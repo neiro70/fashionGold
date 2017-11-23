@@ -60,7 +60,7 @@ if($idTipo > 0)	{
 			
 			$imagen="site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
-			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta);
+			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta,'idProducto'=>$idProducto);
 			
 	
 
@@ -791,9 +791,9 @@ foreach($node as $posicion=>$registro)
 	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
 	<ul class='row-container list-unstyled clearfix'>
 		<li class='row-left'>
-			<a	href='#'
+			<a	onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
 				class='container_item'> <img 
-				src='{$registro['imagen']}'
+				src='$context/{$registro['imagen']}'
 				class='img-responsive' alt='{$registro['titulo']}' />";
 	
 				if($registro['oferta']== 1 ){	 
@@ -870,6 +870,21 @@ $(document).ready(function() {
     $("#goList").click();
   });
 
+function previewProducto(idProducto){
+	//alert(idProducto);
+	
+
+    var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
+    var height = $(this).attr('data-height') || 250;
+    var width = $(this).attr('data-width') || 400;
+    
+    $("#targetiframe").attr({'src':src,
+                        'height': height,
+                        'width': width});
+	
+}
+
+
 </script></div>
 </div>
 
@@ -912,7 +927,7 @@ $(document).ready(function() {
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>InformaciÃ³n</h5>
+<h5>Información</h5>
 
 <ul class="list-unstyled list-styled">
 
@@ -983,7 +998,7 @@ Todos los derechos reservados.</div>
 
 <script
 	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647"
-	type="text/javascript"></script>
+	type="text/javascript"></scrtargetiframeipt>
 
 <script type="text/javascript">
     //<![CDATA[    
@@ -1076,63 +1091,28 @@ Todos los derechos reservados.</div>
     });
   });
 </script>
-<div id="quick-shop-modal" class="modal" role="dialog"
-	aria-hidden="true" tabindex="-1" data-width="800">
-<div class="modal-dialog rotateInDownLeft">
-<div class="modal-content">
-<div class="modal-header"><i class="close fa fa-times btooltip"
-	data-toggle="tooltip" data-placement="top" title="Close"
-	data-dismiss="modal" aria-hidden="true"></i></div>
-<div class="modal-body">
-<div class="quick-shop-modal-bg"></div>
-<div class="row">
-
-<div class="col-md-12 product-image">
-<div id="quick-shop-image" class="product-image-wrapper"></div>
-</div>
-
-<div class="col-md-12 product-information">
-
-<h1 id="quick-shop-title"></h1>
-
-<div id="quick-shop-infomation" class="description">
-<div id="quick-shop-description" class="text-left"></div>
-</div>
-
-<div id="quick-shop-container">
-
-<div id="quick-shop-relative" class="relative text-left">
-<ul class="list-unstyled">
-	<li class="control-group vendor"><span class="control-label">Vendor :</span></li>
-	<li class="control-group type"><span class="control-label">Type :</span></li>
-</ul>
-</div>
-
-<form action="https://site/cart/add" method="post" class="variants"
-	id="quick-shop-product-actions" enctype="multipart/form-data">
-
-<div id="quick-shop-price-container" class="detail-price"></div>
-
-<div class="quantity-wrapper clearfix"><label class="wrapper-title">Detalle</label>
-<div class="wrapper"><input type="text" id="qs-quantity" size="5"
-	class="item-quantity" name="quantity" value="1" /> <span
-	class="qty-group"> <span class="qty-wrapper"> <span class="qty-up"
-	title="Increase" data-src="#qs-quantity"> <i class="fa fa-plus"></i> </span>
-<span class="qty-down" title="Decrease" data-src="#qs-quantity"> <i
-	class="fa fa-minus"></i> </span> </span> </span></div>
-</div>
-
-<div id="quick-shop-variants-container" class="variants-wrapper"></div>
 
 
-</form>
+<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
+	<div class="modal-dialog rotateInDownLeft">
+	<div class="modal-content">
+			<div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
+				data-dismiss="modal" aria-hidden="true"></i>
+			</div>
+	<div class="modal-body">
+		<div class="quick-shop-modal-bg"></div>
+			<div class="row">
+				<div class="col-md-24 product-image">					
+   					<iframe src="" frameborder="0" id="targetiframe" style=" height:500px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+				</div>
+		</div>
+	</div>
+	</div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+
+
 
 
 <script type="text/javascript">
