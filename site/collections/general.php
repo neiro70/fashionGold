@@ -552,7 +552,7 @@ Anillo
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cï¿½talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -631,7 +631,7 @@ Anillo
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcción
+				En Construcciï¿½n
 			</a></li>
 		</ul>
 		</li>
@@ -791,8 +791,8 @@ foreach($node as $posicion=>$registro)
 	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
 	<ul class='row-container list-unstyled clearfix'>
 		<li class='row-left'>
-			<a	onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-				class='container_item'> <img 
+			<a ref='#' onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+				class='container_item'> <img style='cursor: pointer;'
 				src='$context/{$registro['imagen']}'
 				class='img-responsive' alt='{$registro['titulo']}' />";
 	
@@ -847,6 +847,23 @@ foreach($node as $posicion=>$registro)
 
 ?>
 
+<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
+	<div class="modal-dialog rotateInDownLeft">
+	<div class="modal-content">
+			<div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
+				data-dismiss="modal" aria-hidden="true"></i>
+			</div>
+	<div class="modal-body">
+		<div class="quick-shop-modal-bg"></div>
+			<div class="row">
+				<div class="col-md-24 product-image">					
+   					<iframe src="" frameborder="0" id="targetiframe" style=" height:500px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+				</div>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
 
 </ul>
 </div>
@@ -871,9 +888,6 @@ $(document).ready(function() {
   });
 
 function previewProducto(idProducto){
-	//alert(idProducto);
-	
-
     var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
     var height = $(this).attr('data-height') || 250;
     var width = $(this).attr('data-width') || 400;
@@ -927,7 +941,7 @@ function previewProducto(idProducto){
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaciï¿½n</h5>
 
 <ul class="list-unstyled list-styled">
 

@@ -3,16 +3,16 @@
 
 include("../../site/admin/mvc/util/MysqlDAO.php");
 	
-	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$contexto);	
-	$contexto="http://" .$var[0]."/".$var[1]."/";
+	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	$var =explode("/",$context);	
+	$context="http://" .$var[0]."/".$var[1]."/";
 	
 	
 	
-	if (strpos($contexto, "fashiongold.es") !== false){
-		$contexto="http://fashiongold.es";
+	if (strpos($context, "fashiongold.es") !== false){
+		$context="http://fashiongold.es";
 	}else{//local		
-		$contexto="http://" .$var[0]."/".$var[1]."/";
+		$context="http://" .$var[0]."/".$var[1]."/";
 	}
 
 
@@ -54,7 +54,7 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 			$idImagen=$row["idImagen"];
 			$ran=rand();
 			
-			$imagen="$contexto/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
+			$imagen="$context/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
 			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
 			
@@ -78,24 +78,24 @@ $db->closeSession();
 
 <meta charset="ISO-8859-1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="icon" href="<?php echo $contexto ?>/rings.ico">
+<link rel="icon" href="<?php echo $context ?>/rings.ico">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <link rel="canonical" href="rings.php" />
 <link
-	href='<?php echo $contexto ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css'
+	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css'
 	rel='stylesheet' type='text/css'>
 <link
-	href='<?php echo $contexto ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css'
+	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css'
 	rel='stylesheet' type='text/css'>
 <link
-	href='<?php echo $contexto ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css'
+	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css'
 	rel='stylesheet' type='text/css'>
 <link
-	href='<?php echo $contexto ?>/fonts.googleapis.com/css%3Ffamily=Belleza.css'
+	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Belleza.css'
 	rel='stylesheet' type='text/css'>
 <link
-	href='<?php echo $contexto ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css'
+	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css'
 	rel='stylesheet' type='text/css'>
 
 <meta name="description" content="" />
@@ -110,7 +110,7 @@ $db->closeSession();
 
 
 <meta property="og:image"
-	content="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
+	content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
 
 
 
@@ -121,61 +121,61 @@ $db->closeSession();
 
 
 <link
-	href="<?php echo $contexto ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css" media="all" />
 
 
 
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 
 
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-<link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css"
+	rel="stylesheet" type="text/css" media="all" />
+<link
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css"
+	rel="stylesheet" type="text/css" media="all" />
+
+<link
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 <link
-	href="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css"
+	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 
 
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
 
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647"
 	type="text/javascript"></script>
 
 
@@ -183,28 +183,28 @@ $db->closeSession();
 
 
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
 
 
@@ -216,21 +216,21 @@ $db->closeSession();
 
 
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647"
 	type="text/javascript"></script>
 
 
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647"
 	type="text/javascript"></script>
 
-<script src="<?php echo $contexto ?>/services/javascripts/currencies.js"
+<script src="<?php echo $context ?>/services/javascripts/currencies.js"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
 <script
-	src="<?php echo $contexto ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647"
+	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647"
 	type="text/javascript"></script>
 
 <link rel="alternate" type="application/json+oembed"
@@ -491,7 +491,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <div class="top-navigation">
 
 <ul class="list-inline">
-	<li class="top-logo"><a id="site-title" href="../index.html"
+	<li class="top-logo"><a id="site-title" href="../index.php"
 		title="Jewelry - Shopify theme"> <img class="img-responsive"
 		src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"
 		alt="Jewelry - Shopify theme" /> </a></li>
@@ -544,10 +544,10 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 
 <div class="collapse navbar-collapse">
 		<ul class="nav navbar-nav hoverMenuWrapper">
-		<li class="nav-item active"><a href="<?php echo $contexto?>"> <span>Inicio</span> </a>
+		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cï¿½talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -557,17 +557,17 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<ul>
 				<li class="list-title">Nuevos</li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/rings.php">Anillos </a></li>
+					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/bracelets.php">Puleras<span
+					href="<?php echo $context ?>/site/collections/bracelets.php">Puleras<span
 					class="megamenu-label new-label">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/earrings.php">Aretes <span
+					href="<?php echo $context ?>/site/collections/earrings.php">Aretes <span
 					class="megamenu-label hot-label">Nuevos</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/bracelets.php">pulseras<span
+					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label feature-label">Nuevo</span> </a></li>
 			</ul>
 			</li>			
@@ -576,12 +576,12 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<ul>
 				<li class="list-title">Productos</li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/rings.php">Anillos </a></li>
+					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/bracelets.php">pulseras<span
+					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
 			</ul>
 			</li>			
 			<li>
@@ -589,32 +589,32 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<ul>
 				<li class="list-title">Destacados</li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/rings.php">Anillos </a></li>
+					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/bracelets.php">pulseras<span
+					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
 			</ul>
 			</li>
 			<li>
 			<ul>
 				<li class="list-title">Ofertas</li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/rings.php">Anillos </a></li>
+					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/bracelets.php">pulseras<span
+					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $contexto ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
 
 			</ul>
 			</li>
 		</ul>
 		</div>
 		</li>
-		<li class="nav-item dropdown"><a href="<?php echo $contexto ?>/site/pages/blogs/blogs.html"
+		<li class="nav-item dropdown"><a href="<?php echo $context ?>/site/pages/blogs/blogs.html"
 			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Blog</span>
 
 		<i class="fa fa-caret-down"></i> <i
@@ -626,11 +626,11 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcción
+				En Construcciï¿½n
 			</a></li>
 		</ul>
 		</li>
-		<li class="nav-item"><a href="<?php echo $contexto ?>/site/pages/contact.php"> <span>Contactanos</span>
+		<li class="nav-item"><a href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
 		</a></li>
 	</ul>
 	</div>
@@ -731,7 +731,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 
 
 <div class="collection-panner" align="center" ><img
-	src="<?php echo $contexto ?>/site/img/collection/bracelets/banner.jpg"
+	src="<?php echo $context ?>/site/img/collection/bracelets/banner.jpg"
 	class="img-responsive" alt="" /></div>
 
 
@@ -784,8 +784,8 @@ foreach($node as $posicion=>$registro)
 	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
 	<ul class='row-container list-unstyled clearfix'>
 		<li class='row-left'>
-			<a	href='#' onClick='previewProducto({$registro['idProducto']})'
-				class='container_item'> <img 
+			<a ref='#' onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+				class='container_item'> <img style='cursor: pointer;'
 				src='{$registro['imagen']}'
 				class='img-responsive' alt='{$registro['titulo']}' />";
 	
@@ -847,36 +847,38 @@ foreach($node as $posicion=>$registro)
 </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="myModalFrame">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color: #428BCA; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-        <h4 class="modal-title">Vista del Producto</h4>
-      </div>
-      <div class="modal-body">
-        <iframe src="" frameborder="0" id="targetiframe" style=" height:500px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
-      </div>
 
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
+<div class="modal-dialog rotateInDownLeft">
+<div class="modal-content">
+    <div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
+      data-dismiss="modal" aria-hidden="true"></i>
+    </div>
+<div class="modal-body">
+  <div class="quick-shop-modal-bg"></div>
+    <div class="row">
+      <div class="col-md-24 product-image">					
+           <iframe src="" frameborder="0" id="targetiframe" style=" height:400px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
 
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#goList").click();
   });
 
-function previewProducto(idProducto){
 
-	
-    var src = '<?=$contexto?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
-    var height = $(this).attr('data-height') || 250;
+function previewProducto(idProducto){
+    var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
+    var height = $(this).attr('data-height') || 150;
     var width = $(this).attr('data-width') || 400;
-   /* alert(src);
     $("#targetiframe").attr({'src':src,
                         'height': height,
-                        'width': width});*/
+                        'width': width});
 	
 }
 </script></div>
@@ -905,7 +907,7 @@ function previewProducto(idProducto){
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quiénes Somos</a></li>
+	<li class="list-unstyled"><a href="index.php">Quiï¿½nes Somos</a></li>
 
 
 
@@ -921,13 +923,13 @@ function previewProducto(idProducto){
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaci&oacute;n</h5>
 
 <ul class="list-unstyled list-styled">
 
 	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="index.html">Qué es oro laminado </a>
+	<li class="list-unstyled"><a href="index.html">Quï¿½ es oro laminado </a>
 	</li>
 
 </ul>
@@ -1087,65 +1089,6 @@ Todos los derechos reservados.</div>
 </script>
 
 
-<div id="quick-shop-modal" class="modal" role="dialog"
-	aria-hidden="true" tabindex="-1" data-width="800">
-<div class="modal-dialog rotateInDownLeft">
-<div class="modal-content">
-<div class="modal-header"><i class="close fa fa-times btooltip"
-	data-toggle="tooltip" data-placement="top" title="Close"
-	data-dismiss="modal" aria-hidden="true"></i></div>
-<div class="modal-body">
-<div class="quick-shop-modal-bg"></div>
-<div class="row">
-
-<div class="col-md-12 product-image">
-<div id="quick-shop-image" class="product-image-wrapper"></div>
-</div>
-
-<div class="col-md-12 product-information">
-
-<h1 id="quick-shop-title"></h1>
-
-<div id="quick-shop-infomation" class="description">
-<div id="quick-shop-description" class="text-left"></div>
-</div>
-
-<div id="quick-shop-container">
-
-<div id="quick-shop-relative" class="relative text-left">
-<ul class="list-unstyled">
-	<li class="control-group vendor"><span class="control-label">Vendor :</span></li>
-	<li class="control-group type"><span class="control-label">Type :</span></li>
-</ul>
-</div>
-
-<form action="https://site/cart/add" method="post" class="variants"
-	id="quick-shop-product-actions" enctype="multipart/form-data">
-
-<div id="quick-shop-price-container" class="detail-price"></div>
-
-<div class="quantity-wrapper clearfix"><label class="wrapper-title">Detalle</label>
-<div class="wrapper"><input type="text" id="qs-quantity" size="5"
-	class="item-quantity" name="quantity" value="1" /> <span
-	class="qty-group"> <span class="qty-wrapper"> <span class="qty-up"
-	title="Increase" data-src="#qs-quantity"> <i class="fa fa-plus"></i> </span>
-<span class="qty-down" title="Decrease" data-src="#qs-quantity"> <i
-	class="fa fa-minus"></i> </span> </span> </span></div>
-</div>
-
-<div id="quick-shop-variants-container" class="variants-wrapper"></div>
-
-
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
 <script type="text/javascript">
   
   jQuery(document).ready(function($) {
@@ -1170,7 +1113,7 @@ Todos los derechos reservados.</div>
           itemsDesktopSmall : [979,3],
           itemsTablet: [768,3],
           itemsMobile : [479,2],
-          scrollPerPage: true,
+          scrollPequickShopImagerPage: true,
           navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>']
         });
         
@@ -1214,8 +1157,8 @@ Todos los derechos reservados.</div>
       
       // Update image
       quickShopImage.empty();
-      quickShopImage.html('<a class="main-image"><img class="img-zoom img-responsive image-fly" src="https://site/collections/'+&#32;Shopify.resizeImage(selectedProduct.featured_image,"grande")+'" data-zoom-image="'+ selectedProduct.featured_image +'" alt="" /></a>');
-      
+     // quickShopImage.html('<a class="main-image"><img class="img-zoom img-responsive image-fly" src="https://site/collections/'+&#32;Shopify.resizeImage(selectedProduct.featured_image,"grande")+'" data-zoom-image="'+ selectedProduct.featured_image +'" alt="" /></a>');
+     quickShopImage
       var qs_images_size = "";
        if(selectedProduct.images.length < 4) qs_images_size="small-thumbs";
        

@@ -29,7 +29,6 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 		LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto 
 		WHERE 1=1 AND t01.idTipo = {$idTipo}";
 	
-		//"t01.idTipo = 1 ";
 
 
 
@@ -550,7 +549,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cï¿½talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -629,7 +628,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcción
+				En Construcciï¿½n
 			</a></li>
 		</ul>
 		</li>
@@ -790,7 +789,7 @@ foreach($node as $posicion=>$registro)
 	<ul class='row-container list-unstyled clearfix'>
 		<li class='row-left'>
 			<a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-				class='container_item'> <img 
+				class='container_item'> <img style='cursor: pointer;'
 				src='$context/{$registro['imagen']}'
 				class='img-responsive' alt='{$registro['titulo']}' />";
 	
@@ -809,7 +808,7 @@ foreach($node as $posicion=>$registro)
 				<a class='title-5' href='#'>
 		 			{$registro['titulo']} 
 		 		</a>
-		 		<span class='shopify-product-reviews-badge' data-id='registro$idProducto'></span></div>
+		 		<span class='shopify-product-reviews-badge' data-id='registro{$registro['idProducto']}'></span></div>
 		<div class='product-content-right'>		
 		<div class='product-price'>";
 		 			
@@ -848,17 +847,7 @@ foreach($node as $posicion=>$registro)
 
 </ul>
 </div>
-
-
-
-
-
 </div>
-
-
-
-
-
 </div>
 </div>
 <script type="text/javascript">
@@ -904,7 +893,7 @@ function previewProducto(idProducto){
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quiénes Somos</a></li>
+	<li class="list-unstyled"><a href="index.php">Quiï¿½nes Somos</a></li>
 
 
 
@@ -920,13 +909,13 @@ function previewProducto(idProducto){
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaciï¿½n</h5>
 
 <ul class="list-unstyled list-styled">
 
 	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="index.html">Qué es oro laminado </a>
+	<li class="list-unstyled"><a href="index.html">Quï¿½ es oro laminado </a>
 	</li>
 
 </ul>

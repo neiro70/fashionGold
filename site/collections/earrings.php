@@ -56,7 +56,7 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 			
 			$imagen="site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
-			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo- $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta);
+			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo- $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta,'idProducto'=>$idProducto );
 				
 	
 
@@ -547,7 +547,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cï¿½talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -626,7 +626,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcción
+				En Construcciï¿½n
 			</a></li>
 		</ul>
 		</li>
@@ -784,8 +784,8 @@ foreach($node as $posicion=>$registro)
 	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
 	<ul class='row-container list-unstyled clearfix'>
 		<li class='row-left'>
-			<a	href='#'
-				class='container_item'> <img 
+      <a ref='#' onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+        class='container_item'> <img style='cursor: pointer;'
 				src='$context/{$registro['imagen']}'
 				class='img-responsive' alt='{$registro['titulo']}' />";
 	
@@ -804,7 +804,7 @@ foreach($node as $posicion=>$registro)
 				<a class='title-5' href='#'>
 		 			{$registro['titulo']} 
 		 		</a>
-		 		<span class='shopify-product-reviews-badge' data-id='registro$idProducto></span></div>
+		 		<span class='shopify-product-reviews-badge' data-id='registro{$registro['idProducto']} ></span></div>
 		<div class='product-content-right'>		
 		<div class='product-price'>";
 		 			
@@ -839,29 +839,47 @@ foreach($node as $posicion=>$registro)
 
 
 ?>
-
 </ul>
 </div>
+</div>
+</div>
+</div>
+<!-- Modal -->
 
-
-
-
-
-
+<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
+<div class="modal-dialog rotateInDownLeft">
+<div class="modal-content">
+    <div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
+      data-dismiss="modal" aria-hidden="true"></i>
+    </div>
+<div class="modal-body">
+  <div class="quick-shop-modal-bg"></div>
+    <div class="row">
+      <div class="col-md-24 product-image">					
+           <iframe src="" frameborder="0" id="targetiframe" style=" height:400px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+      </div>
+  </div>
+</div>
+</div>
+</div>
 </div>
 
 
-
-
-
-</div>
-</div>
 <script type="text/javascript">
 $(document).ready(function() {
 
     $("#goList").click();
   });
 
+function previewProducto(idProducto){
+    var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
+    var height = $(this).attr('data-height') || 150;
+    var width = $(this).attr('data-width') || 400;
+    $("#targetiframe").attr({'src':src,
+                        'height': height,
+                        'width': width});
+	
+}
 </script></div>
 </div>
 
@@ -888,7 +906,7 @@ $(document).ready(function() {
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quiénes Somos</a></li>
+	<li class="list-unstyled"><a href="index.php">Quiï¿½nes Somos</a></li>
 
 
 
@@ -904,13 +922,13 @@ $(document).ready(function() {
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaciï¿½n</h5>
 
 <ul class="list-unstyled list-styled">
 
 	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="index.html">Qué es oro laminado </a>
+	<li class="list-unstyled"><a href="index.html">Quï¿½ es oro laminado </a>
 	</li>
 
 </ul>
@@ -1354,7 +1372,7 @@ Todos los derechos reservados.</div>
 <script
 	src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
-á
+ï¿½
 <script type="text/javascript">
   
   jQuery('.currencies li').on(clickEv, function() {

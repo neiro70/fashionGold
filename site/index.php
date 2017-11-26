@@ -33,7 +33,6 @@ $sql="SELECT m01.idImagen,t01.txtCodigo,t01.idProducto,t01.isOferta, t01.txtTitu
 		LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto 
 		WHERE 1=1 OR isNuevo=1 OR isDestacado=1 ";
 
-//"t01.idTipo = 1 ";
 
 
 
@@ -65,10 +64,10 @@ if ($result->num_rows > 0) {
 		$imagen="$context/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
 		if($isNuevo=="1"){
-			$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta);
+			$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta,'idProducto'=>$idProducto);
 		}
 		if($isDestacado=="1"){
-			$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta);
+			$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta,'idProducto'=>$idProducto);
 
 		}
 			
@@ -324,7 +323,7 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 <script id="__st">
 //<![CDATA[
 var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-wrench"></i> 
-		En Construcción498e-86bc-7f61efcb57d8","pageurl":"site\/","u":"1de4edf625be","p":"home"};
+		En Construcci&oacute;n498e-86bc-7f61efcb57d8","pageurl":"site\/","u":"1de4edf625be","p":"home"};
 //]]>
 </script>
 <script
@@ -456,159 +455,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 
 
 
-<!--top-->
-<div class="container">
-<div class="top row">
 
-<div class="col-md-6 phone-shopping"><span>Ventas Mex (55) 3488 1042 </span>
-</div>
-
-<div class="col-md-18">
-<ul class="text-right">
-	<li class="customer-links hidden-xs">
-
-
-	<ul id="accounts" class="list-inline">
-		<li class="my-account"><a href="https://site/account">Mi cuenta</a></li>
-
-		<li class="login"><span id="loginButton" class="dropdown-toggle"
-			data-toggle="dropdown"> Login <i class="sub-dropdown1"></i> <i
-			class="sub-dropdown"></i> </span> <!-- Customer Account Login -->
-		<div id="loginBox" class="dropdown-menu text-left">
-		<form method="post" action="https://site/account/login"
-			id="customer_login" accept-charset="UTF-8"><input type="hidden"
-			value="customer_login" name="form_type" /><input type="hidden"
-			name="ISO-8859-1" value="" />
-
-		<div id="bodyBox">
-		<ul class="control-container customer-accounts list-unstyled">
-			<li class="clearfix"><label for="customer_email_box"
-				class="control-label">Email <span class="req">*</span></label> <input
-				type="email" value="" name="customer[email]" id="customer_email_box"
-				class="form-control" /></li>
-
-			<li class="clearfix"><label for="customer_password_box"
-				class="control-label">Password <span class="req">*</span></label> <input
-				type="password" value="" name="customer[password]"
-				id="customer_password_box" class="form-control password" /></li>
-
-			<li class="clearfix">
-			<button class="btn" type="submit">Login</button>
-			</li>
-<!--			<li class="clearfix"><a class="action btn btn-1"-->
-<!--				href="https://site/account/register">Crear una cuenta</a></li>-->
-		</ul>
-		</div>
-		</form>
-
-		</div>
-
-
-		</li>
-		<li>/</li>
-
-<!--		<li class="register"><a href="https://site/account/register"-->
-<!--			id="customer_register_link">Crea una cuenta</a></li>-->
-
-
-	</ul>
-
-
-
-	</li>
-
-
-	<li class="li-currency">
-	<div class="currency_group">
-	<div class="currencies-switcher hidden-xs"><!--  
-<div class="currency btn-group uppercase">
-  <a class="currency_wrapper dropdown-toggle" data-toggle="dropdown">
-    <i class="sub-dropdown1"></i>
-    <i class="sub-dropdown"></i>
-    
-    <span class="heading hidden-xs">Moneda</span>
-    <span class="currency_code visible-xs">USD</span>
-    <i class="fa fa-caret-down"></i>
-  </a>
-  <ul class="currencies dropdown-menu text-left">
-    
-    
-    <li class="currency-USD active">
-      <a href="javascript:;">USD</a>
-      <input type="hidden" value="USD" />
-    </li>
-    
-    
-    
-    
-    <li class="currency-EUR">
-      <a href="javascript:;">EUR</a>
-      <input type="hidden" value="EUR" />
-    </li>
-    
-    
-    
-    <li class="currency-GBP">
-      <a href="javascript:;">GBP</a>
-      <input type="hidden" value="GBP" />
-    </li>
-    
-    
-  </ul>
-  
-  <select class="currencies_src hide" name="currencies">
-    
-    
-    <option value="USD" selected="selected">USD</option>
-    
-    
-    
-    
-    <option value="EUR">EUR</option>
-    
-    
-    
-    <option value="GBP">GBP</option>
-    
-    
-  </select>
-</div>
-
---></div>
-	</div>
-	</li>
-
-
-
-
-	<li id="widget-social">
-	<ul class="list-inline">
-
-		<li><a target="_blank"
-			href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
-			class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
-			title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a></li>
-		<!--		<li><a target="_blank" href="index.php" class="btooltip swing"-->
-		<!--			data-toggle="tooltip" data-placement="bottom" title="Twitter"><i-->
-		<!--			class="fa fa-twitter"></i></a></li>-->
-		<!---->
-		<!---->
-		<!--		<li><a target="_blank" href="index.html#" class="btooltip swing"-->
-		<!--			data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i-->
-		<!--			class="fa fa-pinterest"></i></a></li>-->
-
-
-
-
-	</ul>
-	</li>
-
-</ul>
-</div>
-
-</div>
-</div>
-<!--End top-->
 
 <div class="line"></div>
 
@@ -648,7 +495,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 		<ul class="customer dropdown-menu">
 
 			<li class="logout"><a href="https://site/account/login">Login</a></li>
-<!--			<li class="account"><a href="https://site/account/register">Register</a>-->
+			<li class="account"><a href="https://site/account/register">Register</a>
 			</li>
 
 		</ul>
@@ -663,8 +510,8 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 
 
 
-<!--		<li class="is-mobile-cart"><a href="https://site/cart"><i-->
-<!--			class="fa fa-shopping-cart"></i></a></li>-->
+		<li class="is-mobile-cart"><a href="https://site/cart"><i
+			class="fa fa-shopping-cart"></i></a></li>
 	</ul>
 	</div>
 
@@ -672,7 +519,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 	<ul class="nav navbar-nav hoverMenuWrapper">
 		<li class="nav-item active"><a href="#"> <span>Inicio</span> </a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C&aacute;talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -754,12 +601,21 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 		<ul class="dropdown-menu">
 			<li class=""><a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En Construcción </a></li>
+				class="fa fa-wrench"></i> En ConstrucciÃ³n </a></li>
 		</ul>
 		</li>
 		<li class="nav-item"><a
 			href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
 		</a></li>
+   
+    <li class="nav-item">
+        <a target="_blank"
+          href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
+          class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+          title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
+    </li>
+
+    
 	</ul>
 
 	</div>
@@ -859,27 +715,13 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 
 
 <div class="camera_wrap" id="home-slider">
+ <!-- div	data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-1.jpg?14058599523483859647" -->
+ <div	data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div
-	data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-1.jpg?14058599523483859647">
-
-<div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
-	href="<?php echo $context ?>/site/collections/bracelets.php"
-	style="color: #010101;">¡Bienvenido!</a></div>
+  <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
+	href="<?php echo $context ?>/site/collections/general.php"
+	style="color: #010101;">&#33;Bienvenido!</a></div>
 
 
 
@@ -898,40 +740,22 @@ var __st={"a":9087252,"offset":-14400,"reqid":"62ed4830-3fb9-			<i class="fa fa-
 
 <div class="camera_cta_1"><a
 	href="<?php echo $context ?>/site/collections/general.php" class="btn">Nuestros
-Cátalogos</a></div>
+C&aacute;talogos</a></div>
 
 
 </div>
+<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div
-	data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-2.jpg?14058599523483859647">
-
+<div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
+	href="<?php echo $context ?>/site/collections/general.php"
+	style="color: #010101;">&#33; FashionGold te desea una excelente navidad !</a></div>
+<!--
 <div class="camera_caption camera_title_2 moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/sample-collection-with-left-slidebar.html"
 	style="color: #666666;">Joyas</a></div>
-
-
-
-
-
 <div class="camera_caption camera_image-caption_2 moveFromLeft"><img
 	src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-caption-2.png%3F14058599523483859647"
-	alt="image_caption" /></div>
+	alt="image_caption" /></div>-->
 
 
 
@@ -939,44 +763,26 @@ Cátalogos</a></div>
 
 <div class="camera_cta_2"><a
 	href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver
-cátalogo</a></div>
+c&aacute;talogo</a></div>
 
 
 </div>
+<!-- div data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-3.jpg?14058599523483859647" -->
+  <div	data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 
 
 
+<div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
+	href="<?php echo $context ?>/site/collections/bracelets.php"
+	style="color: #010101;">&#33; Te invitamos a ver nuestros c&aacute;talogos !</a></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div
-	data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-3.jpg?14058599523483859647">
-
-
-
-
-
-<div class="camera_caption camera_image-caption_3 moveFromLeft"><img
+<!-- <div class="camera_caption camera_image-caption_3 moveFromLeft"><img
 	src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-caption-3.png%3F14058599523483859647"
-	alt="image_caption" /></div>
-
-
-
-
-
-<div class="camera_cta_3"><a
+	alt="image_caption" /></div>-->
+<div class="camera_cta_1">
+<a
 	href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver
-Cátalogo</a></div>
+C&aacute;talogo</a></div>
 
 
 </div>
@@ -1013,7 +819,7 @@ Cátalogo</a></div>
 <div class="col-md-24">
 
 <div class="home_collections">
-<h6 class="general-title">Más Populares</h6>
+<h6 class="general-title">M&aacute;s Populares</h6>
 <div class="home_collections_wrapper">
 <div id="home_collections">
 
@@ -1032,7 +838,7 @@ Cátalogo</a></div>
 	href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a></span>
 <div class="collection-action"><a
 	href="<?php echo $context ?>/site/collections/bracelets.php"> <i
-	class="fa fa-eye"></i> Ver Colección</a></div>
+	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
 </div>
 </div>
 </div>
@@ -1053,7 +859,7 @@ Cátalogo</a></div>
 	href="<?php echo $context ?>/site/collections/games.php">Juegos</a></span>
 <div class="collection-action"><a
 	href="<?php echo $context ?>/site/collections/games.php"> <i
-	class="fa fa-eye"></i> Ver Colección</a></div>
+	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
 </div>
 </div>
 </div>
@@ -1074,7 +880,7 @@ Cátalogo</a></div>
 	href="<?php echo $context ?>/site/collections/earrings.php">Aretes</a></span>
 <div class="collection-action"><a
 	href="<?php echo $context ?>/site/collections/earrings.php"> <i
-	class="fa fa-eye"></i> Ver Colección</a></div>
+	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
 </div>
 </div>
 </div>
@@ -1094,7 +900,7 @@ Cátalogo</a></div>
 	href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a></span>
 <div class="collection-action"><a
 	href="<?php echo $context ?>/site/collections/necklaces.php"> <i
-	class="fa fa-eye"></i> Ver Colección</a></div>
+	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
 </div>
 </div>
 </div>
@@ -1112,10 +918,10 @@ Cátalogo</a></div>
 <br>
 <br>
 <div class="hover-overlay"><span class="col-name"><a
-	href="<?php echo $context ?>/site/collections/rings.php">Añllos</a></span>
+	href="<?php echo $context ?>/site/collections/rings.php">Anillos</a></span>
 <div class="collection-action"><a
 	href="<?php echo $context ?>/site/collections/rings.php"> <i
-	class="fa fa-eye"></i> Ver Colección</a></div>
+	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
 </div>
 </div>
 </div>
@@ -1168,15 +974,16 @@ foreach($nodeNuevo as $posicion=>$registro)
 						data-animate='fadeInUp' data-delay='0'>
 					<ul class='row-container list-unstyled clearfix'>
 					<li class='row-left'>
-						<a href='#' class='container_item'> 
-							<img src='{$registro['imagen']}' class='img-responsive' alt='{$registro['titulo']}' />
+          <a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+              class='container_item'> <img style='cursor: pointer;'
+							src='{$registro['imagen']}' class='img-responsive' alt='{$registro['titulo']}' />
 							<span class='sale_banner'> <span class='sale_text'>Oferta</span> </span> 
 						</a>
 					</li>
 					<li class='row-right parent-fly animMix'>
 						<div class='product-content-left'>
 							<a class='title-5'	href='#'>{$registro['titulo']}</a> 
-							<span class='shopify-product-reviews-badge' data-id='registro{$posicion}'></span></div>
+							<span class='shopify-product-reviews-badge' data-id='registro{$registro['idProducto']}'></span></div>
 							<div class='product-content-right'>
 							<div class='product-price'>
 							<span class='price_sale'>
@@ -1195,8 +1002,8 @@ foreach($nodeNuevo as $posicion=>$registro)
 								data-animate='fadeInUp' data-delay='0'>
 							<ul class='row-container list-unstyled clearfix'>
 								<li class='row-left'>
-									<a href='#' class='container_item'> 
-										<img src='{$registro['imagen']}' class='img-responsive' 
+                  <a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+                    class='container_item'> <img style='cursor: pointer;' src='{$registro['imagen']}' class='img-responsive' 
 										alt='{$registro['titulo']}' />
 									 </a>
 
@@ -1221,11 +1028,28 @@ foreach($nodeNuevo as $posicion=>$registro)
 	}
 
 ?>
-
-
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
+<!-- Modal -->
+
+<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
+<div class="modal-dialog rotateInDownLeft">
+<div class="modal-content">
+    <div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
+      data-dismiss="modal" aria-hidden="true"></i>
+    </div>
+<div class="modal-body">
+  <div class="quick-shop-modal-bg"></div>
+    <div class="row">
+      <div class="col-md-24 product-image">					
+           <iframe src="" frameborder="0" id="targetiframe" style=" height:400px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+      </div>
+  </div>
 </div>
 </div>
 </div>
@@ -1242,9 +1066,9 @@ foreach($nodeNuevo as $posicion=>$registro)
 	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/home_banner_image_text.png?14058599523483859647"
 	alt="" />
 <div class="home-banner-caption">
-<p>Si deseas emprender tu propio negocio somos la mejor opción pues
+<p>Si deseas emprender tu propio negocio somos la mejor opci&oacute;n pues
 manejamos diferentes rangos de descuento dependiendo tu monto de
-inversión, entendiendo que entre mas inviertas mayor será el descuento.
+inversi&oacute;n, entendiendo que entre mas inviertas mayor ser&aacute; el descuento.
 </p>
 </div>
 
@@ -1305,7 +1129,7 @@ de descuento y Puedes obtener hasta un 55% de descuento.</div>
 </div>
 </div>
 <div class="home-blog-content col-md-20">
-<h4><a href="blogs/blogs/44831939-vel-illum-qui-dolorem-eum-fugiat.html">Información</a></h4>
+<h4><a href="blogs/blogs/44831939-vel-illum-qui-dolorem-eum-fugiat.html">Informaci&oacute;n</a></h4>
 <ul class="list-inline">
 	<li class="author"><i class="fa fa-user"></i> Ivette Camacho</li>
 	<li>/</li>
@@ -1316,10 +1140,10 @@ de descuento y Puedes obtener hasta un 55% de descuento.</div>
 <div class="intro">
 
 <ol>
-	<li>* Aceptamos devoluciones en un 30% de tu próxima compra</li>
-	<li>* Contamos con más de 300 modelos diferentes entre aretes,
+	<li>* Aceptamos devoluciones en un 30% de tu pr&oacute;xima compra</li>
+	<li>* Contamos con m&aacute;s de 300 modelos diferentes entre aretes,
 	arracadas, broqueles, gargantillas, pulseras, Puleras, juegos</li>
-	<li>* Modelos nuevos e innovadores cada 20 días</li>
+	<li>* Modelos nuevos e innovadores cada 20 d&iacute;as</li>
 	<li>* Enviamos a toda la Republica</li>
 </ol>
 
@@ -1364,7 +1188,9 @@ foreach($nodeDestacado as $posicion=>$registro)
 			$divDestacadoOferta="<div class='element no_full_width not-animated' data-animate='fadeInUp'
 										data-delay='0'>
 									<ul class='row-container list-unstyled clearfix'>
-										<li class='row-left'><a href='#' class='container_item'> <img
+                    <li class='row-left'>
+                    <a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+                      class='container_item'> <img style='cursor: pointer;'
 											src='{$registro['imagen']}' class='img-responsive'
 											alt='{$registro['titulo']}' /> <span class='sale_banner'> <span
 											class='sale_text'>Oferta</span> </span> </a>
@@ -1390,7 +1216,9 @@ foreach($nodeDestacado as $posicion=>$registro)
 			$divDestacadoComercial="<div class='element no_full_width not-animated' data-animate='fadeInUp'
 								data-delay='200'>
 							<ul class='row-container list-unstyled clearfix'>
-								<li class='row-left'><a href='#' class='container_item'> <img
+                <li class='row-left'>
+                <a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+                  class='container_item'> <img style='cursor: pointer;'
 									src='{$registro['imagen']}' class='img-responsive'
 									alt='{$registro['titulo']}' /> </a>
 														
@@ -1414,10 +1242,6 @@ foreach($nodeDestacado as $posicion=>$registro)
 }
 
 ?>
-
-
-
-
 </div>
 </div>
 </div>
@@ -1562,13 +1386,13 @@ foreach($nodeDestacado as $posicion=>$registro)
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaci&oacute;n</h5>
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
+	<li class="list-unstyled"><a href="#">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="index.html">Qué es oro laminado </a>
+	<li class="list-unstyled"><a href="#">Qu&eacute; es oro laminado </a>
 	</li>
 
 </ul>
@@ -1576,29 +1400,6 @@ foreach($nodeDestacado as $posicion=>$registro)
 </div>
 
 
-
-
-
-<!--    <div class="footer-link-list col-md-6">--> <!--      <div class="group">-->
-<!--        <h5 class="general-title">Account</h5>--> <!--        --> <!--        <ul class="list-unstyled list-styled">-->
-<!--          --> <!--          <li class="list-unstyled">--> <!--            <a href="index.html">Preferences</a>-->
-<!--          </li>--> <!--          --> <!--          <li class="list-unstyled">-->
-<!--            <a href="index.html">Order History</a>--> <!--          </li>-->
-<!--          --> <!--          <li class="list-unstyled">--> <!--            <a href="index.html">Cart Page</a>-->
-<!--          </li>--> <!--          --> <!--          <li class="list-unstyled">-->
-<!--            <a href="index.html">Sign In</a>--> <!--          </li>-->
-<!--          --> <!--        </ul>--> <!--      </div>--> <!--    </div>-->
-<!--    --> <!----> <!--    --> <!----> <!--    --> <!--    <div class="footer-link-list col-md-6">-->
-<!--      <div class="group">--> <!--        <h5 class="general-title">Customer</h5>-->
-<!--        --> <!--        <ul class="list-unstyled list-styled">--> <!--          -->
-<!--          <li class="list-unstyled">--> <!--            <a href="https://site/search">Search Advanced</a>-->
-<!--          </li>--> <!--          --> <!--          <li class="list-unstyled">-->
-<!--            <a href="index.html">Return Policy</a>--> <!--          </li>-->
-<!--          --> <!--          <li class="list-unstyled">--> <!--            <a href="index.html">Privacy Policy</a>-->
-<!--          </li>--> <!--          --> <!--          <li class="list-unstyled">-->
-<!--            <a href="index.html">Help &amp; Contact</a>--> <!--          </li>-->
-<!--          --> <!--        </ul>--> <!--      </div>--> <!--    </div>-->
-<!--    --></div>
 </div>
 <div class="footer-content footer-content-bottom clearfix">
 <div class="container">
@@ -1761,68 +1562,6 @@ Todos los derechos reservados.</div>
     });
   });
 </script>
-<div id="quick-shop-modal" class="modal" role="dialog"
-	aria-hidden="true" tabindex="-1" data-width="800">
-<div class="modal-dialog rotateInDownLeft">
-<div class="modal-content">
-<div class="modal-header"><i class="close fa fa-times btooltip"
-	data-toggle="tooltip" data-placement="top" title="Close"
-	data-dismiss="modal" aria-hidden="true"></i></div>
-<div class="modal-body">
-<div class="quick-shop-modal-bg"></div>
-<div class="row">
-
-<div class="col-md-12 product-image">
-<div id="quick-shop-image" class="product-image-wrapper"></div>
-</div>
-
-<div class="col-md-12 product-information">
-
-<h1 id="quick-shop-title"></h1>
-
-<div id="quick-shop-infomation" class="description">
-<div id="quick-shop-description" class="text-left"></div>
-</div>
-
-<div id="quick-shop-container">
-
-<div id="quick-shop-relative" class="relative text-left">
-<ul class="list-unstyled">
-	<li class="control-group vendor"><span class="control-label">Vendor :</span>
-	</li>
-	<li class="control-group type"><span class="control-label">Type :</span>
-	</li>
-</ul>
-</div>
-
-<form action="https://site/cart/add" method="post" class="variants"
-	id="quick-shop-product-actions" enctype="multipart/form-data">
-
-<div id="quick-shop-price-container" class="detail-price"></div>
-
-<div class="quantity-wrapper clearfix"><label class="wrapper-title">Quantity</label>
-<div class="wrapper"><input type="text" id="qs-quantity" size="5"
-	class="item-quantity" name="quantity" value="1" /> <span
-	class="qty-group"> <span class="qty-wrapper"> <span class="qty-up"
-	title="Increase" data-src="#qs-quantity"> <i class="fa fa-plus"></i> </span>
-
-<span class="qty-down" title="Decrease" data-src="#qs-quantity"> <i
-	class="fa fa-minus"></i> </span> </span> </span></div>
-</div>
-
-<div id="quick-shop-variants-container" class="variants-wrapper"></div>
-
-<div class="others-bottom"><input id="quick-shop-add"
-	class="btn small add-to-cart" type="submit" name="add"
-	value="Add to Cart" /></div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
  <script type="text/javascript">
     var map;
@@ -1830,21 +1569,21 @@ Todos los derechos reservados.</div>
       prettyPrint();
       map = new GMaps({
         div: '#map',
-        lat: 19.43603918202598,
-        lng: -99.1348210349679,
+        lat: 19.435202,
+        lng: -99.134932,
         zoom: 17
       });
       
       map.addMarker({
-        lat: 19.43603918202598,
-        lng: -99.134821,
+        lat: 19.435202,
+        lng: -99.134932,
         title: 'FashionGold',
         details: {
           database_id: 42,
           author: 'FashionGold'
         }, 
         infoWindow: {
-          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de México</p>'
+          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de Mï¿½xico</p>'
         },
         mouseover: function(){
             (this.infoWindow).open(this.map, this);
@@ -1855,7 +1594,7 @@ Todos los derechos reservados.</div>
         click: function(e){
           //if(console.log)
            // console.log(e);
-          //alert('FashionGold'); Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de México           
+          //alert('FashionGold'); Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de Mï¿½xico           
 			window.top.location.href='<?php echo $context ?>/site/pages/contact.php';
         }
       });
@@ -1870,6 +1609,17 @@ Todos los derechos reservados.</div>
         }
       });*/
     });
+
+function previewProducto(idProducto){
+    var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
+    var height = $(this).attr('data-height') || 250;
+    var width = $(this).attr('data-width') || 400;
+  
+    $("#targetiframe").attr({'src':src,
+                        'height': height,
+                        'width': width});
+	
+}  
   </script>
 <script type="text/javascript">
   

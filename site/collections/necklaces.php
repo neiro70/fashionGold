@@ -60,7 +60,7 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 			
 			$imagen="site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
-			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta);
+			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
 			
 	
 
@@ -551,7 +551,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cï¿½talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -630,7 +630,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcción
+				En Construcciï¿½n
 			</a></li>
 		</ul>
 		</li>
@@ -787,8 +787,8 @@ foreach($node as $posicion=>$registro)
 	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
 	<ul class='row-container list-unstyled clearfix'>
 		<li class='row-left'>
-			<a	href='#'
-				class='container_item'> <img 
+      <a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
+        class='container_item'> <img style='cursor: pointer;'
 				src='$context/{$registro['imagen']}'
 				class='img-responsive' alt='{$registro['titulo']}' />";
 	
@@ -807,7 +807,7 @@ foreach($node as $posicion=>$registro)
 				<a class='title-5' href='#'>
 		 			{$registro['titulo']} 
 		 		</a>
-		 		<span class='shopify-product-reviews-badge' data-id='registro$idProducto'></span></div>
+		 		<span class='shopify-product-reviews-badge' data-id='registro{$registro['idProducto']} '></span></div>
 		<div class='product-content-right'>		
 		<div class='product-price'>";
 		 			
@@ -846,24 +846,47 @@ foreach($node as $posicion=>$registro)
 
 </ul>
 </div>
+</div>
+</div>
+</div>
 
+<!-- Modal -->
 
-
-
-
-
+<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
+<div class="modal-dialog rotateInDownLeft">
+<div class="modal-content">
+    <div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
+      data-dismiss="modal" aria-hidden="true"></i>
+    </div>
+<div class="modal-body">
+  <div class="quick-shop-modal-bg"></div>
+    <div class="row">
+      <div class="col-md-24 product-image">					
+           <iframe src="" frameborder="0" id="targetiframe" style=" height:400px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+      </div>
+  </div>
+</div>
+</div>
+</div>
 </div>
 
 
 
-
-
-</div>
-</div>
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#goList").click();
   });
+
+function previewProducto(idProducto){
+    var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
+    var height = $(this).attr('data-height') || 250;
+    var width = $(this).attr('data-width') || 400;
+  
+    $("#targetiframe").attr({'src':src,
+                        'height': height,
+                        'width': width});
+	
+}
 
 </script></div>
 </div>
@@ -891,7 +914,7 @@ $(document).ready(function() {
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quiénes Somos</a></li>
+	<li class="list-unstyled"><a href="index.php">Quiï¿½nes Somos</a></li>
 
 
 
@@ -907,13 +930,13 @@ $(document).ready(function() {
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaciï¿½n</h5>
 
 <ul class="list-unstyled list-styled">
 
 	<li class="list-unstyled"><a href="#">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="#">Qué es oro laminado </a>
+	<li class="list-unstyled"><a href="#">Quï¿½ es oro laminado </a>
 	</li>
 
 </ul>
@@ -1007,7 +1030,8 @@ Todos los derechos reservados.</div>
               var table = jQuery(cart_summary_id + ' div.items');
        
               jQuery.each(value, function(i, item) {
-                jQuery('<div class="row items-wrapper"><a class="cart-close" title="Remove" href="javascript:void(0);" onclick="Shopify.removeItem(' + item.variant_id + ')"><i class="fa fa-times"></i></a><div class="col-md-8 cart-left"><a class="cart-image" href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'"><img src="https://site/collections/'&#32;+&#32;Shopify.resizeImage(item.image,&#32;'small')&#32;+&#32;'" alt="" title=""/></a></div><div class="col-md-16 cart-right"><div class="cart-title"><a href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'">' + item.title + '</a></div><div class="cart-price">' + Shopify.formatMoney(item.price, "<span class='money'>${{amount}}</span>") + '<span class="x"> x </span>' + item.quantity + '</div></div></div>').appendTo(table);
+                jQuery(
+'<div class="row items-wrapper"><a class="cart-close" title="Remove" href="javascript:void(0);" onclick="Shopify.removeItem(' + item.variant_id + ')"><i class="fa fa-times"></i></a><div class="col-md-8 cart-left"><a class="cart-image" href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'"><img src="https://site/collections/'&#32;+&#32;Shopify.resizeImage(item.image,&#32;'small')&#32;+&#32;'" alt="" title=""/></a></div><div class="col-md-16 cart-right"><div class="cart-title"><a href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'">' + item.title + '</a></div><div class="cart-price">' + Shopify.formatMoney(item.price, "<span class='money'>${{amount}}</span>") + '<span class="x"> x </span>' + item.quantity + '</div></div></div>').appendTo(table);
               });
                        
               jQuery('<div class="subtotal"><span>Subtotal:</span><span class="cart-total-right">' + Shopify.formatMoney(cart.total_price, "<span class='money'>${{amount}}</span>") + '</span></div>').appendTo(cart_summary);
@@ -1071,64 +1095,6 @@ Todos los derechos reservados.</div>
     });
   });
 </script>
-<div id="quick-shop-modal" class="modal" role="dialog"
-	aria-hidden="true" tabindex="-1" data-width="800">
-<div class="modal-dialog rotateInDownLeft">
-<div class="modal-content">
-<div class="modal-header"><i class="close fa fa-times btooltip"
-	data-toggle="tooltip" data-placement="top" title="Close"
-	data-dismiss="modal" aria-hidden="true"></i></div>
-<div class="modal-body">
-<div class="quick-shop-modal-bg"></div>
-<div class="row">
-
-<div class="col-md-12 product-image">
-<div id="quick-shop-image" class="product-image-wrapper"></div>
-</div>
-
-<div class="col-md-12 product-information">
-
-<h1 id="quick-shop-title"></h1>
-
-<div id="quick-shop-infomation" class="description">
-<div id="quick-shop-description" class="text-left"></div>
-</div>
-
-<div id="quick-shop-container">
-
-<div id="quick-shop-relative" class="relative text-left">
-<ul class="list-unstyled">
-	<li class="control-group vendor"><span class="control-label">Vendor :</span></li>
-	<li class="control-group type"><span class="control-label">Type :</span></li>
-</ul>
-</div>
-
-<form action="https://site/cart/add" method="post" class="variants"
-	id="quick-shop-product-actions" enctype="multipart/form-data">
-
-<div id="quick-shop-price-container" class="detail-price"></div>
-
-<div class="quantity-wrapper clearfix"><label class="wrapper-title">Detalle</label>
-<div class="wrapper"><input type="text" id="qs-quantity" size="5"
-	class="item-quantity" name="quantity" value="1" /> <span
-	class="qty-group"> <span class="qty-wrapper"> <span class="qty-up"
-	title="Increase" data-src="#qs-quantity"> <i class="fa fa-plus"></i> </span>
-<span class="qty-down" title="Decrease" data-src="#qs-quantity"> <i
-	class="fa fa-minus"></i> </span> </span> </span></div>
-</div>
-
-<div id="quick-shop-variants-container" class="variants-wrapper"></div>
-
-
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 
 <script type="text/javascript">
   

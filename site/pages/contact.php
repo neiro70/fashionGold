@@ -38,28 +38,12 @@
 <link href="<?php echo $context ?>/site/toast/toastr.css"
 	rel="stylesheet" type="text/css">
 
-<meta name="description"
-	content="Contact Information Office Address 249 Ung Van Khiem Street, Binh Thanh Dist, HCM city +84 0123456xxx support@designshopify.com Follow Us on" />
-
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 
 <title>Contactanos | Fashion Gold</title>
 
-
-
-
-
-
 <meta property="og:image"
 	content="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
-
-
-
-
-
-
-
-
 
 <link
 	href="../../netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
@@ -154,7 +138,7 @@
 			data-toggle="dropdown"> Login <i class="sub-dropdown1"></i> <i
 			class="sub-dropdown"></i> </span> <!-- Customer Account Login -->
 		<div id="loginBox" class="dropdown-menu text-left">
-		<form method="post" action="https://site/account/login"
+		<form method="post" action=""
 			id="customer_login" accept-charset="UTF-8"><input type="hidden"
 			value="customer_login" name="form_type" /><input type="hidden"
 			name="utf8" value="‚úì" />
@@ -174,8 +158,7 @@
 			<li class="clearfix">
 			<button class="btn" type="submit">Login</button>
 			</li>
-			<li class="clearfix"><a class="action btn btn-1"
-				href="https://site/account/register">Create an account</a></li>
+
 		</ul>
 		</div>
 		</form>
@@ -186,19 +169,16 @@
 		</li>
 		<li>/</li>
 
-		<li class="register"><a href="https://site/account/register"
-			id="customer_register_link">Crear Cuenta</a></li>
-
 
 	</ul>
 
-
+	sudo service apache2 restart
 
 	</li>
 
 
 
-
+	sudo service apache2 restart
 
 	<li id="widget-social">
 	<ul class="list-inline">
@@ -281,7 +261,7 @@
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C·talogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C√°talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -311,7 +291,7 @@
 				<li class="list-title">Productos</li>
 				<li class="list-unstyled li-sub-mega"><a
 					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-				<li class="list-unstyled li-sub-mega"><a
+				<li class="list-unstyled li-sub-mega"><asudo service apache2 restart
 					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
@@ -360,7 +340,7 @@
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En ConstrucciÛn
+				En Construcci√≥n
 			</a></li>
 		</ul>
 		</li>
@@ -373,37 +353,6 @@
 
 
 	<li class="top-search hidden-xs"></li>
-
-
-	<!-- 
-      <li class="umbrella hidden-xs">			
-        <div id="umbrella" class="list-inline unmargin">
-          <div class="cart-link">
-            <a href="https://site/cart" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
-              <i class="sub-dropdown1"></i>
-              <i class="sub-dropdown"></i>              
-              <div class="num-items-in-cart">
-                <span class="icon">
-                  Cart
-                  <span class="number">0</span>
-                </span>
-              </div>
-            </a>
-
-            
-            <div id="cart-info" class="dropdown-menu">
-              <div id="cart-content">
-                <div class="loading">
-                  <img src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/loader.gif%3F14058599523483859647" alt="" />
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </li>
-      -->
-
 
 
 	<li class="mobile-search visible-xs">
@@ -438,7 +387,7 @@
 <div itemprop="breadcrumb" class="container">
 <div class="row">
 <div class="col-md-24"><a href="<?php echo $context ?>"
-	class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
+	class="homepage-link" title="Inicio">Inicio</a> <span>/</span>
 <span class="page-title">Contactanos</span></div>
 </div>
 </div>
@@ -493,14 +442,14 @@
 
 
 <div class="right-block contact-content col-md-12">
-<h6 class="sb-title"><i class="fa fa-home"></i> InformaciÛn del Sitio</h6>
+<h6 class="sb-title"><i class="fa fa-home"></i> Informaci√≥n del Sitio</h6>
 <ul class="right-content">
 	<li class="title">
 	<h6>Nos Ubicamos En</h6>
 	</li>
 	<li class="address">
 	<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de
-	MÈxico</p>
+	M√©xico</p>
 	</li>
 	<ul>
 		<li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
@@ -566,13 +515,13 @@
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>InformaciÛn</h5>
+<h5>Informaci√≥n</h5>
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
+	<li class="list-unstyled"><a href="#">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="index.html">Qu√© es oro laminado </a>
+	<li class="list-unstyled"><a href="#">Qu√© es oro laminado </a>
 	</li>
 
 </ul>

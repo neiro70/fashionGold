@@ -97,21 +97,10 @@ footer {
 
 <body>
 
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grcouped for better mobile display -->
-            <div class="navbar-header;" align="center" >
-                 <img alt="fashion Gold" src="<?=$contexto?>/site/img/collection/logo.png" width="125px"  style="padding-top: 10px;">
-            </div>
-        </nav>
-
-        <div id="p	$contexto="http://" .$var[0]."/".$var[1]."/";	
-	age-wrapper">
+        <div id="page-wrapper" style="margin-top: -60px;">
             <div class="container-fluid">
                 <!-- Page Heading -->
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
                             <li>
@@ -143,9 +132,9 @@ footer {
             <div class="col-md-4">
                 <h3>Detalles </h3>
                 <ul>
-                	<li><b>Código:</b> <?php echo $txtCodigo;?>	</li>
-                	<li><b>Número Producto:</b> <?php echo $idProducto;?>	</li>
-                    <li><b>Descripción:</b> <?php echo $txtDescripcion;?>	</li>
+                	<li><b>C&oacute;digo:</b> <?php echo $txtCodigo;?>	</li>
+                	<li><b>N&uacute;mero Producto:</b> <?php echo $idProducto;?>	</li>
+                    <li><b>Descripci&oacute;n:</b> <?php echo $txtDescripcion;?>	</li>
                     <li><b>Tipo:</b> <?php echo $txtTipo;?>	</li>
                     <li><b>Oferta:</b> <?php echo $isOferta==0?'NO':'SI';?></li>
                     <li><b>Precio:</b> $<?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioComercial);?> MXN </li>
@@ -164,7 +153,7 @@ footer {
         </div>
         <!-- /#page-wrapper -->
 
-    </div>
+    
     <!-- /#wrapper -->
        <div id="clock-loader" style="display: none;">				
 		<div style="font-weight: bold; color: white; font-size: 12pt;">
