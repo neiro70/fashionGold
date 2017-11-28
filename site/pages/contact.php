@@ -171,15 +171,7 @@
 
 
 	</ul>
-
-	sudo service apache2 restart
-
 	</li>
-
-
-
-	sudo service apache2 restart
-
 	<li id="widget-social">
 	<ul class="list-inline">
 
