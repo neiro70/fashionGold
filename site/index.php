@@ -504,7 +504,7 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 				<li class="list-unstyled li-sub-mega"><a
 					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/bracelets.php">Puleras<span
+					href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
 					class="megamenu-label new-label">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
 					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
@@ -577,7 +577,7 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 		</ul>
 		</li>
 		<li class="nav-item"><a
-			href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
+			href="<?php echo $context ?>/site/pages/contact.php"> <span>Cont&aacute;ctenos</span>
 		</a></li>
    
     <li class="nav-item">
@@ -693,7 +693,7 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 
   <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/general.php"
-	style="color: #010101;">&#33;Bienvenido!</a></div>
+	style="color: #010101;">¡Bienvenido!</a></div>
 
 
 
@@ -720,7 +720,7 @@ C&aacute;talogos</a></div>
 
 <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/general.php"
-	style="color: #010101;">&#33; FashionGold te desea una excelente navidad !</a></div>
+	style="color: #010101;">  ¡FashionGold te desea una excelente navidad &#33; </a></div>
 <!--
 <div class="camera_caption camera_title_2 moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/sample-collection-with-left-slidebar.html"
@@ -1038,15 +1038,15 @@ foreach($nodeNuevo as $posicion=>$registro)
 	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/home_banner_image_text.png?14058599523483859647"
 	alt="" />
 <div class="home-banner-caption">
-<p>Si deseas emprender tu propio negocio somos la mejor opci&oacute;n pues
+<p>Si deseas incrementa tus ingresos, somos la mejor opci&oacute;n pues
 manejamos diferentes rangos de descuento dependiendo tu monto de
-inversi&oacute;n, entendiendo que entre mas inviertas mayor ser&aacute; el descuento.
+inversi&oacute;n, entendiendo que entre m&aacute;s inviertas mayor ser&aacute; el descuento.
 </p>
 </div>
 
 
 
-<div class="home-banner-action"><a href="#">Contactanos</a></div>
+<div class="home-banner-action"><a href="#">Cont&aacute;ctenos</a></div>
 
 
 </div>
@@ -1089,8 +1089,8 @@ del mes</a></h4>
 		href="blogs/blogs/47648387-sample-blog-post-with-left-slidebar.html#comments">
 	<span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios </a></li>
 </ul>
-<div class="intro">Puedes invertir desde $1,200 MXN y obtendras un 20%
-de descuento y Puedes obtener hasta un 55% de descuento.</div>
+<div class="intro">Puedes invertir desde $1,200 MXN y obtendr&aacute;s un 20%
+de descuento y puedes obtener hasta un 55% de descuento.</div>
 </div>
 </div>
 
@@ -1114,9 +1114,9 @@ de descuento y Puedes obtener hasta un 55% de descuento.</div>
 <ol>
 	<li>* Aceptamos devoluciones en un 30% de tu pr&oacute;xima compra</li>
 	<li>* Contamos con m&aacute;s de 300 modelos diferentes entre aretes,
-	arracadas, broqueles, gargantillas, pulseras, Puleras, juegos</li>
+	arracadas, broqueles, gargantillas, pulseras y juegos</li>
 	<li>* Modelos nuevos e innovadores cada 20 d&iacute;as</li>
-	<li>* Enviamos a toda la Republica</li>
+	<li>* Enviamos a toda la rep&uacute;blica</li>
 </ol>
 
 </div>
@@ -1346,7 +1346,7 @@ foreach($nodeDestacado as $posicion=>$registro)
 
 
 
-	<li class="list-unstyled"><a href="index.php">Contactanos</a></li>
+	<li class="list-unstyled"><a href="index.php">Cont&aacute;ctenos</a></li>
 
 </ul>
 </div>
@@ -1361,12 +1361,8 @@ foreach($nodeDestacado as $posicion=>$registro)
 <h5>Informaci&oacute;n</h5>
 
 <ul class="list-unstyled list-styled">
-
-	<li class="list-unstyled"><a href="#">Empieza tu negocio</a></li>
-
-	<li class="list-unstyled"><a href="#">Qu&eacute; es oro laminado </a>
-	</li>
-
+	<li class="list-unstyled"><a href="#">Incrementa tus ingresos</a></li>
+	<li class="list-unstyled"><a href="#">Qu&eacute; es oro laminado</a></li>
 </ul>
 </div>
 </div>
