@@ -3,15 +3,9 @@
 include("../../site/admin/mvc/util/MysqlDAO.php");
 	
 	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$context);	
-	$context="http://" .$var[0]."/".$var[1]."/";
-	
-	
-	
-	if (strpos($context, "fashiongold.es") !== false) { 
-		$context="http://fashiongold.es";
-	}else{//local		
-		$context="http://" .$var[0]."/".$var[1]."/";
+	if (strpos($context, "localhost") !== false) {
+		$var =explode("/",$context);
+		$context="http://" .$var[0]."/".$var[1];
 	}
 
 
@@ -473,7 +467,7 @@ Anillo
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cï¿½talogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -846,7 +840,7 @@ function previewProducto(idProducto){
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">QuiÃ©nes Somos</a></li>
+	<li class="list-unstyled"><a href="index.php">Quiénes Somos</a></li>
 
 
 
@@ -862,13 +856,13 @@ function previewProducto(idProducto){
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Informaciï¿½n</h5>
+<h5>Información</h5>
 
 <ul class="list-unstyled list-styled">
 
 	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="index.html">QuÃ© es oro laminado </a>
+	<li class="list-unstyled"><a href="index.html">Qué es oro laminado </a>
 	</li>
 
 </ul>

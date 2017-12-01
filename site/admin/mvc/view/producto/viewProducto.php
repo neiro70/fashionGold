@@ -1,15 +1,10 @@
 <?php
-
-
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$contexto);	
-	$contexto="http://" .$var[0]."/".$var[1]."/";
-		
-	if (strpos($contexto, 'fashiongold.es') !== false) { 
-		$contexto="http://fashiongold.es";
-	}else{//local		
-		$contexto="http://" .$var[0]."/".$var[1]."/";
+	if (strpos($contexto, "localhost") !== false) {
+		$var =explode("/",$contexto);
+		$contexto="http://" .$var[0]."/".$var[1];
 	}
+
 
 	header('Content-Type: text/html; charset=ISO-8859-1');
 	include("../../../mvc/util/MysqlDAO.php");

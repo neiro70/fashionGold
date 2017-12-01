@@ -6,6 +6,7 @@
 	$db = new MySQL (); 
 	$idTipo = isset($_GET['idTipo']) ? (int)trim($_GET['idTipo']) : 0;
 
+
 	
 	if($idTipo > 0)	{
 
@@ -26,6 +27,7 @@
 		$conn=$db->getConexion();
 
 		$result = $conn->query($sql);
+		
 
 		setlocale(LC_MONETARY, 'es_MX'); 
 		if ($result->num_rows > 0) {
@@ -34,8 +36,6 @@
 
 				$idProducto=$row["idProducto"];
 				$txtTitulo=$row["txtTitulo"];
-				
-				
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
 				$txtDescripcion=$row["txtDescripcion"];
@@ -78,19 +78,13 @@
 			}
 		}
 
-
 		if($entrys != null && count($entrys) > 0) {
 			$data=array('data'=>$entrys);
 		}
 
-
-
-
-
-
-if(count(isset($entrys)?$entrys:array()) == 0) {
-	$data=array('data'=>array());
-}
+		if(count(isset($entrys)?$entrys:array()) == 0) {
+			$data=array('data'=>array());
+		}
 
 $db->closeSession();
 $json_string = json_encode($data);

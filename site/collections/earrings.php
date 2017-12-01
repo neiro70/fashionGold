@@ -4,15 +4,9 @@
 include("../../site/admin/mvc/util/MysqlDAO.php");
 	
 	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$context);	
-	$context="http://" .$var[0]."/".$var[1]."/";
-	
-	
-	
-	if (strpos($context, "fashiongold.es") !== false) { 
-		$context="http://fashiongold.es";
-	}else{//local		
-		$context="http://" .$var[0]."/".$var[1]."/";
+	if (strpos($context, "localhost") !== false) {
+		$var =explode("/",$context);
+		$context="http://" .$var[0]."/".$var[1];
 	}
 
 
