@@ -693,7 +693,7 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 
   <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/general.php"
-	style="color: #010101;">¡Bienvenido!</a></div>
+	style="color: #010101;">&#161;Bienvenido!</a></div>
 
 
 
@@ -720,7 +720,7 @@ C&aacute;talogos</a></div>
 
 <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/general.php"
-	style="color: #010101;">  ¡FashionGold te desea una excelente navidad &#33; </a></div>
+	style="color: #010101;">  &#161;FashionGold te desea una excelente navidad &#33; </a></div>
 <!--
 <div class="camera_caption camera_title_2 moveFromLeft"><a
 	href="<?php echo $context ?>/site/collections/sample-collection-with-left-slidebar.html"
