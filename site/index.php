@@ -2,11 +2,13 @@
 
 include("../site/admin/mvc/util/MysqlDAO.php");
 
-$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-if (strpos($context, "localhost") !== false) {
+	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$var =explode("/",$context);
-	$context="http://" .$var[0]."/".$var[1];
-}
+	if (strpos($context, "localhost") !== false) {
+		$context="http://" .$var[0]."/".$var[1];
+	}else{
+		$context="http://" .$var[0];
+	}
 
 
 $db = new MySQL ();
