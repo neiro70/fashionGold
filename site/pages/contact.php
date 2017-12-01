@@ -141,7 +141,7 @@
 		<form method="post" action=""
 			id="customer_login" accept-charset="UTF-8"><input type="hidden"
 			value="customer_login" name="form_type" /><input type="hidden"
-			name="utf8" value="âœ“" />
+			name="utf8" value="" />
 
 		<div id="bodyBox">
 		<ul class="control-container customer-accounts list-unstyled">
@@ -253,7 +253,7 @@
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>CÃ¡talogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -408,7 +408,7 @@
 <form method="post" action="" id="emailForm" name="emailForm"
 	class="contact-form" accept-charset="UTF-8"><input type="hidden"
 	value="contact" name="form_type" /><input type="hidden" name="utf8"
-	value="âœ“" />
+	value="" />
 <ul id="contact-form" class="row list-unstyled">
 	<li class="">
 	<h3>Tus sugerencias y comentarios</h3>
@@ -434,14 +434,14 @@
 
 
 <div class="right-block contact-content col-md-12">
-<h6 class="sb-title"><i class="fa fa-home"></i> InformaciÃ³n del Sitio</h6>
+<h6 class="sb-title"><i class="fa fa-home"></i> Información del Sitio</h6>
 <ul class="right-content">
 	<li class="title">
 	<h6>Nos Ubicamos En</h6>
 	</li>
 	<li class="address">
 	<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de
-	MÃ©xico</p>
+	México</p>
 	</li>
 	<ul>
 		<li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
@@ -507,13 +507,13 @@
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>InformaciÃ³n</h5>
+<h5>Información</h5>
 
 <ul class="list-unstyled list-styled">
 
 	<li class="list-unstyled"><a href="#">Empieza tu negocio</a></li>
 
-	<li class="list-unstyled"><a href="#">QuÃ© es oro laminado </a>
+	<li class="list-unstyled"><a href="#">Qué es oro laminado </a>
 	</li>
 
 </ul>
