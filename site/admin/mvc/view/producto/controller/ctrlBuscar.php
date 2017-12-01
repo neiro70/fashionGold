@@ -5,7 +5,7 @@
 
 	$db = new MySQL (); 
 	$idTipo = isset($_GET['idTipo']) ? (int)trim($_GET['idTipo']) : 0;
-
+	$entrys;
 
 	
 	if($idTipo > 0)	{
@@ -17,12 +17,11 @@
 		WHERE t01.idTipo = {$idTipo} ";
 		
 	}else{
-		$sql="SELECT t01.idProducto, t01.isOferta,t01.txtCodigo,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+		$sql="SELECT t01.idProducto,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 
 		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
-		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo ";
-		
-	}	
+		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo "; 
+	}	 
 
 		$conn=$db->getConexion();
 
@@ -38,6 +37,9 @@
 				$txtTitulo=$row["txtTitulo"];
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
+
+
+				
 				$txtDescripcion=$row["txtDescripcion"];
 				$estatus=$row["estatus"];
 				$tipo=$row["tipo"];
@@ -50,6 +52,7 @@
 					$isOferta='SI';
 				}
 					
+				
 
 				$nestatus=$row["idStatus"];
 
