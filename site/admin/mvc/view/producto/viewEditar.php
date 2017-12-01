@@ -2,9 +2,11 @@
 	session_start();
 	
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	$var =explode("/",$contexto);
 	if (strpos($contexto, "localhost") !== false) {
-		$var =explode("/",$contexto);
 		$contexto="http://" .$var[0]."/".$var[1];
+	}else{
+		$contexto="http://" .$var[0];
 	}
 	
 	
