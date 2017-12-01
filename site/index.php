@@ -3,15 +3,15 @@
 include("../site/admin/mvc/util/MysqlDAO.php");
 
 $context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$var =explode("/",$context);
-$context="http://" .$var[0]."/".$var[1]."/";
 
+$var =explode("/",$context);
+$context="http://" .$var[0]."/".$var[1];
 
 
 if (strpos($context, "fashiongold.es") !== false) {
 	$context="http://fashiongold.es";
 }else{//local
-	$context="http://" .$var[0]."/".$var[1]."/";
+	$context="http://" .$var[0]."/".$var[1];
 }
 
 
@@ -1482,7 +1482,7 @@ Todos los derechos reservados.</div>
           author: 'FashionGold'
         }, 
         infoWindow: {
-          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de Mï¿½xico</p>'
+          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de México</p>'
         },
         mouseover: function(){
             (this.infoWindow).open(this.map, this);

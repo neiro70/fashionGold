@@ -7,12 +7,13 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 	$var =explode("/",$context);	
 	$context="http://" .$var[0]."/".$var[1]."/";
 	
+	echo $var[0].':';
+	echo $var[1];
 	
-	
-	if (strpos($context, "fashiongold.es") !== false){
+	if (strpos($context, "fashiongold.es") !== false) {
 		$context="http://fashiongold.es";
-	}else{//local		
-		$context="http://" .$var[0]."/".$var[1]."/";
+	}else{//local
+		$context="http://" .$var[0]."/".$var[1];
 	}
 
 
