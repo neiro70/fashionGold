@@ -601,11 +601,11 @@ $(document).ready(function(e) {
 				})
 				  .done(function(data) {
 					  
-					  toastr.success('Â¡Exito se envio correo!');
+					  toastr.success('¡Exito se envio correo!');
 				  })
 				  .fail(function(data) {
 					 
-					 toastr.error('Â¡Error al enviar correo!');
+					 toastr.error('¡Error al enviar correo!');
 				  })
 				  .always(function(data) {
 				  // alert( "complete" );
