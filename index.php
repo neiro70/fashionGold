@@ -4,6 +4,8 @@
 	$var =explode("/",$context);
 	if (strpos($context, "localhost") !== false) {
 		$context="http://" .$var[0]."/".$var[1];
+	}else if(strpos($context, ".es") !== false){
+		$context="http://fashiongold.com.mx";
 	}else{
 		$context="http://" .$var[0];
 	}
