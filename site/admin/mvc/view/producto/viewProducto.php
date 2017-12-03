@@ -137,8 +137,8 @@ footer {
                     <li><b>Descripci&oacute;n:</b> <?php echo $txtDescripcion;?>	</li>
                     <li><b>Tipo:</b> <?php echo $txtTipo;?>	</li>
                     <li><b>Oferta:</b> <?php echo $isOferta==0?'NO':'SI';?></li>
-                    <li><b>Precio:</b> $<?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioComercial);?> MXN </li>
-                    <li><b>Precio Oferta:</b> $<?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioOferta);?> MXN</li>
+                    <li><b>Precio:</b> <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioComercial);?> MXN </li>
+                    <li><b>Precio Oferta:</b> <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioOferta);?> MXN</li>
                 </ul>
 
             </div>

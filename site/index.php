@@ -60,10 +60,10 @@ if ($result->num_rows > 0) {
 		$imagen="$context/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
 		if($isNuevo=="1"){
-			$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta,'idProducto'=>$idProducto);
+			$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
 		}
 		if($isDestacado=="1"){
-			$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>'$ '.$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>'$ '.$dPrecioOferta,'idProducto'=>$idProducto);
+			$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
 
 		}
 			
