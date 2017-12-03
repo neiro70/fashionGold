@@ -27,7 +27,7 @@
 	
 	$db = new MySQL (); 
 	
-	$sql="SELECT t01.idProducto, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,t01.idTipo,t01.idStatus,t01.isOferta,t01.isDestacado,t01.isNuevo,t01.txtCodigo
+	$sql="SELECT t01.idProducto, t01.idLinea,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,t01.idTipo,t01.idStatus,t01.isOferta,t01.isDestacado,t01.isNuevo,t01.txtCodigo
 		FROM t01producto t01 
 		WHERE t01.idProducto = {$idProducto} ";
 	
@@ -48,6 +48,9 @@
 			$isNuevo=$row["isNuevo"];
 			$isDestacado=$row["isDestacado"];
 			$txtCodigo=$row["txtCodigo"];
+			$idLinea=$row["idLinea"];
+			
+			
 			/*
 			
 			$txtfabricante=mb_convert_encoding($row["txtfabricante"],'UTF-8','ISO-8859-1');
@@ -182,9 +185,21 @@
                 <form id="formProducto" name="formProducto" role="form">
                 <div class="col-lg-6">
                             <div class="form-group">
-                                <label># Producto</label>
+                                <label>Linea</label>
                                 <input  type="hidden" class="form-control" id="idProducto" name="idProducto" value="<?=$idProducto?>">
-                                <input  type="text" disabled="disabled" class="form-control" id="idproductotmp" name="idproductotmp" value="<?=$idProducto?>">
+                                <select id="idLinea" name="idLinea">
+                                	<option value="L0" <?=$idLinea=='L0'?"selected='selected'":''?>>L0</option>
+                                	<option value="L1" <?=$idLinea=='L1'?"selected='selected'":''?>>L1</option>
+                                	<option value="L2" <?=$idLinea=='L2'?"selected='selected'":''?>>L2</option>
+                                	<option value="L3" <?=$idLinea=='L3'?"selected='selected'":''?>>L3</option>
+                                	<option value="L4" <?=$idLinea=='L4'?"selected='selected'":''?>>L4</option>
+                                	<option value="L5" <?=$idLinea=='L5'?"selected='selected'":''?>>L5</option>
+                                	<option value="L6" <?=$idLinea=='L6'?"selected='selected'":''?>>L6</option>
+                                	<option value="L7" <?=$idLinea=='L7'?"selected='selected'":''?>>L7</option>
+                                	<option value="L8" <?=$idLinea=='L8'?"selected='selected'":''?>>L8</option>
+                                	<option value="L9" <?=$idLinea=='L9'?"selected='selected'":''?>>L9</option>
+                                	<option value="L10" <?=$idLinea=='L10'?"selected='selected'":''?>>L10</option>
+                                </select>
                                 
                             </div>
                             <div class="form-group">
@@ -377,6 +392,7 @@
 		$("#idOferta").chosen({width: "100%"});	
 		$("#isDestacado").chosen({width: "100%"});
 		$("#isNuevo").chosen({width: "100%"});
+		$("#idLinea").chosen({width: "100%"});
 	
 
 		toastr.options = {

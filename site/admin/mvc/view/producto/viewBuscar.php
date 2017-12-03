@@ -169,7 +169,7 @@
 			                           			<table id="example"  class="display" cellspacing="0" width="100%">
 					        						<thead>
 														<tr>
-															<th>#</th>
+															<th>LINEA</th>
 															<th>TITULO</th>
 															<th>CODIGO</th>
 															<th>DESCRIPCIÓN</th>															
@@ -277,7 +277,7 @@
 				"fadeIn" : 300,
 				"fadeOut" : 1000,
 				"timeOut" : 5000,
-				"extendedTimeOut" : 1000,
+				"extendedTimeOut" : 1000
 			};
 
 

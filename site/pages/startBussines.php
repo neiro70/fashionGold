@@ -1,73 +1,13 @@
 <?php
-
-
-include("../../site/admin/mvc/util/MysqlDAO.php");
-	
-	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$context);
-	if (strpos($context, "localhost") !== false) {
-		$context="http://" .$var[0]."/".$var[1];
-	}else{
-		$context="http://" .$var[0];
-	}
-
-	$db = new MySQL ();
-	
-	$node = array();
-	$pos=1;
-	$idTipo=2;
-
-	$sql="SELECT m01.idImagen,t01.txtCodigo,t01.idLinea,t01.idProducto,t01.isOferta, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
-		FROM t01producto t01 
-		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
-		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
-		LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto 
-		WHERE 1=1 AND t01.idTipo = {$idTipo}";
-	
-		//"t01.idTipo = 1 ";
-
-
-
-	$conn=$db->getConexion();
-
-	$result = $conn->query($sql);
-
-	setlocale(LC_MONETARY, 'es_MX');
-	if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			$idLinea=$row['idLinea'];
-			$idProducto=$row["idProducto"];
-			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-
-
-			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
-			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-			
-			$estatus=$row["estatus"];
-			$tipo=$row["tipo"];
-			$isOferta=$row["isOferta"];
-			$txtCodigo=$row["txtCodigo"];
-
-			$idImagen=$row["idImagen"];
-			$ran=rand();
-			
-			$imagen="site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
-			
-			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$idLinea-$txtCodigo-$txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
-			
-	
-
-		}
-	}
-
-
-
-$db->closeSession();
+$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$var =explode("/",$context);
+if (strpos($context, "localhost") !== false) {
+	$context="http://" .$var[0]."/".$var[1];
+}else{
+	$context="http://" .$var[0];
+}
 
 ?>
-
 <!doctype html>
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
@@ -75,8 +15,8 @@ $db->closeSession();
 <!--<![endif]-->
 <head>
 
-<meta charset="ISO-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -90,9 +30,7 @@ $db->closeSession();
 <link
 	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css'
 	rel='stylesheet' type='text/css'>
-<link
-	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Belleza.css'
-	rel='stylesheet' type='text/css'>
+
 <link
 	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css'
 	rel='stylesheet' type='text/css'>
@@ -101,7 +39,7 @@ $db->closeSession();
 
 
 
-<title>Gargantillas FashionGold</title>
+<title>Empieza tu propio negocio FashionGold</title>
 
 
 
@@ -243,29 +181,6 @@ $db->closeSession();
       Shopify.theme = {"name":"jewelry","id":41982083,"theme_store_id":null,"role":"main"};
       Shopify.theme.handle = "null";
       Shopify.theme.style = {"id":null,"handle":null};
-
-//]]>
-</script>
-<script type="text/javascript">
-//<![CDATA[
-    (function() {
-      function asyncLoad() {
-        var urls = ["\/\/productreviews.shopifycdn.com\/assets\/v4\/spr.js?shop=site"];
-        for (var i = 0; i < urls.length; i++) {
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = urls[i];
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-        }
-      };
-      if(window.attachEvent) {
-        window.attachEvent('onload', asyncLoad);
-      } else {
-        window.addEventListener('load', asyncLoad, false);
-      }
-    })();
 
 //]]>
 </script>
@@ -441,7 +356,8 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			class="fa fa-user"></i></div>
 		<ul class="customer dropdown-menu">
 
-			<li class="logout"><a href="https://site/account/login">Login</a></li>
+			<li class="logout"><a href="https://site/account/login">Inicio de
+			sesi&oacute;n</a></li>
 			<li class="account"><a href="https://site/account/register">Register</a>
 			</li>
 
@@ -463,15 +379,16 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 	</div>
 
 	<div class="collapse navbar-collapse">
-		<ul class="nav navbar-nav hoverMenuWrapper">
-		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
-		</li>
+	<ul class="nav navbar-nav hoverMenuWrapper">
+		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
+		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
 			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
-		<div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
+		<div
+			class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
 		<ul class="sub-mega-menu">
 			<li>
 			<ul>
@@ -482,16 +399,17 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 					href="<?php echo $context ?>/site/collections/bracelets.php">Puleras<span
 					class="megamenu-label new-label">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+				</a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/earrings.php">Aretes <span
-					class="megamenu-label hot-label">Nuevos</span> </a></li>
+					href="<?php echo $context ?>/site/collections/earrings.php">Aretes
+				<span class="megamenu-label hot-label">Nuevos</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
 					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label feature-label">Nuevo</span> </a></li>
 			</ul>
-			</li>			
-			
+			</li>
+
 			<li>
 			<ul>
 				<li class="list-title">Productos</li>
@@ -501,9 +419,10 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+				</a></li>
 			</ul>
-			</li>			
+			</li>
 			<li>
 
 			<ul>
@@ -514,7 +433,8 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 					href="<?php echo $context ?>/site/collections/bracelets.php">pulseras<span
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+				</a></li>
 			</ul>
 			</li>
 			<li>
@@ -527,35 +447,35 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
 
 				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas </a></li>
+					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+				</a></li>
 
 			</ul>
 			</li>
 		</ul>
 		</div>
 		</li>
-		<li class="nav-item dropdown"><a href="<?php echo $context ?>/site/pages/blogs/blogs.html"
+		<li class="nav-item dropdown"><a
+			href="<?php echo $context ?>/site/pages/blogs/blogs.html"
 			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Blog</span>
 
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
 		<ul class="dropdown-menu">
-			<li class="">
-				
-			<a tabindex="-1"
-				href="blogs/sample-blog-with-grid-3-columns.html">
-				<i class="fa fa-wrench"></i> 
-				En Construcciï¿½n
-			</a></li>
+			<li class=""><a tabindex="-1"
+				href="blogs/sample-blog-with-grid-3-columns.html"> <i
+				class="fa fa-wrench"></i> En Construcción </a></li>
 		</ul>
 		</li>
-		<li class="nav-item"><a href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
+		<li class="nav-item"><a
+			href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
 		</a></li>
 	</ul>
 	</div>
 	</div>
-	</nav></li>	
+	</nav></li>
+
 
 
 
@@ -622,9 +542,9 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <div id="breadcrumb" class="breadcrumb">
 <div itemprop="breadcrumb" class="container">
 <div class="row">
-<div class="col-md-24"><a href="<?php echo $context ?>" class="homepage-link"
-	title="Back to the frontpage">Inicio</a> <span>/</span> <span
-	class="page-title">Gargantillas</span></div>
+<div class="col-md-24"><a href="<?php echo $context ?>"
+	class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
+<span class="page-title">Empieza tu propio negocio</span></div>
 </div>
 </div>
 </div>
@@ -634,177 +554,31 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 
 <div class="container">
 <div class="row">
-
-
-
-<div id="collection-content"><!-- Tags loading -->
-<div id="tags-load" style="display: none;"><i
-	class="fa fa-spinner fa-pulse fa-2x"></i></div>
-
-<div id="page-header" class="col-sm-24">
-<h1 id="page-title">Gargantillas</h1>
+<div id="page-header">
+<h1 id="page-title">EMPIEZA TU PROPIO NEGOCIO </h1>
 </div>
+<div id="col-main" class="col-md-24 normal-page clearfix">
+<div class="page about-us   ">
+<p align="center"> 
+<img
+	src="<?php echo $context?>/site/img/collection/laminado/banners_oro.jpg" /></p>
+<br />
 
-
-<div class="collection-warper col-sm-24 clearfix">
-
-
-<div class="collection-panner" align="center" ><img
-	src="<?php echo $context ?>/site/img/collection/necklances/banner_collares.jpg"
-	class="img-responsive" alt="" /></div>
-
-
-
-
-
-</div>
-<div class="collection-main-content">
-
-
-
-
-
-<div id="col-main"
-	class="collection collection-page col-xs-24 col-sm-24 ">
-
-
-<div class="container-nav clearfix">
-
-<div id="options" class="container-nav clearfix">
-<ul class="list-inline text-right">
-
-	<li class="grid_list">
-	<ul class="list-inline option-set hidden-xs"
-		data-option-key="layoutMode">
-		<li data-option-value="fitRows" id="goGrid"
-			class="goAction btooltip active" data-toggle="tooltip"
-			data-placement="top" title="Malla"><span></span></li>
-		<li data-option-value="straightDown" id="goList"
-			class="goAction btooltip" data-toggle="tooltip" data-placement="top"
-			title="Listado"><span></span></li>
-	</ul>
-	</li>
-
-
-
-
+<ul>
+	<li><i class="fa fa-check"></i>Si  deseas  emprender tu propio negocio somos la mejor opción pues manejamos  diferentes  rangos  de descuento dependiendo tu monto de inversión,  entendiendo que entre mas inviertas mayor será el descuento. </li>
+	<li><i class="fa fa-check"></i>Puedes  invertir desde  $1,200  y obtendrás   un 20% de descuento y  Puedes obtener hasta un 55% de descuento.</li>
+	<li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30%  de tu próxima compra</li>
+	<li><i class="fa fa-check"></i>Contamos con más de 300 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
+	<li><i class="fa fa-check"></i>Modelos nuevos e innovadores cada 20 días</li>
+	<li><i class="fa fa-check"></i>Enviamos a toda la Republica</li>
 </ul>
-</div>
-</div>
 
-<div id="sandBox-wrapper" class="group-product-item row collection-full">
-<ul id="sandBox" class="list-unstyled">
-
-
-<?php
-
-foreach($node as $posicion=>$registro)
-	{
-	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
-	<ul class='row-container list-unstyled clearfix'>
-		<li class='row-left'>
-      <a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-        class='container_item'> <img style='cursor: pointer;'
-				src='$context/{$registro['imagen']}'
-				class='img-responsive' alt='{$registro['titulo']}' />";
-	
-				if($registro['oferta']== 1 ){	 
-					$div =$div."<span class='sale_banner'> 
-							 	<span class='sale_text'>Oferta</span> 
-						 </span>";
-				 }
-		
-		$div =$div."</a>
-			
-		</li>
-
-		<li class='row-right parent-fly animMix'>
-			<div class='product-content-left'>
-				<a class='title-5' href='#'>
-		 			{$registro['titulo']} 
-		 		</a>
-		 		<span class='shopify-product-reviews-badge' data-id='registro{$registro['idProducto']} '></span></div>
-		<div class='product-content-right'>		
-		<div class='product-price'>";
-		 			
-
-		if($registro['oferta'] == 1 ){	
-				$div =$div."	<span class='price_sale'> 
-								<span class='money'>{$registro['precioAnterior']}</span> 
-						</span>
-						<del class='price_compare'> 
-							<span class='money'>{$registro['precio']} </span>
-						</del>";
-			}else{
-				$div =$div." 			
-				<span class='price'> 
-					<span class='money'>{$registro['precio']}</span> 
-				</span>";
-		
-			}
-		
-		$div =$div."</div>
-			
-		</div>
-		<div class='list-mode-description'> {$registro['descripcion']}</div>
-
-		</li>
-	</ul>
-	</li>";
-	
-	echo $div;
-	
-	}
-
-
-?>
-
-
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Modal -->
-
-<div id="quick-shop-modal" class="modal" role="dialog"	aria-hidden="true" tabindex="-1" data-width="800">
-<div class="modal-dialog rotateInDownLeft">
-<div class="modal-content">
-    <div class="modal-header"><i class="close fa fa-times btooltip"	data-toggle="tooltip" data-placement="top" title="Cerrar"
-      data-dismiss="modal" aria-hidden="true"></i>
-    </div>
-<div class="modal-body">
-  <div class="quick-shop-modal-bg"></div>
-    <div class="row">
-      <div class="col-md-24 product-image">					
-           <iframe src="" frameborder="0" id="targetiframe" style=" height:400px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
-      </div>
-  </div>
-</div>
-</div>
 </div>
 </div>
 
 
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$("#goList").click();
-  });
-
-function previewProducto(idProducto){
-    var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto='+idProducto;
-    var height = $(this).attr('data-height') || 250;
-    var width = $(this).attr('data-width') || 400;
-  
-    $("#targetiframe").attr({'src':src,
-                        'height': height,
-                        'width': width});
-	
-}
-
-</script></div>
+</div>
 </div>
 
 
@@ -812,7 +586,6 @@ function previewProducto(idProducto){
 </section></div>
 </div>
 </div>
-
 <footer id="footer">
 <div id="footer-content"><!--<h6 class="general-title contact-footer-title">Newsletter</h6>-->
 
@@ -875,22 +648,16 @@ Todos los derechos reservados.</div>
 </div>
 </footer>
 
-
-
-
-<script
+ <script
 	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647"
-	type="text/javascript"></script>
-
-<script type="text/javascript">
+	type="text/javascript"></script> <script type="text/javascript">
     //<![CDATA[    
     // Including api.jquery.js conditionnally.
     if (typeof Shopify.onCartShippingRatesUpdate === 'undefined') {
       document.write("\u003cscript src=\"\/\/cdn.shopify.com\/s\/assets\/themes_support\/api.jquery-249bc01571641fb7bf9bf82378ba6333e9abdcc34aad49eb9e4edb01557b7dac.js\" type=\"text\/javascript\"\u003e\u003c\/script\u003e");
     }    
     //]]>
-  </script>
-<script type="text/javascript">
+  </script> <script type="text/javascript">
   Shopify.updateCartInfo = function(cart, cart_summary_id, cart_count_id) {
     if ((typeof cart_summary_id) === 'string') {
       var cart_summary = jQuery(cart_summary_id);
@@ -909,8 +676,7 @@ Todos los derechos reservados.</div>
               var table = jQuery(cart_summary_id + ' div.items');
        
               jQuery.each(value, function(i, item) {
-                jQuery(
-'<div class="row items-wrapper"><a class="cart-close" title="Remove" href="javascript:void(0);" onclick="Shopify.removeItem(' + item.variant_id + ')"><i class="fa fa-times"></i></a><div class="col-md-8 cart-left"><a class="cart-image" href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'"><img src="https://site/collections/'&#32;+&#32;Shopify.resizeImage(item.image,&#32;'small')&#32;+&#32;'" alt="" title=""/></a></div><div class="col-md-16 cart-right"><div class="cart-title"><a href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'">' + item.title + '</a></div><div class="cart-price">' + Shopify.formatMoney(item.price, "<span class='money'>${{amount}}</span>") + '<span class="x"> x </span>' + item.quantity + '</div></div></div>').appendTo(table);
+                jQuery('<div class="row items-wrapper"><a class="cart-close" title="Remove" href="javascript:void(0);" onclick="Shopify.removeItem(' + item.variant_id + ')"><i class="fa fa-times"></i></a><div class="col-md-8 cart-left"><a class="cart-image" href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'"><img src="https://site/collections/'&#32;+&#32;Shopify.resizeImage(item.image,&#32;'small')&#32;+&#32;'" alt="" title=""/></a></div><div class="col-md-16 cart-right"><div class="cart-title"><a href="https://site/collections/'&#32;+&#32;item.url&#32;+&#32;'">' + item.title + '</a></div><div class="cart-price">' + Shopify.formatMoney(item.price, "<span class='money'>${{amount}}</span>") + '<span class="x"> x </span>' + item.quantity + '</div></div></div>').appendTo(table);
               });
                        
               jQuery('<div class="subtotal"><span>Subtotal:</span><span class="cart-total-right">' + Shopify.formatMoney(cart.total_price, "<span class='money'>${{amount}}</span>") + '</span></div>').appendTo(cart_summary);
@@ -973,9 +739,7 @@ Todos los derechos reservados.</div>
       Shopify.updateCartInfo(cart, '#cart-info #cart-content');		
     });
   });
-</script>
-
-<script type="text/javascript">
+</script> <script type="text/javascript">
   
   jQuery(document).ready(function($) {
     
@@ -1194,16 +958,10 @@ Todos los derechos reservados.</div>
             }
             
            });
-</script>
-
-
-<script src="../services/javascripts/currencies.js"
-	type="text/javascript"></script>
-<script
+</script> <script src="../services/javascripts/currencies.js"
+	type="text/javascript"></script> <script
 	src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-<script type="text/javascript">
+	type="text/javascript"></script> <script type="text/javascript">
   
   jQuery('.currencies li').on(clickEv, function() {
     if(!$(this).hasClass('active')){
@@ -1300,12 +1058,7 @@ Todos los derechos reservados.</div>
     /* Update currency */
     Currency.convertAll(shopCurrency, Currency.cookie.read(), id, 'money_format');
   }
-</script>
-
-
-
-
-<script>
+</script> <script>
     jQuery(function() {
       jQuery('.swatch :radio').change(function() {
         var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
@@ -1318,11 +1071,7 @@ Todos los derechos reservados.</div>
         .trigger('change');
       }); 
     });
-  </script>
-
-
-<!--Androll-->
-<script type="text/javascript">
+  </script> <!--Androll--> <script type="text/javascript">
 adroll_adv_id = "HTF7KIWJRBHHXL46WLUDBC";
 adroll_pix_id = "IE5CHDRTR5ABXH2P6QXAVM";
 (function () {
@@ -1338,10 +1087,7 @@ window.onload = function(){
     document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
    if(oldonload){oldonload()}};
 }());
-</script>
-
-<!-- Google Code -->
-<script>
+</script> <!-- Google Code --> <script>
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 

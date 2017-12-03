@@ -1042,7 +1042,7 @@ inversi&oacute;n, entendiendo que entre m&aacute;s inviertas mayor ser&aacute; e
 
 
 
-<div class="home-banner-action"><a href="#">Cont&aacute;ctenos</a></div>
+<div class="home-banner-action"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></div>
 
 
 </div>
@@ -1058,9 +1058,11 @@ inversi&oacute;n, entendiendo que entre m&aacute;s inviertas mayor ser&aacute; e
 <h6 class="general-title">Noticias</h6>
 
 <div class="home-bottom_banner_wrapper col-md-12">
-<div id="home-bottom_banner" class="home-bottom_banner"><a href="#"><img
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/home_bottom_banner.jpg"
-	alt="" /></a></div>
+<div id="home-bottom_banner" class="home-bottom_banner">
+	<img
+		src="<?php echo $context ?>/site/img/collection/laminado/collars.jpg"
+		alt="" />
+	</div>
 </div>
 
 
@@ -1311,64 +1313,35 @@ foreach($nodeDestacado as $posicion=>$registro)
 <footer id="footer">
 <div id="footer-content"><!--<h6 class="general-title contact-footer-title">Newsletter</h6>-->
 
-
-<div id="widget-newsletter">
-<div class="container"><!--<div class="newsletter col-md-24">--> <!--<form-->
-<!--	action="https://codespot.us5.list-manage.com/subscribe/post?u=ed73bc2d2f8ae97778246702e&amp;id=c63b4d644d"-->
-<!--	method="post" id="mc-embedded-subscribe-form"--> <!--	name="mc-embedded-subscribe-form" target="_blank"><span-->
-<!--	class="news-desc">We promise only send the good things</span>--> <!--<div class="group_input"><input class="form-control" type="email"-->
-<!--	placeholder="Your Email Address" name="MERGE0" id="MERGE0" /> <input-->
-<!--	type="hidden" name="MERGE1" id="MERGE1" size="25" value="Customer Name">-->
-<!--<input type="hidden" name="MERGE2" id="MERGE2" size="25"--> <!--	value="Customer Name 2">-->
-<!--<div class="unpadding-top">--> <!--<button class="btn btn-1" type="submit"><i class="fa fa-paper-plane"></i></button>-->
-<!--</div>--> <!--</div>--> <!--</form>--> <!--</div>--></div>
-</div>
-
-
 <div class="footer-content footer-content-top clearfix">
 <div class="container">
-
-
-
-
-
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
 <h5>Nosotros</h5>
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quienes Somos</a></li>
-
-
-
-	<li class="list-unstyled"><a href="index.php">Cont&aacute;ctenos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
 </ul>
 </div>
 </div>
-
-
-
-
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
 <h5>Informaci&oacute;n</h5>
 
 <ul class="list-unstyled list-styled">
-	<li class="list-unstyled"><a href="#">Incrementa tus ingresos</a></li>
-	<li class="list-unstyled"><a href="#">Qu&eacute; es oro laminado</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/startBussines.php">Incrementa tus ingresos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/whatGold.php">Qu&eacute; es oro laminado</a></li>
 </ul>
 </div>
 </div>
 
-
 </div>
 <div class="footer-content footer-content-bottom clearfix">
 <div class="container">
-
-
 
 <div class="copyright col-md-12">&copy; 2017 <a href="index.html">FashionGold</a>.
 Todos los derechos reservados.</div>
@@ -1380,25 +1353,13 @@ Todos los derechos reservados.</div>
 
 
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Visa"><a href="index.html#" class="icons visa"></a></li>
-
-
-
+		title="Visa"><a href="#" class="icons visa"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Mastercard"><a href="index.html#" class="icons mastercard"></a></li>
-
-
-
+		title="Mastercard"><a href="#" class="icons mastercard"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="American Express"><a href="index.html#" class="icons amex"></a></li>
-
-
-
+		title="American Express"><a href="#" class="icons amex"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Paypal"><a href="index.html#" class="icons paypal"></a></li>
-
-
-
+		title="Paypal"><a href="#" class="icons paypal"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
 		title="Moneybookers"><a href="index.html#;" class="icons moneybookers"></a></li>
 
@@ -1409,8 +1370,6 @@ Todos los derechos reservados.</div>
 </div>
 
 </div>
-
-
 </footer>
 
 

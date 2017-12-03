@@ -20,7 +20,7 @@
 	
 	$db = new MySQL (); 
 	
-	$sql="SELECT t01.idProducto, t01.txtCodigo,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,t02.txtdescripcion AS tipo,t01.idStatus,t01.isOferta
+	$sql="SELECT t01.idProducto,t01.idLinea, t01.txtCodigo,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,t02.txtdescripcion AS tipo,t01.idStatus,t01.isOferta
 		FROM t01producto t01,c01tipo t02 
 		WHERE t02.idTipo=t01.idTipo AND t01.idProducto = {$idProducto} ";
 	
@@ -38,6 +38,7 @@
 			$dPrecioComercial=$row["dPrecioComercial"];
 			$dPrecioOferta=$row["dPrecioOferta"];
 			$txtCodigo=$row["txtCodigo"];
+			$idLinea=$row["idLinea"];
 	
 		}
 	
@@ -130,6 +131,7 @@ footer {
             <div class="col-md-4">
                 <h3>Detalles </h3>
                 <ul>
+                	<li><b>Linea:</b><?php echo $idLinea;?>	</li>
                 	<li><b>C&oacute;digo:</b> <?php echo $txtCodigo;?>	</li>
                 	<li><b>N&uacute;mero Producto:</b> <?php echo $idProducto;?>	</li>
                     <li><b>Descripci&oacute;n:</b> <?php echo $txtDescripcion;?>	</li>

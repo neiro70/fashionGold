@@ -10,14 +10,14 @@
 	
 	if($idTipo > 0)	{
 
-		$sql="SELECT t01.idProducto,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 
 		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
 		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
 		WHERE t01.idTipo = {$idTipo} ";
 		
 	}else{
-		$sql="SELECT t01.idProducto,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 
 		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
 		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo "; 
@@ -32,15 +32,15 @@
 		if ($result->num_rows > 0) {
 			// output data of each row
 			while($row = $result->fetch_assoc()) {
-
+				$idLinea=$row["idLinea"];
 				$idProducto=$row["idProducto"];
 				$txtTitulo=$row["txtTitulo"];
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
 
-
+				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');				
+				//$txtDescripcion=$row["txtDescripcion"];
 				
-				$txtDescripcion=$row["txtDescripcion"];
 				$estatus=$row["estatus"];
 				$tipo=$row["tipo"];
 				$isOferta=$row["isOferta"];
@@ -76,10 +76,11 @@
 									style='cursor: pointer;' title='ver'><i class='fa fa-eye'></i></button> ";
 
 
-				$entrys[]= array( $idProducto, $txtTitulo,$txtCodigo,$txtDescripcion,$estatus,$dPrecioComercial,$dPrecioOferta,$isOferta,$tipo,  $ligaPreview.$ligaEditar.$ligaEliminar);
+				$entrys[]= array( $idLinea, $txtTitulo,$txtCodigo,$txtDescripcion,$estatus,$dPrecioComercial,$dPrecioOferta,$isOferta,$tipo,  $ligaPreview.$ligaEditar.$ligaEliminar);
 
 			}
 		}
+
 
 		if($entrys != null && count($entrys) > 0) {
 			$data=array('data'=>$entrys);

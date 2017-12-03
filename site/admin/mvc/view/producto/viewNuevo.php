@@ -138,9 +138,21 @@
                 <form id="formProducto" name="formProducto" role="form">
                     <div class="col-lg-6">
                             <div class="form-group">
-                                <label># Producto</label>
+                                <label>Linea</label>
                                 <input  type="hidden" class="form-control" id="idProducto" name="idProducto">
-                                <input  type="text" disabled="disabled" class="form-control" id="idproductotmp" name="idproductotmp">
+                                <select id="idLinea" name="idLinea">
+                                	<option value="L0">L0</option>
+                                	<option value="L1">L1</option>
+                                	<option value="L2">L2</option>
+                                	<option value="L3">L3</option>
+                                	<option value="L4">L4</option>
+                                	<option value="L5">L5</option>
+                                	<option value="L6">L6</option>
+                                	<option value="L7">L7</option>
+                                	<option value="L8">L8</option>
+                                	<option value="L9">L9</option>
+                                	<option value="L10">L10</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>1) Codigo</label>
@@ -349,6 +361,7 @@
 		$("#idOferta").chosen({width: "100%"});
 		$("#isDestacado").chosen({width: "100%"});
 		$("#isNuevo").chosen({width: "100%"});
+		$("#idLinea").chosen({width: "100%"});
 
 		
 

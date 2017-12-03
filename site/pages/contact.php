@@ -403,61 +403,39 @@
 </div>
 
 <footer id="footer">
-<div id="footer-content">
-
+<div id="footer-content"><!--<h6 class="general-title contact-footer-title">Newsletter</h6>-->
 
 <div class="footer-content footer-content-top clearfix">
 <div class="container">
-
-
-
-
-
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
 <h5>Nosotros</h5>
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quienes Somos</a></li>
-
-
-
-	<li class="list-unstyled"><a href="index.php">Contactanos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
 </ul>
 </div>
 </div>
-
-
-
-
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaci&oacute;n</h5>
 
 <ul class="list-unstyled list-styled">
-
-	<li class="list-unstyled"><a href="#">Empieza tu negocio</a></li>
-
-	<li class="list-unstyled"><a href="#">Qué es oro laminado </a>
-	</li>
-
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/startBussines.php">Incrementa tus ingresos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/whatGold.php">Qu&eacute; es oro laminado</a></li>
 </ul>
 </div>
 </div>
 
-
-</div>
 </div>
 <div class="footer-content footer-content-bottom clearfix">
 <div class="container">
 
-
-
-
-<div class="copyright col-md-12">&copy; 2017 <a href="../index.php">FashionGold</a>.
+<div class="copyright col-md-12">&copy; 2017 <a href="index.html">FashionGold</a>.
 Todos los derechos reservados.</div>
 
 
@@ -467,27 +445,15 @@ Todos los derechos reservados.</div>
 
 
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Visa"><a href="rings.html#" class="icons visa"></a></li>
-
-
-
+		title="Visa"><a href="#" class="icons visa"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Mastercard"><a href="rings.html#" class="icons mastercard"></a></li>
-
-
-
+		title="Mastercard"><a href="#" class="icons mastercard"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="American Express"><a href="rings.html#" class="icons amex"></a></li>
-
-
-
+		title="American Express"><a href="#" class="icons amex"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Paypal"><a href="rings.html#" class="icons paypal"></a></li>
-
-
-
+		title="Paypal"><a href="#" class="icons paypal"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Moneybookers"><a href="rings.html#;" class="icons moneybookers"></a></li>
+		title="Moneybookers"><a href="index.html#;" class="icons moneybookers"></a></li>
 
 </ul>
 </div>
@@ -496,8 +462,6 @@ Todos los derechos reservados.</div>
 </div>
 
 </div>
-
-
 </footer>
 
 

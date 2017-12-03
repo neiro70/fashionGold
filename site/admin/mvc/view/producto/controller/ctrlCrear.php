@@ -16,8 +16,8 @@
 	
 	
 	
-	$sql="INSERT INTO t01producto (idUsuario, idStatus,idTipo,dPrecioComercial,dPrecioOferta,isOferta,txtDescripcion,txtTitulo,fhregistro) 
-						   VALUES ($idusuario,$idStatus,1,$dPrecioComercial,$dPrecioOferta,$isOferta,NULL,NULL,CURRENT_TIMESTAMP)";
+	$sql="INSERT INTO t01producto (idUsuario, idStatus,idTipo,dPrecioComercial,dPrecioOferta,isOferta,txtDescripcion,txtTitulo,fhregistro,idLinea) 
+						   VALUES ($idusuario,$idStatus,1,$dPrecioComercial,$dPrecioOferta,$isOferta,NULL,NULL,CURRENT_TIMESTAMP,'')";
 			
 	$conn=$db->getConexion();
 	 

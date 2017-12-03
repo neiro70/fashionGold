@@ -12,6 +12,7 @@
  	$isDestacado=trim($_POST['isDestacado']);
  	$isNuevo=trim($_POST['isNuevo']);
  	$idCodigo=trim($_POST['idCodigo']);
+ 	$idLinea=trim($_POST['idLinea']);
 
 
  	
@@ -32,10 +33,10 @@
 	
 	//idUsuario, idStatus, idImagen,dPrecioComercial,dPrecioOferta,isOferta,txtDescripcion,txtTitulo,
 	if($finalizar > 0){
-			$sql="UPDATE t01producto SET idStatus = $finalizar ,idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
+			$sql="UPDATE t01producto SET idStatus = $finalizar,idLinea='{$idLinea}',idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
 			txtDescripcion='{$txtDescripcion}',txtTitulo='{$txtTitulo}',isDestacado='{$isDestacado}',isNuevo='{$isNuevo}'	WHERE idProducto = {$idproducto}";
 	}else{
-			$sql="UPDATE t01producto SET idStatus = 2,idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
+			$sql="UPDATE t01producto SET idStatus = 2,idLinea='{$idLinea}',idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
 			txtDescripcion='{$txtDescripcion}',txtTitulo='{$txtTitulo}',isDestacado='{$isDestacado}',isNuevo='{$isNuevo}'	WHERE idProducto = {$idproducto}";
 	}
 

@@ -17,7 +17,7 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 	$pos=1;
 	$idTipo=5;
 
-	$sql="SELECT m01.idImagen,t01.txtCodigo,t01.idProducto,t01.isOferta, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+	$sql="SELECT m01.idImagen,t01.idLinea,t01.txtCodigo,t01.idProducto,t01.isOferta, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 
 		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
 		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
@@ -35,7 +35,7 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-
+			$idLinea=$row['idLinea'];
 			$idProducto=$row["idProducto"];
 			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
 
@@ -53,7 +53,7 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 			
 			$imagen="site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 			
-			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+			$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$idLinea-$txtCodigo-$txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
 			
 	
 
@@ -793,61 +793,39 @@ function previewProducto(idProducto){
 </div>
 
 <footer id="footer">
-<div id="footer-content">
-
+<div id="footer-content"><!--<h6 class="general-title contact-footer-title">Newsletter</h6>-->
 
 <div class="footer-content footer-content-top clearfix">
 <div class="container">
-
-
-
-
-
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
 <h5>Nosotros</h5>
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="index.php">Quiénes Somos</a></li>
-
-
-
-	<li class="list-unstyled"><a href="index.php">Contactanos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
 </ul>
 </div>
 </div>
-
-
-
-
 
 <div class="footer-link-list col-md-12 text-center">
 <div class="group">
-<h5>Información</h5>
+<h5>Informaci&oacute;n</h5>
 
 <ul class="list-unstyled list-styled">
-
-	<li class="list-unstyled"><a href="index.html">Empieza tu negocio</a></li>
-
-	<li class="list-unstyled"><a href="index.html">Qué es oro laminado </a>
-	</li>
-
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/startBussines.php">Incrementa tus ingresos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/whatGold.php">Qu&eacute; es oro laminado</a></li>
 </ul>
 </div>
 </div>
 
-
-</div>
 </div>
 <div class="footer-content footer-content-bottom clearfix">
 <div class="container">
 
-
-
-
-<div class="copyright col-md-12">&copy; 2017 <a href="../index.php">FashionGold</a>.
+<div class="copyright col-md-12">&copy; 2017 <a href="index.html">FashionGold</a>.
 Todos los derechos reservados.</div>
 
 
@@ -857,27 +835,15 @@ Todos los derechos reservados.</div>
 
 
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Visa"><a href="rings.html#" class="icons visa"></a></li>
-
-
-
+		title="Visa"><a href="#" class="icons visa"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Mastercard"><a href="rings.html#" class="icons mastercard"></a></li>
-
-
-
+		title="Mastercard"><a href="#" class="icons mastercard"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="American Express"><a href="rings.html#" class="icons amex"></a></li>
-
-
-
+		title="American Express"><a href="#" class="icons amex"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Paypal"><a href="rings.html#" class="icons paypal"></a></li>
-
-
-
+		title="Paypal"><a href="#" class="icons paypal"></a></li>
 	<li class="btooltip tada" data-toggle="tooltip" data-placement="top"
-		title="Moneybookers"><a href="rings.html#;" class="icons moneybookers"></a></li>
+		title="Moneybookers"><a href="index.html#;" class="icons moneybookers"></a></li>
 
 </ul>
 </div>
@@ -886,10 +852,7 @@ Todos los derechos reservados.</div>
 </div>
 
 </div>
-
-
 </footer>
-
 
 
 
