@@ -181,7 +181,7 @@
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>CÃ¡talogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i   
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -362,14 +362,14 @@
 
 
 <div class="right-block contact-content col-md-12">
-<h6 class="sb-title"><i class="fa fa-home"></i> Informaciï¿½n del Sitio</h6>
+<h6 class="sb-title"><i class="fa fa-home"></i> Información del Sitio</h6>
 <ul class="right-content">
 	<li class="title">
 	<h6>Nos Ubicamos En</h6>
 	</li>
 	<li class="address">
 	<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de
-	Mï¿½xico</p>
+	México</p>
 	</li>
 	<ul>
 		<li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
