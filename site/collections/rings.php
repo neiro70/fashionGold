@@ -1,6 +1,6 @@
 <?php
 
-header('Content-Type: text/html; charset=ISO-8859-1');
+//header('Content-Type: text/html; charset=ISO-8859-1');
 include("../../site/admin/mvc/util/MysqlDAO.php");
 	
 	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -44,8 +44,8 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 
 			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
 			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
-			//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-      $txtDescripcion=$row["txtDescripcion"];
+			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+      //$txtDescripcion=$row["txtDescripcion"];
       
 			$estatus=$row["estatus"];
 			$tipo=$row["tipo"];
