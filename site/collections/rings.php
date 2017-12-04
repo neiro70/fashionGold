@@ -1,6 +1,6 @@
 <?php
 
-
+//header('Content-Type: text/html; charset=ISO-8859-1');
 include("../../site/admin/mvc/util/MysqlDAO.php");
 	
 	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -44,8 +44,9 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 
 			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
 			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-			
+			//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+      $txtDescripcion=$row["txtDescripcion"];
+      
 			$estatus=$row["estatus"];
 			$tipo=$row["tipo"];
 			$isOferta=$row["isOferta"];
@@ -74,8 +75,8 @@ $db->closeSession();
 <!--<![endif]-->
 <head>
 
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -543,7 +544,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcci�n
+				En Construcci?n
 			</a></li>
 		</ul>
 		</li>

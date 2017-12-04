@@ -36,7 +36,7 @@
 <html lang="en">
 <head>
 
-    <meta charset="ISO-8859-1">
+	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=1,initial-scale=1,user-scalable=1" />
 	  <title>SIS-Fashion Gold</title>
 	  <link rel="icon" href="<?php echo $context ?>/rings.ico">
@@ -109,7 +109,7 @@
 					<img src="<?=$context?>/site/img/collection/logo.png" class="img-responsive" width="35%" />
 					<h4 class = "form-signin-heading" style="color:red;"><?php echo $msg; ?></h4>
 					<input type="text" name="username" placeholder="Usuario" required class="form-control input-lg" />
-					<input type="password" name="password" placeholder="Contraseña" required class="form-control input-lg" />
+					<input type="password" name="password" placeholder="Contrase?a" required class="form-control input-lg" />
 					<button type="submit" name="login" class="btn btn-lg btn-primary btn-block">Entrar</button>
 <!-- 					<div> -->
 <!-- 						<a href="#">Create account</a> or <a href="#">reset password</a> -->

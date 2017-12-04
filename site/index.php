@@ -1437,7 +1437,7 @@ Todos los derechos reservados.</div>
           author: 'FashionGold'
         }, 
         infoWindow: {
-          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de México</p>'
+          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de M?xico</p>'
         },
         mouseover: function(){
             (this.infoWindow).open(this.map, this);

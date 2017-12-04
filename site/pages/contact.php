@@ -16,8 +16,8 @@
 <!--<![endif]-->
 <head>
 
-<meta charset="iso-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <link rel="canonical" href="contact.html" />
@@ -181,7 +181,7 @@
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos </span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos </span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i   
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -260,7 +260,7 @@
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En ConstrucciÃ³n
+				En Construcción
 			</a></li>
 		</ul>
 		</li>
@@ -362,14 +362,14 @@
 
 
 <div class="right-block contact-content col-md-12">
-<h6 class="sb-title"><i class="fa fa-home"></i> Información del Sitio</h6>
+<h6 class="sb-title"><i class="fa fa-home"></i> Informaci?n del Sitio</h6>
 <ul class="right-content">
 	<li class="title">
 	<h6>Nos Ubicamos En</h6>
 	</li>
 	<li class="address">
 	<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de
-	México</p>
+	M?xico</p>
 	</li>
 	<ul>
 		<li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
@@ -565,11 +565,11 @@ $(document).ready(function(e) {
 				})
 				  .done(function(data) {
 					  
-					  toastr.success('ï¿½Exito se envio correo!');
+					  toastr.success('?Exito se envio correo!');
 				  })
 				  .fail(function(data) {
 					 
-					 toastr.error('ï¿½Error al enviar correo!');
+					 toastr.error('?Error al enviar correo!');
 				  })
 				  .always(function(data) {
 				  // alert( "complete" );

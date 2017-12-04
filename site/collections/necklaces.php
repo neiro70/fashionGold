@@ -467,7 +467,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -546,7 +546,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcciï¿½n
+				En Construcci?n
 			</a></li>
 		</ul>
 		</li>

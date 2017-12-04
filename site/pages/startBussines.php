@@ -15,8 +15,8 @@ if (strpos($context, "localhost") !== false) {
 <!--<![endif]-->
 <head>
 
-<meta charset="iso-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -383,7 +383,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
 		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -465,7 +465,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<ul class="dropdown-menu">
 			<li class=""><a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En Construcción </a></li>
+				class="fa fa-wrench"></i> En Construcci?n </a></li>
 		</ul>
 		</li>
 		<li class="nav-item"><a
@@ -565,11 +565,11 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <br />
 
 <ul>
-	<li><i class="fa fa-check"></i>Si  deseas  emprender tu propio negocio somos la mejor opción pues manejamos  diferentes  rangos  de descuento dependiendo tu monto de inversión,  entendiendo que entre mas inviertas mayor será el descuento. </li>
-	<li><i class="fa fa-check"></i>Puedes  invertir desde  $1,200  y obtendrás   un 20% de descuento y  Puedes obtener hasta un 55% de descuento.</li>
-	<li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30%  de tu próxima compra</li>
-	<li><i class="fa fa-check"></i>Contamos con más de 300 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
-	<li><i class="fa fa-check"></i>Modelos nuevos e innovadores cada 20 días</li>
+	<li><i class="fa fa-check"></i>Si  deseas  emprender tu propio negocio somos la mejor opci?n pues manejamos  diferentes  rangos  de descuento dependiendo tu monto de inversi?n,  entendiendo que entre mas inviertas mayor ser? el descuento. </li>
+	<li><i class="fa fa-check"></i>Puedes  invertir desde  $1,200  y obtendr?s   un 20% de descuento y  Puedes obtener hasta un 55% de descuento.</li>
+	<li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30%  de tu pr?xima compra</li>
+	<li><i class="fa fa-check"></i>Contamos con m?s de 300 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
+	<li><i class="fa fa-check"></i>Modelos nuevos e innovadores cada 20 d?as</li>
 	<li><i class="fa fa-check"></i>Enviamos a toda la Republica</li>
 </ul>
 

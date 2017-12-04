@@ -74,7 +74,7 @@
 <html lang="en">
 
 <head>
-	 <meta charset="ISO-8859-1">
+	<meta charset="ISO-8859-1">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -210,12 +210,12 @@
                             <div class="form-group">
                                 <label>2) Titulo Producto</label>
                                 <input class="form-control" id="txtTitulo" name="txtTitulo" value="<?=$txtTitulo?>" >
-                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAÑO 18K'.</p>
+                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BA?O 18K'.</p>
                             </div>
                             <div class="form-group">
-                                <label>3) Descripción del Producto</label>
+                                <label>3) Descripci?n del Producto</label>
                                <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"><?=$txtDescripcion?></textarea>
-                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavé y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
+                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con ba?o de oro rosa, cristal pav? y una piedra rectangular para a?adir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y f?cil de combinar y mezclar con otras piezas de cualquier colecci?n personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
                     </div>
@@ -234,14 +234,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>5) Ver en sección Destacado</label>
+                                <label>5) Ver en secci?n Destacado</label>
 						          <select id="isDestacado" name="isDestacado" data-placeholder="Selecciona..." class="chosen-select">
                                 		<option value="0"  <?=$isDestacado==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isDestacado==1?"selected='selected'":''?>>SI</option>
                                 </select>
                             </div>
                              <div class="form-group">    
-                                <label>6) Ver en sección Nuevo</label>
+                                <label>6) Ver en secci?n Nuevo</label>
 						          <select id="isNuevo" name="isNuevo" data-placeholder="Selecciona..." class="chosen-select">
                                 		<option value="0"  <?=$isNuevo==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isNuevo==1?"selected='selected'":''?>>SI</option>

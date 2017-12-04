@@ -15,8 +15,8 @@ if (strpos($context, "localhost") !== false) {
 <!--<![endif]-->
 <head>
 
-<meta charset="iso-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -383,7 +383,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
 		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -465,7 +465,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<ul class="dropdown-menu">
 			<li class=""><a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En Construcción </a></li>
+				class="fa fa-wrench"></i> En Construcci?n </a></li>
 		</ul>
 		</li>
 		<li class="nav-item"><a
@@ -564,18 +564,18 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 	src="<?php echo $context?>/site/img/collection/laminado/laminado.jpg" /></p>
 <br />
 
-<h3>¿QUÉ ES ORO LAMINADO?</h3>
+<h3>?QU? ES ORO LAMINADO?</h3>
 <p>
 Se refiere a pieza hecha a partir de una base como el l cobre y que es recubierta con varias capas de oro de distintos quilates 14k o  18k. 
 </p>
 <p>
-La cantidad de capas y el grosor  pueden variar  3 a 6 capas. de metal precioso con soldadura y presión. Es 50 a 100  veces más grueso que el chapeado regular.
+La cantidad de capas y el grosor  pueden variar  3 a 6 capas. de metal precioso con soldadura y presi?n. Es 50 a 100  veces m?s grueso que el chapeado regular.
 </p>
 <p>
- La calidad de oro más usada es de  14K y 18k. Un estándar del peso del metal precioso (oro ) es del 20% de su peso total. 
+ La calidad de oro m?s usada es de  14K y 18k. Un est?ndar del peso del metal precioso (oro ) es del 20% de su peso total. 
 </p>
 <p>
-Su garantía es de 8 meses hasta un año si se cuenta con el debido cuidado, recordemos que es joyería con solo unas cuantas  micras  de oro solo para darle el acabado fino.
+Su garant?a es de 8 meses hasta un a?o si se cuenta con el debido cuidado, recordemos que es joyer?a con solo unas cuantas  micras  de oro solo para darle el acabado fino.
 
 </p>
 

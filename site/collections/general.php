@@ -78,7 +78,7 @@ $db->closeSession();
 <head>
 
 <meta charset="ISO-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -469,7 +469,7 @@ Anillo
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -548,7 +548,7 @@ Anillo
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcciï¿½n
+				En Construcci?n
 			</a></li>
 		</ul>
 		</li>
