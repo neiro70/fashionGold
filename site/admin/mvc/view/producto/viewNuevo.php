@@ -75,7 +75,7 @@
                 </button>
                 <img alt="fashion Gold" src="<?=$contexto?>/site/img/collection/logo.png" width="125px"  style="padding-top: 10px;">
          
-                fac
+                
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
