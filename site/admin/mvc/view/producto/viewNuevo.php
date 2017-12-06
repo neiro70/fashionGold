@@ -329,7 +329,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #428BCA; color:#FFF;  border-tfacop-left-radius: 5px; border-top-right-radius: 5px; ">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
         <h4 class="modal-title">Vista del Producto</h4>
       </div>
       <div class="modal-body">
@@ -444,7 +444,7 @@
 
 
 		 BootstrapDialog.show({
-	            title: 'Finalizar Producto',fac
+	            title: 'Finalizar Producto',
 	            message: '¿Esta seguro que quiere finalizar el producto? <br> !Recuerde que al finalizarlo estaría listo para visualizarlo en el sitio!',
 	            buttons: [{
 	                label: 'No',
