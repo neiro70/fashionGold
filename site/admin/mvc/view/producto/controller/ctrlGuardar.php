@@ -3,7 +3,8 @@
  	header('Content-Type: text/html; charset=iso-8859-1');
  	include("../../../../mvc/util/MysqlDAO.php");
 
-	$txtDescripcion=utf8_decode(trim($_POST['txtDescripcion']));
+	//$txtDescripcion=utf8_decode(trim($_POST['txtDescripcion']));
+	$txtDescripcion=mb_convert_encoding(trim($_POST['txtDescripcion']),'UTF-8','ISO-8859-1');
 	//$txtDescripcion=trim($_POST['txtDescripcion']);
  	$txtPrecio=$_POST["txtPrecio"]!=null ?$_POST["txtPrecio"]:0;
  	$idOferta=trim($_POST['idOferta']);
