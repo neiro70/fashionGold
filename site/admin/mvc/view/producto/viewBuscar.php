@@ -120,7 +120,7 @@
                     <div class="col-lg-12">
                     
                         <h1 class="page-header">
-                            B?squeda de Producto
+                            Búsqueda de Producto
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -172,13 +172,13 @@
 															<th>LINEA</th>
 															<th>TITULO</th>
 															<th>CODIGO</th>
-															<th>DESCRIPCI?N</th>															
+															<th>DESCRIPCIÓN</th>															
 															<th>ESTATUS</th>
 															<th>P.COMERCIAL</th>
 															<th>P.OFERTA</th>
 															<th>T.OFERTA</th>
 															<th>TIPO</th>
-															<th>ACCI?N</th>						
+															<th>ACCIÓN</th>						
 														</tr>
 														
 														</thead>
@@ -212,7 +212,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
         <h4 class="modal-title">Modal title</h4>
       </div>
       <div class="modal-body">
@@ -233,7 +233,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #428BCA; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
         <h4 class="modal-title">Vista del Producto</h4>
       </div>
       <div class="modal-body">
