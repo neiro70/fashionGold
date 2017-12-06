@@ -192,9 +192,9 @@
                                 	<option value="L0" <?=$idLinea=='L0'?"selected='selected'":''?>>L0</option>
                                 	<option value="L1" <?=$idLinea=='L1'?"selected='selected'":''?>>L1</option>
                                 	<option value="L2" <?=$idLinea=='L2'?"selected='selected'":''?>>L2</option>
-									<option value="J2" <?=$idLinea=='J2'?"selected='selected'":''?>>J2</option>
+									<option value="J2" <?=$idLinea=='L2J'?"selected='selected'":''?>>L2J</option>
                                 	<option value="L3" <?=$idLinea=='L3'?"selected='selected'":''?>>L3</option>
-									<option value="J3" <?=$idLinea=='J3'?"selected='selected'":''?>>J3</option>
+									<option value="J3" <?=$idLinea=='L3J'?"selected='selected'":''?>>L3J</option>
                                 	<option value="L4" <?=$idLinea=='L4'?"selected='selected'":''?>>L4</option>
                                 	<option value="L5" <?=$idLinea=='L5'?"selected='selected'":''?>>L5</option>
                                 	<option value="L6" <?=$idLinea=='L6'?"selected='selected'":''?>>L6</option>
@@ -213,12 +213,12 @@
                             <div class="form-group">
                                 <label>2) Titulo Producto</label>
                                 <input class="form-control" id="txtTitulo" name="txtTitulo" value="<?=$txtTitulo?>" >
-                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAÑO 18K'.</p>
+                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAï¿½O 18K'.</p>
                             </div>
                             <div class="form-group">
-                                <label>3) Descripción del Producto</label>
+                                <label>3) Descripciï¿½n del Producto</label>
                                <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"><?=$txtDescripcion?></textarea>
-                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavo y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
+                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baï¿½o de oro rosa, cristal pavo y una piedra rectangular para aï¿½adir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fï¿½cil de combinar y mezclar con otras piezas de cualquier colecciï¿½n personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
                     </div>
@@ -237,14 +237,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>5) Ver en sección Destacado</label>
+                                <label>5) Ver en secciï¿½n Destacado</label>
 						          <select id="isDestacado" name="isDestacado" data-placeholder="Selecciona..." class="chosen-select">
                                 		<option value="0"  <?=$isDestacado==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isDestacado==1?"selected='selected'":''?>>SI</option>
                                 </select>
                             </div>
                              <div class="form-group">    
-                                <label>6) Ver en sección Nuevo</label>
+                                <label>6) Ver en secciï¿½n Nuevo</label>
 						          <select id="isNuevo" name="isNuevo" data-placeholder="Selecciona..." class="chosen-select">
                                 		<option value="0"  <?=$isNuevo==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isNuevo==1?"selected='selected'":''?>>SI</option>

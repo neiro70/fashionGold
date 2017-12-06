@@ -144,9 +144,9 @@
                                 	<option value="L0">L0</option>
                                 	<option value="L1">L1</option>
                                 	<option value="L2">L2</option>
-									<option value="J2">J2</option>
+									<option value="L2J">L2J</option>
                                 	<option value="L3">L3</option>
-									<option value="J3">J3</option>
+									<option value="L3J">L3J</option>
                                 	<option value="L4">L4</option>
                                 	<option value="L5">L5</option>
                                 	<option value="L6">L6</option>
@@ -165,12 +165,12 @@
                             <div class="form-group">
                                 <label>2) Titulo Producto</label>
                                 <input class="form-control" id="txtTitulo" name="txtTitulo">
-                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAÑO 18K'.</p>
+                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAï¿½O 18K'.</p>
                             </div>
                             <div class="form-group">
-                                <label>3) Descripción del Producto</label>
+                                <label>3) Descripciï¿½n del Producto</label>
                                <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"></textarea>
-                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavo y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
+                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baï¿½o de oro rosa, cristal pavo y una piedra rectangular para aï¿½adir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fï¿½cil de combinar y mezclar con otras piezas de cualquier colecciï¿½n personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
                     </div>
@@ -188,14 +188,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>5) Ver en sección Destacado</label>
+                                <label>5) Ver en secciï¿½n Destacado</label>
 						          <select id="isDestacado" name="isDestacado" data-placeholder="Selecciona..." class="chosen-select">
 									<option value="0">NO</option>
 									<option value="1">SI</option>
                                 </select>
                             </div>
                              <div class="form-group">    
-                                <label>6) Ver en sección Nuevo</label>
+                                <label>6) Ver en secciï¿½n Nuevo</label>
 						          <select id="isNuevo" name="isNuevo" data-placeholder="Selecciona..." class="chosen-select">
 						          	<option value="1">SI</option>
 									<option value="0">NO</option>
@@ -381,7 +381,7 @@
 
 		  BootstrapDialog.show({
 	            title: 'Registro de nuevo producto',
-	            message: '¿Esta seguro que quiere registar un nuevo producto?',
+	            message: 'ï¿½Esta seguro que quiere registar un nuevo producto?',
 	            buttons: [{
 	                label: 'No',
 	                cssClass:"btn-danger",
@@ -445,7 +445,7 @@
 
 		 BootstrapDialog.show({
 	            title: 'Finalizar Producto',
-	            message: '¿Esta seguro que quiere finalizar el producto? <br> !Recuerde que al finalizarlo estaría listo para visualizarlo en el sitio!',
+	            message: 'ï¿½Esta seguro que quiere finalizar el producto? <br> !Recuerde que al finalizarlo estarï¿½a listo para visualizarlo en el sitio!',
 	            buttons: [{
 	                label: 'No',
 	                cssClass:"btn-danger",
@@ -509,7 +509,7 @@
 
 		 BootstrapDialog.show({
 	            title: 'Finalizar Producto',
-	            message: 'ï¿½ï¿½sta seguro que quiere finalizar el producto? <br> !Recuerde que al finalizarlo estaría listo para facturar y no podra editarlo!',
+	            message: 'ï¿½ï¿½sta seguro que quiere finalizar el producto? <br> !Recuerde que al finalizarlo estarï¿½a listo para facturar y no podra editarlo!',
 	            buttons: [{
 	                label: 'No',
 	                cssClass:"btn-danger",
