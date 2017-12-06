@@ -144,7 +144,9 @@
                                 	<option value="L0">L0</option>
                                 	<option value="L1">L1</option>
                                 	<option value="L2">L2</option>
+									<option value="J2">J2</option>
                                 	<option value="L3">L3</option>
+									<option value="J3">J3</option>
                                 	<option value="L4">L4</option>
                                 	<option value="L5">L5</option>
                                 	<option value="L6">L6</option>
@@ -163,12 +165,12 @@
                             <div class="form-group">
                                 <label>2) Titulo Producto</label>
                                 <input class="form-control" id="txtTitulo" name="txtTitulo">
-                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAÑO 18K'.</p>
+                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAï¿½O 18K'.</p>
                             </div>
                             <div class="form-group">
-                                <label>3) Descripción del Producto</label>
+                                <label>3) Descripciï¿½n del Producto</label>
                                <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"></textarea>
-                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavé y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
+                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baï¿½o de oro rosa, cristal pavï¿½ y una piedra rectangular para aï¿½adir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fï¿½cil de combinar y mezclar con otras piezas de cualquier colecciï¿½n personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
                     </div>
@@ -186,14 +188,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>5) Ver en sección Destacado</label>
+                                <label>5) Ver en secciï¿½n Destacado</label>
 						          <select id="isDestacado" name="isDestacado" data-placeholder="Selecciona..." class="chosen-select">
 									<option value="0">NO</option>
 									<option value="1">SI</option>
                                 </select>
                             </div>
                              <div class="form-group">    
-                                <label>6) Ver en sección Nuevo</label>
+                                <label>6) Ver en secciï¿½n Nuevo</label>
 						          <select id="isNuevo" name="isNuevo" data-placeholder="Selecciona..." class="chosen-select">
 						          	<option value="1">SI</option>
 									<option value="0">NO</option>
@@ -308,7 +310,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
         <h4 class="modal-title">Modal title</h4>
       </div>
       <div class="modal-body">
@@ -327,7 +329,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #428BCA; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
         <h4 class="modal-title">Vista del Producto</h4>
       </div>
       <div class="modal-body">
@@ -379,7 +381,7 @@
 
 		  BootstrapDialog.show({
 	            title: 'Registro de nuevo producto',
-	            message: '¿Esta seguro que quiere registar un nuevo producto?',
+	            message: 'ï¿½Esta seguro que quiere registar un nuevo producto?',
 	            buttons: [{
 	                label: 'No',
 	                cssClass:"btn-danger",
@@ -443,7 +445,7 @@
 
 		 BootstrapDialog.show({
 	            title: 'Finalizar Producto',
-	            message: '¿Ésta seguro que quiere finalizar el producto? <br> ¡Recuerde que al finalizarlo estará listopara visualizarlo en el sitio!',
+	            message: 'ï¿½ï¿½sta seguro que quiere finalizar el producto? <br> ï¿½Recuerde que al finalizarlo estarï¿½ listopara visualizarlo en el sitio!',
 	            buttons: [{
 	                label: 'No',
 	                cssClass:"btn-danger",
@@ -507,7 +509,7 @@
 
 		 BootstrapDialog.show({
 	            title: 'Finalizar Producto',
-	            message: '¿Ésta seguro que quiere finalizar el producto? <br> ¡Recuerde que al finalizarlo estará listo para facturar y no podra editarlo!',
+	            message: 'ï¿½ï¿½sta seguro que quiere finalizar el producto? <br> ï¿½Recuerde que al finalizarlo estarï¿½ listo para facturar y no podra editarlo!',
 	            buttons: [{
 	                label: 'No',
 	                cssClass:"btn-danger",

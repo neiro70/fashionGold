@@ -383,7 +383,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
 		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -564,18 +564,18 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 	src="<?php echo $context?>/site/img/collection/laminado/laminado.jpg" /></p>
 <br />
 
-<h3>?QU? ES ORO LAMINADO?</h3>
+<h3>¿QUÉ ES ORO LAMINADO?</h3>
 <p>
-Se refiere a pieza hecha a partir de una base como el l cobre y que es recubierta con varias capas de oro de distintos quilates 14k o  18k. 
+Se refiere a pieza hecha a partir de una base como el cobre y que es recubierta con varias capas de oro de distintos quilates 14k o  18k. 
 </p>
 <p>
-La cantidad de capas y el grosor  pueden variar  3 a 6 capas. de metal precioso con soldadura y presi?n. Es 50 a 100  veces m?s grueso que el chapeado regular.
+La cantidad de capas y el grosor  pueden variar  3 a 6 capas. de metal precioso con soldadura y presión. Es 50 a 100  veces más grueso que el chapeado regular.
 </p>
 <p>
- La calidad de oro m?s usada es de  14K y 18k. Un est?ndar del peso del metal precioso (oro ) es del 20% de su peso total. 
+ La calidad de oro más usada es de  14K y 18k. Un estándar del peso del metal precioso (oro ) es del 20% de su peso total. 
 </p>
 <p>
-Su garant?a es de 8 meses hasta un a?o si se cuenta con el debido cuidado, recordemos que es joyer?a con solo unas cuantas  micras  de oro solo para darle el acabado fino.
+Su garant?a es de 8 meses hasta un a?o si se cuenta con el debido cuidado, recordemos que es joyería con solo unas cuantas  micras  de oro solo para darle el acabado fino.
 
 </p>
 
@@ -606,7 +606,7 @@ Su garant?a es de 8 meses hasta un a?o si se cuenta con el debido cuidado, recor
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quiénes Somos</a></li>
 	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
 </ul>

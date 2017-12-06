@@ -191,7 +191,9 @@
                                 	<option value="L0" <?=$idLinea=='L0'?"selected='selected'":''?>>L0</option>
                                 	<option value="L1" <?=$idLinea=='L1'?"selected='selected'":''?>>L1</option>
                                 	<option value="L2" <?=$idLinea=='L2'?"selected='selected'":''?>>L2</option>
+									<option value="J2" <?=$idLinea=='J2'?"selected='selected'":''?>>J2</option>
                                 	<option value="L3" <?=$idLinea=='L3'?"selected='selected'":''?>>L3</option>
+									<option value="J3" <?=$idLinea=='J3'?"selected='selected'":''?>>J3</option>
                                 	<option value="L4" <?=$idLinea=='L4'?"selected='selected'":''?>>L4</option>
                                 	<option value="L5" <?=$idLinea=='L5'?"selected='selected'":''?>>L5</option>
                                 	<option value="L6" <?=$idLinea=='L6'?"selected='selected'":''?>>L6</option>
