@@ -295,8 +295,7 @@
     	t=$('#example').dataTable({
     		"processing": true,    		
             "serverSide": false,
-    		"ajax": "controller/ctrlBuscar.php?",  
-            "contentType": "application/json; charset=utf-8",  		
+    		"ajax": "controller/ctrlBuscar.php?",  		
     		"bAutoWidth": false,
     		"bFilter" : true,	
     		"bLengthChange": true,
