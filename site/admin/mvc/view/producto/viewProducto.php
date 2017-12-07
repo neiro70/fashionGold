@@ -32,8 +32,8 @@
 		while($row = $result->fetch_assoc()) {
 	
 			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-            $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-            //$txtDescripcion=$row["txtDescripcion"];
+            //$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+            $txtDescripcion=$row["txtDescripcion"];
 			$txtTipo=$row["tipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];

@@ -40,8 +40,8 @@
 		while($row = $result->fetch_assoc()) {
 				
 			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-			//$txtDescripcion=$row["txtDescripcion"];
+			//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+			$txtDescripcion=$row["txtDescripcion"];
 			$idTipo=$row["idTipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];
@@ -62,15 +62,13 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="ISO-8859-1">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>FashionGold Edici&oacute;n de producto</title>
    <link rel="icon" href="<?php echo $contexto ?>/rings.ico">

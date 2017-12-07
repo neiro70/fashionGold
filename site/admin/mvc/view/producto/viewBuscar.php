@@ -15,14 +15,12 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
     <meta charset="ISO-8859-1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
 		<link href="<?=$contexto?>/site/admin/css/bootstrap3-dialog/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
 
@@ -120,7 +118,7 @@
                     <div class="col-lg-12">
                     
                         <h1 class="page-header">
-                            Búsqueda de Producto
+                            Bï¿½squeda de Producto
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -172,13 +170,13 @@
 															<th>LINEA</th>
 															<th>TITULO</th>
 															<th>CODIGO</th>
-															<th>DESCRIPCIÓN</th>															
+															<th>DESCRIPCIï¿½N</th>															
 															<th>ESTATUS</th>
 															<th>P.COMERCIAL</th>
 															<th>P.OFERTA</th>
 															<th>T.OFERTA</th>
 															<th>TIPO</th>
-															<th>ACCIÓN</th>						
+															<th>ACCIï¿½N</th>						
 														</tr>
 														
 														</thead>
