@@ -1,6 +1,6 @@
 <?php
 
-	header("Content-Type: text/json; charset=UTF-8");
+	header("Content-Type: text/json; charset=ISO-8859-1");
 	include("../../../util/MysqlDAO.php");
 
 	$db = new MySQL (); 
