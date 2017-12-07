@@ -60,7 +60,7 @@
 
 				if($nestatus != 3){
 					$ligaEditar="
-				 			<button type='button class='btn btn-success'  onclick='editarProducto({$idProducto})' 
+				 			<button typhttp://fashiongold.com.mx/e='button class='btn btn-success'  onclick='editarProducto({$idProducto})' 
 		                           		style='cursor: pointer;' title='Editar'>
 		                           		<i class='fa fa-pencil-square-o'></i></button>
 							</a>";
@@ -79,7 +79,7 @@
 
 
 				$entrys[]= array( $idLinea, $txtTitulo,$txtCodigo,$txtDescripcion,$estatus,$dPrecioComercial,$dPrecioOferta,$isOferta,$tipo,  $ligaPreview.$ligaEditar.$ligaEliminar);
-
+				//echo $txtDescripcion;
 			}
 		}
 
