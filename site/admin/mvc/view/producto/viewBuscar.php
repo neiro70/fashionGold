@@ -118,7 +118,7 @@
                     <div class="col-lg-12">
                     
                         <h1 class="page-header">
-                            B�squeda de Producto
+                            Búsqueda de Producto
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -170,13 +170,13 @@
 															<th>LINEA</th>
 															<th>TITULO</th>
 															<th>CODIGO</th>
-															<th>DESCRIPCI�N</th>															
+															<th>DESCRIPCIÓN</th>															
 															<th>ESTATUS</th>
 															<th>P.COMERCIAL</th>
 															<th>P.OFERTA</th>
 															<th>T.OFERTA</th>
 															<th>TIPO</th>
-															<th>ACCI�N</th>						
+															<th>ACCIÓN</th>						
 														</tr>
 														
 														</thead>
