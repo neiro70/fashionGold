@@ -9,7 +9,7 @@
 
 	
 	if($idTipo > 0)	{
-
+		
 		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtdescripcion as txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 
 		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
@@ -27,7 +27,7 @@
 
 		$result = $conn->query($sql);
 		
-
+		
 		setlocale(LC_MONETARY, 'es_MX'); 
 		if ($result->num_rows > 0) {
 			// output data of each row
@@ -38,8 +38,9 @@
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
 
-				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');				
-				//$txtDescripcion=$row["txtDescripcion"];
+				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1,UTF-8');				
+				//$txtDescripcion=utf8_decode($row["txtDescripcion"]);
+				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');	
 				
 				$estatus=$row["estatus"];
 				$tipo=$row["tipo"];

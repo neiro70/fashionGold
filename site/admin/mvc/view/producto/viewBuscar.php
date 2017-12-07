@@ -177,7 +177,7 @@
 															<th>T.OFERTA</th>
 															<th>TIPO</th>
 															<th>ACCIÓN</th>						
-														</tr>
+                                                        </tr>
 														
 														</thead>
 					    							</table>
