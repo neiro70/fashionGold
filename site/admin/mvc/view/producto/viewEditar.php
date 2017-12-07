@@ -40,8 +40,8 @@
 		while($row = $result->fetch_assoc()) {
 				
 			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-			//$txtDescripcion=$row["txtDescripcion"];
+			//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+			$txtDescripcion=$row["txtDescripcion"];
 			$idTipo=$row["idTipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];
@@ -50,17 +50,7 @@
 			$isDestacado=$row["isDestacado"];
 			$txtCodigo=$row["txtCodigo"];
 			$idLinea=$row["idLinea"];
-			
-			
-			/*
-			
-			$txtfabricante=mb_convert_encoding($row["txtfabricante"],'UTF-8','ISO-8859-1');
-			$txtemblema=mb_convert_encoding($row["txtemblema"],'UTF-8','ISO-8859-1');
-			$txtmo=mb_convert_encoding($row["txtmo"],'UTF-8','ISO-8859-1');
-			$fprecio=mb_convert_encoding($row["fprecio"],'UTF-8','ISO-8859-1');			
-			$txtcaraterinova=mb_convert_encoding($row["txtcaraterinova"],'UTF-8','ISO-8859-1');
-			$txtdefinicion=mb_convert_encoding($row["txtdefinicion"],'UTF-8','ISO-8859-1');
-			$txtvalores=mb_convert_encoding($row["txtvalores"],'UTF-8','ISO-8859-1');*/
+
 	
 		}
 	
