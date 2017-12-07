@@ -1,6 +1,6 @@
 <?php
 
-	header('Content-Type: application/json; charset=ISO-8859-1');
+	header('Content-Type: application/json; charset=UTF-8');
 	include("../../../util/MysqlDAO.php");
 
 	$db = new MySQL (); 
@@ -38,8 +38,8 @@
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
 
-				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1,UTF-8');				
-				//$txtDescripcion=utf8_decode($row["txtDescripcion"]);
+				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1,UTF-8');				
+				$txtDescripcion=utf8_encode($row["txtDescripcion"]);
 				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');	
 				
 				$estatus=$row["estatus"];
