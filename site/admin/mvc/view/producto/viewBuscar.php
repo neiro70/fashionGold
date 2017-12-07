@@ -1,4 +1,5 @@
 <?php
+    header('Content-Type:text/html; charset=UTF-8');
 	session_start();
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$var =explode("/",$contexto);
