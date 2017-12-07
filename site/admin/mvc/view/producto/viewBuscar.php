@@ -295,7 +295,8 @@
     	t=$('#example').dataTable({
     		"processing": true,    		
             "serverSide": false,
-    		"ajax": "controller/ctrlBuscar.php?",    		
+    		"ajax": "controller/ctrlBuscar.php?",  
+            "contentType": "application/json; charset=utf-8",  		
     		"bAutoWidth": false,
     		"bFilter" : true,	
     		"bLengthChange": true,
@@ -434,7 +435,7 @@
     function reloadTable(){
     	var params=	$('#idTipo').serialize(); 
     	showloading();
-     	$("#example").DataTable().ajax.url( "controller/ctrlBuscar.php?"+params ).load();
+     	    $("#example").DataTable().ajax.url( "controller/ctrlBuscar.php?"+params ).load();
      	hideloading();
 
     }
