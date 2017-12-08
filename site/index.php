@@ -684,7 +684,7 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 
 <div class="camera_wrap" id="home-slider">
  <!-- div	data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-1.jpg?14058599523483859647" -->
- <div	data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
+ <div	data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 
 
   <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
