@@ -432,10 +432,17 @@ window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
 <div class="top-navigation">
 
 <ul class="list-inline">
-	<li class="top-logo"><a id="site-title" href="<?php echo $context?>"
+	<!-- <li class="top-logo"><a id="site-title" href="<?php echo $context?>"
 		title="Fashion Gold"> <img class="img-responsive"
 		src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"
-		alt="Fashion Gold" /> </a></li>
+		alt="Fashion Gold" /> </a>
+		</li>-->
+	<li class="top-logo"><a id="site-title" href="<?php echo $context?>"
+		title="Fashion Gold"> <img class="img-responsive"
+		src="<?php echo $context ?>/site/img/collection/logo.png"
+		alt="Fashion Gold" /> </a>
+		</li>
+
 
 	<li class="navigation"><nav class="navbar" role="navigation">
 	<div class="clearfix">

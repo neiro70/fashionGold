@@ -5,17 +5,30 @@
 
 	$db = new MySQL (); 
 	$idTipo = isset($_GET['idTipo']) ? (int)trim($_GET['idTipo']) : 0;
+	$idLinea = isset($_GET['idLinea']) ? trim($_GET['idLinea']) : 'TODAS';
 	$entrys;
 
-	
-	if($idTipo > 0)	{
+	if($idTipo > 0 && $idLinea != 'TODAS' ){
 		
 		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtdescripcion as txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 
 		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
 		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
-		WHERE t01.idTipo = {$idTipo} ";
+		WHERE t01.idTipo = {$idTipo} and t01.idLinea ='{$idLinea}' ";
 		
+	}else if($idTipo > 0  ){
+		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtdescripcion as txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+		FROM t01producto t01 
+		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
+		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
+		WHERE t01.idTipo = {$idTipo} ";
+
+	}else if( $idLinea != 'TODAS'){
+		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtdescripcion as txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+		FROM t01producto t01 
+		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
+		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
+		WHERE t01.idLinea ='{$idLinea}' ";
 	}else{
 		$sql="SELECT t01.idProducto,t01.idLinea,t01.isOferta,t01.txtCodigo, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtdescripcion as txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 		FROM t01producto t01 

@@ -134,7 +134,7 @@
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                            <div class="form-group">
                                 <label>Tipo</label>
 								<select id="idTipo" name="idTipo">
@@ -146,13 +146,42 @@
 									<option value="5">JUEGO</option>
 									<option value="6">ARETE</option>
 								</select>
-                           		<button type="button" class="btn btn-success" 
-	                           		style="cursor: pointer;" id="idBuscar" name="idBuscar">
-	                           		<i class="fa fa-search" aria-hidden="true"></i>	                           		 
-	                           		Buscar</button>
-	                          </div>                            
+                            </div>                          
                      </div>
-                  </div>                  
+                    <div class="col-lg-6">
+                           <div class="form-group">
+                                <label>Linea</label>
+                                <select id="idLinea" name="idLinea">
+                                    <option value="TODAS">TODAS</option>
+                                    <option value="L0">L0</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L2J">L2J</option>
+                                    <option value="L3">L3</option>
+                                    <option value="L3J">L3J</option>
+                                    <option value="L4">L4</option>
+                                    <option value="L5">L5</option>
+                                    <option value="L6">L6</option>
+                                    <option value="L7">L7</option>
+                                    <option value="L8">L8</option>
+                                    <option value="L9">L9</option>
+                                    <option value="L10">L10</option>
+                                </select>
+                            </div>
+                    </div>    
+                </div> 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group" >
+                                        <button type="button" class="btn btn-success" 
+                                            style="cursor: pointer;" id="idBuscar" name="idBuscar">
+                                            <i class="fa fa-search" aria-hidden="true"></i>	                           		 
+                                            Buscar</button>
+                        </div>   
+                     </div>    
+                </div> 
+
+
                   
                   
 
@@ -267,7 +296,9 @@
     <script type="text/javascript">
     $( document ).ready(function() {
 
-    	$("#idTipo").chosen();
+    	$("#idTipo").chosen({width: "100%"});
+        $("#idLinea").chosen({width: "100%"});
+        
     	
 		toastr.options = {
 				"debug" : false,
@@ -432,7 +463,7 @@
 
 
     function reloadTable(){
-    	var params=	$('#idTipo').serialize(); 
+    	var params=	$('#idTipo').serialize()+'&'+$('#idLinea').serialize(); 
     	showloading();
      	    $("#example").DataTable().ajax.url( "controller/ctrlBuscar.php?"+params ).load();
      	hideloading();
