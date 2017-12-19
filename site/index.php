@@ -1233,84 +1233,16 @@ foreach($nodeDestacado as $posicion=>$registro)
 
 <div class="home-partners">
 <div class="container">
-<div class="partners-logo row">
-
-<div class="col-md-24">
-<div id="partners-container" class="clearfix">
-<h6 class="general-title">Proveedores</h6>
-<div class="home-bottom_banner_wrapper col-md-24">
-  <div id="body">
-    <div class="row">
-      <div class="span11">
-        <div class="popin">
-          <div id="map"></div>
-        </div>
-      </div>
-      </div>
-   	</div>
-      
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="150"><a class="animated"-->
-<!--	href="https://site/collections/vendors?q=Vendor%201"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_1.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="300"><a class="animated" Product with right sidebar-->
-<!--	href="https://site/collections/vendors?q=Vendor%202"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_2.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="450"><a class="animated"-->
-<!--	href="https://site/collections/vendors?q=Vendor%203"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_3.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="600"><a class="animated"-->
-<!--	href="https://site/collections/vendors?q=Vendor%204"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_4.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="750"><a class="animated"-->
-<!--	href="https://site/collections/vendors?q=Vendor%201"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_5.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="900"><a class="animated"-->
-<!--	href="https://site/collections/vendors?q=Vendor%202"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_6.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--<div class="logo not-animated text-center" data-animate="bounceIn"-->
-<!--	data-delay="1050"><a class="animated"-->
-<!--	href="https://site/collections/vendors?q=Vendor%203"> <img-->
-<!--	class="pulse"-->
-<!--	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/partners_logo_7.png?14058599523483859647"-->
-<!--	alt="" /> </a></div>-->
-<!---->
-<!--</div>-->
-
+	<div class="partners-logo row">
+		<div class="col-md-24">
+			<div id="partners-container" class="clearfix">
+				<h6 class="general-title">Proveedores</h6>
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
 </div>
 </div>
-
-</div>
-</div>
-</div>
-
-
-</div>
-
 
 
 </section></div>
@@ -1444,7 +1376,7 @@ Todos los derechos reservados.</div>
           author: 'FashionGold'
         }, 
         infoWindow: {
-          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de M?xico</p>'
+          content: '<p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de México</p>' 
         },
         mouseover: function(){
             (this.infoWindow).open(this.map, this);
