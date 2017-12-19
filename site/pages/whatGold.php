@@ -37,6 +37,34 @@ if (strpos($context, "localhost") !== false) {
 
 <meta name="description" content="" />
 
+<style>
+.foto{
+	width:80%;
+  position:relative;
+  margin: auto;
+}
+
+.foto img{
+	width:100%;
+}
+
+.foto p{
+	position:absolute;
+	bottom:100px;
+  left:65px;
+	/*width:100%;*/
+  width:400px;
+	text-align:justify;
+	/*color:rgba(243,243,243,.8);*/
+  color:black;
+	font-family:Verdana;
+	font-size:14px;
+	font-style: italic;
+	/*background-color:rgba(0,0,0,.7);*/
+	padding:.5em 0;
+}
+</style>
+
 
 
 <title>Oro Laminado FashionGold</title>
@@ -173,7 +201,10 @@ if (strpos($context, "localhost") !== false) {
 <link rel="alternate" type="application/json+oembed"
 	href="https://site/collections/rings.oembed">
 <link rel="alternate" type="application/atom+xml" title="Feed"
-	href="https://site/collections/rings.atom" />
+  href="https://site/collections/rings.atom" />
+  
+<link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
+
 <script type="text/javascript">
 //<![CDATA[
       var Shopify = Shopify || {};
@@ -383,7 +414,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
 		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C·talogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C√°talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -465,7 +496,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<ul class="dropdown-menu">
 			<li class=""><a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En Construcci?n </a></li>
+				class="fa fa-wrench"></i> En Construcci√≥n </a></li>
 		</ul>
 		</li>
 		<li class="nav-item"><a
@@ -555,30 +586,23 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <div class="container">
 <div class="row">
 <div id="page-header">
-<h1 id="page-title">Oro Laminado </h1>
+    <p class="chopsFontTitle">Oro Laminado </p>
 </div>
 <div id="col-main" class="col-md-24 normal-page clearfix">
 <div class="page about-us   ">
-<p align="center"> 
-<img
-	src="<?php echo $context?>/site/img/collection/laminado/laminado.jpg" /></p>
-<br />
-
-<h3>øQU… ES ORO LAMINADO?</h3>
-<p>
-Se refiere a pieza hecha a partir de una base como el cobre y que es recubierta con varias capas de oro de distintos quilates 14k o  18k. 
-</p>
-<p>
-La cantidad de capas y el grosor  pueden variar  3 a 6 capas. de metal precioso con soldadura y presiÛn. Es 50 a 100  veces m·s grueso que el chapeado regular.
-</p>
-<p>
- La calidad de oro m·s usada es de  14K y 18k. Un est·ndar del peso del metal precioso (oro ) es del 20% de su peso total. 
-</p>
-<p>
-Su garant?a es de 8 meses hasta un a?o si se cuenta con el debido cuidado, recordemos que es joyerÌa con solo unas cuantas  micras  de oro solo para darle el acabado fino.
-
-</p>
-
+  <div class="foto">
+        <img src="<?php echo $context?>/site/img/collection/laminado/laminado.jpg" />
+        <p>
+          <b>¬øQU√â ES ORO LAMINADO?</b>
+          <br>
+          <br>
+          Se refiere a pieza hecha a partir de una base como el cobre y que es recubierta con varias capas de oro de distintos quilates 14k o 18k. <br><br>
+          La cantidad de capas y el grosor  pueden variar  3 a 6 capas. de metal precioso con soldadura y presi√≥n. Es 50 a 100  veces m√°s grueso que el chapeado regular.<br><br>
+          La calidad de oro m√°s usada es de  14K y 18k. Un est√°ndar del peso del metal precioso (oro) es del 20% de su peso total. <br><br>
+          Su garant√≠a es de 8 meses hasta un a√±o si se cuenta con el debido cuidado, recordemos que es joyer√≠a con solo unas cuantas  micras  de oro solo para darle el acabado fino.<br>
+        </p>
+      
+  </div>
 
 
 </div>
@@ -606,7 +630,7 @@ Su garant?a es de 8 meses hasta un a?o si se cuenta con el debido cuidado, recor
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">QuiÈnes Somos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Qui√©nes Somos</a></li>
 	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
 </ul>

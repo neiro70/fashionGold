@@ -37,6 +37,8 @@
 <link href="<?php echo $context ?>/site/toast/toastr.css"
 	rel="stylesheet" type="text/css">
 
+<link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
+
 <link rel="icon" href="<?php echo $context ?>/rings.ico">
 
 <title>Contactanos | Fashion Gold</title>
@@ -181,7 +183,7 @@
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span> </a>
 		</li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C?talogos </span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos </span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i   
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -260,7 +262,7 @@
 			<a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcci�n
+				En Construcción
 			</a></li>
 		</ul>
 		</li>
@@ -315,13 +317,10 @@
 
 <section class="content">
 
-
-
-
 <div class="container">
 <div class="row">
 <div id="page-header" class="col-md-24">
-<h1 id="page-title">Contactanos</h1>
+<p id="page-title" class='chopsFontTitle'>Contactanos</p>
 </div>
 </div>
 </div>
@@ -362,7 +361,7 @@
 
 
 <div class="right-block contact-content col-md-12">
-<h6 class="sb-title"><i class="fa fa-home"></i> Informaci?n del Sitio</h6>
+<h6 class="sb-title"><i class="fa fa-home"></i> Información del Sitio</h6>
 <ul class="right-content">
 	<li class="title">
 	<h6>Nos Ubicamos En</h6>
@@ -373,7 +372,6 @@
 	</li>
 	<ul>
 		<li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
-		<li class="email"><i class="fa fa-envelope"></i>oro.laminado@hotmail.com</li>
 		<li class="email"><i class="fa fa-envelope"></i>ivett.camacho@fashiongold.es</li>
 	</ul>
 	<ul class="right-content">
@@ -435,7 +433,7 @@
 <div class="footer-content footer-content-bottom clearfix">
 <div class="container">
 
-<div class="copyright col-md-12">&copy; 2017 <a href="index.html">FashionGold</a>.
+<div class="copyright col-md-12">&copy; 2017 <a href="/">Fashion Gold</a>.
 Todos los derechos reservados.</div>
 
 
@@ -565,11 +563,11 @@ $(document).ready(function(e) {
 				})
 				  .done(function(data) {
 					  
-					  toastr.success('?Exito se envio correo!');
+					  toastr.success('¡Exito se envio correo!');
 				  })
 				  .fail(function(data) {
 					 
-					 toastr.error('?Error al enviar correo!');
+					 toastr.error('¡Error al enviar correo!');
 				  })
 				  .always(function(data) {
 				  // alert( "complete" );

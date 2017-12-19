@@ -37,37 +37,19 @@ if (strpos($context, "localhost") !== false) {
 
 <meta name="description" content="" />
 
+<link href="<?php echo $context ?>/site/toast/toastr.css"
+	rel="stylesheet" type="text/css">
 
-
-<title>Empieza tu propio negocio FashionGold</title>
-
-
-
-
-
-
+<link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
+<title>Empieza tu propio negocio </title>
 <meta property="og:image"
 	content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
-
-
-
-
-
-
-
-
-
 <link
 	href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css" media="all" />
-
-
-
 <link
 	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
-
-
 <link
 	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
@@ -114,11 +96,6 @@ if (strpos($context, "localhost") !== false) {
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647"
 	type="text/javascript"></script>
-
-
-
-
-
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647"
 	type="text/javascript"></script>
@@ -143,24 +120,15 @@ if (strpos($context, "localhost") !== false) {
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647"
 	type="text/javascript"></script>
-
-
-
 <script
 	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.isotope.min.js?14058599523483859647"
 	type="text/javascript"></script>
-
-
-
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647"
 	type="text/javascript"></script>
-
-
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647"
 	type="text/javascript"></script>
-
 <script src="<?php echo $context ?>/services/javascripts/currencies.js"
 	type="text/javascript"></script>
 <script
@@ -169,6 +137,10 @@ if (strpos($context, "localhost") !== false) {
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647"
 	type="text/javascript"></script>
+<script type="text/javascript"
+	src="<?php echo $context ?>/site/toast/toastr.min.js"></script>
+
+
 
 <link rel="alternate" type="application/json+oembed"
 	href="https://site/collections/rings.oembed">
@@ -383,7 +355,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
 		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>CÃ¡talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -465,7 +437,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<ul class="dropdown-menu">
 			<li class=""><a tabindex="-1"
 				href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En Construcci?n </a></li>
+				class="fa fa-wrench"></i> En ConstrucciÃ³n </a></li>
 		</ul>
 		</li>
 		<li class="nav-item"><a
@@ -550,42 +522,61 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 </div>
 
 <section class="content">
-
-
-<div class="container">
-<div class="row">
-<div id="page-header">
-<h1 id="page-title">EMPIEZA TU PROPIO NEGOCIO </h1>
+  <div class="container">
+    <div class="row">
+      <div id="page-header">
+          <p id="page-title" class='chopsFontTitle'>Empieza tu propio negocio </p>
+      </div>
+      <div id="col-main" class="col-md-24 normal-page clearfix">
+        <div class="page about-us">
+            <p align="center"> 
+              <img src="<?php echo $context?>/site/img/collection/laminado/banners_oro.jpg" />
+            </p>
+            <br/>
+            <ul>
+              <li><i class="fa fa-check"></i>Si  deseas  emprender tu propio negocio somos la mejor opciÃ³n pues manejamos  diferentes  rangos  de descuento dependiendo tu monto de inversiÃ³n,  entendiendo que entre mas inviertas mayor serÃ¡ el descuento. </li>
+              <li><i class="fa fa-check"></i>Puedes  invertir desde  $1,200  y obtendrÃ¡s   un 20% de descuento y  Puedes obtener hasta un 55% de descuento.</li>
+              <li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30%  de tu prÃ³xima compra</li>
+              <li><i class="fa fa-check"></i>Contamos con mÃ¡s de 300 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
+              <li><i class="fa fa-check"></i>Modelos nuevos e innovadores cada 20 dÃ­as</li>
+              <li><i class="fa fa-check"></i>Enviamos a toda la Republica</li>
+            </ul>
+            <div class="col-md-12">
+              <form method="post" action="" id="emailForm" name="emailForm"
+                class="contact-form" accept-charset="UTF-8"><input type="hidden"
+                value="contact" name="form_type" /><input type="hidden" name="utf8"
+                value="" />
+                  <ul id="contact-form" class="row list-unstyled">
+                    <li class="">
+                    <h3>Contactanos</h3>
+                    </li>
+                    <li class=""><label class="control-label" for="name">Nombre</label> <input
+                      type="text" id="txtnombre" value="" class="form-control"
+                      name="txtnombre" /></li>
+                    <li class="clearfix"></li>
+                    <li class=""><label class="control-label" for="email">Email <span
+                      class="req">*</span></label> <input type="email" id="txtemail"
+                      value="" class="form-control email" name="txtemail" /></li>
+                    <li class="clearfix"></li>
+                    <li class=""><label class="control-label" for="message">Mensaje <span
+                      class="req">*</span></label> <textarea id="txtmensaje" rows="5"
+                      class="form-control" name="txtmensaje"></textarea></li>
+                    <li class="clearfix"></li>
+                    <li class="unpadding-top">
+                    <button type="button" class="btn" id="sendEmail" name="sendEmail">Contactar</button>
+                    </li>
+                  </ul>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
-<div id="col-main" class="col-md-24 normal-page clearfix">
-<div class="page about-us   ">
-<p align="center"> 
-<img
-	src="<?php echo $context?>/site/img/collection/laminado/banners_oro.jpg" /></p>
-<br />
-
-<ul>
-	<li><i class="fa fa-check"></i>Si  deseas  emprender tu propio negocio somos la mejor opción pues manejamos  diferentes  rangos  de descuento dependiendo tu monto de inversión,  entendiendo que entre mas inviertas mayor será el descuento. </li>
-	<li><i class="fa fa-check"></i>Puedes  invertir desde  $1,200  y obtendrás   un 20% de descuento y  Puedes obtener hasta un 55% de descuento.</li>
-	<li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30%  de tu próxima compra</li>
-	<li><i class="fa fa-check"></i>Contamos con más de 300 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
-	<li><i class="fa fa-check"></i>Modelos nuevos e innovadores cada 20 días</li>
-	<li><i class="fa fa-check"></i>Enviamos a toda la Republica</li>
-</ul>
-
 </div>
 </div>
 
-
-
-</div>
-</div>
-
-
-
-</section></div>
-</div>
-</div>
 <footer id="footer">
 <div id="footer-content"><!--<h6 class="general-title contact-footer-title">Newsletter</h6>-->
 
@@ -597,7 +588,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 
 <ul class="list-unstyled list-styled">
 
-	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quiénes Somos</a></li>
+	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">QuiÃ©nes Somos</a></li>
 	<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
 </ul>
@@ -619,7 +610,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <div class="footer-content footer-content-bottom clearfix">
 <div class="container">
 
-<div class="copyright col-md-12">&copy; 2017 <a href="index.html">FashionGold</a>.
+<div class="copyright col-md-12">&copy; 2017 <a href="index.html">Fashion Gold</a>.
 Todos los derechos reservados.</div>
 
 
@@ -647,6 +638,53 @@ Todos los derechos reservados.</div>
 
 </div>
 </footer>
+<script>
+$(document).ready(function(e) {
+	toastr.options = {
+			  "closeButton": false,
+			  "debug": false,
+			  "newestOnTop": false,
+			  "progressBar": false,
+			  "positionClass": "toast-top-full-width",
+			  "preventDuplicates": false,
+			  "onclick": null,
+			  "showDuration": "300",
+			  "hideDuration": "1000",
+			  "timeOut": "5000",
+			  "extendedTimeOut": "1000",
+			  "showEasing": "swing",
+			  "hideEasing": "linear",
+			  "showMethod": "fadeIn",
+			  "hideMethod": "fadeOut"
+			}     
+    
+});
+
+
+  $("#sendEmail").click(function(){
+		$.ajax(
+				{
+				  url : 'email.php',
+				  type: "POST",
+				  data : $("#emailForm").serialize()
+				})
+				  .done(function(data) {
+					  
+					  toastr.success('Â¡Exito se envio correo!');
+				  })
+				  .fail(function(data) {
+					 
+					 toastr.error('Â¡Error al enviar correo!');
+				  })
+				  .always(function(data) {
+				  // alert( "complete" );
+				  });
+
+		
+		});
+  
+	
+</script>
 
  <script
 	src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647"

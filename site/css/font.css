@@ -1,0 +1,13 @@
+@font-face {
+    font-family: chopsFont;
+    src: url(../font/CHOPS.ttf);
+  }
+
+  .chopsFont{
+    font-family: chopsFont;
+    font-size: 400%;
+  }
+  .chopsFontTitle{
+    font-family: chopsFont;
+    font-size: xx-large;
+  }

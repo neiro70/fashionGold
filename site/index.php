@@ -92,6 +92,7 @@
 		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="https://hpneo.github.io/gmaps/prettify/prettify.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="https://hpneo.github.io/gmaps/styles.css" rel="stylesheet" type="text/css" media="all" />
+		<link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
 			
 		<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
 		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
@@ -458,7 +459,7 @@
 					
 					<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 						<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-							<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">&#161;Bienvenido!</a>
+							<p style="color: #010101;" class='chopsFont' >Bienvenido</a>
 						</div>
 						<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">La joya ideal para ti</div>
 						<div class="camera_cta_2">
@@ -468,9 +469,9 @@
 
 					<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 						<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-							<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">  
-								&#161;FashionGold te desea una excelente navidad &#33;
-							</a>
+							<p style="color: #010101;" class='chopsFont'>  
+								Fashion Gold te desea una excelente navidad
+							</p>
 						</div>
 						<div class="camera_cta_2">
 							<a href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver c&aacute;talogo</a>
@@ -479,9 +480,9 @@
 
 					<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 						<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-							<a href="<?php echo $context ?>/site/collections/bracelets.php" style="color: #010101;">
-								&#33; Te invitamos a ver nuestros c&aacute;talogos!
-							</a>
+							<p class='chopsFont' style="color: #010101;">
+								Te invitamos a ver nuestros c&aacute;talogos
+							</p>
 						</div>
 						<div class="camera_cta_2">
 							<a href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver C&aacute;talogo</a>

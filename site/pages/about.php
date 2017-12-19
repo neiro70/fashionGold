@@ -39,7 +39,7 @@ if (strpos($context, "localhost") !== false) {
 
 
 
-<title>Quiénes Somos FashionGold</title>
+<title>QuiÃ©nes Somos FashionGold</title>
 
 
 
@@ -103,6 +103,7 @@ if (strpos($context, "localhost") !== false) {
 	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css"
 	rel="stylesheet" type="text/css" media="all" />
 
+<link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
 
 <script
 	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647"
@@ -383,7 +384,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 		<li class="nav-item active"><a href="<?php echo $context?>"> <span>Inicio</span>
 		</a></li>
 		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Cátalogos</span>
+			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>CÃ¡talogos</span>
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
@@ -544,7 +545,7 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <div class="row">
 <div class="col-md-24"><a href="<?php echo $context ?>"
 	class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
-<span class="page-title">Quiénes Somos</span></div>
+<span class="page-title">QuiÃ©nes Somos</span></div>
 </div>
 </div>
 </div>
@@ -555,19 +556,19 @@ var __st={"a":9087252,"offset":-14400,"reqid":"83e85db6-519f-44c8-b874-116cd9899
 <div class="container">
 <div class="row">
 <div id="page-header">
-<h1 id="page-title">Quiénes Somos </h1>
+<p id="page-title" class='chopsFontTitle'>QuiÃ©nes Somos </p>
 </div>
 <div id="col-main" class="col-md-24 normal-page clearfix">
 <div class="page about-us   ">
 <p><img
 	src="https://cdn.shopify.com/s/files/1/0784/5183/files/banner.png?2741831906760330520" /></p>
 <br />
-<p>Somos una empresa  compuesta por gente joven y  emprendedora,  con experiencia  en el ramo joyero desde hace 10 años, dedicada a la venta de mayoreo y menudeo  en   joyería de oro laminado con baño   de 14k. y 18k, rodio, acero inoxidable y cristal swarovski. 
+<p>Somos una empresa  compuesta por gente joven y  emprendedora,  con experiencia  en el ramo joyero desde hace 10 aÃ±os, dedicada a la venta de mayoreo y menudeo  en   joyerÃ­a de oro laminado con baÃ±o   de 14k. y 18k, rodio, acero inoxidable y cristal swarovski. 
 
-Toda la joyería que manejamos  es de  excelente calidad y a precios inmejorables  pues no tenemos intermediarios , trabajamos directamente con fabricantes. 
+Toda la joyerÃ­a que manejamos  es de  excelente calidad y a precios inmejorables  pues no tenemos intermediarios , trabajamos directamente con fabricantes. 
 </p>
 <p>Saludos</p>
-<p> Ivette Camacho</p>
+<p> Fashion Gold</p>
 
 </div>
 </div>
