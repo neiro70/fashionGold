@@ -1,684 +1,459 @@
 <?php
-
-include("../site/admin/mvc/util/MysqlDAO.php");
+	include("../site/admin/mvc/util/MysqlDAO.php");
 
 	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$var =explode("/",$context);
+	
 	if (strpos($context, "localhost") !== false) {
 		$context="http://" .$var[0]."/".$var[1];
 	}else{
 		$context="http://" .$var[0];
 	}
 
+	$nodeNuevo = array();
+	$nodeDestacado = array();
+	$posNuevo=1;
+	$posDestacado=1;
 
-$db = new MySQL ();
+	$sql="SELECT m01.idImagen,t01.txtCodigo,t01.idProducto,t01.isOferta,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,
+			t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus,t01.isNuevo,t01.isDestacado
+			FROM t01producto t01 INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
+			LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto WHERE 1=1 OR isNuevo=1 OR isDestacado=1 ";
 
-$nodeNuevo = array();
-$nodeDestacado = array();
-$posNuevo=1;
-$posDestacado=1;
+	$db = new MySQL ();
+	$conn=$db->getConexion();
+	
+	setlocale(LC_MONETARY, 'es_MX');
+	
+	$result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+		while($row = $result->fetch_assoc()) {// output data of each row
+			$idProducto=$row["idProducto"];
+			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
+			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
+			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
+			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+			$estatus=$row["estatus"];
+			$tipo=$row["tipo"];
+			$isOferta=$row["isOferta"];
+			$isNuevo=$row["isNuevo"];
+			$isDestacado=$row["isDestacado"];
+			$txtCodigo=$row["txtCodigo"];
+			$idImagen=$row["idImagen"];
+			$ran=rand();
+			$imagen="$context/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
+				
+			if($isNuevo=="1"){
+				$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",
+				'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+			}
 
-
-
-$sql="SELECT m01.idImagen,t01.txtCodigo,t01.idProducto,t01.isOferta, t01.txtTitulo,t01.dPrecioComercial,
-		t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,
-		c01.txtdescripcion as tipo,t01.idStatus,t01.isNuevo,t01.isDestacado
-		FROM t01producto t01 
-		INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
-		INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
-		LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto 
-		WHERE 1=1 OR isNuevo=1 OR isDestacado=1 ";
-
-
-
-
-$conn=$db->getConexion();
-$result = $conn->query($sql);
-setlocale(LC_MONETARY, 'es_MX');
-if ($result->num_rows > 0) {
-	// output data of each row
-	while($row = $result->fetch_assoc()) {
-
-		$idProducto=$row["idProducto"];
-		$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-
-
-		$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
-		$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
-		$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-			
-		$estatus=$row["estatus"];
-		$tipo=$row["tipo"];
-		$isOferta=$row["isOferta"];
-		$isNuevo=$row["isNuevo"];
-		$isDestacado=$row["isDestacado"];
-		$txtCodigo=$row["txtCodigo"];
-
-		$idImagen=$row["idImagen"];
-		$ran=rand();
-			
-		$imagen="$context/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
-			
-		if($isNuevo=="1"){
-			$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+			if($isDestacado=="1"){
+				$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",
+				'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+			}
 		}
-		if($isDestacado=="1"){
-			$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
-
-		}
-			
-
-
 	}
 
-
-}
-
-$db->closeSession();
-
-
+	$db->closeSession();
 ?>
+
 <!doctype html>
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js">
 <!--<![endif]-->
-<head>
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<link rel="icon" href="<?php echo $context ?>/rings.ico">
+		<link rel="canonical" href="<?php echo $context ?>" />
+		<link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css'rel='stylesheet' type='text/css'>
+		<link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css' rel='stylesheet' type='text/css'>
+		<link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css' rel='stylesheet' type='text/css'>
+		<link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Belleza.css' rel='stylesheet' type='text/css'>
+		<link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css' rel='stylesheet' type='text/css'>
+		
+		<meta name="description" content="" />
+		<title>Fashion Gold</title>
+		<meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
+		
+		<link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="https://hpneo.github.io/gmaps/prettify/prettify.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="https://hpneo.github.io/gmaps/styles.css" rel="stylesheet" type="text/css" media="all" />
+			
+		<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
+		<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647" type="text/javascript"></script>
+		<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
+		<script src="services/javascripts/currencies.js" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
+		
+		<!-- Facebook Conversion Code for Themes -->
+		<script>
+			(function() {
+				var _fbq = window._fbq || (window._fbq = []);
+				if (!_fbq.loaded) {
+					var fbds = document.createElement('script');
+					fbds.async = true;
+					fbds.src = '//connect.facebook.net/en_US/fbds.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(fbds, s);
+					_fbq.loaded = true;
+				}
+			})();
+			window._fbq = window._fbq || [];
+			window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
+		</script>
 
-<meta charset="ISO-8859-1">
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-<link rel="icon" href="<?php echo $context ?>/rings.ico">
-<link rel="canonical" href="<?php echo $context ?>" />
-<link
-	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css'
-	rel='stylesheet' type='text/css'>
-<link
-	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css'
-	rel='stylesheet' type='text/css'>
-<link
-	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css'
-	rel='stylesheet' type='text/css'>
-<link
-	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Belleza.css'
-	rel='stylesheet' type='text/css'>
-<link
-	href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css'
-	rel='stylesheet' type='text/css'>
-
-<meta name="description" content="" />
+		<noscript><img height="1" width="1" alt="" style="display: none" src="../www.facebook.com/tr%3Fev=6016096938024&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
 
 
+		<script type="text/javascript">
+			var Shopify = Shopify || {};
+			Shopify.shop = "site";
+			Shopify.theme = {"name":"jewelry","id":41982083,"theme_store_id":null,"role":"main"};
+			Shopify.theme.handle = "null";
+			Shopify.theme.style = {"id":null,"handle":null};
+		</script>
 
-<title>Fashion Gold</title>
+		<script src="<?php echo $context ?>/cdn.shopify.com/s/javascripts/shopify_stats.js%3Fv=6" type="text/javascript" async="async"></script>
+		<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/9087252/digital_wallets/dialog" />
 
+		<script type="text/javascript">
+			window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+			window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+			window.ShopifyAnalytics.meta.currency = 'USD';
+			var meta = {"page":{"pageType":"home"}};
+			for (var attr in meta) {
+				window.ShopifyAnalytics.meta[attr] = meta[attr];
+			}	
+		</script>
 
+		<script type="text/javascript">window.ShopifyAnalytics.merchantGoogleAnalytics = function() {};</script>
 
+		<script type="text/javascript" class="analytics">
+			(function () {
+				var customDocumentWrite = function(content) {
+					var jquery = null;
+					if (window.jQuery) {
+						jquery = window.jQuery;
+					} else if (window.Checkout && window.Checkout.$) {
+						jquery = window.Checkout.$;
+					}
 
+					if (jquery) {jquery('body').append(content);}
+				};
 
+				var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+				if (trekkie.integrations) {
+					return;
+				}
+				trekkie.methods = ['identify','page','ready','track','trackForm','trackLink'];
+				trekkie.factory = function(method) {
+					return function() {
+						var args = Array.prototype.slice.call(arguments);
+						args.unshift(method);
+						trekkie.push(args);
+						return trekkie;
+					};
+				};
 
-<meta property="og:image"
-	content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
+				for (var i = 0; i < trekkie.methods.length; i++) {
+					var key = trekkie.methods[i];
+					trekkie[key] = trekkie.factory(key);
+				}
 
+				trekkie.load = function(config) {
+					trekkie.config = config;
+					var script = document.createElement('script');
+					script.type = 'text/javascript';
+					script.onerror = function(e) {(new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';};
+					script.async = true;
+					script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1';
+					var first = document.getElementsByTagName('script')[0];
+					first.parentNode.insertBefore(script, first);
+				};
+				
+				trekkie.load(
+					{"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":9087252,"isMerchantRequest":null,
+					"themeId":41982083,"themeCityHash":14839528528689155135}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,
+					"navigationTimingApiMeasurementsSampleRate":0.1},"Session Attribution":{}}
+				);
 
+				var loaded = false;
+				trekkie.ready(function() {
+					if (loaded) return;
+					loaded = true;
+					window.ShopifyAnalytics.lib = window.trekkie;
+					var originalDocumentWrite = document.write;
+					document.write = customDocumentWrite;
+					try { 
+						window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); 
+					} catch(error) {};
+					document.write = originalDocumentWrite;
+					window.ShopifyAnalytics.lib.page(null,{"pageType":"home"});	
+				});
 
-
-
-
-
-
-
-<link
-	href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="https://hpneo.github.io/gmaps/prettify/prettify.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link
-	href="https://hpneo.github.io/gmaps/styles.css"
-	rel="stylesheet" type="text/css" media="all" />
+				var eventsListenerScript = document.createElement('script');
+				eventsListenerScript.async = true;
+				eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
+				document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+			})();
+		</script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjoJhxzdM2GNiubYHbXUTImb0466lfinY"></script>
+		<script type="text/javascript" src="https://hpneo.github.io/gmaps/gmaps.js"></script>
+		<script type="text/javascript" src="https://hpneo.github.io/gmaps/prettify/prettify.js	"></script>
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage" class="templateIndex">
 	
-	
-	
-	
-	
-
-
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-
-
-
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-
-
-
-
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647"
-	type="text/javascript"></script>
-
-<script src="services/javascripts/currencies.js" type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<script
-	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647"
-	type="text/javascript"></script>
-<!-- Facebook Conversion Code for Themes -->
-<script>(function() {
-  var _fbq = window._fbq || (window._fbq = []);
-  if (!_fbq.loaded) {
-    var fbds = document.createElement('script');
-    fbds.async = true;
-    fbds.src = '//connect.facebook.net/en_US/fbds.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(fbds, s);
-    _fbq.loaded = true;
-  }
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', '6016096938024', {'value':'0.00','currency':'USD'}]);
-</script>
-
-
-
-<noscript><img height="1" width="1" alt="" style="display: none"
-	src="../www.facebook.com/tr%3Fev=6016096938024&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
-
-
-<script type="text/javascript">
-//<![CDATA[
-      var Shopify = Shopify || {};
-      Shopify.shop = "site";
-      Shopify.theme = {"name":"jewelry","id":41982083,"theme_store_id":null,"role":"main"};
-      Shopify.theme.handle = "null";
-      Shopify.theme.style = {"id":null,"handle":null};
-
-//]]>
-</script>
-
-  <script
-	src="<?php echo $context ?>/cdn.shopify.com/s/javascripts/shopify_stats.js%3Fv=6"
-	type="text/javascript" async="async"></script>
-<meta id="shopify-digital-wallet" name="shopify-digital-wallet"
-	content="/9087252/digital_wallets/dialog" />
-
-<script type="text/javascript">
-        
-      window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-      window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-      window.ShopifyAnalytics.meta.currency = 'USD';
-      var meta = {"page":{"pageType":"home"}};
-      for (var attr in meta) {
-        window.ShopifyAnalytics.meta[attr] = meta[attr];
-      }
-    
-      </script>
-
-<script type="text/javascript">
-        window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-          
-        };
-      </script>
-
-<script type="text/javascript" class="analytics">
-        
-        
-
-        (function () {
-          var customDocumentWrite = function(content) {
-            var jquery = null;
-
-            if (window.jQuery) {
-              jquery = window.jQuery;
-            } else if (window.Checkout && window.Checkout.$) {
-              jquery = window.Checkout.$;
-            }
-
-            if (jquery) {
-              jquery('body').append(content);
-            }
-          };
-
-          var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-          if (trekkie.integrations) {
-            return;
-          }
-          trekkie.methods = [
-            'identify',
-            'page',
-            'ready',
-            'track',
-            'trackForm',
-            'trackLink'
-          ];
-          trekkie.factory = function(method) {
-            return function() {
-              var args = Array.prototype.slice.call(arguments);
-              args.unshift(method);
-              trekkie.push(args);
-              return trekkie;
-            };
-          };
-          for (var i = 0; i < trekkie.methods.length; i++) {
-            var key = trekkie.methods[i];
-            trekkie[key] = trekkie.factory(key);
-          }
-          trekkie.load = function(config) {
-            trekkie.config = config;
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.onerror = function(e) {
-              (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
-            };
-            script.async = true;
-            script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1';
-            var first = document.getElementsByTagName('script')[0];
-            first.parentNode.insertBefore(script, first);
-          };
-          trekkie.load(
-            {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":9087252,"isMerchantRequest":null,"themeId":41982083,"themeCityHash":14839528528689155135}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":0.1},"Session Attribution":{}}
-          );
-
-          var loaded = false;
-          trekkie.ready(function() {
-            if (loaded) return;
-            loaded = true;
-
-            window.ShopifyAnalytics.lib = window.trekkie;
-            
-
-            var originalDocumentWrite = document.write;
-            document.write = customDocumentWrite;
-            try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
-            document.write = originalDocumentWrite;
-
-            
-        window.ShopifyAnalytics.lib.page(
-          null,
-          {"pageType":"home"}
-        );
-      
-            
-          });
-
-          
-      var eventsListenerScript = document.createElement('script');
-      eventsListenerScript.async = true;
-      eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
-      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
-    
-        })();
-      </script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjoJhxzdM2GNiubYHbXUTImb0466lfinY"></script>
-<script type="text/javascript" src="https://hpneo.github.io/gmaps/gmaps.js"></script>
-<script type="text/javascript" src="https://hpneo.github.io/gmaps/prettify/prettify.js	"></script>
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage"
-	class="templateIndex">
-
-<!-- Header -->
-<header id="top" class="fadeInDown clearfix">
-
-
-
-
-
-
-<div class="line"></div>
-
-<!-- Navigation -->
-<div class="container">
-<div class="top-navigation">
-
-<ul class="list-inline">
-	<!-- <li class="top-logo"><a id="site-title" href="<?php echo $context?>"
-		title="Fashion Gold"> <img class="img-responsive"
-		src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"
-		alt="Fashion Gold" /> </a>
-		</li>-->
-	<li class="top-logo"><a id="site-title" href="<?php echo $context?>"
-		title="Fashion Gold"> <img class="img-responsive"
-		src="<?php echo $context ?>/site/img/collection/logo.png"
-		alt="Fashion Gold" /> </a>
-		</li>
-
-
-	<li class="navigation"><nav class="navbar" role="navigation">
-	<div class="clearfix">
-	<div class="navbar-header">
-	<button type="button" class="navbar-toggle" data-toggle="collapse"
-		data-target=".navbar-collapse"><span class="sr-only">Toggle main
-	navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-	<span class="icon-bar"></span></button>
-	</div>
-
-	<div class="is-mobile visible-xs">
-	<ul class="list-inline">
-		<li class="is-mobile-menu">
-		<div class="btn-navbar" data-toggle="collapse"
-			data-target=".navbar-collapse"><span class="icon-bar-group"> <span
-			class="icon-bar"></span> <span class="icon-bar"></span> <span
-			class="icon-bar"></span> </span></div>
-		</li>
-
-
-		<li class="is-mobile-login">
-		<div class="btn-group">
-		<div class="dropdown-toggle" data-toggle="dropdown"><i
-			class="fa fa-user"></i></div>
-		<ul class="customer dropdown-menu">
-
-			<li class="logout"><a href="https://site/account/login">Login</a></li>
-			<li class="account"><a href="https://site/account/register">Register</a>
-			</li>
-
-		</ul>
-		</div>
-		</li>
-
-
-		<li class="is-mobile-wl"><a href="pages/wish-list.html"><i
-			class="fa fa-heart"></i></a></li>
-
-
-
-
-
-		<li class="is-mobile-cart"><a href="https://site/cart"><i
-			class="fa fa-shopping-cart"></i></a></li>
-	</ul>
-	</div>
-
-	<div class="collapse navbar-collapse">
-	<ul class="nav navbar-nav hoverMenuWrapper">
-		<li class="nav-item active"><a href="#"> <span>Inicio</span> </a></li>
-		<li class="dropdown mega-menu"><a href="#"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C&aacute;talogos</span>
-		<i class="fa fa-caret-down"></i> <i
-			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
-			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
-		<div
-			class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
-		<ul class="sub-mega-menu">
-			<li>
-			<ul>
-				<li class="list-title">Nuevos</li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
-					class="megamenu-label new-label">Oferta</span> </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
-				</a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/earrings.php">Aretes
-				<span class="megamenu-label hot-label">Nuevos</span> </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
-					class="megamenu-label feature-label">Nuevo</span> </a></li>
-			</ul>
-			</li>
-
-			<li>
-			<ul>
-				<li class="list-title">Productos</li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
-					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
-				</a></li>
-			</ul>
-			</li>
-			<li>
-
-			<ul>
-				<li class="list-title">Destacados</li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
-					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
-				</a></li>
-			</ul>
-			</li>
-			<li>
-			<ul>
-				<li class="list-title">Ofertas</li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
-					class="megamenu-label li-sub-mega">Oferta</span> </a></li>
-
-				<li class="list-unstyled li-sub-mega"><a
-					href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
-				</a></li>
+		<!-- Header -->	
+		<header id="top" class="fadeInDown clearfix">
+			<!-- Navigation -->	
+			<div class="line"></div>
+			<div class="container">
+			<div class="top-navigation">
+
+			<ul class="list-inline">
+				<li class="top-logo">
+					<a id="site-title" href="
+						<?php echo $context?>"
+							title="Fashion Gold">
+							<img class="img-responsive"src="
+						<?php echo $context ?>/site/img/collection/logo.png"alt="Fashion Gold" /> 
+					</a>
+				</li>
+				<li class="navigation">
+					<nav class="navbar" role="navigation">
+						<div class="clearfix">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle mainnavigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="is-mobile visible-xs">
+								<ul class="list-inline">
+									<li class="is-mobile-menu">
+										<div class="btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
+											<span class="icon-bar-group">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</span>
+										</div>
+									</li>
+									<li class="is-mobile-login">
+										<div class="btn-group">
+											<div class="dropdown-toggle" data-toggle="dropdown">
+												<i class="fa fa-user"></i>
+											</div>
+											<ul class="customer dropdown-menu">
+												<li class="logout"><a href="https://site/account/login">Login</a></li>
+												<li class="account"><a href="https://site/account/register">Register</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="is-mobile-wl">
+										<a href="pages/wish-list.html">
+										<i class="fa fa-heart"></i></a></li>
+
+
+
+
+
+					<li class="is-mobile-cart"><a href="https://site/cart"><i
+						class="fa fa-shopping-cart"></i></a></li>
+				</ul>
+				</div>
+
+				<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav hoverMenuWrapper">
+					<li class="nav-item active"><a href="#"> <span>Inicio</span> </a></li>
+					<li class="dropdown mega-menu"><a href="#"
+						class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>C&aacute;talogos</span>
+					<i class="fa fa-caret-down"></i> <i
+						class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
+						class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
+					<div
+						class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
+					<ul class="sub-mega-menu">
+						<li>
+						<ul>
+							<li class="list-title">Nuevos</li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
+								class="megamenu-label new-label">Oferta</span> </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+							</a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/earrings.php">Aretes
+							<span class="megamenu-label hot-label">Nuevos</span> </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
+								class="megamenu-label feature-label">Nuevo</span> </a></li>
+						</ul>
+						</li>
+
+						<li>
+						<ul>
+							<li class="list-title">Productos</li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
+								class="megamenu-label li-sub-mega">Oferta</span> </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+							</a></li>
+						</ul>
+						</li>
+						<li>
+
+						<ul>
+							<li class="list-title">Destacados</li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
+								class="megamenu-label li-sub-mega">Oferta</span> </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+							</a></li>
+						</ul>
+						</li>
+						<li>
+						<ul>
+							<li class="list-title">Ofertas</li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span
+								class="megamenu-label li-sub-mega">Oferta</span> </a></li>
+
+							<li class="list-unstyled li-sub-mega"><a
+								href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas
+							</a></li>
+
+						</ul>
+						</li>
+					</ul>
+					</div>
+					</li>
+					<li class="nav-item dropdown"><a
+						href="<?php echo $context ?>/site/pages/blogs/blogs.html"
+						class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Blog</span>
+
+					<i class="fa fa-caret-down"></i> <i
+						class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
+						class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
+					<ul class="dropdown-menu">
+						<li class=""><a tabindex="-1"
+							href="#"> <i
+							class="fa fa-wrench"></i> En Construcci&oacute;n </a></li>
+					</ul>
+					</li>
+					<li class="nav-item"><a
+						href="<?php echo $context ?>/site/pages/contact.php"> <span>Cont&aacute;ctenos</span>
+					</a></li>
+			
+				<li class="nav-item">
+					<a target="_blank"
+					href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
+					class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+					title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
+				</li>
+
+				
+				</ul>
+
+				</div>
+				</div>
+				</nav></li>
+
+
+				<li class="top-search hidden-xs"></li>
+
+
+				<li class="mobile-search visible-xs">
+				<form id="mobile-search" class="search-form"
+					action="https://site/search" method="get"><input type="hidden"
+					name="type" value="product" /> <input type="text" class="" name="q"
+					value="" accesskey="4" autocomplete="off"
+					placeholder="Escribe para buscar..." />
+
+				<button type="submit" class="search-submit" title="search"><i
+					class="fa fa-search"></i></button>
+
+				</form>
+				</li>
 
 			</ul>
-			</li>
-		</ul>
-		</div>
-		</li>
-		<li class="nav-item dropdown"><a
-			href="<?php echo $context ?>/site/pages/blogs/blogs.html"
-			class="dropdown-toggle dropdown-link" data-toggle="dropdown"> <span>Blog</span>
 
-		<i class="fa fa-caret-down"></i> <i
-			class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
-			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
-		<ul class="dropdown-menu">
-			<li class=""><a tabindex="-1"
-				href="#"> <i
-				class="fa fa-wrench"></i> En Construcci&oacute;n </a></li>
-		</ul>
-		</li>
-		<li class="nav-item"><a
-			href="<?php echo $context ?>/site/pages/contact.php"> <span>Cont&aacute;ctenos</span>
-		</a></li>
-   
-    <li class="nav-item">
-        <a target="_blank"
-          href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
-          class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
-          title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
-    </li>
-
-    
-	</ul>
-
-	</div>
-	</div>
-	</nav></li>
+			</div>
+			</div>
+			<!--End Navigation-->
 
 
-	<li class="top-search hidden-xs"></li>
+			<script>
+			function addaffix(scr){
+				if($(window).innerWidth() >= 1024){
+				if(scr > $('#top').innerHeight()){
+					if(!$('#top').hasClass('affix')){
+					$('#top').addClass('affix').addClass('animated');
+					}
+				}
+				else{
+					if($('#top').hasClass('affix')){
+					$('#top').prev().remove();
+					$('#top').removeClass('affix').removeClass('animated');
+					}
+				}
+				}
+				else $('#top').removeClass('affix');
+			}
+			$(window).scroll(function() {
+				var scrollTop = $(this).scrollTop();
+				addaffix(scrollTop);
+			});
+			$( window ).resize(function() {
+				var scrollTop = $(this).scrollTop();
+				addaffix(scrollTop);
+			});
+			</script>
 
-
-	<!-- 
-      <li class="umbrella hidden-xs">			
-        <div id="umbrella" class="list-inline unmargin">
-          <div class="cart-link">
-            <a href="https://site/cart" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
-              <i class="sub-dropdown1"></i>
-              <i class="sub-dropdown"></i>              
-              <div class="num-items-in-cart">
-                <span class="icon">
-                  Cart
-                  <span class="number">0</span>
-                </span>
-              </div>
-            </a>
-
-            
-            <div id="cart-info" class="dropdown-menu">
-              <div id="cart-content">
-                <div class="loading">
-                  <img src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/loader.gif%3F14058599523483859647" alt="" />
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </li>-->
-
-
-
-	<li class="mobile-search visible-xs">
-	<form id="mobile-search" class="search-form"
-		action="https://site/search" method="get"><input type="hidden"
-		name="type" value="product" /> <input type="text" class="" name="q"
-		value="" accesskey="4" autocomplete="off"
-		placeholder="Escribe para buscar..." />
-
-	<button type="submit" class="search-submit" title="search"><i
-		class="fa fa-search"></i></button>
-
-	</form>
-	</li>
-
-</ul>
-
-</div>
-</div>
-<!--End Navigation-->
-
-
-<script>
-  function addaffix(scr){
-    if($(window).innerWidth() >= 1024){
-      if(scr > $('#top').innerHeight()){
-        if(!$('#top').hasClass('affix')){
-          $('#top').addClass('affix').addClass('animated');
-        }
-      }
-      else{
-        if($('#top').hasClass('affix')){
-          $('#top').prev().remove();
-          $('#top').removeClass('affix').removeClass('animated');
-        }
-      }
-    }
-    else $('#top').removeClass('affix');
-  }
-  $(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-    addaffix(scrollTop);
-  });
-  $( window ).resize(function() {
-    var scrollTop = $(this).scrollTop();
-	addaffix(scrollTop);
-  });
-</script>
-
-</header>
+			</header>
 
 <div id="content-wrapper-parent">
 <div id="content-wrapper">
