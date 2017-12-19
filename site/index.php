@@ -59,10 +59,8 @@
 ?>
 
 <!doctype html>
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js">
-<!--<![endif]-->
+
 	<head>
 		<meta charset="ISO-8859-1">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -231,6 +229,7 @@
 		<script type="text/javascript" src="https://hpneo.github.io/gmaps/gmaps.js"></script>
 		<script type="text/javascript" src="https://hpneo.github.io/gmaps/prettify/prettify.js	"></script>
 	</head>
+
 	<body itemscope itemtype="http://schema.org/WebPage" class="templateIndex">
 	
 		<!-- Header -->	
@@ -425,242 +424,187 @@
 			</div>
 			<!--End Navigation-->
 
-
-			<script>
-			function addaffix(scr){
-				if($(window).innerWidth() >= 1024){
-				if(scr > $('#top').innerHeight()){
-					if(!$('#top').hasClass('affix')){
-					$('#top').addClass('affix').addClass('animated');
+	<script>
+		function addaffix(scr) {
+			if ($(window).innerWidth() >= 1024) {
+				if (scr > $('#top').innerHeight()) {
+					if (!$('#top').hasClass('affix')) {
+						$('#top').addClass('affix').addClass('animated');
+					}
+				} else {
+					if ($('#top').hasClass('affix')) {
+						$('#top').prev().remove();
+						$('#top').removeClass('affix').removeClass('animated');
 					}
 				}
-				else{
-					if($('#top').hasClass('affix')){
-					$('#top').prev().remove();
-					$('#top').removeClass('affix').removeClass('animated');
-					}
-				}
-				}
-				else $('#top').removeClass('affix');
-			}
-			$(window).scroll(function() {
-				var scrollTop = $(this).scrollTop();
-				addaffix(scrollTop);
-			});
-			$( window ).resize(function() {
-				var scrollTop = $(this).scrollTop();
-				addaffix(scrollTop);
-			});
-			</script>
+			} else $('#top').removeClass('affix');
+		}
+		$(window).scroll(function() {
+			var scrollTop = $(this).scrollTop();
+			addaffix(scrollTop);
+		});
+		$(window).resize(function() {
+			var scrollTop = $(this).scrollTop();
+			addaffix(scrollTop);
+		}); 
+	</script>
+</header>
 
-			</header>
+	<!--Start the slider-->
+	<div id="content-wrapper-parent">
+		<div id="content-wrapper">
+			<div class="home-slider-wrapper clearfix">
+				<div class="camera_wrap" id="home-slider">
+					
+					<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
+						<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
+							<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">&#161;Bienvenido!</a>
+						</div>
+						<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">La joya ideal para ti</div>
+						<div class="camera_cta_2">
+							<a href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver c&aacute;talogo</a>
+						</div>
+					</div>
 
-<div id="content-wrapper-parent">
-<div id="content-wrapper">
+					<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
+						<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
+							<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">  
+								&#161;FashionGold te desea una excelente navidad &#33;
+							</a>
+						</div>
+						<div class="camera_cta_2">
+							<a href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver c&aacute;talogo</a>
+						</div>
+					</div>
 
+					<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
+						<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
+							<a href="<?php echo $context ?>/site/collections/bracelets.php" style="color: #010101;">
+								&#33; Te invitamos a ver nuestros c&aacute;talogos!
+							</a>
+						</div>
+						<div class="camera_cta_2">
+							<a href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver C&aacute;talogo</a>
+						</div>
+					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
 
-<div class="home-slider-wrapper clearfix">
+	<!-- Content -->
+	<div id="content" class="clearfix"><section class="content">
+		<div id="col-main" class="clearfix">
+			<div class="home-popular-collections">
+				<div class="container">
+					<div class="group_home_collections row">
+						<div class="col-md-24">
+							<div class="home_collections">
+								<h6 class="general-title">M&aacute;s Populares</h6>
+								<div class="home_collections_wrapper">
+									<div id="home_collections">
 
-
-
-<div class="camera_wrap" id="home-slider">
- <!-- div	data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-1.jpg?14058599523483859647" -->
- <div	data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
-
-
-  <div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
-	href="<?php echo $context ?>/site/collections/general.php"
-	style="color: #010101;">&#161;Bienvenido!</a></div>
-
-
-
-<div class="camera_caption camera_caption_1 fadeIn"
-	style="color: #010101;">La joya ideal para ti</div>
-
-
-
-<!--       <div class="camera_caption camera_image-caption_1 moveFromLeft">-->
-<!--          <img src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-caption-1.png" alt="image_caption" />-->
-<!--        </div>   -->
-
-
-
-
-
-<div class="camera_cta_1"><a
-	href="<?php echo $context ?>/site/collections/general.php" class="btn">Nuestros
-C&aacute;talogos</a></div>
-
-
-</div>
-<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
-
-<div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
-	href="<?php echo $context ?>/site/collections/general.php"
-	style="color: #010101;">  &#161;FashionGold te desea una excelente navidad &#33; </a></div>
-<!--
-<div class="camera_caption camera_title_2 moveFromLeft"><a
-	href="<?php echo $context ?>/site/collections/sample-collection-with-left-slidebar.html"
-	style="color: #666666;">Joyas</a></div>
-<div class="camera_caption camera_image-caption_2 moveFromLeft"><img
-	src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-caption-2.png%3F14058599523483859647"
-	alt="image_caption" /></div>-->
-
-
-
-
-
-<div class="camera_cta_2"><a
-	href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver
-c&aacute;talogo</a></div>
-
-
-</div>
-<!-- div data-src="//cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-3.jpg?14058599523483859647" -->
-  <div	data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
-
-
-
-<div class="camera_caption camera_title_1 fadeIn moveFromLeft"><a
-	href="<?php echo $context ?>/site/collections/bracelets.php"
-	style="color: #010101;">&#33; Te invitamos a ver nuestros c&aacute;talogos !</a></div>
-
-<!-- <div class="camera_caption camera_image-caption_3 moveFromLeft"><img
-	src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/slide-image-caption-3.png%3F14058599523483859647"
-	alt="image_caption" /></div>-->
-<div class="camera_cta_1">
-<a
-	href="<?php echo $context ?>/site/collections/general.php" class="btn">Ver
-C&aacute;talogo</a></div>
-
-
-</div>
-
-
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- Content -->
-<div id="content" class="clearfix"><section class="content">
-<div id="col-main" class="clearfix">
-
-
-	<div class="home-popular-collections">
-		<div class="container">
-			<div class="group_home_collections row">
-				<div class="col-md-24">
-					<div class="home_collections">
-						<h6 class="general-title">M&aacute;s Populares</h6>
-						<div class="home_collections_wrapper">
-							<div id="home_collections">
-								<div class="home_collections_item">
-									<div class="home_collections_item_inner">
-										<div class="collection-details">
-											<a href="<?php echo $context ?>/site/collections/bracelets.php" title="Buscar Pulseras">
-												<img src="../site/img/collection/bracelets/20.jpg" alt="Puleras" />
-											</a>
-										</div>
-										<br><br><br><br>
-										<div class="hover-overlay">
-											<span class="col-name">
-												<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a>
-											</span>
-											<div class="collection-action">
-												<a href="<?php echo $context ?>/site/collections/bracelets.php">
-												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+										<div class="home_collections_item">
+											<div class="home_collections_item_inner">
+												<div class="collection-details">
+													<a href="<?php echo $context ?>/site/collections/bracelets.php" title="Buscar Pulseras">
+														<img src="../site/img/collection/bracelets/20.jpg" alt="Puleras" />
+													</a>
+												</div>
+												<br><br><br><br>
+												<div class="hover-overlay">
+													<span class="col-name">
+														<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a>
+													</span>
+													<div class="collection-action">
+														<a href="<?php echo $context ?>/site/collections/bracelets.php">
+														<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
 
-								<div class="home_collections_item">
-									<div class="home_collections_item_inner">
-										<div class="collection-details">
-											<a href="<?php echo $context ?>/site/collections/games.php" title="Buscar Juegos">
-												<img src="../site/img/collection/games/19.jpg" alt="Juego" /> 
-											</a>
-										</div>
-										<br><br><br>
-										<div class="hover-overlay">
-											<span class="col-name">
-												<a href="<?php echo $context ?>/site/collections/games.php">Juegos</a>
-											</span>
-											<div class="collection-action">
-												<a href="<?php echo $context ?>/site/collections/games.php">
-												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+										<div class="home_collections_item">
+											<div class="home_collections_item_inner">
+												<div class="collection-details">
+													<a href="<?php echo $context ?>/site/collections/games.php" title="Buscar Juegos">
+														<img src="../site/img/collection/games/19.jpg" alt="Juego" /> 
+													</a>
+												</div>
+												<br><br><br>
+												<div class="hover-overlay">
+													<span class="col-name">
+														<a href="<?php echo $context ?>/site/collections/games.php">Juegos</a>
+													</span>
+													<div class="collection-action">
+														<a href="<?php echo $context ?>/site/collections/games.php">
+														<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
 
-								<div class="home_collections_item">
-									<div class="home_collections_item_inner">
-										<div class="collection-details">
-											<a href="<?php echo $context ?>/site/collections/earrings.php" title="Buscar Aretes">
-												<img src="<?php echo $context ?>/site/img/collection/aretes/H1.jpg" width="100%" alt="Aretes" />
-											</a>
-										</div>
-										<br><br><br><br>
-										<div class="hover-overlay">
-											<span class="col-name">
-												<a href="<?php echo $context ?>/site/collections/earrings.php">Aretes</a>
-											</span>
-											<div class="collection-action">
-												<a href="<?php echo $context ?>/site/collections/earrings.php">
-												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+										<div class="home_collections_item">
+											<div class="home_collections_item_inner">
+												<div class="collection-details">
+													<a href="<?php echo $context ?>/site/collections/earrings.php" title="Buscar Aretes">
+														<img src="<?php echo $context ?>/site/img/collection/aretes/H1.jpg" width="100%" alt="Aretes" />
+													</a>
+												</div>
+												<br><br><br><br>
+												<div class="hover-overlay">
+													<span class="col-name">
+														<a href="<?php echo $context ?>/site/collections/earrings.php">Aretes</a>
+													</span>
+													<div class="collection-action">
+														<a href="<?php echo $context ?>/site/collections/earrings.php">
+														<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
 
-								<div class="home_collections_item">
-									<div class="home_collections_item_inner">
-										<div class="collection-details">
-											<a href="<?php echo $context ?>/site/collections/necklaces.php" title="Buscar Gargantillas"> 
-												<img src="../site/img/collection/necklances/8.jpg" alt="Gargantillas" />
-											</a>
-										</div>
-										<br><br><br>
-										<div class="hover-overlay">
-											<span class="col-name">
-												<a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a>
-											</span>
-											<div class="collection-action">
-												<a href="<?php echo $context ?>/site/collections/necklaces.php">
-												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+										<div class="home_collections_item">
+											<div class="home_collections_item_inner">
+												<div class="collection-details">
+													<a href="<?php echo $context ?>/site/collections/necklaces.php" title="Buscar Gargantillas"> 
+														<img src="../site/img/collection/necklances/8.jpg" alt="Gargantillas" />
+													</a>
+												</div>
+												<br><br><br>
+												<div class="hover-overlay">
+													<span class="col-name">
+														<a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a>
+													</span>
+													<div class="collection-action">
+														<a href="<?php echo $context ?>/site/collections/necklaces.php">
+														<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
 
-								<div class="home_collections_item">
-									<div class="home_collections_item_inner">
-										<div class="collection-details">
-											<a href="<?php echo $context ?>/site/collections/rings.php" title="Buscar Anillos">
-												<img src="../site/img/collection/rings/A10.jpg" alt="Anillos" />
-											</a>
-										</div>
-										<br><br>
-										<div class="hover-overlay">
-											<span class="col-name">
-												<a href="<?php echo $context ?>/site/collections/rings.php">Anillos</a>
-											</span>
-											<div class="collection-action">
-												<a href="<?php echo $context ?>/site/collections/rings.php">
-												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+										<div class="home_collections_item">
+											<div class="home_collections_item_inner">
+												<div class="collection-details">
+													<a href="<?php echo $context ?>/site/collections/rings.php" title="Buscar Anillos">
+														<img src="../site/img/collection/rings/A10.jpg" alt="Anillos" />
+													</a>
+												</div>
+												<br><br>
+												<div class="hover-overlay">
+													<span class="col-name">
+														<a href="<?php echo $context ?>/site/collections/rings.php">Anillos</a>
+													</span>
+													<div class="collection-action">
+														<a href="<?php echo $context ?>/site/collections/rings.php">
+														<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+													</div>
+												</div>
 											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -1060,11 +1004,9 @@ Todos los derechos reservados.</div>
 
 
 
-<div class="newsletter-popup" style="display: none;">
-<form action="" method="post" name="mc-embedded-subscribe-form"
-	target="_blank">
-
-<h3>Bienvenido FashionGold</h3>
+	<div class="newsletter-popup" style="display: none;">
+		<form action="" method="post" name="mc-embedded-subscribe-form" target="_blank">
+			<h3>Bienvenido FashionGold</h3>
 
 <p class="tagline">Gracias por visitar nuestro sitio</p>
 
@@ -1149,6 +1091,7 @@ function previewProducto(idProducto){
 	
 }  
   </script>
+  
 <script type="text/javascript">
   
   jQuery(document).ready(function($) {
@@ -1205,75 +1148,71 @@ function previewProducto(idProducto){
     var quickShopModalBackground = $('#quick-shop-modal .quick-shop-modal-bg');
       
            });
-</script> <script src="services/javascripts/currencies.js"
-	type="text/javascript"></script> <script
-	src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647"
-	type="text/javascript"></script> <script type="text/javascript">
+</script> 
+
+		<script src="services/javascripts/currencies.js" type="text/javascript"></script>
+		<script src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"> </script>
+
+		<script type="text/javascript">  
+			jQuery('.currencies li').on(clickEv, function() {
+				if(!$(this).hasClass('active')){
+				jQuery('.currencies li').removeClass('active');
+				var cls = jQuery(this).attr('class');
+				jQuery('.' + cls).addClass('active');
+				
+				var selectedValue = jQuery(this).find('input[type=hidden]').val();
+				jQuery('.currencies_src option[value='+selectedValue+']').attr('selected', true);
+				jQuery('.currencies_src').change();
+				jQuery('.currency').removeClass('open');
+				}
+			}); 
+		</script> 
+
+		<script>
+			jQuery(function() {
+			jQuery('.swatch :radio').change(function() {
+				var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+				var optionValue = jQuery(this).val();
+				jQuery(this)
+				.closest('form')
+				.find('.single-option-selector')
+				.eq(optionIndex)
+				.val(optionValue)
+				.trigger('change');
+			}); 
+			});
+		</script> 
   
-  jQuery('.currencies li').on(clickEv, function() {
-    if(!$(this).hasClass('active')){
-      jQuery('.currencies li').removeClass('active');
-      var cls = jQuery(this).attr('class');
-      jQuery('.' + cls).addClass('active');
-      
-      var selectedValue = jQuery(this).find('input[type=hidden]').val();
-      jQuery('.currencies_src option[value='+selectedValue+']').attr('selected', true);
-      jQuery('.currencies_src').change();
-      jQuery('.currency').removeClass('open');
-    }
-  });
-  
- 
-</script> <script>
-    jQuery(function() {
-      jQuery('.swatch :radio').change(function() {
-        var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
-        var optionValue = jQuery(this).val();
-        jQuery(this)
-        .closest('form')
-        .find('.single-option-selector')
-        .eq(optionIndex)
-        .val(optionValue)
-        .trigger('change');
-      }); 
-    });
-  </script> <!--Androll--> <script type="text/javascript">
-adroll_adv_id = "HTF7KIWJRBHHXL46WLUDBC";
-adroll_pix_id = "IE5CHDRTR5ABXH2P6QXAVM";
-(function () {
-var oldonload = window.onload;
-window.onload = function(){
-   __adroll_loaded=true;
-   var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-   scr.setAttribute('async', 'true');
-   scr.type = "text/javascript";
-   scr.src = host + "/j/roundtrip.js";
-   ((document.getElementsByTagName('head') || [null])[0] ||
-    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-   if(oldonload){oldonload()}};
-}());
-</script> <!-- Google Code --> <script>
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55571446-8', 'auto');
-
-  ga('require', 'displayfeatures');
-  
-  ga('set', 'dimension1', 'sf_jewelry');
-     
-  ga('set', 'dimension2', 'jewelry_store');
-
-  ga('send', 'pageview');
-
-</script>
-
-</body>
+ 	 	<!--Androll--> 
+  		<script type="text/javascript">
+			adroll_adv_id = "HTF7KIWJRBHHXL46WLUDBC";
+			adroll_pix_id = "IE5CHDRTR5ABXH2P6QXAVM";
+			(function () {
+				var oldonload = window.onload;
+				window.onload = function(){
+					__adroll_loaded=true;
+					var scr = document.createElement("script");
+					var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+					scr.setAttribute('async', 'true');
+					scr.type = "text/javascript";
+					scr.src = host + "/j/roundtrip.js";
+					((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+					if(oldonload){oldonload()}
+				};
+			}());
+		</script> 
+		
+		<!-- Google Code --> 
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-55571446-8', 'auto');
+			ga('require', 'displayfeatures');
+			ga('set', 'dimension1', 'sf_jewelry');
+			ga('set', 'dimension2', 'jewelry_store');
+			ga('send', 'pageview');
+		</script>
+	</body>
 </html>
