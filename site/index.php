@@ -553,157 +553,133 @@ C&aacute;talogo</a></div>
 
 <!-- Content -->
 <div id="content" class="clearfix"><section class="content">
-
-
 <div id="col-main" class="clearfix">
 
 
+	<div class="home-popular-collections">
+		<div class="container">
+			<div class="group_home_collections row">
+				<div class="col-md-24">
+					<div class="home_collections">
+						<h6 class="general-title">M&aacute;s Populares</h6>
+						<div class="home_collections_wrapper">
+							<div id="home_collections">
+								<div class="home_collections_item">
+									<div class="home_collections_item_inner">
+										<div class="collection-details">
+											<a href="<?php echo $context ?>/site/collections/bracelets.php" title="Buscar Pulseras">
+												<img src="../site/img/collection/bracelets/20.jpg" alt="Puleras" />
+											</a>
+										</div>
+										<br><br><br><br>
+										<div class="hover-overlay">
+											<span class="col-name">
+												<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a>
+											</span>
+											<div class="collection-action">
+												<a href="<?php echo $context ?>/site/collections/bracelets.php">
+												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+											</div>
+										</div>
+									</div>
+								</div>
 
+								<div class="home_collections_item">
+									<div class="home_collections_item_inner">
+										<div class="collection-details">
+											<a href="<?php echo $context ?>/site/collections/games.php" title="Buscar Juegos">
+												<img src="../site/img/collection/games/19.jpg" alt="Juego" /> 
+											</a>
+										</div>
+										<br><br><br>
+										<div class="hover-overlay">
+											<span class="col-name">
+												<a href="<?php echo $context ?>/site/collections/games.php">Juegos</a>
+											</span>
+											<div class="collection-action">
+												<a href="<?php echo $context ?>/site/collections/games.php">
+												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+											</div>
+										</div>
+									</div>
+								</div>
 
+								<div class="home_collections_item">
+									<div class="home_collections_item_inner">
+										<div class="collection-details">
+											<a href="<?php echo $context ?>/site/collections/earrings.php" title="Buscar Aretes">
+												<img src="<?php echo $context ?>/site/img/collection/aretes/H1.jpg" width="100%" alt="Aretes" />
+											</a>
+										</div>
+										<br><br><br><br>
+										<div class="hover-overlay">
+											<span class="col-name">
+												<a href="<?php echo $context ?>/site/collections/earrings.php">Aretes</a>
+											</span>
+											<div class="collection-action">
+												<a href="<?php echo $context ?>/site/collections/earrings.php">
+												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+											</div>
+										</div>
+									</div>
+								</div>
 
+								<div class="home_collections_item">
+									<div class="home_collections_item_inner">
+										<div class="collection-details">
+											<a href="<?php echo $context ?>/site/collections/necklaces.php" title="Buscar Gargantillas"> 
+												<img src="../site/img/collection/necklances/8.jpg" alt="Gargantillas" />
+											</a>
+										</div>
+										<br><br><br>
+										<div class="hover-overlay">
+											<span class="col-name">
+												<a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a>
+											</span>
+											<div class="collection-action">
+												<a href="<?php echo $context ?>/site/collections/necklaces.php">
+												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+											</div>
+										</div>
+									</div>
+								</div>
 
+								<div class="home_collections_item">
+									<div class="home_collections_item_inner">
+										<div class="collection-details">
+											<a href="<?php echo $context ?>/site/collections/rings.php" title="Buscar Anillos">
+												<img src="../site/img/collection/rings/A10.jpg" alt="Anillos" />
+											</a>
+										</div>
+										<br><br>
+										<div class="hover-overlay">
+											<span class="col-name">
+												<a href="<?php echo $context ?>/site/collections/rings.php">Anillos</a>
+											</span>
+											<div class="collection-action">
+												<a href="<?php echo $context ?>/site/collections/rings.php">
+												<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<div class="home-popular-collections">
-<div class="container">
-<div class="group_home_collections row">
-<div class="col-md-24">
-
-<div class="home_collections">
-<h6 class="general-title">M&aacute;s Populares</h6>
-<div class="home_collections_wrapper">
-<div id="home_collections">
-
-
-<div class="home_collections_item">
-<div class="home_collections_item_inner">
-<div class="collection-details"><a
-	href="<?php echo $context ?>/site/collections/bracelets.php"
-	title="Buscar Pulseras"> <img
-	src="../site/img/collection/bracelets/20.jpg" alt="Puleras" /> </a></div>
-<br>
-<br>
-<br>
-<br>
-<div class="hover-overlay"><span class="col-name"><a
-	href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a></span>
-<div class="collection-action"><a
-	href="<?php echo $context ?>/site/collections/bracelets.php"> <i
-	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
-</div>
-</div>
-</div>
-
-
-
-
-<div class="home_collections_item">
-<div class="home_collections_item_inner">
-<div class="collection-details"><a
-	href="<?php echo $context ?>/site/collections/games.php"
-	title="Buscar Juegos"> <img src="../site/img/collection/games/19.jpg"
-	alt="Juego" /> </a></div>
-<br>
-<br>
-<br>
-<div class="hover-overlay"><span class="col-name"><a
-	href="<?php echo $context ?>/site/collections/games.php">Juegos</a></span>
-<div class="collection-action"><a
-	href="<?php echo $context ?>/site/collections/games.php"> <i
-	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
-</div>
-</div>
-</div>
-
-
-<div class="home_collections_item">
-<div class="home_collections_item_inner">
-<div class="collection-details"><a
-	href="<?php echo $context ?>/site/collections/earrings.php"
-	title="Buscar Aretes"> <img
-	src="<?php echo $context ?>/site/img/collection/aretes/H1.jpg"
-	width="100%" alt="Aretes" /> </a></div>
-<br>
-<br>
-<br>
-<br>
-<div class="hover-overlay"><span class="col-name"><a
-	href="<?php echo $context ?>/site/collections/earrings.php">Aretes</a></span>
-<div class="collection-action"><a
-	href="<?php echo $context ?>/site/collections/earrings.php"> <i
-	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
-</div>
-</div>
-</div>
-
-
-
-<div class="home_collections_item">
-<div class="home_collections_item_inner">
-<div class="collection-details"><a
-	href="<?php echo $context ?>/site/collections/necklaces.php"
-	title="Buscar Gargantillas"> <img
-	src="../site/img/collection/necklances/8.jpg" alt="Gargantillas" /> </a></div>
-<br>
-<br>
-<br>
-<div class="hover-overlay"><span class="col-name"><a
-	href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a></span>
-<div class="collection-action"><a
-	href="<?php echo $context ?>/site/collections/necklaces.php"> <i
-	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
-</div>
-</div>
-</div>
-
-
-
-
-
-<div class="home_collections_item">
-<div class="home_collections_item_inner">
-<div class="collection-details"><a
-	href="<?php echo $context ?>/site/collections/rings.php"
-	title="Buscar Anillos"> <img src="../site/img/collection/rings/A10.jpg"
-	alt="Anillos" /> </a></div>
-<br>
-<br>
-<div class="hover-overlay"><span class="col-name"><a
-	href="<?php echo $context ?>/site/collections/rings.php">Anillos</a></span>
-<div class="collection-action"><a
-	href="<?php echo $context ?>/site/collections/rings.php"> <i
-	class="fa fa-eye"></i> Ver Colecci&oacute;n</a></div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-</div>
-</div>
-</div>
-<script>
-          $(document).ready(function() {
-            $('.collection-details').hover(
-              function() {
-                $(this).parent().addClass("collection-hovered");
-              },
-              function() {
-              $(this).parent().removeClass("collection-hovered");
-              });
-          });
-          
-        </script></div>
-</div>
-</div>
-</div>
-
-
-
+	<!--script>
+		$(document).ready(function() {
+			$('.collection-details').hover(function() {
+					$(this).parent().addClass("collection-hovered");
+				},function() {
+					$(this).parent().removeClass("collection-hovered");
+				});
+			});    
+	</script-->
 
 <div class="home-newproduct">
 <div class="container">
@@ -716,8 +692,7 @@ C&aacute;talogo</a></div>
 <div id="home_products"><?php 
 
 foreach($nodeNuevo as $posicion=>$registro)
-	{
-		
+	{	
 		if($registro['oferta'] == 1 ){
 			$divOferta="
 				<div class='element no_full_width col-md-8 col-sm-8 not-animated'
@@ -747,7 +722,6 @@ foreach($nodeNuevo as $posicion=>$registro)
 				</div>";
 			echo $divOferta;
 		}else{
-		
 			$divComercial="<div class='element no_full_width col-md-8 col-sm-8 not-animated'
 								data-animate='fadeInUp' data-delay='0'>
 							<ul class='row-container list-unstyled clearfix'>
@@ -772,12 +746,10 @@ foreach($nodeNuevo as $posicion=>$registro)
 							</ul>
 							</div>";
 			echo $divComercial;
-		}
-		
-		
+		}	
 	}
-
 ?>
+
 </div>
 </div>
 </div>
