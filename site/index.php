@@ -1,7 +1,7 @@
 <?php
 	include("../site/admin/mvc/util/MysqlDAO.php");
 
-	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	$context= $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 	$var =explode("/",$context);
 	
 	if (strpos($context, "localhost") !== false) {
