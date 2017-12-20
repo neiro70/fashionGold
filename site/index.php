@@ -419,7 +419,7 @@
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">
-									<p style="color: #010101;" class='chopsFont' >Bienvenido
+									<p style="color: #010101;" class='chopsFont' > Bienvenido </p>
 								</a>
 							</div>
 							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
