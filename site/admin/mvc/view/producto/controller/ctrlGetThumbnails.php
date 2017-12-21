@@ -25,19 +25,17 @@ if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
 			
-		$txtnombre=$row["txtNombre"];
-		$src=$txtnombre;
+		$txtNombre=$row["txtNombre"];
+		
+		//$src=$txtnombre;
 		//$data = base64_decode($row["txtbase64"]);
-		$idimgproducto=$row["idImagen"];
-
+		$idImagen=$row["idImagen"];
+		
 
 		//$liga="<a href='controller/ctrlGetFile.php?idimg={$idimgproducto}' target='_blank' >{$txtnombre} </a>";
 		//$ligaEliminar="<a href='#' onclick='eliminarFile({$row["idimgproducto"]})'  ><i class='fa fa-trash'></i> </a>";
-		$thumbnail="<img class='img-thumbnail' src='$contexto/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idimgproducto}' 
-		alt='{$txtnombre}'   >";
-
-
-		$entrys[]= array( tipo=>$row["ntipo"],thumbnail=>$thumbnail,idimg=>$idimgproducto);
+		$thumbnail="<img class='img-thumbnail' src='$contexto/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}' alt='{$txtNombre}'>";
+		$entrys[]= array('thumbnail'=>$thumbnail,'idimg'=>$idImagen);
 
 	}
 	/*if(count($entrys) > 0) {

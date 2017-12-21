@@ -94,7 +94,7 @@
 	<title>Fashion Gold</title>
 	<meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
 	
-	<link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
+	
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
@@ -102,15 +102,17 @@
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="https://hpneo.github.io/gmaps/prettify/prettify.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="https://hpneo.github.io/gmaps/styles.css" rel="stylesheet" type="text/css" media="all" />
 	<link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
-	
+	<link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+
+	<script src="<?=$context?>/site/admin/js/jquery.js"></script>		
 	<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
 	<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
 	<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
@@ -621,17 +623,17 @@
 															foreach($nodeNuevo as $posicion=>$registro){	
 																if($registro['oferta'] == 1 ){
 																	$divOferta="
-																		<div class='element no_full_width col-md-8 col-sm-8 not-animated'
-																				data-animate='fadeInUp' data-delay='0'>
-																			<ul class='row-container list-unstyled clearfix'>
-																			<li class='row-left'>
-																<a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-																	class='container_item'> <img style='cursor: pointer;'
-																					src='{$registro['imagen']}' class='img-responsive' alt='{$registro['titulo']}' />
-																					<span class='sale_banner'> <span class='sale_text'>Oferta</span> </span> 
-																				</a>
-																			</li>
-																			<li class='row-right parent-fly animMix'>
+																					<div class='element no_full_width col-md-8 col-sm-8 not-animated'
+																					data-animate='fadeInUp' data-delay='0'>
+																				<ul class='row-container list-unstyled clearfix'>
+																				<li class='row-left'>
+																	<a onClick='previewProducto({$registro['idProducto']})'  data-target='#myModalFrame' data-toggle='modal'>
+																						<img style='cursor: pointer;'
+																						src='{$registro['imagen']}' class='img-responsive' alt='{$registro['titulo']}' />
+																						<span class='sale_banner'> <span class='sale_text'>Oferta</span> </span> 
+																					</a>
+																				</li>
+																				<li class='row-right parent-fly animMix'>
 																				<div class='product-content-left'>
 																					<a class='title-5'	href='#'>{$registro['titulo']}</a> 
 																					<span class='shopify-product-reviews-badge' data-id='registro{$registro['idProducto']}'></span></div>
@@ -648,29 +650,30 @@
 																		</div>";
 																	echo $divOferta;
 																}else{
-																	$divComercial="<div class='element no_full_width col-md-8 col-sm-8 not-animated'
-																						data-animate='fadeInUp' data-delay='0'>
-																					<ul class='row-container list-unstyled clearfix'>
-																						<li class='row-left'>
-																		<a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-																			class='container_item'> <img style='cursor: pointer;' src='{$registro['imagen']}' class='img-responsive' 
-																								alt='{$registro['titulo']}' />
-																							</a>
-
-																						</li>
-																						<li class='row-right parent-fly animMix'>
-																							<div class='product-content-left'>
-																								<a class='title-5' href='#'> {$registro['titulo']}</a>
-																								<span class='shopify-product-reviews-badge' data-id='registro{$posicion}'></span></div>
-																								<div class='product-content-right'>
-																								<div class='product-price'>
-																								<span class='price'> 
-																								<span class='money'>{$registro['precio']} </span> </span></div>
-																							</div>
-																						<div class='list-mode-description'>{$registro['descripcion']}</div>
-																						</li>
-																					</ul>
-																					</div>";
+																	$divComercial="
+																		<div class='element no_full_width col-md-8 col-sm-8 not-animated' data-animate='fadeInUp' data-delay='0'>
+																			<ul class='row-container list-unstyled clearfix'>
+																				<li class='row-left'>
+																					<a onClick='previewProducto({$registro['idProducto']})'  data-target='#myModalFrame' data-toggle='modal'>
+																						<img style='cursor: pointer;' src='{$registro['imagen']}' class='img-responsive' alt='{$registro['titulo']}' />
+																					</a>
+																				</li>
+																				<li class='row-right parent-fly animMix'>
+																					<div class='product-content-left'>
+																						<a class='title-5' href='#'> {$registro['titulo']}</a>
+																						<span class='shopify-product-reviews-badge' data-id='registro{$posicion}'></span>
+																					</div>
+																					<div class='product-content-right'>
+																						<div class='product-price'>
+																							<span class='price'> 
+																								<span class='money'>{$registro['precio']} </span>
+																							</span>
+																						</div>
+																					</div>
+																					<div class='list-mode-description'>{$registro['descripcion']}</div>
+																				</li>
+																			</ul>
+																		</div>";
 																	echo $divComercial;
 																}	
 															}
@@ -766,8 +769,8 @@
 																									data-delay='0'>
 																								<ul class='row-container list-unstyled clearfix'>
 																				<li class='row-left'>
-																				<a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-																				class='container_item'> <img style='cursor: pointer;'
+																				<a onClick='previewProducto({$registro['idProducto']})'  data-target='#myModalFrame' data-toggle='modal'> 
+																					<img style='cursor: pointer;'
 																										src='{$registro['imagen']}' class='img-responsive'
 																										alt='{$registro['titulo']}' /> <span class='sale_banner'> <span
 																										class='sale_text'>Oferta</span> </span> </a>
@@ -791,8 +794,8 @@
 																							data-delay='200'>
 																						<ul class='row-container list-unstyled clearfix'>
 																			<li class='row-left'>
-																			<a onClick='previewProducto({$registro['idProducto']})'  data-target='#quick-shop-modal' data-toggle='modal'
-																			class='container_item'> <img style='cursor: pointer;'
+																			<a onClick='previewProducto({$registro['idProducto']})'  data-target='#myModalFrame' data-toggle='modal'>
+																				<img style='cursor: pointer;'
 																								src='{$registro['imagen']}' class='img-responsive'
 																								alt='{$registro['titulo']}' /> </a>
 																													
@@ -913,19 +916,22 @@
 		</div>
 
 		<!-- Modal -->
-		<div id="quick-shop-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1" data-width="800">
-			<div class="modal-dialog rotateInDownLeft">
-				<div class="modal-content">
-					<div class="modal-header">
-						<i class="close fa fa-times btooltip" data-toggle="tooltip" data-placement="top" title="Cerrar" data-dismiss="modal" aria-hidden="true">
-							</i>
-					</div>
-					<div class="modal-body">
-						<div class="quick-shop-modal-bg"></div>
-						<div class="row">
-							<div class="col-md-24 product-image">
-								<iframe src="" frameborder="0" id="targetiframe" style=" height:400px; width:100%;" name="targetframe" allowtransparency="true"></iframe>
-							</div>
+		<div class="container">
+			<div class="modal fade" id="myModalFrame">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header" style="background-color: #428BCA; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							<h4 class="modal-title">Vista del Producto</h4>
+						</div>
+						<div class="modal-body">
+							<iframe src="" 
+									frameborder="0" 
+									id="targetiframe" 
+									style=" height:500px; width:100%;" 
+									name="targetframe" 
+									allowtransparency="true">
+							</iframe> 
 						</div>
 					</div>
 				</div>
@@ -933,7 +939,6 @@
 		</div>
 
 		<script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script> 
-
 		<script type="text/javascript">
 			if (typeof Shopify.onCartShippingRatesUpdate === 'undefined') {
 				document.write("\u003cscript src=\"\/\/cdn.shopify.com\/s\/assets\/themes_support\/api.jquery-249bc01571641fb7bf9bf82378ba6333e9abdcc34aad49eb9e4edb01557b7dac.js\" type=\"text\/javascript\"\u003e\u003c\/script\u003e");
@@ -979,7 +984,7 @@
 				var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto=' + idProducto;
 				var height = $(this).attr('data-height') || 250;
 				var width = $(this).attr('data-width') || 400;
-
+				
 				$("#targetiframe").attr({
 					'src': src,
 					'height': height,
@@ -988,66 +993,9 @@
 
 			}
 		</script>
-  
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-
-				$('#quick-shop-modal').on('hidden.bs.modal', function() {
-					$('.zoomContainer').css('z-index', '1');
-					$('#top').removeClass('z-idx');
-				})
-
-				$('#quick-shop-modal').on('shown.bs.modal', function() {
-					$('#top').addClass('z-idx');
-					$('.modal-dialog').addClass("fadeIn");
-					imagesLoaded('#quick-shop-modal', function() {
-
-						updateScrollThumbsQS();
-
-						$("#gallery_main_qs").show().owlCarousel({
-							navigation: true,
-							pagination: false,
-							items: 4,
-							itemsDesktop: [1199, 4],
-							itemsDesktopSmall: [979, 3],
-							itemsTablet: [768, 3],
-							itemsMobile: [479, 2],
-							scrollPerPage: true,
-							navigationText: ['<span class="btooltip" title="Anterior"></span>', '<span class="btooltip" title="Siguiente"></span>']
-						});
-
-						var delayLoadingQS = '';
-						delayLoadingQS = setInterval(function() {
-
-							quickShopModalBackground.hide();
-							$('.zoomContainer').css('z-index', '2000');
-							$('#quick-shop-modal .modal-body').resize();
-
-							clearInterval(delayLoadingQS);
-						}, 500);
-					});
-
-				});
-
-				var quickShopModal = $('#quick-shop-modal');
-				var quickShopContainer = $('#quick-shop-container');
-				var quickShopImage = $('#quick-shop-image');
-				var quickShopTitle = $('#quick-shop-title');
-				var quickShopDescription = $('#quick-shop-description');
-				var quickShopRelative = $('#quick-shop-relative');
-				var quickShopVariantsContainer = $('#quick-shop-variants-container');
-				var quickShopPriceContainer = $('#quick-shop-price-container');
-				var quickShopAddButton = $('#quick-shop-add');
-				var quickShopAddToCartButton = $('#quick-shop-add');
-				var quickShopProductActions = $('#quick-shop-product-actions');
-				var quickShopModalBackground = $('#quick-shop-modal .quick-shop-modal-bg');
-			});
-		</script>
 
 		<script src="services/javascripts/currencies.js" type="text/javascript"></script>
-		
 		<script src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"> </script>
-
 		<script type="text/javascript">  
 			jQuery('.currencies li').on(clickEv, function() {
 				if(!$(this).hasClass('active')){

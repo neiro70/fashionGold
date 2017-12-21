@@ -23,7 +23,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="<?=$contexto?>/site/admin/css/bootstrap3-dialog/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
+	<link href="<?=$contexto?>/site/admin/css/bootstrap3-dialog/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
 
 
     <title>Fashion Gold Buscar producto</title>
