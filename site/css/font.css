@@ -5,9 +5,10 @@
 
   .chopsFont{
     font-family: chopsFont;
-    font-size: 100%;
+    font-size: 400%;
   }
   .chopsFontTitle{
     font-family: chopsFont;
     font-size: xx-large;
+    color: #9D802E;
   }

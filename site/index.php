@@ -12,6 +12,8 @@
 
 	$nodeNuevo = array();
 	$nodeDestacado = array();
+	$nodeCatalogo = array();
+    $posCatalogo=1;
 	$posNuevo=1;
 	$posDestacado=1;
 
@@ -19,6 +21,8 @@
 			t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus,t01.isNuevo,t01.isDestacado
 			FROM t01producto t01 INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
 			LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto WHERE 1=1 OR isNuevo=1 OR isDestacado=1 ";
+	
+	$sqlCatalogo="SELECT * FROM c01tipo";
 
 	$db = new MySQL ();
 	$conn=$db->getConexion();
@@ -26,6 +30,8 @@
 	setlocale(LC_MONETARY, 'es_MX');
 	
 	$result = $conn->query($sql);
+	$resultCatalogo = $conn->query($sqlCatalogo);
+
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {// output data of each row
 			$idProducto=$row["idProducto"];
@@ -54,6 +60,17 @@
 			}
 		}
 	}
+
+	if ($resultCatalogo->num_rows > 0) {
+		// output data of each row
+		while($row =  $resultCatalogo->fetch_assoc()) {
+            $txtDescripcion=mb_convert_encoding($row["txtdescripcion"],'ISO-8859-1','UTF-8');
+            $txturl=$row["txturl"];
+            $idTipo=$row["idtipo"];
+			$nodeCatalogo[$posCatalogo++]=array('descripcion'=>$txtDescripcion,'idTipo'=>$idTipo,'url'=>$txturl);
+		}
+	}
+
 
 	$db->closeSession();
 ?>
@@ -305,45 +322,42 @@
 													<i class="sub-dropdown1 visible-sm visible-md visible-lg"></i>
 													<i class="sub-dropdown visible-sm visible-md visible-lg"></i>
 												</a>
-												<div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
-													<ul class="sub-mega-menu">
-														<li>
-															<ul>
-																<li class="list-title">Nuevos</li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<spanclass="megamenu-label new-label">Oferta</span></a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/earrings.php">Aretes<span class="megamenu-label hot-label">Nuevos</span></a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span class="megamenu-label feature-label">Nuevo</span></a></li>
-															</ul>
-														</li>
-														<li>
-															<ul>
-																<li class="list-title">Productos</li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<spanclass="megamenu-label li-sub-mega">Oferta</span> </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a></li>
-															</ul>
-														</li>
-														<li>
-															<ul>
-																<li class="list-title">Destacados</li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<spanclass="megamenu-label li-sub-mega">Oferta</span> </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a></li>
-															</ul>
-														</li>
-														<li>
-															<ul>
-																<li class="list-title">Ofertas</li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/rings.php">Anillos </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras<span class="megamenu-label li-sub-mega">Oferta</span> </a></li>
-																<li class="list-unstyled li-sub-mega"><a href="<?php echo $context ?>/site/collections/necklaces.php">Gargantillas</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-											</li>
+                                                  <div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
+                                                  <ul class="sub-mega-menu">
+                                                      <li>
+                                                          <ul>
+                                                              <li class="list-title">Productos</li>
+                                                              <?php 
+                                                                        $menu='';
+                                                                        foreach($nodeCatalogo as $posicion=>$registro){
+                                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
+                                                                          $menu=$menu.$li;
+                                                                        }
+
+                                                                        echo $menu;
+                                                              
+                                                              ?>
+                                                          </ul>
+                                                      </li>
+
+                                                      <li>
+
+                                                          <ul>
+                                                              <li class="list-title">Destacados</li>
+                                                              <?php 
+                                                                        $menu='';
+                                                                        foreach($nodeCatalogo as $posicion=>$registro){
+                                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
+                                                                          $menu=$menu.$li;
+                                                                        }
+
+                                                                        echo $menu;
+                                                              
+                                                              ?>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                            </li>
 											<li class="nav-item dropdown">
 												<a href="<?php echo $context ?>/site/pages/blogs/blogs.html" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
 													<span>Blog</span>
@@ -418,9 +432,9 @@
 						
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-								<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">
+								
 									<p style="color: #010101;" class='chopsFont' > Bienvenido </p>
-								</a>
+
 							</div>
 							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
 								La joya ideal para ti
@@ -434,11 +448,11 @@
 
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-								<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">  
+
 									<p style="color: #010101;" class='chopsFont'>  
 										Fashion Gold te desea una excelente navidad
 									</p>
-								</a>
+
 							</div>
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/collections/general.php" class="btn">
@@ -450,9 +464,9 @@
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">
-									<p class='chopsFont' style="color: #010101;">
+
 										Te invitamos a ver nuestros c&aacute;talogos
-									</p>
+
 								</a>
 							</div>
 							<div class="camera_cta_1">
@@ -671,7 +685,7 @@
 
 							<div class="home-banner-wrapper">
 								<div class="container">
-									<div id="home-banner" class="text-center clearfix"><img class="pulse img-banner-caption" src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/home_banner_image_text.png?14058599523483859647" alt="" />
+									<div id="home-banner" class="text-center clearfix"><img class="pulse img-banner-caption" src="img/collection/muneca3.png" alt="" />
 										<div class="home-banner-caption">
 											<p>Si deseas incrementa tus ingresos, somos la mejor opci&oacute;n pues manejamos diferentes rangos de descuento dependiendo tu monto de inversi&oacute;n, entendiendo que entre m&aacute;s inviertas mayor ser&aacute; el descuento.</p>
 										</div>
@@ -854,7 +868,7 @@
 
 					<div class="footer-content footer-content-bottom clearfix">
 						<div class="container">
-							<div class="copyright col-md-12">&copy; 2017 <a href="index.html">FashionGold</a>.Todos los derechos reservados.</div>
+							<div class="copyright col-md-12">&copy; 2017 Fashion Gold .Todos los derechos reservados.</div>
 							<div id="widget-payment" class="col-md-12">
 								<ul id="payments" class="list-inline animated">
 									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
@@ -873,8 +887,7 @@
 
 		<div class="newsletter-popup" style="display: none;">
 			<form action="" method="post" name="mc-embedded-subscribe-form" target="_blank">
-				<h3>Bienvenido FashionGold</h3>
-				<p class="tagline">Gracias por visitar nuestro sitio</p>
+				<h3>Bienvenido Fashion Gold</h3>
 			</form>
 				<!--<div class="group_input"><input class="form-control" type="email"-->
 				<!--	name="EMAIL" placeholder="YOUR EMAIL" />--> <!--<button class="btn" type="submit"><i class="fa fa-paper-plane"></i></button>-->
