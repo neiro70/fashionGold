@@ -79,8 +79,8 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="ISO-8859-1">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 	<link rel="icon" href="<?php echo $context ?>/rings.ico">
 	<link rel="canonical" href="<?php echo $context ?>" />
