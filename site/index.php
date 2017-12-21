@@ -463,11 +463,11 @@
 
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-								<a href="<?php echo $context ?>/site/collections/general.php" style="color: #010101;">
-
+								
+									<p class='chopsFont' style="color: #010101;">
 										Te invitamos a ver nuestros c&aacute;talogos
-
-								</a>
+									</p>
+								
 							</div>
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/collections/general.php" class="btn">
