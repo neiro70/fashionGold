@@ -53,8 +53,8 @@
 
 				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1,UTF-8');				
 				//$txtDescripcion=utf8_encode($row["txtDescripcion"]); 
-				$txtDescripcion=$row["txtDescripcion"];
-				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');	
+				//$txtDescripcion=$row["txtDescripcion"];
+				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');	
 				
 				$estatus=$row["estatus"];
 				$tipo=$row["tipo"];
