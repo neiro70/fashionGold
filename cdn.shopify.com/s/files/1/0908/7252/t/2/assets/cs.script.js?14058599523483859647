@@ -301,7 +301,7 @@ function handleCarousel(){
         height: k,
         playPause: false,
         pagination: false,
-        autoAdvance: false,
+        autoAdvance: true,
         fx: 'simpleFade'
       });
   }

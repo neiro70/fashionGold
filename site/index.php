@@ -424,7 +424,7 @@
 				}); 
 			</script>
 		</header>
-
+		
 		<!--Start the slider-->
 		<div id="content-wrapper-parent">
 			<div id="content-wrapper">
@@ -597,15 +597,6 @@
 													</div>
 												</div>
 											</div>
-											<!--script>
-												$(document).ready(function() {
-													$('.collection-details').hover(function() {
-															$(this).parent().addClass("collection-hovered");
-														},function() {
-															$(this).parent().removeClass("collection-hovered");
-														});
-													});    
-											</script-->
 										</div>
 									</div>
 								</div>
