@@ -40,13 +40,16 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 		while($row = $result->fetch_assoc()) {
 
 			$idLinea=$row['idLinea'];
-			$idProducto=$row["idProducto"];
-			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
+            $idProducto=$row["idProducto"];
+            
+            //$txtDescripcion=$row["txtDescripcion"];
+            $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+            $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
 
 
 			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
 			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+			
 			
 			$estatus=$row["estatus"];
 			$tipo=$row["tipo"];
@@ -115,6 +118,7 @@ $db->closeSession();
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
 
+        <script src="<?=$context?>/site/admin/js/jquery.js"></script>	
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
@@ -662,6 +666,7 @@ foreach($node as $posicion=>$registro)
                                     </div>
                                 </div>
                                 <!-- Modal -->
+                                
 
                                 <div id="quick-shop-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1" data-width="800">
                                     <div class="modal-dialog rotateInDownLeft">
@@ -689,8 +694,8 @@ foreach($node as $posicion=>$registro)
 
                                     function previewProducto(idProducto) {
                                         var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto=' + idProducto;
-                                        var height = $(this).attr('data-height') || 150;
-                                        var width = $(this).attr('data-width') || 400;
+                                        var height = $(this).attr('data-height') || '450px';
+                                        var width = $(this).attr('data-width') || '100%';
                                         $("#targetiframe").attr({
                                             'src': src,
                                             'height': height,

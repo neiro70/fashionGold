@@ -196,7 +196,7 @@
                             "</div>";
                             $("#divThumbnails").append(div);
                             idimg = val.idimg;
-                            console.info(val);
+                          
 
                         });
 
