@@ -59,17 +59,11 @@
 				
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
-
-				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1,UTF-8');				
-				
-
 				
 				if($isLocal){		
-					//$txtDescripcion=utf8_encode($row["txtDescripcion"]); 			
-					$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');
-					$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','auto');
-						//$txtDescripcion=utf8_encode($row["txtDescripcion"]); 
-					//$txtDescripcion=$row["txtDescripcion"];
+		
+					$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
+					$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
 					
 				}else{
 					$txtDescripcion=$row["txtDescripcion"];

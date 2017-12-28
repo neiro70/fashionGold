@@ -18,8 +18,9 @@
 		$txtTitulo=$_POST["txtTitulo"];
 		$txtDescripcion=$_POST["txtDescripcion"];
 	}else{
-		$txtTitulo=mb_convert_encoding($_POST["txtTitulo"],'UTF-8','ISO-8859-1');
-		$txtDescripcion=mb_convert_encoding($_POST["txtDescripcion"],'UTF-8','ISO-8859-1');
+
+		$txtTitulo=mb_convert_encoding($_POST["txtTitulo"],'ISO-8859-1','UTF-8');
+		$txtDescripcion=mb_convert_encoding($_POST["txtDescripcion"],'ISO-8859-1','UTF-8');
 	}	
 
 	

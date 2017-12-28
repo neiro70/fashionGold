@@ -39,10 +39,10 @@ include("../../site/admin/mvc/util/MysqlDAO.php");
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
 			$idLinea=$row['idLinea'];
-			$idProducto=$row["idProducto"];
+            $idProducto=$row["idProducto"];
+            
+
 			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-
-
 			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
 			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
 			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
@@ -87,8 +87,8 @@ $db->closeSession();
 
     <head>
 
-        <meta charset="ISO-8859-1">
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" href="<?php echo $context ?>/rings.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
         <link rel="canonical" href="rings.php" />
@@ -409,7 +409,7 @@ $db->closeSession();
                                                 <div class="btn-group">
                                                     <div class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></div>
                                                     <ul class="customer dropdown-menu">
-
+                                                    //$txtDescripcion=utf8_encode($row["txtDescripcion"]); 
                                                         <li class="logout"><a href="https://site/account/login">Login</a></li>
                                                         <li class="account"><a href="https://site/account/register">Register</a>
                                                         </li>
