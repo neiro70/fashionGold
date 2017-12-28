@@ -109,7 +109,7 @@ $db->closeSession();
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Belleza.css' rel='stylesheet' type='text/css'>
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css' rel='stylesheet' type='text/css'>
         <meta name="description" content="" />
-        <title>Pulseras</title>
+        <title>Pulseras/Brazaletes</title>
         <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
         <link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
@@ -539,7 +539,7 @@ $db->closeSession();
                     <div id="breadcrumb" class="breadcrumb">
                         <div itemprop="breadcrumb" class="container">
                             <div class="row">
-                                <div class="col-md-24"><a href="../index.php" class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span> <span class="page-title">pulseras</span></div>
+                                <div class="col-md-24"><a href="../index.php" class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span> <span class="page-title">Pulseras y Brazaletes</span></div>
                             </div>
                         </div>
                     </div>
@@ -557,7 +557,7 @@ $db->closeSession();
                                     <div id="tags-load" style="display: none;"><i class="fa fa-spinner fa-pulse fa-2x"></i></div>
 
                                     <div id="page-header" class="col-sm-24">
-                                        <p id="page-title" class='chopsFontTitle'>Pulseras</p>
+                                        <p id="page-title" class='chopsFontTitle'>Pulseras y Brazaletes</p>
                                     </div>
 
 

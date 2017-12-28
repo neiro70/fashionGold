@@ -504,7 +504,7 @@
 																<br><br><br><br>
 																<div class="hover-overlay">
 																	<span class="col-name">
-																		<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a>
+																		<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras/Brazaletes</a>
 																	</span>
 																	<div class="collection-action">
 																		<a href="<?php echo $context ?>/site/collections/bracelets.php">
