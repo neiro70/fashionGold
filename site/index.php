@@ -524,7 +524,7 @@
 																<br><br><br>
 																<div class="hover-overlay">
 																	<span class="col-name">
-																		<a href="<?php echo $context ?>/site/collections/games.php">Juegos</a>
+																		<a href="<?php echo $context ?>/site/collections/games.php">Juegos (SET)</a>
 																	</span>
 																	<div class="collection-action">
 																		<a href="<?php echo $context ?>/site/collections/games.php">
