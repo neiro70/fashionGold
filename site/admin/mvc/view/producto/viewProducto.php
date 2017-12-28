@@ -34,13 +34,17 @@
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
     
-           /* if(!$isLocal){
-                $txtDescripcion=$row["txtDescripcion"];
-                $txtTitulo=$row["txtTitulo"];
-            }else{*/
+            if(!$isLocal){
+               // $txtDescripcion=$row["txtDescripcion"];
+               // $txtTitulo=$row["txtTitulo"];
+                $txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
+                $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+
+
+            }else{
                 $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
                 $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
-            //}
+            }
 
             
 			$txtTipo=$row["tipo"];
