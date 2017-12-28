@@ -2,11 +2,12 @@
     header('Content-Type:text/html; charset=UTF-8');
 	session_start();
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$contexto);
+    $var =explode("/",$contexto);
+ 
 	if (strpos($contexto, "localhost") !== false) {
-		$contexto="http://" .$var[0]."/".$var[1];
-	}else{
-		$contexto="http://" .$var[0];
+        $contexto="http://" .$var[0]."/".$var[1];
+ 	}else{
+        $contexto="http://" .$var[0];
 	}
 	if(!isset($_SESSION['username'])){
 		header("location:{$contexto}/site/admin/index.php");

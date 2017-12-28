@@ -3,17 +3,21 @@
 	
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$var =explode("/",$contexto);
+	$isLocal=true;
+
 	if (strpos($contexto, "localhost") !== false) {
 		$contexto="http://" .$var[0]."/".$var[1];
+		
 	}else{
 		$contexto="http://" .$var[0];
+		$isLocal=false;
 	}
 	
 	
 	if(!isset($_SESSION['username'])){
 		header("$contexto/site/index.php");
 	}
-	header('Content-Type: text/html; charset=ISO-8859-1');
+	header('Content-Type: text/html; charset=UTF-8');
 	include("../../../mvc/util/MysqlDAO.php");
 	
 	$usuario=$_SESSION['username'];
@@ -38,10 +42,16 @@
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-				
-			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-			//$txtDescripcion=$row["txtDescripcion"];
+			
+			
+			if($isLocal){
+				$txtTitulo=$row["txtTitulo"];
+				$txtDescripcion=$row["txtDescripcion"];
+			}else{
+				$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
+			}	
+
 			$idTipo=$row["idTipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];
@@ -65,8 +75,8 @@
 <html lang="es">
 
 <head>
-	<meta charset="ISO-8859-1">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -201,12 +211,12 @@
                             <div class="form-group">
                                 <label>2) Titulo Producto</label>
                                 <input class="form-control" id="txtTitulo" name="txtTitulo" value="<?=$txtTitulo?>" >
-                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BA�O 18K'.</p>
+                                <p class="help-block">Ejemplo 'ANILLO DE ORO LAMINADO BAÑO 18K'.</p>
                             </div>
                             <div class="form-group">
-                                <label>3) Descripci�n del Producto</label>
+                                <label>3) Descripción del Producto</label>
                                <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"><?=$txtDescripcion?></textarea>
-                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con ba�o de oro rosa, cristal pavo y una piedra rectangular para a�adir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y f�cil de combinar y mezclar con otras piezas de cualquier colecci�n personal de accesorios, es perfecto como regalo'.</p>
+                                <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavo y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
                     </div>
@@ -225,14 +235,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>5) Ver en secci�n Destacado</label>
+                                <label>5) Ver en sección Destacado</label>
 						          <select id="isDestacado" name="isDestacado" data-placeholder="Selecciona..." class="chosen-select">
                                 		<option value="0"  <?=$isDestacado==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isDestacado==1?"selected='selected'":''?>>SI</option>
                                 </select>
                             </div>
                              <div class="form-group">    
-                                <label>6) Ver en secci�n Nuevo</label>
+                                <label>6) Ver en sección Nuevo</label>
 						          <select id="isNuevo" name="isNuevo" data-placeholder="Selecciona..." class="chosen-select">
                                 		<option value="0"  <?=$isNuevo==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isNuevo==1?"selected='selected'":''?>>SI</option>

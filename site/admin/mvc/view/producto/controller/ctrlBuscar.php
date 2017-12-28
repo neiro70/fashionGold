@@ -2,6 +2,15 @@
 
 	header("Content-Type: text/json; charset=ISO-8859-1");
 	include("../../../util/MysqlDAO.php");
+	
+	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+   	$isLocal=true;
+	
+	if (strpos($contexto, "localhost") === false) {
+        $isLocal=false;
+ 	}
+
+	
 
 	$db = new MySQL (); 
 	$idTipo = isset($_GET['idTipo']) ? (int)trim($_GET['idTipo']) : 0;
@@ -47,14 +56,27 @@
 			while($row = $result->fetch_assoc()) {
 				$idLinea=$row["idLinea"];
 				$idProducto=$row["idProducto"];
-				$txtTitulo=$row["txtTitulo"];
+				
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
 
 				//$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1,UTF-8');				
-				//$txtDescripcion=utf8_encode($row["txtDescripcion"]); 
-				//$txtDescripcion=$row["txtDescripcion"];
-				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');	
+				
+
+				
+				if($isLocal){		
+					//$txtDescripcion=utf8_encode($row["txtDescripcion"]); 			
+					$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','auto');
+					$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','auto');
+						//$txtDescripcion=utf8_encode($row["txtDescripcion"]); 
+					//$txtDescripcion=$row["txtDescripcion"];
+					
+				}else{
+					$txtDescripcion=$row["txtDescripcion"];
+					$txtTitulo=$row["txtTitulo"];
+				}
+			
+
 				
 				$estatus=$row["estatus"];
 				$tipo=$row["tipo"];

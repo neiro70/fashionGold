@@ -1,11 +1,14 @@
 <?php
 
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$contexto);
+    $var =explode("/",$contexto);
+    $isLocal=true;
 	if (strpos($contexto, "localhost") !== false) {
-		$contexto="http://" .$var[0]."/".$var[1];
+        $contexto="http://" .$var[0]."/".$var[1];
+        
 	}else{
-		$contexto="http://" .$var[0];
+        $contexto="http://" .$var[0];
+        $isLocal=false;
 	}
 
 
@@ -30,10 +33,16 @@
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-	
-			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-            $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-            //$txtDescripcion=$row["txtDescripcion"];
+    
+            if(!$isLocal){
+                $txtDescripcion=$row["txtDescripcion"];
+                $txtTitulo=$row["txtTitulo"];
+            }else{
+                $txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
+                $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+            }
+
+            
 			$txtTipo=$row["tipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];
@@ -53,13 +62,13 @@
 
 <head>
 
-    <meta charset="ISO-8859-1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=ISO-8859-1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FashionGold Detalle de producto</title>
+    <title>Fashion Gold Detalle de producto</title>
     <link rel="icon" href="<?php echo $contexto ?>/rings.ico">
     <!-- Bootstrap Core CSS -->
     <link href="<?=$contexto?>/site/admin/css/bootstrap.min.css" rel="stylesheet">
