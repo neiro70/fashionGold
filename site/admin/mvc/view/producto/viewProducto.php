@@ -12,7 +12,7 @@
 	}
 
 
-	header('Content-Type: text/html; charset=UTF-8');
+	header('Content-Type: text/html; charset=ISO-8859-1');
 	include("../../../mvc/util/MysqlDAO.php");
 	
 	//$usuario=$_SESSION['username'];
@@ -35,10 +35,10 @@
 		while($row = $result->fetch_assoc()) {
     
             if(!$isLocal){
-               // $txtDescripcion=$row["txtDescripcion"];
-               // $txtTitulo=$row["txtTitulo"];
-                $txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-                $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+                $txtDescripcion=$row["txtDescripcion"];
+                $txtTitulo=$row["txtTitulo"];
+               7/ $txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
+               // $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
 
 
             }else{
@@ -66,8 +66,8 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=UTF-8">
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
