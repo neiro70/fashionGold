@@ -112,7 +112,7 @@
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
 
-	<script src="<?=$context?>/site/admin/js/jquery.js"></script>		
+	<script src="<?=$context?>/site/admin/js/jquery.js"></script>	
 	<script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
 	<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
 	<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
@@ -913,13 +913,12 @@
 					<div class="modal-content">
 						<div class="modal-header" style="background-color: #9D802E; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-							<h4 class="modal-title" style="color:#FFF;">Vista del Producto</h4>
+							<h4 class="modal-title" style="color:#FFF;">Detalle del Producto</h4>
 						</div>
 						<div class="modal-body">
 							<iframe src="" 
 									frameborder="0" 
-									id="targetiframe" 
-									
+									id="targetiframe"
 									name="targetframe" 
 									allowtransparency="true">
 							</iframe> 

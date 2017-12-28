@@ -107,30 +107,16 @@
 
         <div id="page-wrapper" style="margin-top: -100px;">
             <div class="container-fluid">
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-book"></i> Producto
-                            </li>
-                            <li class="active">
-                                <?php echo $txtTitulo;?>
-
-
-                            </li>
-                        </ol>
+                <!-- Portfolio Item Row -->
+                <div class="row" align='center'>
+                    <div class="col-md-3">
+                        <div id="divThumbnails" style="width:70%;">
+                            <!-- div para cargar dinamicamente -->
+                        </div>
                     </div>
                 </div>
-                <!-- /.row -->
-
-                <!-- Portfolio Item Row -->
-                <div class="row">
-                    <div id="divThumbnails">
-                        <!-- div para cargar dinamicamente -->
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Detalles </h3>
+                <div class="row"  >    
+                    <div class="col-md-3"  style="font-size:small;">
                         <ul>
                             <li><b>Linea:</b>
                                 <?php echo $idLinea;?> </li>
@@ -175,10 +161,13 @@
         <script src="<?=$contexto?>/site/admin/js/jquery.dataTables.min.js"></script>
         <script src="<?=$contexto?>/site/admin/js/dataTables.buttons.min.js"></script>
         <script src="<?=$contexto?>/site/admin/js/dataTables.tableTools.js"></script>
+	    <script src="<?=$contexto?>/site/admin/js/jquery.elevatezoom.js" type="text/javascript"></script>	
+
 
         <script type="text/javascript">
             $(document).ready(function() {
 
+                
                 getThumbnails();
 
             });
@@ -207,10 +196,20 @@
                             "</div>";
                             $("#divThumbnails").append(div);
                             idimg = val.idimg;
+                            console.info(val);
 
                         });
 
-                        $("#thumbnailPrincipal").attr("src", "controller/ctrlGetFile.php?idimg=" + idimg);
+                       // $("#zoom_01").attr("src", "small/controller/ctrlGetFile.php?idimg=" + idimg);
+                        $("#zoom_01").attr("data-zoom-image", "controller/ctrlGetFile.php?idimg=" + idimg);
+                       // $("#zoom_01").elevateZoom();
+                      // $("#zoom_01").elevateZoom({constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true, gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: "active"}); 
+
+                       $("#zoom_01").elevateZoom({
+                        zoomType : "lens",
+                        lensShape : "round",
+                        lensSize    : 200
+                      });
 
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -224,14 +223,6 @@
 
             }
 
-
-
-
-            function setPrincipal(idimg) {
-                showloading();
-                $("#thumbnailPrincipal").attr("src", "controller/ctrlGetFile.php?idimg=" + idimg);
-                hideloading();
-            }
         </script>
 
     </body>
