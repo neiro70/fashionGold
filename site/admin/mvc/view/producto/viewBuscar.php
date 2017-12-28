@@ -141,7 +141,7 @@
 								<select id="idTipo" name="idTipo">
 								   <option value="0">TODOS</option>
 									<option value="1">OTRO</option>
-									<option value="2">COLLAR</option>
+									<option value="2">GARGANTILLA</option>
 									<option value="3">PULSERA</option>
 									<option value="4">ANILLO</option>
 									<option value="5">JUEGO</option>

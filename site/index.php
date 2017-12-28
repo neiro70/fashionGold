@@ -911,15 +911,15 @@
 			<div class="modal fade" id="myModalFrame">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<div class="modal-header" style="background-color: #428BCA; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
+						<div class="modal-header" style="background-color: #9D802E; color:#FFF;  border-top-left-radius: 5px; border-top-right-radius: 5px; ">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-							<h4 class="modal-title">Vista del Producto</h4>
+							<h4 class="modal-title" style="color:#FFF;">Vista del Producto</h4>
 						</div>
 						<div class="modal-body">
 							<iframe src="" 
 									frameborder="0" 
 									id="targetiframe" 
-									style=" height:500px; width:100%;" 
+									
 									name="targetframe" 
 									allowtransparency="true">
 							</iframe> 
@@ -973,8 +973,8 @@
 
 			function previewProducto(idProducto) {
 				var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto=' + idProducto;
-				var height = $(this).attr('data-height') || 250;
-				var width = $(this).attr('data-width') || 400;
+				var height = $(this).attr('data-height') || '450px';
+				var width = $(this).attr('data-width') || '100%';
 				
 				$("#targetiframe").attr({
 					'src': src,

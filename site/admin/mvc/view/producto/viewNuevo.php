@@ -182,7 +182,7 @@
 									<option value="2">GARGANTILLA</option>
 									<option value="3">Pulsera</option>
 									<option value="4">ANILLO</option>
-									<option value="5">JUEGO</option>
+									<option value="5">JUEGO(SET)</option>
 									<option value="6">Arete</option>
 
                                 </select>

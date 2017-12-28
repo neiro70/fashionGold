@@ -190,9 +190,9 @@
                                 	<option value="L0" <?=$idLinea=='L0'?"selected='selected'":''?>>L0</option>
                                 	<option value="L1" <?=$idLinea=='L1'?"selected='selected'":''?>>L1</option>
                                 	<option value="L2" <?=$idLinea=='L2'?"selected='selected'":''?>>L2</option>
-									<option value="J2" <?=$idLinea=='L2J'?"selected='selected'":''?>>L2J</option>
+									<option value="L2J" <?=$idLinea=='L2J'?"selected='selected'":''?>>L2J</option>
                                 	<option value="L3" <?=$idLinea=='L3'?"selected='selected'":''?>>L3</option>
-									<option value="J3" <?=$idLinea=='L3J'?"selected='selected'":''?>>L3J</option>
+									<option value="L3J" <?=$idLinea=='L3J'?"selected='selected'":''?>>L3J</option>
                                 	<option value="L4" <?=$idLinea=='L4'?"selected='selected'":''?>>L4</option>
                                 	<option value="L5" <?=$idLinea=='L5'?"selected='selected'":''?>>L5</option>
                                 	<option value="L6" <?=$idLinea=='L6'?"selected='selected'":''?>>L6</option>
@@ -226,9 +226,9 @@
 						          <select id="idTipo" name="idTipo" data-placeholder="Selecciona..." class="chosen-select" tabindex="2">
 									<option value="1" <?=$idTipo==1?"selected='selected'":''?>>OTRO</option>
 									<option value="2" <?=$idTipo==2?"selected='selected'":''?>>GARGANTILLA</option>
-									<option value="3" <?=$idTipo==3?"selected='selected'":''?>>Pulsera</option>
+									<option value="3" <?=$idTipo==3?"selected='selected'":''?>>PULSERA</option>
 									<option value="4" <?=$idTipo==4?"selected='selected'":''?>>ANILLO</option>
-									<option value="5" <?=$idTipo==5?"selected='selected'":''?>>JUEGO</option>
+									<option value="5" <?=$idTipo==5?"selected='selected'":''?>>JUEGO(SET)</option>
 									<option value="6" <?=$idTipo==6?"selected='selected'":''?>>ARETE</option>
 									
 

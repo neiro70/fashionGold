@@ -37,10 +37,6 @@
             if(!$isLocal){
                $txtDescripcion=$row["txtDescripcion"];
                $txtTitulo=$row["txtTitulo"];
-               // $txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
-               // $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
-
-
             }else{
                 $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
                 $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
@@ -61,190 +57,183 @@
 	
 	
 ?>
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Fashion Gold Detalle de producto</title>
-    <link rel="icon" href="<?php echo $contexto ?>/rings.ico">
-    <!-- Bootstrap Core CSS -->
-    <link href="<?=$contexto?>/site/admin/css/bootstrap.min.css" rel="stylesheet">
+        <title>Fashion Gold Detalle de producto</title>
+        <link rel="icon" href="<?php echo $contexto ?>/rings.ico">
+        <!-- Bootstrap Core CSS -->
+        <link href="<?=$contexto?>/site/admin/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-     <link href="<?=$contexto?>/site/admin/css/sb-admin.css" rel="stylesheet"> 
-    <!-- Custom Fonts -->
-    <link href="<?=$contexto?>/site/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="<?=$contexto?>/site/admin/css/jquery.fileupload.css" rel="stylesheet">
-    <link href="<?=$contexto?>/site/admin/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="<?=$contexto?>/site/admin/css/toastr.css" rel="stylesheet" type="text/css"/>
+        <!-- Custom CSS -->
+        <link href="<?=$contexto?>/site/admin/css/sb-admin.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="<?=$contexto?>/site/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+        <link href="<?=$contexto?>/site/admin/css/jquery.fileupload.css" rel="stylesheet">
+        <link href="<?=$contexto?>/site/admin/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link href="<?=$contexto?>/site/admin/css/toastr.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
         <script sr	$contexto="http://" .$var[0]."/".$var[1]."/";	
 	c="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 
-<style type="text/css">
-.portfolio-item {
-    margin-bottom: 25px;
-}
+        <style type="text/css">
+            .portfolio-item {
+                margin-bottom: 25px;
+            }
 
-footer {
-    margin: 50px 0;
-}
+            footer {
+                margin: 50px 0;
+            }
+        </style>
 
-</style>
+    </head>
 
-</head>
+    <body>
 
-<body>
-
-        <div id="page-wrapper" style="margin-top: -60px;">
+        <div id="page-wrapper" style="margin-top: -100px;">
             <div class="container-fluid">
                 <!-- Page Heading -->
-                <div class="row" >
-                    <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6">
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-book"></i>  Producto
+                                <i class="fa fa-book"></i> Producto
                             </li>
                             <li class="active">
                                 <?php echo $txtTitulo;?>
 
-	
+
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row -->
 
-        <!-- Portfolio Item Row -->
-        <div class="row">
-       
-            <div id="divThumbnails"  >
-            		<!-- div para cargar dinamicamente -->
-            		
-            		
+                <!-- Portfolio Item Row -->
+                <div class="row">
+                    <div id="divThumbnails">
+                        <!-- div para cargar dinamicamente -->
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Detalles </h3>
+                        <ul>
+                            <li><b>Linea:</b>
+                                <?php echo $idLinea;?> </li>
+                            <li><b>C&oacute;digo:</b>
+                                <?php echo $txtCodigo;?> </li>
+                            <li><b>Descripci&oacute;n:</b>
+                                <?php echo $txtDescripcion;?> </li>
+                            <li><b>Precio:</b>
+                                <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioComercial);?> MXN </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
             </div>
+            <!-- /.row -->
+
 
         </div>
-
-        <!-- /.row -->
-
-            <div class="col-md-4">
-                <h3>Detalles </h3>
-                <ul>
-                	<li><b>Linea:</b><?php echo $idLinea;?>	</li>
-                	<li><b>C&oacute;digo:</b> <?php echo $txtCodigo;?>	</li>
-                	<li><b>N&uacute;mero Producto:</b> <?php echo $idProducto;?>	</li>
-                    <li><b>Descripci&oacute;n:</b> <?php echo $txtDescripcion;?>	</li>
-                    <li><b>Tipo:</b> <?php echo $txtTipo;?>	</li>
-                    <li><b>Oferta:</b> <?php echo $isOferta==0?'NO':'SI';?></li>
-                    <li><b>Precio:</b> <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioComercial);?> MXN </li>
-                    <li><b>Precio Oferta:</b> <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioOferta);?> MXN</li>
-                </ul>
-
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-
-            </div>
-            <!-- /.container-fluid -->
+        <!-- /.container-fluid -->
 
         </div>
         <!-- /#page-wrapper -->
 
-    
-    <!-- /#wrapper -->
-       <div id="clock-loader" style="display: none;">				
-		<div style="font-weight: bold; color: white; font-size: 12pt;">
-			<img src="<?=$contexto?>/site/admin/img/ajax-loader.gif" alt="" border="0" /><br>Procesando...
-		</div>	
-	</div>	
 
-    <!-- jQuery -->
-    <script src="<?=$contexto?>/site/admin/js/jquery.js"></script>
+        <!-- /#wrapper -->
+        <div id="clock-loader" style="display: none;">
+            <div style="font-weight: bold; color: white; font-size: 12pt;">
+                <img src="<?=$contexto?>/site/admin/img/ajax-loader.gif" alt="" border="0" /><br>Procesando...
+            </div>
+        </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?=$contexto?>/site/admin/js/bootstrap.min.js"></script>
-   	<script src="<?=$contexto?>/site/admin/js/toastr.min.js"></script>
-	<script src="<?=$contexto?>/site/admin/js/jquery.blockUI.js"></script>
-	<script src="<?=$contexto?>/site/admin/js/ajaxUtil.js"></script>
-	<script src="<?=$contexto?>/site/admin/js/jquery.dataTables.min.js"></script>
-	<script src="<?=$contexto?>/site/admin/js/dataTables.buttons.min.js"></script>
-	<script src="<?=$contexto?>/site/admin/js/dataTables.tableTools.js"></script>
-    
-    <script type="text/javascript">
+        <!-- jQuery -->
+        <script src="<?=$contexto?>/site/admin/js/jquery.js"></script>
 
-    $( document ).ready(function() {
- 
-    	getThumbnails();
+        <!-- Bootstrap Core JavaScript -->
+        <script src="<?=$contexto?>/site/admin/js/bootstrap.min.js"></script>
+        <script src="<?=$contexto?>/site/admin/js/toastr.min.js"></script>
+        <script src="<?=$contexto?>/site/admin/js/jquery.blockUI.js"></script>
+        <script src="<?=$contexto?>/site/admin/js/ajaxUtil.js"></script>
+        <script src="<?=$contexto?>/site/admin/js/jquery.dataTables.min.js"></script>
+        <script src="<?=$contexto?>/site/admin/js/dataTables.buttons.min.js"></script>
+        <script src="<?=$contexto?>/site/admin/js/dataTables.tableTools.js"></script>
 
-    });
+        <script type="text/javascript">
+            $(document).ready(function() {
 
-    function getThumbnails(){
+                getThumbnails();
 
-    	var params="idproducto="+<?php echo $idProducto;?>;
+            });
 
-    	
-    	$.ajaxSetup ({ cache: false });
-    	//iniciar el registro
-    	$.ajax('<?=$contexto?>/site/admin/mvc/view/producto/controller/ctrlGetThumbnails.php', {
-    	  	  type: 'GET', 
-    	  	  data:params,
-    	  	   beforeSend: function( xhr ) {
-    		       showloading();
-    	  	  },
-    	      success: function(data) {
+            function getThumbnails() {
 
-    	    	  var idimg=0;
-    	    
-    	       $.each(data, function (key, val) {    	           
-    	            var div="<div class='col-md-4'> "+val.thumbnail;
- 	                "</div>";
-					 $("#divThumbnails").append(div);
-					 idimg=val.idimg;
-    	           
-    	       });
-
-    	       $("#thumbnailPrincipal").attr("src","controller/ctrlGetFile.php?idimg="+idimg);
-    	    	  
-    	       	},
-    	      error: function(jqXHR, textStatus, errorThrown) {
-    	    	  toastr.error('ERRORS: ' + textStatus);
-    	      },
-    	      complete: function() {
-    	          hideloading();
-    	         
-    	      }
-    	   });
-
-  }
+                var params = "idproducto=" + <?php echo $idProducto;?>;
 
 
+                $.ajaxSetup({
+                    cache: false
+                });
+                //iniciar el registro
+                $.ajax('<?=$contexto?>/site/admin/mvc/view/producto/controller/ctrlGetThumbnails.php', {
+                    type: 'GET',
+                    data: params,
+                    beforeSend: function(xhr) {
+                        showloading();
+                    },
+                    success: function(data) {
+
+                        var idimg = 0;
+
+                        $.each(data, function(key, val) {
+                            var div = "<div class='col-md-3'> " + val.thumbnail;
+                            "</div>";
+                            $("#divThumbnails").append(div);
+                            idimg = val.idimg;
+
+                        });
+
+                        $("#thumbnailPrincipal").attr("src", "controller/ctrlGetFile.php?idimg=" + idimg);
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        toastr.error('ERRORS: ' + textStatus);
+                    },
+                    complete: function() {
+                        hideloading();
+
+                    }
+                });
+
+            }
 
 
-    function setPrincipal(idimg){
-        showloading();
-		$("#thumbnailPrincipal").attr("src","controller/ctrlGetFile.php?idimg="+idimg);
-		  hideloading();
-    }
 
-    </script>
 
-</body>
+            function setPrincipal(idimg) {
+                showloading();
+                $("#thumbnailPrincipal").attr("src", "controller/ctrlGetFile.php?idimg=" + idimg);
+                hideloading();
+            }
+        </script>
 
-</html>
+    </body>
+
+    </html>
