@@ -14,7 +14,7 @@
 		 $isLocal=false;
 	 }
 
-	 if($isLocal){
+	 if(!$isLocal){
 		$txtTitulo=$_POST["txtTitulo"];
 		$txtDescripcion=$_POST["txtDescripcion"];
 	}else{
