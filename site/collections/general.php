@@ -3,11 +3,13 @@
 include("../../site/admin/mvc/util/MysqlDAO.php");
 	
 	$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$var =explode("/",$context);
+    $var =explode("/",$context);
+    $isLocal=true;
 	if (strpos($context, "localhost") !== false) {
 		$context="http://" .$var[0]."/".$var[1];
 	}else{
-		$context="http://" .$var[0];
+        $context="http://" .$var[0];
+        $isLocal=false;
 	}
 
 
@@ -41,12 +43,20 @@ if($idTipo > 0)	{
 		while($row = $result->fetch_assoc()) {
 			$idLinea=$row['idLinea'];
 			$idProducto=$row["idProducto"];
-			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
+            
+            if($isLocal){			
+                $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
+                $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+                
+            }else{
+                $txtDescripcion=$row["txtDescripcion"];
+                $txtTitulo=$row["txtTitulo"];
+            }
 
 
 			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
 			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
-			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
+			
 			
 			$estatus=$row["estatus"];
 			$tipo=$row["tipo"];
@@ -92,8 +102,8 @@ $db->closeSession();
 
     <head>
 
-        <meta charset="ISO-8859-1">
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" href="<?php echo $context ?>/rings.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
         <link rel="canonical" href="rings.php" />
@@ -770,7 +780,9 @@ foreach($node as $posicion=>$registro)
                 <div class="footer-content footer-content-top clearfix">
                     <div class="container">
                         <div class="footer-link-list col-md-12 text-center">
-                            <div class="group">
+                            <div cl            //$txtDescripcion=$row["txtDescripcion"];
+            $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+            $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');ass="group">
                                 <h5>Nosotros</h5>
 
                                 <ul class="list-unstyled list-styled">
