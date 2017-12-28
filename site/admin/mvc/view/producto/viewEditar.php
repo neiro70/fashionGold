@@ -45,11 +45,11 @@
 			
 			
 		//	if($isLocal){
-		//		$txtTitulo=$row["txtTitulo"];
-		//		$txtDescripcion=$row["txtDescripcion"];
+			$txtTitulo=$row["txtTitulo"];
+			$txtDescripcion=$row["txtDescripcion"];
 		//	}else{
-				$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
-				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
+				//$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+			///	$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
 		//	}	
 
 			$idTipo=$row["idTipo"];
