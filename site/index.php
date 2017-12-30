@@ -709,7 +709,7 @@
 													<div class="home-blog-content col-md-20">
 														<h4><a href="blogs/blogs/47648387-sample-blog-post-with-left-slidebar.html">Oferta del mes</a></h4>
 														<ul class="list-inline">
-															<li class="author"><i class="fa fa-user"></i> Ivette Camacho</li>
+															<li class="author"><i class="fa fa-user"></i> Fashion Gold</li>
 															<li>/</li>
 															<li class="comment"><a href="blogs/blogs/47648387-sample-blog-post-with-left-slidebar.html#comments"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios </a></li>
 														</ul>
@@ -725,7 +725,7 @@
 													<div class="home-blog-content col-md-20">
 														<h4><a href="blogs/blogs/44831939-vel-illum-qui-dolorem-eum-fugiat.html">Informaci&oacute;n</a></h4>
 														<ul class="list-inline">
-															<li class="author"><i class="fa fa-user"></i> Ivette Camacho</li>
+															<li class="author"><i class="fa fa-user"></i> Fashion Gold</li>
 															<li>/</li>
 															<li class="comment"><a href="blogs/blogs/44831939-vel-illum-qui-dolorem-eum-fugiat.html#comments"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios </a></li>
 														</ul>

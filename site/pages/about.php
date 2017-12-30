@@ -463,14 +463,25 @@ $db->closeSession();
                                     <p id="page-title" class='chopsFontTitle'>Quiénes Somos </p>
                                 </div>
                                 <div id="col-main" class="col-md-24 normal-page clearfix">
+                                    
                                     <div class="page about-us   ">
-                                        <p align="center">
-                                            <img src="../img/collection/local.jpg" width="30%" /></p>
+                                        <div class="col-md-24 ">
+                                                <img src="../img/collection/local4.jpeg" />
+                                        </div>
+                                    
+                                        <div class="col-md-6" >
+                                            <img src="../img/collection/local2.jpeg"  />
+                                        </div> 
+                                        <div class="col-md-6">   
+                                            <img src="../img/collection/local3.jpeg"  />
+                                            
+                                        </div>
                                         <br />
                                         <p>Somos una empresa compuesta por gente joven y emprendedora, con experiencia en el ramo joyero desde hace 10 años, dedicada a la venta de mayoreo y menudeo en joyería de oro laminado con baño de 14k. y 18k, rodio, acero inoxidable y cristal swarovski. Toda la joyería que manejamos es de excelente calidad y a precios inmejorables pues no tenemos intermediarios , trabajamos directamente con fabricantes.
                                         </p>
                                         <p>Saludos</p>
-                                        <p> Fashion Gold</p>
+                                        <p><b> Fashion Gold</b></p>
+                                       
 
                                     </div>
                                 </div>
