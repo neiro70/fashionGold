@@ -484,68 +484,67 @@
 
 											<div id="sandBox-wrapper" class="group-product-item row collection-full">
 												<ul id="sandBox" class="list-unstyled">
-                                                <?php
+                                                    <?php
+                                                        foreach($node as $posicion=>$registro)
+                                                            {
+                                                            $div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
+                                                            <ul class='row-container list-unstyled clearfix'>
+                                                                <li class='row-left'>
+                                                            <a onClick='previewProducto({$registro['idProducto']})'  data-target='#myModalFrame' data-toggle='modal'
+                                                                class='container_item'> <img style='cursor: pointer;'
+                                                                        src='$context/{$registro['imagen']}'
+                                                                        class='img-responsive' alt='{$registro['titulo']}' />";
+                                                            
+                                                                        if($registro['oferta']== 1 ){	 
+                                                                            $div =$div."<span class='sale_banner'> 
+                                                                                        <span class='sale_text'>Oferta</span> 
+                                                                                </span>";
+                                                                        }
+                                                                
+                                                                $div =$div."</a>
+                                                            
+                                                                </li>
 
-foreach($node as $posicion=>$registro)
-	{
-	$div = "<li class='element no_full_width' data-alpha='{$registro['titulo']}' data-price='{$registro['precio']}'>
-	<ul class='row-container list-unstyled clearfix'>
-		<li class='row-left'>
-      <a onClick='previewProducto({$registro['idProducto']})'  data-target='#myModalFrame' data-toggle='modal'
-        class='container_item'> <img style='cursor: pointer;'
-				src='$context/{$registro['imagen']}'
-				class='img-responsive' alt='{$registro['titulo']}' />";
-	
-				if($registro['oferta']== 1 ){	 
-					$div =$div."<span class='sale_banner'> 
-							 	<span class='sale_text'>Oferta</span> 
-						 </span>";
-				 }
-		
-		$div =$div."</a>
-	
-		</li>
+                                                                <li class='row-right parent-fly animMix'>
+                                                                    <div class='product-content-left'>
+                                                                        <a class='title-5' href='#' data-target='#myModalFrame'>
+                                                                            {$registro['titulo']} 
+                                                                        </a>
+                                                                        <span class='shopify-product-reviews-badge' data-id='registro$idProducto'></span></div>
+                                                                <div class='product-content-right'>		
+                                                                <div class='product-price'>";
+                                                                            
 
-		<li class='row-right parent-fly animMix'>
-			<div class='product-content-left'>
-				<a class='title-5' href='#' data-target='#myModalFrame'>
-		 			{$registro['titulo']} 
-		 		</a>
-		 		<span class='shopify-product-reviews-badge' data-id='registro$idProducto'></span></div>
-		<div class='product-content-right'>		
-		<div class='product-price'>";
-		 			
+                                                                if($registro['oferta'] == 1 ){	
+                                                                        $div =$div."	<span class='price_sale'> 
+                                                                                        <span class='money'>{$registro['precioAnterior']}</span> 
+                                                                                </span>
+                                                                                <del class='price_compare'> 
+                                                                                    <span class='money'>{$registro['precio']} </span>
+                                                                                </del>";
+                                                                    }else{
+                                                                        $div =$div." 			
+                                                                        <span class='price'> 
+                                                                            <span class='money'>{$registro['precio']}</span> 
+                                                                        </span>";
+                                                                
+                                                                    }
+                                                                
+                                                                $div =$div."</div>
+                                                                    
+                                                                </div>
+                                                                <div class='list-mode-description'> {$registro['descripcion']}</div>
 
-		if($registro['oferta'] == 1 ){	
-				$div =$div."	<span class='price_sale'> 
-								<span class='money'>{$registro['precioAnterior']}</span> 
-						</span>
-						<del class='price_compare'> 
-							<span class='money'>{$registro['precio']} </span>
-						</del>";
-			}else{
-				$div =$div." 			
-				<span class='price'> 
-					<span class='money'>{$registro['precio']}</span> 
-				</span>";
-		
-			}
-		
-		$div =$div."</div>
-			
-		</div>
-		<div class='list-mode-description'> {$registro['descripcion']}</div>
-
-		</li>
-	</ul>
-	</li>";
-	
-	echo $div;
-	
-	}
+                                                                </li>
+                                                            </ul>
+                                                            </li>";
+                                                            
+                                                            echo $div;
+                                                            
+                                                            }
 
 
-?>
+                                                    ?>
 												</ul>
 											</div>
                                         </div>
