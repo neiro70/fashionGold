@@ -48,6 +48,8 @@ $db->closeSession();
         <meta name="description" content="" />
         <title>Quiénes Somos </title>
         <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
+
+        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
@@ -62,9 +64,13 @@ $db->closeSession();
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
 
+        <script src="<?=$context?>/site/admin/js/jquery.js"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
+        <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647" type="text/javascript"></script>
+        <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
@@ -79,7 +85,7 @@ $db->closeSession();
         <script src="<?php echo $context ?>/services/javascripts/currencies.js" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
-
+  
         <link rel="alternate" type="application/json+oembed" href="https://site/collections/rings.oembed">
         <link rel="alternate" type="application/atom+xml" title="Feed" href="https://site/collections/rings.atom" />
         <script type="text/javascript">
@@ -440,6 +446,8 @@ $db->closeSession();
 
         </header>
 
+        
+
         <div id="content-wrapper-parent">
             <div id="content-wrapper">
                 <!-- Content -->
@@ -462,16 +470,24 @@ $db->closeSession();
                                 <div id="page-header">
                                     <p id="page-title" class='chopsFontTitle'>Quiénes Somos </p>
                                 </div>
+
+                                
+
                                 <div id="col-main" class="col-md-24 normal-page clearfix">
-                                    
                                     <div class="page about-us   ">
                                         <div class="col-md-24 ">
-                                                <img src="../img/collection/local4.jpeg" />
+                                            <div class="home-slider-wrapper clearfix">
+                                                <div class="camera_wrap" id="home-slider">
+                                                    <div data-src="<?php echo $context ?>/site/img/collection/local4.jpeg"></div>
+                                                    <div data-src="<?php echo $context ?>/site/img/collection/local6.jpeg"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     
                                         <div class="col-md-6" >
                                             <img src="../img/collection/local2.jpeg"  />
                                         </div> 
+
                                         <div class="col-md-6">   
                                             <img src="../img/collection/local3.jpeg"  />
                                             
