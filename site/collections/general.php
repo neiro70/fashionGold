@@ -102,6 +102,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<meta http-equiv="Pragma" content="no-cache">
         <link rel="icon" href="<?php echo $context ?>/rings.ico">
 		<link rel="canonical" href="<?php echo $context ?>" />
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css' rel='stylesheet' type='text/css'>
