@@ -230,6 +230,7 @@
 									<option value="4" <?=$idTipo==4?"selected='selected'":''?>>ANILLO</option>
 									<option value="5" <?=$idTipo==5?"selected='selected'":''?>>JUEGO(SET)</option>
 									<option value="6" <?=$idTipo==6?"selected='selected'":''?>>ARETE</option>
+									<option value="7" <?=$idTipo==7?"selected='selected'":''?>>BRAZALETE</option>
 									
 
                                 </select>

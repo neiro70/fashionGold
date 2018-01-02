@@ -184,6 +184,7 @@
 									<option value="4">ANILLO</option>
 									<option value="5">JUEGO(SET)</option>
 									<option value="6">Arete</option>
+									<option value="7">BRAZALETE</option>
 
                                 </select>
                             </div>
