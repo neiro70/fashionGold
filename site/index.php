@@ -500,13 +500,13 @@
 															<div class="home_collections_item_inner">
 																<div class="collection-details">
 																	<a href="<?php echo $context ?>/site/collections/bracelets.php" title="Buscar Pulseras">
-																		<img src="../site/img/collection/bracelets/20.jpg" alt="Puleras" />
+																		<img src="../site/img/collection/bracelets/13.jpg" alt="Puleras" />
 																	</a>
 																</div>
 																<br><br><br><br>
 																<div class="hover-overlay">
 																	<span class="col-name">
-																		<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras/Brazaletes</a>
+																		<a href="<?php echo $context ?>/site/collections/bracelets.php">Pulseras</a>
 																	</span>
 																	<div class="collection-action">
 																		<a href="<?php echo $context ?>/site/collections/bracelets.php">
@@ -515,6 +515,26 @@
 																</div>
 															</div>
 														</div>
+
+														<div class="home_collections_item">
+															<div class="home_collections_item_inner">
+																<div class="collection-details">
+																	<a href="<?php echo $context ?>/site/collections/otherBracelets.php" title="Buscar Brazaletes">
+																		<img src="../site/img/collection/bracelets/20.jpg" alt="Brazaletes" />
+																	</a>
+																</div>
+																<br><br><br><br>
+																<div class="hover-overlay">
+																	<span class="col-name">
+																		<a href="<?php echo $context ?>/site/collections/otherBracelets.php">Brazaletes</a>
+																	</span>
+																	<div class="collection-action">
+																		<a href="<?php echo $context ?>/site/collections/otherBracelets.php">
+																		<i class="fa fa-eye"></i> Ver Colecci&oacute;n</a>
+																	</div>
+																</div>
+															</div>
+														</div>														
 
 														<div class="home_collections_item">
 															<div class="home_collections_item_inner">
