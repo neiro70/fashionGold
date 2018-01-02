@@ -110,7 +110,7 @@
 					<h4 class = "form-signin-heading" style="color:red;"><?php echo $msg; ?></h4>
 					<input type="text" name="username" placeholder="Usuario" required class="form-control input-lg" />
 					<input type="password" name="password" placeholder="Contraseña" required class="form-control input-lg" />
-					<button type="submit" name="login" class="btn btn-lg btn-primary btn-block">Entrar</button>
+					<button type="submit" name="login" class="btn btn-lg btn-default btn-block" style="background-color:#9d802e; color: #FFF;">Entrar</button>
 <!-- 					<div> -->
 <!-- 						<a href="#">Create account</a> or <a href="#">reset password</a> -->
 <!-- 					</div> -->
