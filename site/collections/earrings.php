@@ -373,7 +373,7 @@
                                               </div>
                                             </li>
 											<li class="nav-item dropdown">
-												<a href="<?php echo $context ?>/site/pages/blogs/blogs.html" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
+												<a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
 													<span>¿Sabias que?</span>
 													<i class="fa fa-caret-down"></i>
 													<i class="sub-dropdown1  visible-sm visible-md visible-lg"></i> 
