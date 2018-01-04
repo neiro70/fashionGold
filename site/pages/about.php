@@ -377,7 +377,7 @@ $db->closeSession();
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
                                                 <ul class="dropdown-menu">
                                                     <li class=""><a tabindex="-1" href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En Construcción </a></li>
+				class="fa fa-wrench"></i> En construcción </a></li>
                                                 </ul>
                                             </li>
                                             <li class="nav-item"><a href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>

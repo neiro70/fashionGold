@@ -374,7 +374,7 @@
 													<i class="sub-dropdown visible-sm visible-md visible-lg"></i>
 												</a>
 												<ul class="dropdown-menu">
-													<li class=""><a tabindex="-1" href="#"> <i class="fa fa-wrench"></i> En Construcci&oacute;n </a></li>
+													<li class=""><a tabindex="-1" href="#"> <i class="fa fa-wrench"></i> En construcción </a></li>
 												</ul>
 											</li>
 											<li class="nav-item">

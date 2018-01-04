@@ -207,7 +207,7 @@
 
                                                         <a tabindex="-1" href="blogs/sample-blog-with-grid-3-columns.html">
 				<i class="fa fa-wrench"></i> 
-				En Construcción
+				En construcción
 			</a></li>
                                                 </ul>
                                             </li>
@@ -309,12 +309,12 @@
                                                     <h6>Nos Ubicamos En</h6>
                                                 </li>
                                                 <li class="address">
-                                                    <p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de M?xico
+                                                    <p>Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro, Ciudad de México
                                                     </p>
                                                 </li>
                                                 <ul>
                                                     <li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
-                                                    <li class="email"><i class="fa fa-envelope"></i>ivett.camacho@fashiongold.es</li>
+                                                    <li class="email"><i class="fa fa-envelope"></i>informesyventas@fashiongold.com.mx</li>
                                                 </ul>
                                                 <ul class="right-content">
                                                     <li class="title">

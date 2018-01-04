@@ -15,7 +15,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers .= 'From: '.$txtemail . "\r\n";
 //$headers .= 'Cc: myboss@example.com' . "\r\n";
 
-$to="ivett.camacho@fashiongold.es";
+$to="informesyventas@fashiongold.com.mx";
 $subject="Hablemos de negocios";
 
 if(mail($to,$subject,$txtmensaje ,$headers) )
