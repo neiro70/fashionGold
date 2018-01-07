@@ -437,24 +437,28 @@
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								
-									<p style="color: #010101;" class='chopsFont' > Bienvenido </p>
+									<!--<p style="color: #010101;" class='chopsFont' > Bienvenido </p>-->
+									<a href="http://www.espaciosalpro.com/">
+										<img src="<?php echo $context ?>/site/img/collection/expo3.jpg" style='margin-top:-2em'>
+									</a>
+									<div style="color: #FFF; margin-top:-3em;"><b>VISITANOS FASHION GOLD EN EL STAND #259</b></div>
 
 							</div>
-							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
+							<!-- <div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
 								La joya ideal para ti
 							</div>
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/collections/general.php" class="btn">
 									Ver c&aacute;talogo
 								</a>
-							</div>
+							</div>-->
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 
 									<p style="color: #010101;" class='chopsFont'>  
-										Fashion Gold te desea una excelente navidad
+										Fashion Gold te desea un feliz 2018
 									</p>
 
 							</div>
@@ -465,7 +469,7 @@
 							</div>
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								
 									<p class='chopsFont' style="color: #010101;">
