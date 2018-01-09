@@ -112,7 +112,7 @@
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css' rel='stylesheet' type='text/css'>
        
 	    <meta name="description" content="" />
-        <title>Todos los productos</title>
+        <title>Todos los productos | Fashion Gold</title>
         <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
         
 		<link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
@@ -389,14 +389,27 @@
 													<li class=""><a tabindex="-1" href="#"> <i class="fa fa-wrench"></i> En construcción </a></li>
 												</ul>
 											</li>
-											<li class="nav-item">
-												<a href="<?php echo $context ?>/site/pages/contact.php">
-													<span>Cont&aacute;ctenos</span>
-												</a>
-											</li>
-											<li class="nav-item">
-												<a target="_blank" href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal" class="btooltip swing" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
-											</li>
+                                            <li class="nav-item">
+												<a href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
+											</a></li>
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="Facebook"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://twitter.com/fashiongold2018"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="Twitter"><i class="fa fa-twitter"></i></a>
+                                            </li>	
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://www.instagram.com/fashiongold2018/"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="instagram"><i class="fa fa-instagram"></i></a>
+                                            </li>
 										</ul>
 									</div>
 								</div>
@@ -581,8 +594,12 @@
 
 					<div class="footer-content footer-content-bottom clearfix">
 						<div class="container">
-							<div class="copyright col-md-12">&copy; 2018 Fashion Gold. .<a href="<?php echo $context?>/site/pages/privacity.php">Políticas de Privacidad</a></div>
-							<div id="widget-payment" class="col-md-12">
+							<div class="copyright col-md-8" >&copy; 2018 Fashion Gold.</div>
+							<div class="copyright col-md-8" style="text-align:center">
+								<a style="color:blue;" href="<?php echo $context?>/site/pages/privacity.php">Aviso de Privacidad.
+								</a>
+							</div>
+							<div id="widget-payment" class="col-md-8">
 								<ul id="payments" class="list-inline animated">
 									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
 									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Mastercard"><a href="#" class="icons mastercard"></a></li>

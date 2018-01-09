@@ -80,7 +80,7 @@ $db->closeSession();
 
 
 
-        <title>Oro Laminado FashionGold</title>
+        <title>Oro Laminado FashionGold | Fashion Gold</title>
 
 
 
@@ -446,15 +446,27 @@ $db->closeSession();
 				class="fa fa-wrench"></i> En construcción </a></li>
                                                 </ul>
                                             </li>
-                                            <li class="nav-item"><a href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
-		                                        </a></li>
+                                            <li class="nav-item">
+												<a href="<?php echo $context ?>/site/pages/contact.php"> <span>Contactanos</span>
+											</a></li>
                                             <li class="nav-item">
                                               <a target="_blank"
                                               href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
                                               class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
-                                              title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
-				                                    </li>
-
+                                              title="Facebook"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://twitter.com/fashiongold2018"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="Twitter"><i class="fa fa-twitter"></i></a>
+                                            </li>	
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://www.instagram.com/fashiongold2018/"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="instagram"><i class="fa fa-instagram"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -575,7 +587,7 @@ $db->closeSession();
 
                                 <ul class="list-unstyled list-styled">
 
-                                    <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quiénes Somos</a></li>
+                                    <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
                                     <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
 
                                 </ul>
@@ -596,24 +608,21 @@ $db->closeSession();
                     </div>
                     <div class="footer-content footer-content-bottom clearfix">
                         <div class="container">
-
-                            <div class="copyright col-md-12">&copy; 2018 Fashion Gold. <a href="<?php echo $context?>/site/pages/privacity.php">Políticas de Privacidad</a></div>
-
-
-
-                            <div id="widget-payment" class="col-md-12">
-                                <ul id="payments" class="list-inline animated">
-
-
-                                    <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
-                                    <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Mastercard"><a href="#" class="icons mastercard"></a></li>
-                                    <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="American Express"><a href="#" class="icons amex"></a></li>
-                                    <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Paypal"><a href="#" class="icons paypal"></a></li>
-                                    <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Moneybookers"><a href="#" class="icons moneybookers"></a></li>
-
-                                </ul>
+                            <div class="copyright col-md-8" >&copy; 2018 Fashion Gold.</div>
+                                <div class="copyright col-md-8" style="text-align:center">
+                                    <a style="color:blue;" href="<?php echo $context?>/site/pages/privacity.php">Aviso de Privacidad.
+                                    </a>
+                                </div>
+                                <div id="widget-payment" class="col-md-12">
+                                    <ul id="payments" class="list-inline animated">
+                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
+                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Mastercard"><a href="#" class="icons mastercard"></a></li>
+                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="American Express"><a href="#" class="icons amex"></a></li>
+                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Paypal"><a href="#" class="icons paypal"></a></li>
+                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Moneybookers"><a href="#" class="icons moneybookers"></a></li>
+                                    </ul>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

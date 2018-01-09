@@ -227,18 +227,13 @@
                                               href="https://twitter.com/fashiongold2018"
                                               class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
                                               title="Twitter"><i class="fa fa-twitter"></i></a>
-                                              
                                             </li>	
-
                                             <li class="nav-item">
                                               <a target="_blank"
                                               href="https://www.instagram.com/fashiongold2018/"
                                               class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
-                                              title="Twitter"><i class="fa fa-instagram"></i></a>
-                                              
+                                              title="instagram"><i class="fa fa-instagram"></i></a>
                                             </li>	
-                                            
-                                            
                                         </ul>
                                     </div>
                                 </div>
