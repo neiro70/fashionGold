@@ -556,7 +556,7 @@
                     <div class="footer-content footer-content-bottom clearfix">
                         <div class="container">
 
-                            <div class="copyright col-md-12">&copy; 2018 Fashion Gold. <a href="<?php echo $context?>/site/pages/privacity.php">Politicas de Privacidad</a></div>
+                            <div class="copyright col-md-12">&copy; 2018 Fashion Gold. <a href="<?php echo $context?>/site/pages/privacity.php">Políticas de Privacidad</a></div>
 
 
 

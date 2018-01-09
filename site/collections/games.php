@@ -587,7 +587,7 @@
 
 					<div class="footer-content footer-content-bottom clearfix">
 						<div class="container">
-							<div class="copyright col-md-12">&copy; 2018 Fashion Gold. .<a href="<?php echo $context?>/site/pages/privacity.php">Politicas de Privacidad</a></div>
+							<div class="copyright col-md-12">&copy; 2018 Fashion Gold. .<a href="<?php echo $context?>/site/pages/privacity.php">Políticas de Privacidad</a></div>
 							<div id="widget-payment" class="col-md-12">
 								<ul id="payments" class="list-inline animated">
 									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
