@@ -220,8 +220,25 @@
                                               <a target="_blank"
                                               href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"
                                               class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
-                                              title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
-				                            </li>											
+                                              title="Facebook"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://twitter.com/fashiongold2018"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="Twitter"><i class="fa fa-twitter"></i></a>
+                                              
+                                            </li>	
+
+                                            <li class="nav-item">
+                                              <a target="_blank"
+                                              href="https://www.instagram.com/fashiongold2018/"
+                                              class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
+                                              title="Twitter"><i class="fa fa-instagram"></i></a>
+                                              
+                                            </li>	
+                                            
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -322,10 +339,27 @@
                                                     <li class="title">
                                                         <h6>Siguenos en:</h6>
                                                     </li>
-                                                    <li class="facebook"><a href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal"><span
-			class="fa-stack fa-lg btooltip" title="Facebook"> <i
-			class="fa fa-circle fa-stack-2x"></i> <i
-			class="fa fa-facebook fa-inverse fa-stack-1x"></i> </span></a></li>
+                                                    <li class="facebook">
+                                                    <a target="_blank" href="https://www.facebook.com/pg/fashionGold5/about/?ref=page_internal">
+                                                    <span class="fa-stack fa-lg btooltip" title="Facebook"> 
+                                                        <i class="fa fa-circle fa-stack-2x"></i> 
+                                                        <i class="fa fa-facebook fa-inverse fa-stack-1x"></i> 
+                                                    </span></a>
+                                                    </li>
+                                                    <li class="twitter">
+                                                    <a target="_blank" href="https://twitter.com/fashiongold2018/">
+                                                    <span class="fa-stack fa-lg btooltip" title="Twitter"> 
+                                                        <i class="fa fa-circle fa-stack-2x"></i> 
+                                                        <i class="fa fa-twitter fa-inverse fa-stack-1x"></i> 
+                                                    </span></a>
+                                                    </li>
+                                                    <li class="instagram">
+                                                    <a target="_blank" href="https://www.instagram.com/fashiongold2018/">
+                                                    <span class="fa-stack fa-lg btooltip" title="Instagram"> 
+                                                        <i class="fa fa-circle fa-stack-2x"></i> 
+                                                        <i class="fa fa-instagram fa-inverse fa-stack-1x"></i> 
+                                                    </span></a>
+                                                    </li>
                                                 </ul>
 
                                         </div>
