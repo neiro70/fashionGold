@@ -1,31 +1,30 @@
 <?php
 include("../../site/admin/mvc/util/MysqlDAO.php");
-$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$var =explode("/",$context);
-if (strpos($context, "localhost") !== false) {
-	$context="http://" .$var[0]."/".$var[1];
-}else{
-	$context="http://" .$var[0];
-}
-
-$db = new MySQL ();
-$nodeCatalogo = array();
-$posCatalogo=1;    
-$sqlCatalogo="SELECT * FROM c01tipo";
-
-$conn=$db->getConexion();
-$resultCatalogo = $conn->query($sqlCatalogo);
-
-
-if ($resultCatalogo->num_rows > 0) {
-    // output data of each row
-    while($row =  $resultCatalogo->fetch_assoc()) {
-      $txtDescripcion=mb_convert_encoding($row["txtdescripcion"],'ISO-8859-1','UTF-8');
-      $txturl=$row["txturl"];
-      $idTipo=$row["idtipo"];
-      $nodeCatalogo[$posCatalogo++]=array('descripcion'=>$txtDescripcion,'idTipo'=>$idTipo,'url'=>$txturl);
+  $context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  $var =explode("/",$context);
+    if (strpos($context, "localhost") !== false) {
+      $context="http://" .$var[0]."/".$var[1];
+    }else{
+      $context="http://" .$var[0];
     }
-  }
+	$db = new MySQL ();
+	$nodeCatalogo = array();
+  $posCatalogo=1;    
+  $sqlCatalogo="SELECT * FROM c01tipo";
+
+	$conn=$db->getConexion();
+  $resultCatalogo = $conn->query($sqlCatalogo);
+
+ 
+  if ($resultCatalogo->num_rows > 0) {
+		// output data of each row
+		while($row =  $resultCatalogo->fetch_assoc()) {
+            $txtDescripcion=mb_convert_encoding($row["txtdescripcion"],'ISO-8859-1','UTF-8');
+            $txturl=$row["txturl"];
+            $idTipo=$row["idtipo"];
+			$nodeCatalogo[$posCatalogo++]=array('descripcion'=>$txtDescripcion,'idTipo'=>$idTipo,'url'=>$txturl);
+		}
+	}
 $db->closeSession();
 
 ?>
@@ -45,85 +44,33 @@ $db->closeSession();
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css' rel='stylesheet' type='text/css'>
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css' rel='stylesheet' type='text/css'>
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css' rel='stylesheet' type='text/css'>
-
         <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css' rel='stylesheet' type='text/css'>
-
         <meta name="description" content="" />
-
-        <style>
-            .foto {
-                width: 80%;
-                position: relative;
-                margin: auto;
-            }
-
-            .foto img {
-                width: 100%;
-            }
-
-            .foto p {
-                position: absolute;
-                bottom: 100px;
-                left: 65px;
-                /*width:100%;*/
-                width: 400px;
-                text-align: justify;
-                /*color:rgba(243,243,243,.8);*/
-                color: black;
-                font-family: Verdana;
-                font-size: 14px;
-                font-style: italic;
-                /*background-color:rgba(0,0,0,.7);*/
-                padding: .5em 0;
-            }
-        </style>
-
-
-
-        <title>Oro Laminado FashionGold</title>
-
-
-
-
-
+        <title>Aviso de Privacidad | Fashion Gold </title>
         <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
 
-
-
-
-
+        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-
-
-
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+        <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
 
-
+        <script src="<?=$context?>/site/admin/js/jquery.js"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
-
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
-
-
-
-
-
+		<script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
+        <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647" type="text/javascript"></script>
+        <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
@@ -132,27 +79,15 @@ $db->closeSession();
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
-
-
-
         <script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.isotope.min.js?14058599523483859647" type="text/javascript"></script>
-
-
-
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
-
-
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
-
         <script src="<?php echo $context ?>/services/javascripts/currencies.js" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
-
+  
         <link rel="alternate" type="application/json+oembed" href="https://site/collections/rings.oembed">
         <link rel="alternate" type="application/atom+xml" title="Feed" href="https://site/collections/rings.atom" />
-
-        <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
-
         <script type="text/javascript">
             //<![CDATA[
             var Shopify = Shopify || {};
@@ -341,9 +276,9 @@ $db->closeSession();
                 <div class="top-navigation">
 
                     <ul class="list-inline">
-                        <li class="top-logo"><a id="site-title" href="../index.php" > <img class="img-responsive"
+                        <li class="top-logo"><a id="site-title" href="../index.php" title="Jewelry - Shopify theme"> <img class="img-responsive"
 		src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"
-		 /> </a></li>
+		alt="Jewelry - Shopify theme" /> </a></li>
 
                         <li class="navigation">
                             <nav class="navbar" role="navigation">
@@ -398,45 +333,45 @@ $db->closeSession();
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
-                      <div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
-                                                <ul class="sub-mega-menu">
-                                                  <li>
-                                                    <ul>
-                                                      <li class="list-title">Productos</li>
-                                                      <?php 
-                                                          $menu='';
-                                                          foreach($nodeCatalogo as $posicion=>$registro){
-                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
-                                                            $menu=$menu.$li;
-                                                          }
+                                      <div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
+                                                  <ul class="sub-mega-menu">
+                                                      <li>
+                                                          <ul>
+                                                              <li class="list-title">Productos</li>
+                                                              <?php 
+                                                                        $menu='';
+                                                                        foreach($nodeCatalogo as $posicion=>$registro){
+                                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
+                                                                          $menu=$menu.$li;
+                                                                        }
 
-                                                          echo $menu;
-                                                      
-                                                      ?>
-                                                    </ul>
-                                                  </li>
+                                                                        echo $menu;
+                                                              
+                                                              ?>
+                                                          </ul>
+                                                      </li>
 
-                                                  <li>
+                                                      <li>
 
-                                                    <ul>
-                                                      <li class="list-title">Destacados</li>
-                                                      <?php 
-                                                          $menu='';
-                                                          foreach($nodeCatalogo as $posicion=>$registro){
-                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
-                                                            $menu=$menu.$li;
-                                                          }
+                                                          <ul>
+                                                              <li class="list-title">Destacados</li>
+                                                              <?php 
+                                                                        $menu='';
+                                                                        foreach($nodeCatalogo as $posicion=>$registro){
+                                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
+                                                                          $menu=$menu.$li;
+                                                                        }
 
-                                                          echo $menu;
-                                                      
-                                                      ?>
-                                                  </li>
-                                                </ul>
+                                                                        echo $menu;
+                                                              
+                                                              ?>
+                                                      </li>
+                                                  </ul>
                                               </div>
                                             </li>
                                             <li class="nav-item dropdown">
-                                                <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
-                                                    <span>¿Sabias que?</span>
+                                              <a href="#" data-toggle="dropdown">
+                                                  <span>¿Sabias que?</span>
 
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
@@ -454,7 +389,6 @@ $db->closeSession();
                                               class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
                                               title="Facebook"><i class="fa fa-facebook"></i> FACEBOOK</a>
 				                                    </li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -513,6 +447,8 @@ $db->closeSession();
 
         </header>
 
+        
+
         <div id="content-wrapper-parent">
             <div id="content-wrapper">
                 <!-- Content -->
@@ -522,7 +458,7 @@ $db->closeSession();
                         <div itemprop="breadcrumb" class="container">
                             <div class="row">
                                 <div class="col-md-24"><a href="<?php echo $context ?>" class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
-                                    <span class="page-title">Oro Laminado</span></div>
+                                    <span class="page-title">AVISO DE PRIVACIDAD</span></div>
                             </div>
                         </div>
                     </div>
@@ -532,21 +468,94 @@ $db->closeSession();
 
                         <div class="container">
                             <div class="row">
-                                <div id="page-header">
-                                    <p class="chopsFontTitle">Oro Laminado </p>
-                                </div>
                                 <div id="col-main" class="col-md-24 normal-page clearfix">
                                     <div class="page about-us   ">
-                                        <div class="foto">
-                                            <img src="<?php echo $context?>/site/img/collection/laminado/laminado.jpg" />
-                                            <p>
-                                                <b>¿QUÉ ES ORO LAMINADO?</b>
-                                                <br>
-                                                <br> Se refiere a pieza hecha a partir de una base como el cobre y que es recubierta con varias capas de oro de distintos quilates 14k o 18k. <br><br> La cantidad de capas y el grosor pueden variar 3 a 6 capas. de metal precioso con soldadura y presión. Es 50 a 100 veces más grueso que el chapeado regular.<br><br> La calidad de oro más usada es de 14K y 18k. Un estándar del peso del metal precioso (oro) es del 20% de su peso total. <br><br> Su garantía es de 8 meses hasta un año si se cuenta con el debido cuidado, recordemos que es joyería con solo unas cuantas micras de oro solo para darle el acabado fino.<br>
-                                            </p>
 
-                                        </div>
+                                        <div class="col-md-24" >
+                                            <img src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"  />
+                                        </div> 
+                                        <br />
+                                        <p><b>Fashion Gold</b>, con domicilio en la Ciudad de México, es el responsable del uso y protección de sus datos
+                                                personales, y al respecto le informamos lo siguiente:</p>
+                                        <h3>
+                                            ¿Para qué fines utilizaremos sus datos personales?
+                                        </h3>
+                                        <p> 
+                                        Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son
+                                        necesarias para el servicio que solicita:
+                                        </p>
+                                        
+                                        <ul>
+                                        <li>* Envío de información comercial a solicitud del interesado.</li>
+                                        <li>* Comunicación con el interesado.</li>
+                                        </ul>
+                                        
+                                        <p>
+                                        De manera adicional, utilizaremos su información personal para las siguientes finalidades que no son
+                                        necesarias para el servicio solicitado, pero que nos permiten y facilitan brindarle una mejor atención:
+                                        </p>
+                                         
+                                        <ul>
+                                        <li>* Envío de información comercial de interés</li>
+                                        </ul>
+                                        <p> 
+                                        En caso de que no desee que sus datos personales sean tratados para estos fines adicionales, desde este
+                                        momento usted nos puede comunicar lo anterior, a través de la dirección
+                                        <b>direcciongeneral@fashiongold.com.mx</b></p>
 
+
+                                        <h3>¿Qué datos personales utilizaremos para estos fines?</h3>
+                                        <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales: Datos de contacto tales como nombre, teléfono, domicilio y formas de contacto electrónicas.</p>
+                                        <p>Además de los datos personales mencionados anteriormente, para las finalidades informadas en el presente aviso de privacidad utilizaremos los siguientes datos personales considerados como sensibles, que requieren de especial protección: datos financieros, biométricos, digitales, de identificación, patrimoniales, académicos o laborales.</p>
+                                        
+                                        <h3>¿Con quién compartimos su información personal y para qué fines?</h3>
+                                        <p>Le informamos que sus datos personales son compartidos dentro y fuera del país con las siguientes personas, empresas, organizaciones y autoridades distintas a nosotros, para los siguientes fines:</p>
+                                        <p>Destinatario de los datos personales         País (opcional)                   Finalidad</p>
+                                        <p>Autoridades                                                   México                                Si nos fuera solicitado en un proceso judicial bajo una orden.</p>
+                                        <p>Socios de Negocios                                       México                                Proporcionarle un servicio que no dependa completamente de 
+                                           Entidades Financieras                   </p>
+                                        <p>                                 México                               Validar información de pagos entre los involucrados*</p>
+
+                                        <p>Le informamos que para las transferencias indicadas con un asterisco (*) requerimos obtener su consentimiento. Si usted no manifiesta su negativa para dichas transferencias, entenderemos que nos lo ha otorgado [Ésto sólo aplica para consentimiento tácito].</p>
+                                        <p>No autorizo que mis datos personales sean compartidos con los siguientes terceros (favor de notificarlo a <b>direcciongeneral@fashiongold.com.mx</b> )</p>
+                                        
+                                        <h3>¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso?</h3>
+
+                                        <p>Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.</p>
+                                        <p>Para el ejercicio de cualquiera de los derechos ARCO, usted deberá presentar la solicitud respectiva en formato digital firmado a direcciongeneral@fashiongold.com.mx
+Para conocer el procedimiento y requisitos para el ejercicio de los derechos ARCO, usted podrá ponerse en contacto con nuestro Departamento de Privacidad, que dará trámite a las solicitudes para el ejercicio de estos derechos, y atenderá cualquier duda que pudiera tener respecto al tratamiento de su información. Los datos de contacto del Departamento de Privacidad son los siguientes: 
+direcciongeneral@fashiongold.com.mx
+                                        </p>
+                                        
+                                        <h3>¿Cómo puede revocar su consentimiento para el uso de sus datos personales?</h3>
+                                        
+                                        <p>Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante que tenga en cuenta que no en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que por alguna obligación legal requiramos seguir tratando sus datos personales. Asimismo, usted deberá considerar que para ciertos fines, la revocación de su consentimiento implicará que no le podamos seguir prestando el servicio que nos solicitó, o la conclusión de su relación con nosotros.</p>
+                                        <p>Para revocar su consentimiento deberá presentar su solicitud en formato digital firmado a direcciongeneral@fashiongold.com.mx
+Para conocer el procedimiento y requisitos para la revocación del consentimiento, usted podrá ponerse en contacto con nuestro Departamento de Privacidad.
+</p>
+                                        <h3>¿Cómo puede limitar el uso o divulgación de su información personal? </h3>
+
+                                        <p>Con objeto de que usted pueda limitar el uso y divulgación de su información personal, le ofrecemos los siguientes medios:</p>
+                                        <ul>
+                                        <li>* Su inscripción en el Registro Público para Evitar Publicidad, que está a cargo de la Procuraduría Federal del Consumidor, con la finalidad de que sus datos personales no sean utilizados para recibir publicidad o promociones de empresas de bienes o servicios. Para mayor información sobre este registro, usted puede consultar el portal de Internet de la PROFECO, o bien ponerse en contacto directo con ésta.</li>
+                                        </ul>
+                                        <p>Su registro en el listado de exclusión, a fin de que sus datos personales no sean tratados para fines mercadotécnicos, publicitarios o de prospección comercial por nuestra parte. Para mayor información escríbanos  a direcciongeneral@fashiongold.com.mx</p>
+                                        <ul>
+                                        <li>* El uso de tecnologías de rastreo en nuestro portal de Internet
+Le informamos que en nuestra página de Internet utilizamos cookies, web beacons y otras tecnologías a través de las cuales es posible monitorear su comportamiento como usuario de Internet, así como brindarle un mejor servicio y experiencia de usuario al navegar en nuestra página.
+</li>
+                                        </ul>
+
+                                        <p>Los datos personales que obtenemos de estas tecnologías de rastreo son los siguientes: Formulario de Registro, mismos que utilizamos para ponernos en contacto con Usted.  </p>
+                                        <p>Estas tecnologías podrán deshabilitarse siguiendo los siguientes pasos: solicitando la eliminación de sus datos en formato digital firmado a direcciongeneral@fashiongold.com.mx</p>
+                                        
+                                        <h3>¿Cómo puede conocer los cambios a este aviso de privacidad?</h3>
+                                        <p>El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.</p>
+                                        <p>Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través de nuestro SITIO WEB.</p>
+                                        <p>El procedimiento a través del cual se llevarán a cabo las notificaciones sobre cambios o actualizaciones al presente aviso de privacidad es el siguiente: Apartado en el Sitio Web.</p>
+
+                                        <p><b> Fashion Gold</b></p>
+                                       
 
                                     </div>
                                 </div>
@@ -597,7 +606,7 @@ $db->closeSession();
                     <div class="footer-content footer-content-bottom clearfix">
                         <div class="container">
 
-                            <div class="copyright col-md-12">&copy; 2018 Fashion Gold. <a href="<?php echo $context?>/site/pages/privacity.php">Politicas de Privacidad</a></div>
+                            <div class="copyright col-md-12">&copy; 2018 Fashion Gold. <a href="<?php echo $context?>/site/pages/privacity.php">Politicas de Privacidad</a> </div>
 
 
 
@@ -616,10 +625,9 @@ $db->closeSession();
 
                         </div>
                     </div>
-                </div>
-            </div>
-        </footer>
 
+                </div>
+        </footer>
         <script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script>
         <script type="text/javascript">
             //<![CDATA[    
