@@ -1,338 +1,264 @@
 <?php
-include("../../site/admin/mvc/util/MysqlDAO.php");
-$context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$var =explode("/",$context);
-if (strpos($context, "localhost") !== false) {
-	$context="http://" .$var[0]."/".$var[1];
-}else{
-	$context="http://" .$var[0];
-}
+    include("../../site/admin/mvc/util/MysqlDAO.php");
+    $context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $var =explode("/",$context);
+        if (strpos($context, "localhost") !== false) {
+            $context="http://" .$var[0]."/".$var[1];
+        }else{
+            $context="http://" .$var[0];
+        }
+        $db = new MySQL ();
+        $nodeCatalogo = array();
+    $posCatalogo=1;    
+    $sqlCatalogo="SELECT * FROM c01tipo";
 
-$db = new MySQL ();
-$nodeCatalogo = array();
-$posCatalogo=1;    
-$sqlCatalogo="SELECT * FROM c01tipo";
+        $conn=$db->getConexion();
+    $resultCatalogo = $conn->query($sqlCatalogo);
 
-$conn=$db->getConexion();
-$resultCatalogo = $conn->query($sqlCatalogo);
-
-
-if ($resultCatalogo->num_rows > 0) {
-    // output data of each row
-    while($row =  $resultCatalogo->fetch_assoc()) {
-      $txtDescripcion=mb_convert_encoding($row["txtdescripcion"],'ISO-8859-1','UTF-8');
-      $txturl=$row["txturl"];
-      $idTipo=$row["idtipo"];
-      $nodeCatalogo[$posCatalogo++]=array('descripcion'=>$txtDescripcion,'idTipo'=>$idTipo,'url'=>$txturl);
-    }
-  }
-$db->closeSession();
-
+    
+    if ($resultCatalogo->num_rows > 0) {
+            // output data of each row
+            while($row =  $resultCatalogo->fetch_assoc()) {
+                $txtDescripcion=mb_convert_encoding($row["txtdescripcion"],'ISO-8859-1','UTF-8');
+                $txturl=$row["txturl"];
+                $idTipo=$row["idtipo"];
+                $nodeCatalogo[$posCatalogo++]=array('descripcion'=>$txtDescripcion,'idTipo'=>$idTipo,'url'=>$txturl);
+            }
+        }
+    $db->closeSession();
 ?>
     <!doctype html>
-    <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!-->
     <html lang="en" class="no-js">
-    <!--<![endif]-->
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" href="<?php echo $context ?>/rings.ico">
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+            <link rel="canonical" href="rings.php" />
+            <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css' rel='stylesheet' type='text/css'>
+            <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css' rel='stylesheet' type='text/css'>
+            <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css' rel='stylesheet' type='text/css'>
+            <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css' rel='stylesheet' type='text/css'>
+            <meta name="description" content="" />
+            <title>¿Sabias que?| Fashion Gold</title>
+            <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
 
-    <head>
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="icon" href="<?php echo $context ?>/rings.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-        <link rel="canonical" href="rings.php" />
-        <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Carrois+Gothic.css' rel='stylesheet' type='text/css'>
-        <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Lato:100,300,400,700.css' rel='stylesheet' type='text/css'>
-        <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Raleway:400,600,500,700.css' rel='stylesheet' type='text/css'>
+            <script src="<?=$context?>/site/admin/js/jquery.js"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.isotope.min.js?14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/services/javascripts/currencies.js" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
+    
+            <link rel="alternate" type="application/json+oembed" href="https://site/collections/rings.oembed">
+            <link rel="alternate" type="application/atom+xml" title="Feed" href="https://site/collections/rings.atom" />
+            <script type="text/javascript">
+                //<![CDATA[
+                var Shopify = Shopify || {};
+                Shopify.shop = "site";
+                Shopify.theme = {
+                    "name": "jewelry",
+                    "id": 41982083,
+                    "theme_store_id": null,
+                    "role": "main"
+                };
+                Shopify.theme.handle = "null";
+                Shopify.theme.style = {
+                    "id": null,
+                    "handle": null
+                };
 
-        <link href='<?php echo $context ?>/fonts.googleapis.com/css%3Ffamily=Quicksand:300,400,700.css' rel='stylesheet' type='text/css'>
+                //]]>
+            </script>
+            <script id="__st">
+                //<![CDATA[
+                var __st = {
+                    "a": 9087252,
+                    "offset": -14400,
+                    "reqid": "83e85db6-519f-44c8-b874-116cd9899619",
+                    "pageurl": "site\/collections\/rings",
+                    "u": "9a13e414eb47",
+                    "p": "collection",
+                    "rtyp": "collection",
+                    "rid": 81695171
+                };
+                //]]>
+            </script>
+            <script src="../../cdn.shopify.com/s/javascripts/shopify_stats.js%3Fv=6" type="text/javascript" async="async"></script>
+            <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/9087252/digital_wallets/dialog" />
 
-        <meta name="description" content="" />
-
-        <style>
-            .foto {
-                width: 80%;
-                position: relative;
-                margin: auto;
-            }
-
-            .foto img {
-                width: 100%;
-            }
-
-            .foto p {
-                position: absolute;
-                bottom: 100px;
-                left: 65px;
-                /*width:100%;*/
-                width: 400px;
-                text-align: justify;
-                /*color:rgba(243,243,243,.8);*/
-                color: black;
-                font-family: Verdana;
-                font-size: 14px;
-                font-style: italic;
-                /*background-color:rgba(0,0,0,.7);*/
-                padding: .5em 0;
-            }
-        </style>
-
-
-
-        <title>Oro Laminado FashionGold | Fashion Gold</title>
-
-
-
-
-
-        <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
-
-
-
-
-
-        <link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-
-
-
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-
-
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
-
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
-
-
-
-
-
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
-
-
-
-        <script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.isotope.min.js?14058599523483859647" type="text/javascript"></script>
-
-
-
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
-
-
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
-
-        <script src="<?php echo $context ?>/services/javascripts/currencies.js" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
-
-        <link rel="alternate" type="application/json+oembed" href="https://site/collections/rings.oembed">
-        <link rel="alternate" type="application/atom+xml" title="Feed" href="https://site/collections/rings.atom" />
-
-        <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
-
-        <script type="text/javascript">
-            //<![CDATA[
-            var Shopify = Shopify || {};
-            Shopify.shop = "site";
-            Shopify.theme = {
-                "name": "jewelry",
-                "id": 41982083,
-                "theme_store_id": null,
-                "role": "main"
-            };
-            Shopify.theme.handle = "null";
-            Shopify.theme.style = {
-                "id": null,
-                "handle": null
-            };
-
-            //]]>
-        </script>
-        <script id="__st">
-            //<![CDATA[
-            var __st = {
-                "a": 9087252,
-                "offset": -14400,
-                "reqid": "83e85db6-519f-44c8-b874-116cd9899619",
-                "pageurl": "site\/collections\/rings",
-                "u": "9a13e414eb47",
-                "p": "collection",
-                "rtyp": "collection",
-                "rid": 81695171
-            };
-            //]]>
-        </script>
-        <script src="../../cdn.shopify.com/s/javascripts/shopify_stats.js%3Fv=6" type="text/javascript" async="async"></script>
-        <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/9087252/digital_wallets/dialog" />
-
-        <script type="text/javascript">
-            window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-            window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-            window.ShopifyAnalytics.meta.currency = 'USD';
-            var meta = {
-                "page": {
-                    "pageType": "collection",
-                    "resourceType": "collection",
-                    "resourceId": 81695171
-                }
-            };
-            for (var attr in meta) {
-                window.ShopifyAnalytics.meta[attr] = meta[attr];
-            }
-        </script>
-
-        <script type="text/javascript">
-            window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-
-            };
-        </script>
-
-        <script type="text/javascript" class="analytics">
-            (function() {
-                var customDocumentWrite = function(content) {
-                    var jquery = null;
-
-                    if (window.jQuery) {
-                        jquery = window.jQuery;
-                    } else if (window.Checkout && window.Checkout.$) {
-                        jquery = window.Checkout.$;
-                    }
-
-                    if (jquery) {
-                        jquery('body').append(content);
+            <script type="text/javascript">
+                window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+                window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+                window.ShopifyAnalytics.meta.currency = 'USD';
+                var meta = {
+                    "page": {
+                        "pageType": "collection",
+                        "resourceType": "collection",
+                        "resourceId": 81695171
                     }
                 };
-
-                var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-                if (trekkie.integrations) {
-                    return;
+                for (var attr in meta) {
+                    window.ShopifyAnalytics.meta[attr] = meta[attr];
                 }
-                trekkie.methods = [
-                    'identify',
-                    'page',
-                    'ready',
-                    'track',
-                    'trackForm',
-                    'trackLink'
-                ];
-                trekkie.factory = function(method) {
-                    return function() {
-                        var args = Array.prototype.slice.call(arguments);
-                        args.unshift(method);
-                        trekkie.push(args);
-                        return trekkie;
-                    };
+            </script>
+
+            <script type="text/javascript">
+                window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+
                 };
-                for (var i = 0; i < trekkie.methods.length; i++) {
-                    var key = trekkie.methods[i];
-                    trekkie[key] = trekkie.factory(key);
-                }
-                trekkie.load = function(config) {
-                    trekkie.config = config;
-                    var script = document.createElement('script');
-                    script.type = 'text/javascript';
-                    script.onerror = function(e) {
-                        (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
+            </script>
+
+            <script type="text/javascript" class="analytics">
+                (function() {
+                    var customDocumentWrite = function(content) {
+                        var jquery = null;
+
+                        if (window.jQuery) {
+                            jquery = window.jQuery;
+                        } else if (window.Checkout && window.Checkout.$) {
+                            jquery = window.Checkout.$;
+                        }
+
+                        if (jquery) {
+                            jquery('body').append(content);
+                        }
                     };
-                    script.async = true;
-                    script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1';
-                    var first = document.getElementsByTagName('script')[0];
-                    first.parentNode.insertBefore(script, first);
-                };
-                trekkie.load({
-                    "Trekkie": {
-                        "appName": "storefront",
-                        "development": false,
-                        "defaultAttributes": {
-                            "shopId": 9087252,
-                            "isMerchantRequest": null,
-                            "themeId": 41982083,
-                            "themeCityHash": 14839528528689155135
-                        }
-                    },
-                    "Performance": {
-                        "navigationTimingApiMeasurementsEnabled": true,
-                        "navigationTimingApiMeasurementsSampleRate": 0.1
-                    },
-                    "Session Attribution": {}
-                });
 
-                var loaded = false;
-                trekkie.ready(function() {
-                    if (loaded) return;
-                    loaded = true;
+                    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+                    if (trekkie.integrations) {
+                        return;
+                    }
+                    trekkie.methods = [
+                        'identify',
+                        'page',
+                        'ready',
+                        'track',
+                        'trackForm',
+                        'trackLink'
+                    ];
+                    trekkie.factory = function(method) {
+                        return function() {
+                            var args = Array.prototype.slice.call(arguments);
+                            args.unshift(method);
+                            trekkie.push(args);
+                            return trekkie;
+                        };
+                    };
+                    for (var i = 0; i < trekkie.methods.length; i++) {
+                        var key = trekkie.methods[i];
+                        trekkie[key] = trekkie.factory(key);
+                    }
+                    trekkie.load = function(config) {
+                        trekkie.config = config;
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.onerror = function(e) {
+                            (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
+                        };
+                        script.async = true;
+                        script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1';
+                        var first = document.getElementsByTagName('script')[0];
+                        first.parentNode.insertBefore(script, first);
+                    };
+                    trekkie.load({
+                        "Trekkie": {
+                            "appName": "storefront",
+                            "development": false,
+                            "defaultAttributes": {
+                                "shopId": 9087252,
+                                "isMerchantRequest": null,
+                                "themeId": 41982083,
+                                "themeCityHash": 14839528528689155135
+                            }
+                        },
+                        "Performance": {
+                            "navigationTimingApiMeasurementsEnabled": true,
+                            "navigationTimingApiMeasurementsSampleRate": 0.1
+                        },
+                        "Session Attribution": {}
+                    });
 
-                    window.ShopifyAnalytics.lib = window.trekkie;
+                    var loaded = false;
+                    trekkie.ready(function() {
+                        if (loaded) return;
+                        loaded = true;
 
-
-                    var originalDocumentWrite = document.write;
-                    document.write = customDocumentWrite;
-                    try {
-                        window.ShopifyAnalytics.merchantGoogleAnalytics.call(this);
-                    } catch (error) {};
-                    document.write = originalDocumentWrite;
-
-
-                    window.ShopifyAnalytics.lib.page(
-                        null, {
-                            "pageType": "collection",
-                            "resourceType": "collection",
-                            "resourceId": 81695171
-                        }
-                    );
-
-
-                    window.ShopifyAnalytics.lib.track(
-                        "Viewed Product Category", {
-                            "category": "Collection: rings",
-                            "nonInteraction": true
-                        }
-                    );
-
-                });
-
-
-                var eventsListenerScript = document.createElement('script');
-                eventsListenerScript.async = true;
-                eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
-                document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
-
-            })();
-        </script>
+                        window.ShopifyAnalytics.lib = window.trekkie;
 
 
-    </head>
+                        var originalDocumentWrite = document.write;
+                        document.write = customDocumentWrite;
+                        try {
+                            window.ShopifyAnalytics.merchantGoogleAnalytics.call(this);
+                        } catch (error) {};
+                        document.write = originalDocumentWrite;
+
+
+                        window.ShopifyAnalytics.lib.page(
+                            null, {
+                                "pageType": "collection",
+                                "resourceType": "collection",
+                                "resourceId": 81695171
+                            }
+                        );
+
+
+                        window.ShopifyAnalytics.lib.track(
+                            "Viewed Product Category", {
+                                "category": "Collection: rings",
+                                "nonInteraction": true
+                            }
+                        );
+
+                    });
+
+
+                    var eventsListenerScript = document.createElement('script');
+                    eventsListenerScript.async = true;
+                    eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
+                    document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+                })();
+            </script>
+
+
+        </head>
 
     <body itemscope itemtype="http://schema.org/WebPage" class="templateCollection">
 
         <!-- Header -->
         <header id="top" class="fadeInDown clearfix">
-
-
-
 
             <div class="line"></div>
 
@@ -341,24 +267,19 @@ $db->closeSession();
                 <div class="top-navigation">
 
                     <ul class="list-inline">
-                        <li class="top-logo"><a id="site-title" href="../index.php" > <img class="img-responsive"
-		src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"
-		 /> </a></li>
+                        <li class="top-logo"><a id="site-title" href="../index.php" title="Jewelry - Shopify theme"> <img class="img-responsive" src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647" alt="Jewelry - Shopify theme" /> </a></li>
 
                         <li class="navigation">
                             <nav class="navbar" role="navigation">
                                 <div class="clearfix">
                                     <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle main
-	navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-	<span class="icon-bar"></span></button>
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle main navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span><span class="icon-bar"></span></button>
                                     </div>
 
                                     <div class="is-mobile visible-xs">
                                         <ul class="list-inline">
                                             <li class="is-mobile-menu">
-                                                <div class="btn-navbar" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar-group"> <span
-			class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </span>
+                                                <div class="btn-navbar" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar-group"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </span>
                                                 </div>
                                             </li>
 
@@ -368,8 +289,7 @@ $db->closeSession();
                                                     <div class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></div>
                                                     <ul class="customer dropdown-menu">
 
-                                                        <li class="logout"><a href="https://site/account/login">Inicio de
-			sesi&oacute;n</a></li>
+                                                        <li class="logout"><a href="https://site/account/login">Inicio desesi&oacute;n</a></li>
                                                         <li class="account"><a href="https://site/account/register">Register</a>
                                                         </li>
 
@@ -378,15 +298,13 @@ $db->closeSession();
                                             </li>
 
 
-                                            <li class="is-mobile-wl"><a href="../pages/wish-list.html"><i
-			class="fa fa-heart"></i></a></li>
+                                            <li class="is-mobile-wl"><a href="../pages/wish-list.html"><i class="fa fa-heart"></i></a></li>
 
 
 
 
 
-                                            <li class="is-mobile-cart"><a href="https://site/cart"><i
-			class="fa fa-shopping-cart"></i></a></li>
+                                            <li class="is-mobile-cart"><a href="https://site/cart"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
 
@@ -398,48 +316,49 @@ $db->closeSession();
 		<i class="fa fa-caret-down"></i> <i
 			class="sub-dropdown1 visible-sm visible-md visible-lg"></i> <i
 			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
-                      <div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
-                                                <ul class="sub-mega-menu">
-                                                  <li>
-                                                    <ul>
-                                                      <li class="list-title">Productos</li>
-                                                      <?php 
-                                                          $menu='';
-                                                          foreach($nodeCatalogo as $posicion=>$registro){
-                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
-                                                            $menu=$menu.$li;
-                                                          }
+                                      <div class="megamenu-container megamenu-container-1 dropdown-menu banner-bottom mega-col-4">
+                                                  <ul class="sub-mega-menu">
+                                                      <li>
+                                                          <ul>
+                                                              <li class="list-title">Productos</li>
+                                                              <?php 
+                                                                        $menu='';
+                                                                        foreach($nodeCatalogo as $posicion=>$registro){
+                                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
+                                                                          $menu=$menu.$li;
+                                                                        }
 
-                                                          echo $menu;
-                                                      
-                                                      ?>
-                                                    </ul>
-                                                  </li>
+                                                                        echo $menu;
+                                                              
+                                                              ?>
+                                                          </ul>
+                                                      </li>
 
-                                                  <li>
+                                                      <li>
 
-                                                    <ul>
-                                                      <li class="list-title">Destacados</li>
-                                                      <?php 
-                                                          $menu='';
-                                                          foreach($nodeCatalogo as $posicion=>$registro){
-                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
-                                                            $menu=$menu.$li;
-                                                          }
+                                                          <ul>
+                                                              <li class="list-title">Destacados</li>
+                                                              <?php 
+                                                                        $menu='';
+                                                                        foreach($nodeCatalogo as $posicion=>$registro){
+                                                                            $li="<li class='list-unstyled li-sub-mega'><a href='{$context}{$registro['url']}'>{$registro['descripcion']} </a></li>";
+                                                                          $menu=$menu.$li;
+                                                                        }
 
-                                                          echo $menu;
-                                                      
-                                                      ?>
-                                                  </li>
-                                                </ul>
+                                                                        echo $menu;
+                                                              
+                                                              ?>
+                                                      </li>
+                                                  </ul>
                                               </div>
                                             </li>
                                             <li class="nav-item dropdown">
-                                                <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
-                                                    <span>¿Sabias que?</span>
-                                                <i class="fa fa-caret-down"></i> <i
-                                                    class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
-                                                    class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
+                                              <a href="#" data-toggle="dropdown">
+                                                  <span>¿Sabias que?</span>
+
+                                            <i class="fa fa-caret-down"></i> <i
+                                                class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
+                                                class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
                                                 <ul class="dropdown-menu">
                                                     <li class=""><a tabindex="-1" href="<?php echo $context ?>/site/pages/know.php#link1"> <i class="fa fa-comments-o"></i> Significado de Pulsera en el tobillo.</a></li>
                                                     <li class=""><a tabindex="-1" href="<?php echo $context ?>/site/pages/know.php#link2"> <i class="fa fa-comments-o"></i> Origen Pulseras y collares.</a></li>
@@ -525,6 +444,8 @@ $db->closeSession();
 
         </header>
 
+        
+
         <div id="content-wrapper-parent">
             <div id="content-wrapper">
                 <!-- Content -->
@@ -534,7 +455,7 @@ $db->closeSession();
                         <div itemprop="breadcrumb" class="container">
                             <div class="row">
                                 <div class="col-md-24"><a href="<?php echo $context ?>" class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
-                                    <span class="page-title">Oro Laminado</span></div>
+                                    <span class="page-title">¿Sabias que?</span></div>
                             </div>
                         </div>
                     </div>
@@ -545,89 +466,96 @@ $db->closeSession();
                         <div class="container">
                             <div class="row">
                                 <div id="page-header">
-                                    <p class="chopsFontTitle">Oro Laminado </p>
+                                    <p id="page-title" class='chopsFontTitle'>¿Sabias que?</p>
                                 </div>
+
                                 <div id="col-main" class="col-md-24 normal-page clearfix">
-                                    <div class="page about-us   ">
-                                        <div class="foto">
-                                            <img src="<?php echo $context?>/site/img/collection/laminado/laminado.jpg" />
-                                            <p>
-                                                <b>¿QUÉ ES ORO LAMINADO?</b>
-                                                <br>
-                                                <br> Se refiere a pieza hecha a partir de una base como el cobre y que es recubierta con varias capas de oro de distintos quilates 14k o 18k. <br><br> La cantidad de capas y el grosor pueden variar 3 a 6 capas. de metal precioso con soldadura y presión. Es 50 a 100 veces más grueso que el chapeado regular.<br><br> La calidad de oro más usada es de 14K y 18k. Un estándar del peso del metal precioso (oro) es del 20% de su peso total. <br><br> Su garantía es de 8 meses hasta un año si se cuenta con el debido cuidado, recordemos que es joyería con solo unas cuantas micras de oro solo para darle el acabado fino.<br>
-                                            </p>
-
-                                        </div>
-
-
+                                    <div class="page about-us"  id="link1">
+                                        <div class="col-md-6" ><img src="../img/collection/image-not-found.png"/></div>
+                                        <p><b> Significado de Pulsera en el tobillo.</b></p>
+                                        <div style="text-align: justify;">
+                                                No todas las mujeres utilizan pulseras tobilleras, lo cierto es que a simple vista representan sensualidad, ya que realza y le da un toque diferente al pie; son utilizadas sobre todo en &eacute;poca de verano, aunque hay quienes las usan permanentemente, pero &iquest;qu&eacute; significado tienen?<br /><br />En la India este accesorio es importante para la mujer y tienen que llevarlas durante el matrimonio; mientras que las viudas no pueden lucirlas.<br /><br />En el antiguo Egipto, se cre&iacute;a que llevar una cadena alrededor del tobillo atra&iacute;a la buena suerte y la fortuna;&nbsp; algunas personas que trabajaban en el campo, sol&iacute;an llevar tobilleras con colgante sonoro para alejar los insectos y evitar picaduras.<br /><br />En la cultura sumeria, las mujeres utilizaban estas joyas de plata u oro, como significado de la riqueza del marido.<br /><br />Como ver&aacute;n, en este aspecto hay historia que contar, pero lo importante es que a medida que han pasado los a&ntilde;os, este significado ha ido cambiando, ya que en la actualidad, tener una pulsera tobillera o esclava (como tambi&eacute;n se le dice), identifica a las mujeres como sexys y les da elegancia a esa parte del cuerpo.<br /><br />&iexcl;Atr&eacute;vete a lucir una!<br /><br />Ac&eacute;rcate a Fashion Gold d&oacute;nde encontrar&aacute;s incre&iacute;bles modelos.
+                                        </div>                                        
                                     </div>
                                 </div>
 
+                                <div id="col-main" class="col-md-24 normal-page clearfix">
+                                    <div class="page about-us" id="link2">
+                                        <div class="col-md-18">
+                                            <p><b> Origen Pulseras y collares.</b></p>
+                                            <div style="text-align: justify;">
+                                                &iquest;Sab&iacute;as que el origen de las&nbsp;pulseras&nbsp;y&nbsp;collares&nbsp;se remonta miles de a&ntilde;os atr&aacute;s? <br />Aunque no lo parezca, el uso de estos complementos es algo tan ancestral y profundo que ha quedado en nuestra cultura y que al d&iacute;a de hoy nos define por completo.<br /><br />Su origen siempre ha estado ligado a las antiguas civilizaciones del Neol&iacute;tico, de La Edad de Bronce o incluso del Antiguo Egipto.<br /><br />Con el paso del tiempo estos complementos han ido evolucionando en materiales y formas, llegando a convertirse en una manera de expresi&oacute;n y de identidad para cada uno de nosotr@s.<br /><br />Al parecer, su uso siempre sol&iacute;a ir orientado al misticismo, la religi&oacute;n o al poder social y econ&oacute;mico.<br /><br />Siempre han representado un sello de identidad para las personas que los pose&iacute;an y un objeto deseado por la mayor&iacute;a de clases sociales inferiores. Actualmente se han vuelto m&aacute;s comunes, s&iacute;, pero eso no quita que para nosotros dejen de ser aquello que nos identifica, que nos diferencia de los dem&aacute;s y que nos complementa en nuestro d&iacute;a a d&iacute;a.<br /><br />Fashion Gold tiene para ti y para tus clientes un amplio cat&aacute;logo<br /><br />Te invitamos a que visites nuestra sucursal, donde encontrar&aacute;s diferentes propuestas y estilos<br /><br />Ac&eacute;rcate a Fashion Gold.
+                                            </div>
+                                        </div>     
+                                        <div class="col-md-6"><img src="../img/collection/image-not-found.png"/></div> 
+                                    </div>
+                                </div>
 
+                                <div id="col-main" class="col-md-24 normal-page clearfix">
+                                    <div class="page about-us" id="link3">
+                                        <div class="col-md-6"><img src="../img/collection/image-not-found.png"/></div>
+                                        <p><b> Porqué se usan aretes?</b></p>
+                                        <div style="text-align: justify;">
+                                            En las culturas occidentales el uso de aretes ha sido siglos patrimonio de las damas.<br /><br />Los aretes se refieren a las joyas que atraviesan el l&oacute;bulo de la oreja.<br /><br />En algunos pa&iacute;ses se llaman aros o pendientes, pero un arete puede que no tenga pendiente, ya que un pendiente es algo que cuelga y tambi&eacute;n puede referirse a una joya que cuelga de una cadena en el cuello.<br /><br />Los aretes, tambi&eacute;n, pueden darte suerte para la prosperidad.<br /><br />Esta costumbre o moda no es nueva. La moda de hoy en d&iacute;a es que, todos usen aretes y pendientes de todas las formas, tama&ntilde;os y colores y precios.<br /><br />En algunas culturas muy antiguas, como las de edad de bronce se han encontrado restos que indican que esos pobladores usaban los pendientes en la nariz, se perforaban el cart&iacute;lago central.<br /><br />Tambi&eacute;n los usaban los asirios tal como se podido apreciar cuando se encontraron sus pinturas y figuras representativas.<br /><br />En la cultura egipcia al realizar investigaciones y estudios en las tumbas de las princesas de las dinast&iacute;as XII YXIII y de faraones de la XX dinast&iacute;as, se han encontrado bellos adornos. De igual manera los usaban los fenicios, hebreos y varios pueblos orientales.<br /><br />Las griegas, tambi&eacute;n usaban pendientes y aretes de belleza y valor muy singular pues los hac&iacute;an de oro con colgantes de perlas y gemas.<br /><br />En la cultura Inca en Sudam&eacute;rica, estos utilizaban, enormes artes confeccionados en oro, plata o cobre y les hac&iacute;an incrustaciones con piedras preciosas, prueba de esto es que se han encontrado restos arqueol&oacute;gicos humanos que demuestran que estas personas llevaban inmensos aretes llamados orejeras.<br /><br />En estas culturas el personaje con mayor nivel y categor&iacute;a usaba el arete m&aacute;s grande.<br /><br />Por otro lado, en el &Aacute;frica casi todas las personas hombres y mujeres de diversas tribus usaban inmensos aretes fabricados manualmente con cer&aacute;mica, huesos, semillas y madera tallada.<br /><br />Algunas culturas utilizan los pendientes como amuleto protector, para impedir que los malos esp&iacute;ritus se introduzcan en el cuerpo a trav&eacute;s de los o&iacute;dos.<br /><br />En la &eacute;poca de los piratas y corsarios acostumbraban a llevar aretes pendientes, no como moda sino como signo de valent&iacute;a y virilidad, cada arete significaba una haza&ntilde;a realizada.
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
-
-
-
                     </section>
                 </div>
             </div>
         </div>
 
-        <footer id="footer">
-            <div id="footer-content">
-                <!--<h6 class="general-title contact-footer-title">Newsletter</h6>-->
+		<footer id="footer">
+			<div id="footer-content">
 
-                <div class="footer-content footer-content-top clearfix">
-                    <div class="container">
-                        <div class="footer-link-list col-md-12 text-center">
-                            <div class="group">
-                                <h5>Nosotros</h5>
+				<div class="footer-content footer-content-top clearfix">
+					<div class="container">
+						<div class="footer-link-list col-md-12 text-center">
+							<div class="group">
+								<h5>Nosotros</h5>
+								<ul class="list-unstyled list-styled">
+									<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
+									<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
+								</ul>
+							</div>
+						</div>
 
-                                <ul class="list-unstyled list-styled">
+						<div class="footer-link-list col-md-12 text-center">
+							<div class="group">
+								<h5>Informaci&oacute;n</h5>
+								<ul class="list-unstyled list-styled">
+									<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/startBussines.php">Incrementa tus ingresos</a></li>
+									<li class="list-unstyled"><a href="<?php echo $context?>/site/pages/whatGold.php">Qu&eacute; es oro laminado</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-                                    <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/about.php">Quienes Somos</a></li>
-                                    <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/contact.php">Cont&aacute;ctenos</a></li>
+					<div class="footer-content footer-content-bottom clearfix">
+						<div class="container">
+							<div class="copyright col-md-8" >&copy; 2018 Fashion Gold.</div>
+							<div class="copyright col-md-8" style="text-align:center">
+								<a style="color:blue;" href="<?php echo $context?>/site/pages/privacity.php">Aviso de Privacidad.
+								</a>
+							</div>
+							<div id="widget-payment" class="col-md-8">
+								<ul id="payments" class="list-inline animated">
+									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
+									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Mastercard"><a href="#" class="icons mastercard"></a></li>
+									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="American Express"><a href="#" class="icons amex"></a></li>
+									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Paypal"><a href="#" class="icons paypal"></a></li>
+									<li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Moneybookers"><a href="index.html#;" class="icons moneybookers"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="footer-link-list col-md-12 text-center">
-                            <div class="group">
-                                <h5>Informaci&oacute;n</h5>
-
-                                <ul class="list-unstyled list-styled">
-                                    <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/startBussines.php">Incrementa tus ingresos</a></li>
-                                    <li class="list-unstyled"><a href="<?php echo $context?>/site/pages/whatGold.php">Qu&eacute; es oro laminado</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="footer-content footer-content-bottom clearfix">
-                        <div class="container">
-                            <div class="copyright col-md-8" >&copy; 2018 Fashion Gold.</div>
-                                <div class="copyright col-md-8" style="text-align:center">
-                                    <a style="color:blue;" href="<?php echo $context?>/site/pages/privacity.php">Aviso de Privacidad.
-                                    </a>
-                                </div>
-                                <div id="widget-payment" class="col-md-12">
-                                    <ul id="payments" class="list-inline animated">
-                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Visa"><a href="#" class="icons visa"></a></li>
-                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Mastercard"><a href="#" class="icons mastercard"></a></li>
-                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="American Express"><a href="#" class="icons amex"></a></li>
-                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Paypal"><a href="#" class="icons paypal"></a></li>
-                                        <li class="btooltip tada" data-toggle="tooltip" data-placement="top" title="Moneybookers"><a href="#" class="icons moneybookers"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+				</div>
+			</div>
+		</footer>
 
         <script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script>
         <script type="text/javascript">

@@ -382,12 +382,13 @@
                                                 <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                                     <span>¿Sabias que?</span>
 
-		<i class="fa fa-caret-down"></i> <i
-			class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
-			class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
+                                                <i class="fa fa-caret-down"></i> <i
+                                                    class="sub-dropdown1  visible-sm visible-md visible-lg"></i> <i
+                                                    class="sub-dropdown visible-sm visible-md visible-lg"></i> </a>
                                                 <ul class="dropdown-menu">
-                                                    <li class=""><a tabindex="-1" href="blogs/sample-blog-with-grid-3-columns.html"> <i
-				class="fa fa-wrench"></i> En construcción </a></li>
+                                                    <li class=""><a tabindex="-1" href="<?php echo $context ?>/site/pages/know.php#link1"> <i class="fa fa-comments-o"></i> Significado de Pulsera en el tobillo.</a></li>
+                                                    <li class=""><a tabindex="-1" href="<?php echo $context ?>/site/pages/know.php#link2"> <i class="fa fa-comments-o"></i> Origen Pulseras y collares.</a></li>
+                                                    <li class=""><a tabindex="-1" href="<?php echo $context ?>/site/pages/know.php#link3"> <i class="fa fa-comments-o"></i> ¿Porqué se usan aretes?</a></li>
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
