@@ -638,7 +638,7 @@
 		<!-- Modal parte 2-->
 		<script type="text/javascript">
 			function previewProducto(idProducto) {
-				var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto=' + idProducto;
+				var src = '<?=$context?>/site/admin/mvc/view/producto/viewProducto.php?idproducto=' + idProducto+'&r='+Math.random();
 				var height = $(this).attr('data-height') || '450px';
 				var width = $(this).attr('data-width') || '100%';
 				

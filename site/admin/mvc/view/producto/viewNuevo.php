@@ -753,7 +753,7 @@ $.ajax('<?=$contexto?>/site/admin/mvc/view/producto/controller/ctrlBorrarFile.ph
 
 
 function previewProducto(){
-    var src = "viewProducto.php?idproducto="+$("#idProducto").val();
+    var src = "viewProducto.php?idproducto="+$("#idProducto").val()+'&r='+Math.random();
     var height = $(this).attr('data-height') || 250;
     var width = $(this).attr('data-width') || 400;
     

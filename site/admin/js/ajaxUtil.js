@@ -340,7 +340,7 @@ function __$PrepareAndShowLoading(loader){
              backgroundColor: '#000', 
              '-webkit-border-radius': '10px', 
              '-moz-border-radius': '10px', 
-           // top:  ($(window).height() - 200) /2 + 'px', 
+            top:  ($(window).height() - 200) /2 + 'px', 
             left: ($(window).width() - 180) /2 + 'px' ,
             width: '150px',	
             height:'150px'

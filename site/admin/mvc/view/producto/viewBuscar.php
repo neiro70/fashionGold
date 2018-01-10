@@ -481,7 +481,7 @@
     function previewProducto(idproducto){
 
     	
-    	    var src = "viewProducto.php?idproducto="+idproducto;
+    	    var src = "viewProducto.php?idproducto="+idproducto+'&r='+Math.random();
     	    var height = $(this).attr('data-height') || 250;
     	    var width = $(this).attr('data-width') || 400;
     	    
