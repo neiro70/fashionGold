@@ -55,6 +55,7 @@
         <link href='<?php echo $context ?>/site/css/font.css' rel='stylesheet' type='text/css'>
         <title>Empieza tu propio negocio | Fashion Gold</title>
         <meta property="og:image" content="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
+        
         <link href="<?php echo $context ?>/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
@@ -85,13 +86,17 @@
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
-        <script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.isotope.min.js?14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/services/javascripts/currencies.js" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
         <script src="<?php echo $context ?>/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
         <script type="text/javascript" src="<?php echo $context ?>/site/toast/toastr.min.js"></script>
+         <!-- TextArea-->
+        <link type="text/css" rel="stylesheet" href="<?php echo $context ?>/site/css/jquery-te-1.4.0.css">
+        <script type="text/javascript" src="<?php echo $context ?>/site/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+
 
 
 
@@ -516,7 +521,7 @@
                       class="req">*</span></label> <input type="email" id="txtemail" value="" class="form-control email" name="txtemail" /></li>
                                                     <li class="clearfix"></li>
                                                     <li class=""><label class="control-label" for="message">Mensaje <span
-                      class="req">*</span></label> <textarea id="txtmensaje" rows="5" class="form-control" name="txtmensaje"></textarea></li>
+                      class="req">*</span></label> <textarea id="txtmensaje" rows="5" class="jqte-test" name="txtmensaje"></textarea></li>
                                                     <li class="clearfix"></li>
                                                     <li class="unpadding-top">
                                                         <button type="button" class="btn" id="sendEmail" name="sendEmail">Contactar</button>
@@ -584,6 +589,17 @@
 
         <script>
             $(document).ready(function(e) {
+
+                //textArea
+                $('.jqte-test').jqte();
+                // settings of status
+                var jqteStatus = true;
+                $(".status").click(function()
+                {
+                    jqteStatus = jqteStatus ? false : true;
+                    $('.jqte-test').jqte({"status" : jqteStatus})
+                });
+
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,
