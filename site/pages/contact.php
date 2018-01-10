@@ -88,8 +88,9 @@
         <script type="text/javascript" src="<?php echo $context ?>/site/js/classie.js"></script>
         <script type="text/javascript" src="<?php echo $context ?>/site/toast/toastr.min.js"></script>
 
-
-
+        <!-- TextArea-->
+        <link type="text/css" rel="stylesheet" href="<?php echo $context ?>/site/css/jquery-te-1.4.0.css">
+        <script type="text/javascript" src="<?php echo $context ?>/site/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
     </head>
 
     <body itemscope itemtype="http://schema.org/WebPage" class="templatePage">
@@ -304,13 +305,15 @@
                                                     <li class=""><label class="control-label" for="email">Email <span
 		class="req">*</span></label> <input type="email" id="txtemail" value="" class="form-control email" name="txtemail" /></li>
                                                     <li class="clearfix"></li>
-                                                    <li class=""><label class="control-label" for="message">Mensaje <span
-		class="req">*</span></label> <textarea id="txtmensaje" rows="5" class="form-control" name="txtmensaje"></textarea></li>
+                                                    <li class="">
+                                                        <label class="control-label" for="message">Mensaje <span class="req">*</span></label> 
+                                                        <textarea id="txtmensaje"  class="jqte-test"    name="txtmensaje"></textarea></li>
                                                     <li class="clearfix"></li>
                                                     <li class="unpadding-top">
                                                         <button type="button" class="btn" id="sendEmail" name="sendEmail">Contactar</button>
                                                     </li>
                                                 </ul>
+
                                             </form>
                                         </div>
 
@@ -489,6 +492,16 @@
 
                 <script>
                     $(document).ready(function(e) {
+
+                        //textArea
+                        $('.jqte-test').jqte();
+                        // settings of status
+                       var jqteStatus = true;
+                        $(".status").click(function()
+                        {
+                            jqteStatus = jqteStatus ? false : true;
+                            $('.jqte-test').jqte({"status" : jqteStatus})
+                        });
 
 
                         toastr.options = {
