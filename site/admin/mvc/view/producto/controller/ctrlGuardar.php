@@ -4,26 +4,16 @@
  	include("../../../../mvc/util/MysqlDAO.php");
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$var =explode("/",$contexto);
-	$isLocal=true;
 	
 	if (strpos($contexto, "localhost") !== false) {
 		 $contexto="http://" .$var[0]."/".$var[1];
 		 
 	}else{
 		 $contexto="http://" .$var[0];
-		 $isLocal=false;
 	 }
-
-	 if(!$isLocal){
-		$txtTitulo=$_POST["txtTitulo"];
-		$txtDescripcion=$_POST["txtDescripcion"];
-	}else{
 
 		$txtTitulo=mb_convert_encoding($_POST["txtTitulo"],'ISO-8859-1','UTF-8');
 		$txtDescripcion=mb_convert_encoding($_POST["txtDescripcion"],'ISO-8859-1','UTF-8');
-	}	
-
-	
  	$txtPrecio=$_POST["txtPrecio"]!=null ?$_POST["txtPrecio"]:0;
  	$idOferta=trim($_POST['idOferta']);
  	$txtPrecioOld=trim($_POST['txtPrecioOld']);

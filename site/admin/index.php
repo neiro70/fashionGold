@@ -2,7 +2,8 @@
 	$status = session_status();
 	if($status == PHP_SESSION_NONE){
 	    //There is no active session
-	    session_start();
+		session_start();
+		
 	    
 	}else
 	if($status == PHP_SESSION_DISABLED){
@@ -11,7 +12,8 @@
 	if($status == PHP_SESSION_ACTIVE){
 	    //Destroy current and start new one
 	    session_destroy();
-	    session_start();
+		session_start();
+		
 	  
 	}
 	
@@ -85,9 +87,9 @@
 			               					while($row = $result->fetch_assoc()) {
 			               						$_SESSION['idusuario']=$row["idusuario"];
 			               					}
-			               				}
-			               						               								
-			               				header("location:mvc/view/producto/viewBuscar.php");
+										   }
+										   echo("<script>location.href = '".$context."/site/admin/mvc/view/producto/viewBuscar.php';</script>");	               								
+			               				//header("location:mvc/view/producto/viewBuscar.php" );  
 			               			}else{
 			               				$msg = '&iexcl;Datos incorrectos!';
 			               				error_log("mensaje", 0);

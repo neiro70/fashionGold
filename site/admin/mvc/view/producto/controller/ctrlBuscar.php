@@ -4,14 +4,6 @@
 	include("../../../util/MysqlDAO.php");
 	
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-   	$isLocal=true;
-	
-	if (strpos($contexto, "localhost") === false) {
-        $isLocal=false;
- 	}
-
-	
-
 	$db = new MySQL (); 
 	$idTipo = isset($_GET['idTipo']) ? (int)trim($_GET['idTipo']) : 0;
 	$idLinea = isset($_GET['idLinea']) ? trim($_GET['idLinea']) : 'TODAS';
@@ -58,17 +50,10 @@
 				$idProducto=$row["idProducto"];
 				
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"]);
-				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);
-				
-				if($isLocal){		
-		
-					$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
-					$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
-					
-				}else{
-					$txtDescripcion=$row["txtDescripcion"];
-					$txtTitulo=$row["txtTitulo"];
-				}
+				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"]);	
+				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
+				$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+
 			
 
 				

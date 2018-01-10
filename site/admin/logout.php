@@ -2,7 +2,9 @@
    session_start();
    unset($_SESSION["username"]);
    unset($_SESSION["password"]);
+   session_destroy();
    
    echo 'Saliendo de la session del sistema';
-   header('Refresh: 2; URL = index.php');
+   echo("<script>location.href = '".$context."/site/admin';</script>");
+  // header('Refresh: 2; URL = index.php');
 ?>

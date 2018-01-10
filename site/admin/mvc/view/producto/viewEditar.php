@@ -3,14 +3,12 @@
 	
 	$contexto= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$var =explode("/",$contexto);
-	$isLocal=true;
 
 	if (strpos($contexto, "localhost") !== false) {
 		$contexto="http://" .$var[0]."/".$var[1];
 		
 	}else{
 		$contexto="http://" .$var[0];
-		$isLocal=false;
 	}
 	
 	
@@ -42,16 +40,9 @@
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-			
-			
-			if(!$isLocal){
-				$txtTitulo=$row["txtTitulo"];
-				$txtDescripcion=$row["txtDescripcion"];
-			}else{
-				$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
-				$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
-			}	
 
+			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
 			$idTipo=$row["idTipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];

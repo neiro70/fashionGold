@@ -5,12 +5,11 @@
         
         $context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
         $var =explode("/",$context);
-        $isLocal=true;
+
         if (strpos($context, "localhost") !== false) {
             $context="http://" .$var[0]."/".$var[1];
         }else{
             $context="http://" .$var[0];
-            $isLocal=false;
         }
         
 
@@ -43,15 +42,12 @@
 
                 $idLinea=$row['idLinea'];
                 $idProducto=$row["idProducto"];
+                		
+                $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
+                $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
+                $txtDescripcion=$row["txtDescripcion"];
+                $txtTitulo=$row["txtTitulo"];
                 
-                if($isLocal){			
-                    $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
-                    $txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
-                    
-                }else{
-                    $txtDescripcion=$row["txtDescripcion"];
-                    $txtTitulo=$row["txtTitulo"];
-                }
 
 
                 $dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
