@@ -642,7 +642,7 @@
 	}
 
 function previewProducto(){
-    var src = "viewProducto.php?idproducto="+$("#idProducto").val()+'&r='+Math.random();;
+    var src = "viewProducto.php?idproducto="+$("#idProducto").val()+'&r='+Math.random();
     var height = $(this).attr('data-height') || 250;
     var width = $(this).attr('data-width') || 400;
     
