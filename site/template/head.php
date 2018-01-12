@@ -17,7 +17,7 @@
 
             <meta name="description" content="" />
             <title>'.$title.'</title>
-            <meta property="og:image" content="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/logo.png?14058599523483859647" />
+            
 
             <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
             <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
@@ -35,8 +35,9 @@
             <link href="'.$context.'/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
             <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
             <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/site/toast/toastr.css" rel="stylesheet" type="text/css">
 
-            <script src="<?=$context?>/site/admin/js/jquery.js"></script>	
+            <script src="'.$context.'/site/admin/js/jquery.js"></script>	
             <script src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
@@ -53,13 +54,14 @@
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
-            <script src="services/javascripts/currencies.js" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
+          
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
-            
+            <script type="text/javascript" src="'.$context.'/site/toast/toastr.min.js"></script>
+
             <!-- TextArea-->
-            <link type="text/css" rel="stylesheet" href="<?php echo $context ?>/site/css/jquery-te-1.4.0.css">
-            <script type="text/javascript" src="<?php echo $context ?>/site/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+            <link type="text/css" rel="stylesheet" href="'.$context.'/site/css/jquery-te-1.4.0.css">
+            <script type="text/javascript" src="'.$context.'/site/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+            <script type="text/javascript" src="'.$context.'/site/js/jquery.isotope.js" charset="utf-8"></script>
             
             <!-- Facebook Conversion Code for Themes -->
             <script>
@@ -82,13 +84,7 @@
                 <img height="1" width="1" alt="" style="display: none" src="../www.facebook.com/tr%3Fev=6016096938024&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" />
             </noscript>
 
-            <script type="text/javascript">
-                var Shopify = Shopify || {};
-                Shopify.shop = "site";
-                Shopify.theme = {"name":"jewelry","id":41982083,"theme_store_id":null,"role":"main"};
-                Shopify.theme.handle = "null";
-                Shopify.theme.style = {"id":null,"handle":null};
-            </script>
+
 
             <script src="'.$context.'/cdn.shopify.com/s/javascripts/shopify_stats.js%3Fv=6" type="text/javascript" async="async"></script>
             <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/9087252/digital_wallets/dialog" />
@@ -108,8 +104,7 @@
             <script type="text/javascript" class="analytics">
                 (function () {
                     var customDocumentWrite = function(content) {
-                        var 
-                        = null;
+                        var jquery = null;
                         if (window.jQuery) {
                             jquery = window.jQuery;
                         } else if (window.Checkout && window.Checkout.$) {

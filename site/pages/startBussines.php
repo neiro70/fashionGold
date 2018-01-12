@@ -38,9 +38,6 @@
     <?php include "../../site/template/head.php";?>
 
     <body itemscope itemtype="http://schema.org/WebPage" class="templateCollection">
-
-        <?php include "../../site/template/header.php";?>
-
         <div id="content-wrapper-parent">
             <div id="content-wrapper">
                 <!-- Content -->

@@ -40,8 +40,6 @@
 
     <body itemscope itemtype="http://schema.org/WebPage" class="templatePage">
 
-        <?php include "../../site/template/header.php";?>
-
         <div id="content-wrapper-parent">
             <div id="content-wrapper">
                 <!-- Content -->

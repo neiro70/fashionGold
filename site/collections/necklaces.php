@@ -95,15 +95,6 @@
 		<?php include "../../site/template/footer.php";?>
 		<?php include "../../site/template/modal.php";?>
 
-		<script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script> 
-		<script type="text/javascript">
-			if (typeof Shopify.onCartShippingRatesUpdate === 'undefined') {
-				document.write("\u003cscript src=\"\/\/cdn.shopify.com\/s\/assets\/themes_support\/api.jquery-249bc01571641fb7bf9bf82378ba6333e9abdcc34aad49eb9e4edb01557b7dac.js\" type=\"text\/javascript\"\u003e\u003c\/script\u003e");
-			}    
-		</script>
-
-		<script src="../services/javascripts/currencies.js" type="text/javascript"></script>
-		<script src="../../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"></script>
 		<script type="text/javascript">
 			jQuery('.currencies li').on(clickEv, function() {
 				if (!$(this).hasClass('active')) {
@@ -134,24 +125,7 @@
 			});
 		</script>
 
- 	 	<!--Androll--> 
-  		<script type="text/javascript">
-			adroll_adv_id = "HTF7KIWJRBHHXL46WLUDBC";
-			adroll_pix_id = "IE5CHDRTR5ABXH2P6QXAVM";
-			(function () {
-				var oldonload = window.onload;
-				window.onload = function(){
-					__adroll_loaded=true;
-					var scr = document.createElement("script");
-					var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-					scr.setAttribute('async', 'true');
-					scr.type = "text/javascript";
-					scr.src = host + "/j/roundtrip.js";
-					((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-					if(oldonload){oldonload()}
-				};
-			}());
-		</script> 
+
 		
 		<!-- Google Code --> 
 		<script>
