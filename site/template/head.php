@@ -54,14 +54,14 @@
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
-          
+            <script src="'.$context.'/site/js/jquery.isotope.js" type="text/javascript" charset="utf-8"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
             <script type="text/javascript" src="'.$context.'/site/toast/toastr.min.js"></script>
 
             <!-- TextArea-->
             <link type="text/css" rel="stylesheet" href="'.$context.'/site/css/jquery-te-1.4.0.css">
             <script type="text/javascript" src="'.$context.'/site/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
-            <script type="text/javascript" src="'.$context.'/site/js/jquery.isotope.js" charset="utf-8"></script>
+            
             
             <!-- Facebook Conversion Code for Themes -->
             <script>

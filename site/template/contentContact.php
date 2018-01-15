@@ -43,7 +43,8 @@
                                                             <li class="clearfix"></li>
                                                             <li class="">
                                                                 <label class="control-label" for="message">Mensaje <span class="req">*</span></label> 
-                                                                <textarea id="txtmensaje"  class="jqte-test"    name="txtmensaje"></textarea></li>
+                                                                <textarea name="textarea" class="jqte-test"></textarea>
+                                                            </li>
                                                             <li class="clearfix"></li>
                                                             <li class="unpadding-top">
                                                                 <button type="button" class="btn" id="sendEmail" name="sendEmail">Contactar</button>

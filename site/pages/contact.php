@@ -42,16 +42,9 @@
         <?php include "../../site/template/footer.php";?>
 
         <script>
+            $('.jqte-test').jqte();
+            
             $(document).ready(function (e) {
-                //textArea
-                $('.jqte-test').jqte();
-                // settings of status
-                var jqteStatus = true;
-                $(".status").click(function () {
-                    jqteStatus = jqteStatus ? false : true;
-                    $('.jqte-test').jqte({ "status": jqteStatus })
-                });
-
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,
