@@ -36,33 +36,6 @@
                                         </button>
                                     </div>
 
-                                    <div class="is-mobile visible-xs">
-                                        <ul class="list-inline">
-                                            <li class="is-mobile-menu">
-                                                <div class="btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
-                                                    <span class="icon-bar-group">
-                                                    <span class="icon-bar"></span>
-                                                    <span class="icon-bar"></span>
-                                                    <span class="icon-bar"></span>
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            <li class="is-mobile-login">
-                                                <div class="btn-group">
-                                                    <div class="dropdown-toggle" data-toggle="dropdown">
-                                                        <i class="fa fa-user"></i>
-                                                    </div>
-                                                    <ul class="customer dropdown-menu">
-                                                        <li class="logout"><a href="https://site/account/login">Login</a></li>
-                                                        <li class="account"><a href="https://site/account/register">Register</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="is-mobile-wl"><a href="pages/wish-list.html"><i class="fa fa-heart"></i></a></li>
-                                            <li class="is-mobile-cart"><a href="https://site/cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-
                                     <div class="collapse navbar-collapse">
                                         <ul class="nav navbar-nav hoverMenuWrapper">
                                             <li class="nav-item active">

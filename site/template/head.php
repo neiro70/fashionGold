@@ -38,7 +38,6 @@
             <link href="'.$context.'/site/toast/toastr.css" rel="stylesheet" type="text/css">
 
             <script src="'.$context.'/site/admin/js/jquery.js"></script>	
-            <script src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery-1.9.1.min.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
             <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
