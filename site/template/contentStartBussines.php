@@ -7,9 +7,11 @@
                 <section class="content">
                     <div id="breadcrumb" class="breadcrumb">
                         <div itemprop="breadcrumb" class="container">
-                            <div class="row">
-                                <div class="col-md-24"><a href="'.$context.'" class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
-                                    <span class="page-title">Empieza tu propio negocio</span></div>
+                            <div style="line-height: 34px;">
+                                <div class="col-md-24">
+                                    <a href="'.$context.'" class="homepage-link" title="Back to the frontpage">Inicio</a> <span>/</span>
+                                    <span class="page-title">Empieza tu propio negocio</span>
+                                </div>
                             </div>
                         </div>
                     </div>

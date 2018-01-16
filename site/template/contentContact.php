@@ -8,7 +8,7 @@
                 <section class="content">
                     <div id="breadcrumb" class="breadcrumb">
                         <div itemprop="breadcrumb" class="container">
-                            <div class="row">
+                            <div style="line-height: 34px;">
                                 <div class="col-md-24">
                                     <a href="'.$context.'" class="homepage-link" title="Inicio">Inicio</a>
                                     <span>/</span>
