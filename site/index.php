@@ -391,11 +391,11 @@
 														</div>
 													</div>
 													<div class="home-blog-content col-md-20">
-														<h4><a href="blogs/blogs/47648387-sample-blog-post-with-left-slidebar.html">Oferta del mes</a></h4>
+														<h4><Oferta del mes</h4>
 														<ul class="list-inline">
 															<li class="author"><i class="fa fa-user"></i> Fashion Gold</li>
 															<li>/</li>
-															<li class="comment"><a href="blogs/blogs/47648387-sample-blog-post-with-left-slidebar.html#comments"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios </a></li>
+															<li class="comment"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios</li>
 														</ul>
 														<div class="intro">Puedes invertir desde $1,200 MXN y obtendr&aacute;s un 20% de descuento y puedes obtener hasta un 55% de descuento.</div>
 													</div>
@@ -407,11 +407,11 @@
 														</div>
 													</div>
 													<div class="home-blog-content col-md-20">
-														<h4><a href="blogs/blogs/44831939-vel-illum-qui-dolorem-eum-fugiat.html">Informaci&oacute;n</a></h4>
+														<h4>Informaci&oacute;n</h4>
 														<ul class="list-inline">
 															<li class="author"><i class="fa fa-user"></i> Fashion Gold</li>
 															<li>/</li>
-															<li class="comment"><a href="blogs/blogs/44831939-vel-illum-qui-dolorem-eum-fugiat.html#comments"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios </a></li>
+															<li class="comment"><span><i class="fa fa-pencil-square-o"></i> 1</span>Comentarios</li>
 														</ul>
 														<div class="intro">
 															<ol>
@@ -581,7 +581,7 @@
 			}
 		</script>
 
-		<script src="https://cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script> 
+		<script src="https://library/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script> 
 		<script type="text/javascript">
 			if (typeof Shopify.onCartShippingRatesUpdate === 'undefined') {
 				document.write("\u003cscript src=\"\/\/cdn.shopify.com\/s\/assets\/themes_support\/api.jquery-249bc01571641fb7bf9bf82378ba6333e9abdcc34aad49eb9e4edb01557b7dac.js\" type=\"text\/javascript\"\u003e\u003c\/script\u003e");
@@ -625,7 +625,7 @@
 		</script>
 
 		<script src="services/javascripts/currencies.js" type="text/javascript"></script>
-		<script src="../cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"> </script>
+		<script src="../library/files/1/0908/7252/t/2/assets/jquery.currencies.min.js%3F14058599523483859647" type="text/javascript"> </script>
 		<script type="text/javascript">  
 			jQuery('.currencies li').on(clickEv, function() {
 				if(!$(this).hasClass('active')){

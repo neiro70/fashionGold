@@ -10,20 +10,12 @@
 		$context="http://" .$var[0];
 	}
 ?>
+
 <html>
-<head>
-
-<script language="Javascript" type="text/javascript">
-
-
-//<![CDATA[
-window.location.href="<?php echo $context ?>/site";     
-
-//]]> End script hiding -->
-
-</script>
-
-</head>
-
+	<head>
+		<script language="Javascript" type="text/javascript">
+			window.location.href="<?php echo $context ?>/site";     
+		</script>
+	</head>
 </html>
 

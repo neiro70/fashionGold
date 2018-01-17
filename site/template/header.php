@@ -60,10 +60,10 @@
                                                     </li>
 
                                                     <li>
-
                                                         <ul>
                                                             <li class="list-title">Destacados</li>
                                                             '.$menu.'
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -106,16 +106,6 @@
                                     </div>
                                 </div>
                             </nav>
-                        </li>
-
-                        <li class="top-search hidden-xs"></li>
-
-                        <li class="mobile-search visible-xs">
-                            <form id="mobile-search" class="search-form" action="https://site/search" method="get">
-                                <input type="hidden" name="type" value="product" />
-                                <input type="text" class="" name="q" value="" accesskey="4" autocomplete="off" placeholder="Escribe para buscar..." />
-                                <button type="submit" class="search-submit" title="search"><i class="fa fa-search"></i></button>
-                            </form>
                         </li>
                     </ul>
                 </div>

@@ -19,42 +19,42 @@
             <title>'.$title.'</title>
             
 
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.camera.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.animate.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/application.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/swatch.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.owl.carousel.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.bxslider.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.global.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.style.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.media.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
             <link href="https://hpneo.github.io/gmaps/prettify/prettify.css" rel="stylesheet" type="text/css" media="all" />
             <link href="https://hpneo.github.io/gmaps/styles.css" rel="stylesheet" type="text/css" media="all" />
             <link href="'.$context.'/site/css/font.css" rel="stylesheet" type="text/css">
             <link href="'.$context.'/netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/bootstrap.min.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.bootstrap.3x.css%3F14058599523483859647.css" rel="stylesheet" type="text/css" media="all" />
             <link href="'.$context.'/site/toast/toastr.css" rel="stylesheet" type="text/css">
 
             <script src="'.$context.'/site/admin/js/jquery.js"></script>	
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647" type="text/javascript"></script>
-            <script src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
-            <script src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647" type="text/javascript"></script>
-            <script src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.imagesloaded.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/bootstrap.min.3x.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.easing.1.3.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.camera.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.mobile.customized.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="'.$context.'/library/files/1/0908/7252/t/2/assets/cookies.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="'.$context.'/library/files/1/0908/7252/t/2/assets/modernizr.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.optionSelect.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.customSelect.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/application.js%3F14058599523483859647" type="text/javascript"></script>
+            <script src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.owl.carousel.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.bxslider.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/skrollr.min.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.fancybox-buttons.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/jquery.zoom.js%3F14058599523483859647" type="text/javascript"></script>
             <script src="'.$context.'/site/js/jquery.isotope.js" type="text/javascript" charset="utf-8"></script>
-            <script	src="'.$context.'/cdn.shopify.com/s/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
+            <script	src="'.$context.'/library/files/1/0908/7252/t/2/assets/cs.script.js%3F14058599523483859647" type="text/javascript"></script>
             <script type="text/javascript" src="'.$context.'/site/toast/toastr.min.js"></script>
 
             <!-- TextArea-->
@@ -85,7 +85,7 @@
 
 
 
-            <script src="'.$context.'/cdn.shopify.com/s/javascripts/shopify_stats.js%3Fv=6" type="text/javascript" async="async"></script>
+            <script src="'.$context.'/library/javascripts/shopify_stats.js%3Fv=6" type="text/javascript" async="async"></script>
             <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/9087252/digital_wallets/dialog" />
 
             <script type="text/javascript">
@@ -139,7 +139,7 @@
                         script.type = "text/javascript";
                         script.onerror = function(e) {(new Image()).src = "//v.shopify.com/internal_errors/track?error=trekkie_load";};
                         script.async = true;
-                        script.src = "https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1";
+                        script.src = "https://library/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1";
                         var first = document.getElementsByTagName("script")[0];
                         first.parentNode.insertBefore(script, first);
                     };
@@ -166,7 +166,7 @@
 
                     var eventsListenerScript = document.createElement("script");
                     eventsListenerScript.async = true;
-                    eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
+                    eventsListenerScript.src = "//library/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
                     document.getElementsByTagName("head")[0].appendChild(eventsListenerScript);
                 })();
             </script>
