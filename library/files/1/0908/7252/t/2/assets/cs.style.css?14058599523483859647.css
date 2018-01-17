@@ -1193,7 +1193,7 @@ h6.general-title:before {
   padding: 0 10px 30px !important;
 }
 .home-banner-wrapper {
-  background: url(https://library/files/1/0908/7252/t/2/assets/home_banner_image.png?4445231886853423007) no-repeat center;
+  background: url(home_banner_image.png) no-repeat center;
   width: 100%;
   min-height: 500px;
   background-repeat: no-repeat;
