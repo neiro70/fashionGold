@@ -1061,7 +1061,7 @@ Home-Product
 -----------------*/
 h6.general-title:before {
   content: '';
-  background: url(https://library/files/1/0908/7252/t/2/assets/home_line.png?4445231886853423007) no-repeat center;
+  background: url(home_line.png) no-repeat center;
   position: absolute;
   left: 0;
   right: 0;
@@ -1439,7 +1439,7 @@ end home-product
 }
 .owl-theme .owl-controls .owl-buttons > div span{
   background-color: transparent;
-  background-image: url(https://library/files/1/0908/7252/t/2/assets/icon_slider.png?4445231886853423007 );
+  background-image: url(icon_slider.png);
   background-repeat: no-repeat;
   display: block;
   width: 5px;
@@ -5108,7 +5108,7 @@ h3#quick-shop-title {
 }
 .fancybox-skin {
   background-color: #1e1e1e;
-  background-image: url(https://library/files/1/0908/7252/t/2/assets/bg_newsletter.png?4445231886853423007 );
+  background-image: url(bg_newsletter.png);
   background-position: 100% auto;
   background-repeat: no-repeat;
   border-radius: 0;
