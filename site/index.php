@@ -391,11 +391,11 @@
 														</div>
 													</div>
 													<div class="home-blog-content col-md-20">
-														<h4><Oferta del mes</h4>
+														<h4>Oferta del mes</h4>
 														<ul class="list-inline">
 															<li class="author"><i class="fa fa-user"></i> Fashion Gold</li>
-															<li>/</li>
-															<li class="comment"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios</li>
+															<!--li>/</li>
+															<li class="comment"><span><i class="fa fa-pencil-square-o"></i> 1</span> Comentarios</li-->
 														</ul>
 														<div class="intro">Puedes invertir desde $1,200 MXN y obtendr&aacute;s un 20% de descuento y puedes obtener hasta un 55% de descuento.</div>
 													</div>
@@ -406,12 +406,13 @@
 															<p><small>Julio</small><span>07</span></p>
 														</div>
 													</div>
+
 													<div class="home-blog-content col-md-20">
 														<h4>Informaci&oacute;n</h4>
 														<ul class="list-inline">
 															<li class="author"><i class="fa fa-user"></i> Fashion Gold</li>
-															<li>/</li>
-															<li class="comment"><span><i class="fa fa-pencil-square-o"></i> 1</span>Comentarios</li>
+															<!--li>/</li>
+															<li class="comment"><span><i class="fa fa-pencil-square-o"></i> 1</span>Comentarios</li-->
 														</ul>
 														<div class="intro">
 															<ol>
