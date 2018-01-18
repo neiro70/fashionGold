@@ -47,7 +47,7 @@
                                                             </li>
                                                             <li class="clearfix"></li>
                                                             <li class="unpadding-top">
-                                                                <button type="button" class="btn" id="sendEmail" name="sendEmail">Contactar</button>
+                                                                <button type="button" class="btn" id="sendEmail" name="sendEmail" style="background-color:#9d802e; color: #FFF;">Contactar</button>
                                                             </li>
                                                         </ul>
                                                     </form>
