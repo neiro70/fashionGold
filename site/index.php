@@ -540,7 +540,29 @@
 							data-placement="bottom"
 							title="Facebook">
 							<i class="fa fa-facebook"></i>
-							FACEBOOK
+							Facebook
+						</a>
+					</li>
+					<li>
+						<a 	target="_blank" 
+							href="https://twitter.com/fashiongold2018/"
+							class="btooltip swing" 
+							data-toggle="tooltip" 
+							data-placement="bottom"
+							title="twitter">
+							<i class="fa fa-twitter"></i>
+							Twitter
+						</a>
+					</li>
+					<li>
+						<a 	target="_blank" 
+							href="https://www.instagram.com/fashiongold2018/"
+							class="btooltip swing" 
+							data-toggle="tooltip" 
+							data-placement="bottom"
+							title="instagram">
+							<i class="fa fa-instagram"></i>
+							Instagram
 						</a>
 					</li>
 				</ul>
