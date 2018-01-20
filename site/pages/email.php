@@ -1,7 +1,7 @@
 <?php
 	$txtnombre=$_POST['txtnombre'];
 	$txtemail=$_POST['txtemail'];
-	$txtmensaje=$_POST['txtmensaje'];
+	$txtmensaje=$_POST['textarea'];
 	$txtmensaje="Escribe: {$txtnombre} {$txtemail} \r\n\n {$txtmensaje} ";
 
 	// Always set content-type when sending HTML email
