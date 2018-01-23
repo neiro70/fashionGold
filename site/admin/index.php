@@ -105,14 +105,14 @@
 			               	
 			            }
 			         ?>
-				<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" role="login">
-				
+				<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" role="login">				
 
-					<img src="<?=$context?>/site/img/collection/logo.png" class="img-responsive" width="35%" />
+					<img src="<?=$context?>/site/img/collection/logo.png" class="img-responsive" width="35%" />					
 					<h4 class = "form-signin-heading" style="color:red;"><?php echo $msg; ?></h4>
 					<input type="text" name="username" placeholder="Usuario" required class="form-control input-lg" />
 					<input type="password" name="password" placeholder="Contraseña" required class="form-control input-lg" />
 					<button type="submit" name="login" class="btn btn-lg btn-default btn-block" style="background-color:#9d802e; color: #FFF;">Entrar</button>
+					<div style="font-size:xx-small; ">v.23012018</div>
 <!-- 					<div> -->
 <!-- 						<a href="#">Create account</a> or <a href="#">reset password</a> -->
 <!-- 					</div> -->
