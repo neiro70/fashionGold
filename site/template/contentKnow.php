@@ -51,7 +51,7 @@
                             <div id="col-main" class="col-md-24 normal-page clearfix">
                             <div class="page about-us" id="link4">
                                 <div  class="col-md-16">
-                                    <h3>¿Porqué usar anillos?</h3>
+                                    <h3>¿Qué significa el anillo en cada dedo?</h3>
                                     <br>
                                     <p>Seguramente has o&iacute;do que usar un anillo en cierto dedo tiene significado &iquest;o no? Desde temas de matrimonio hasta de seguridad, el lugar en el que usas tu anillo puede decir mucho m&aacute;s de ti misma, en Fashion Gold te damos una gu&iacute;a ven, ac&eacute;rcate y conoce la gran variedad de anillos que tenemos para ti.<br />Comencemos por identificar la mano derecha de la mano izquierda<br />Si eres diestro, tu mano derecha se considera como la que est&aacute; dispuesta a dar (activa) y la izquierda a recibir (pasiva). Si eres zurdo, ser&aacute; al contrario.</p>
                                     <p><br /><strong>Pulgar</strong><br />Este anillo en la mano &ldquo;activa&rdquo; significa que sabes ponerte a ti mismo antes que a los dem&aacute;s y crear una imagen fuerte<br />En la mano &ldquo;pasiva&rdquo; significa lo contrario: tiendes a dejar que los dem&aacute;s te manipulen.<br />Para verte m&aacute;s convincente, usa el anillo en la mano &ldquo;activa&rdquo; de plata, si usas piedras, que sea rub&iacute;, granate o cornalina.</p>
