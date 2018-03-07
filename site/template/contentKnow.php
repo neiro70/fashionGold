@@ -48,6 +48,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="col-main" class="col-md-24 normal-page clearfix">
+                            <div class="page about-us" id="link4">
+                                <div  class="col-md-16">
+                                    <h3>¿Porqué usar anillos?</h3>
+                                    <br>
+                                    <p>Seguramente has o&iacute;do que usar un anillo en cierto dedo tiene significado &iquest;o no? Desde temas de matrimonio hasta de seguridad, el lugar en el que usas tu anillo puede decir mucho m&aacute;s de ti misma, en Fashion Gold te damos una gu&iacute;a ven, ac&eacute;rcate y conoce la gran variedad de anillos que tenemos para ti.<br />Comencemos por identificar la mano derecha de la mano izquierda<br />Si eres diestro, tu mano derecha se considera como la que est&aacute; dispuesta a dar (activa) y la izquierda a recibir (pasiva). Si eres zurdo, ser&aacute; al contrario.</p>
+                                    <p><br /><strong>Pulgar</strong><br />Este anillo en la mano &ldquo;activa&rdquo; significa que sabes ponerte a ti mismo antes que a los dem&aacute;s y crear una imagen fuerte<br />En la mano &ldquo;pasiva&rdquo; significa lo contrario: tiendes a dejar que los dem&aacute;s te manipulen.<br />Para verte m&aacute;s convincente, usa el anillo en la mano &ldquo;activa&rdquo; de plata, si usas piedras, que sea rub&iacute;, granate o cornalina.</p>
+                                    <p><strong>Dedo &iacute;ndice</strong><br />Usar un anillo en el dedo &iacute;ndice de tu mano &ldquo;activa&rdquo; significa una alta autoestima,tienes confianza en ti misma y capacidades de liderazgo.<br />Si lo usas en la mano pasiva significa que prefieres obedecer en lugar de mandar.<br />Puedes cambiarlo para empezar a tener m&aacute;s confianza y las piedras que te ayudar&aacute;n son amatista, topacio y lapizlazuli.</p>
+                                    <p><strong>Dedo medio</strong><br />El dedo medio connota tus responsabilidades y valores de vida.<br />Un anillo en este dedo de la mano "activa" significa que te tomas la vida muy en serio y sabes distinguir entre lo malo y lo bueno.<br />En la mano &ldquo;pasiva&rdquo; entonces significa que eres una persona seria y en quien se puede confiar.<br />Las mejores piedras para este dedo son: cuarzo rosa y piedra-luna</p>
+                                    <p><strong>Dedo anular</strong><br />Este dedo en la mano &ldquo;activa&rdquo; significa que eres una persona muy creativa y con mucha inspiraci&oacute;n.<br />Si lo usas en la mano &ldquo;pasiva&rdquo; es asociado al matrimonio y el amor.<br /> Si a&uacute;n no te casas puedes usar un anillo de oro laminado en este dedo para atraer el amor y la pasi&oacute;n.</p>
+                                    <p><strong>Me&ntilde;ique</strong><br />Usar un anillo en el dedo me&ntilde;ique de la mano "activa" puede tener varios significados:<br />desde una capacidad de negociaci&oacute;n y comunicativas hasta curiosidad y disponibilidad sexual.<br />En la mano pasiva, significa que sabes escuchar a la gente y tienes una fuerte intuici&oacute;n</p>
+                                </div>
+                                <div class="col-md-8" style="text-align:center"><img src="../img/collection/know/anillos.jpg"/></div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </section>
