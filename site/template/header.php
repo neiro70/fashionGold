@@ -79,7 +79,7 @@
                                                     <li class=""><a tabindex="-1" href="'.$context.'/site/pages/know.php#link1"> <i class="fa fa-comments-o"></i> Significado de Pulsera en el tobillo.</a></li>
                                                     <li class=""><a tabindex="-1" href="'.$context.'/site/pages/know.php#link2"> <i class="fa fa-comments-o"></i> Origen Pulseras y collares.</a></li>
                                                     <li class=""><a tabindex="-1" href="'.$context.'/site/pages/know.php#link3"> <i class="fa fa-comments-o"></i> ¿Porqué se usan aretes?</a></li>
-                                                    <li class=""><a tabindex="-1" href="'.$context.'/site/pages/know.php#link4"> <i class="fa fa-comments-o"></i> ¿Porqué se usar anillos?</a></li>
+                                                    <li class=""><a tabindex="-1" href="'.$context.'/site/pages/know.php#link4"> <i class="fa fa-comments-o"></i> ¿Que significa el anillo en cada dedo?</a></li>
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
