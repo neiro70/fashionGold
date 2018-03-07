@@ -3,9 +3,8 @@
 
     include("../../site/admin/mvc/util/MysqlDAO.php");
         
-        $context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $context= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
         $var =explode("/",$context);
-
         if (strpos($context, "localhost") !== false) {
             $context="http://" .$var[0]."/".$var[1];
         }else{
@@ -61,7 +60,7 @@
                 $idImagen=$row["idImagen"];
                 $ran=rand();
                 
-                $imagen="$context/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
+                $imagen="/site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
                 
                 $node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$idLinea-$txtCodigo-$txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
                 
