@@ -166,7 +166,7 @@
 
                     var eventsListenerScript = document.createElement("script");
                     eventsListenerScript.async = true;
-                    eventsListenerScript.src = "//library/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
+                    eventsListenerScript.src = "http://fashiongold.com.mx/library/files/1/0908/7252/t/2/assets/shop_events_listener-9410288c486c406bc38edb97003bb123d375112c2b7e037d65afabae7c905e02.js";
                     document.getElementsByTagName("head")[0].appendChild(eventsListenerScript);
                 })();
             </script>
