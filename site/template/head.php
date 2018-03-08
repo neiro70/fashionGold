@@ -139,7 +139,7 @@
                         script.type = "text/javascript";
                         script.onerror = function(e) {(new Image()).src = "//v.shopify.com/internal_errors/track?error=trekkie_load";};
                         script.async = true;
-                        script.src = "https://library/javascripts/tricorder/trekkie.storefront.min.js?v=2017.03.29.1";
+                        script.src = "http://fashiongold.com.mx/library/files/1/0908/7252/t/2/assets/trekkie.storefront.min.js";
                         var first = document.getElementsByTagName("script")[0];
                         first.parentNode.insertBefore(script, first);
                     };

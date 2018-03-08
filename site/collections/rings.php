@@ -90,7 +90,7 @@
 		<?php include "../../site/template/footer.php";?>
 		<?php include "../../site/template/modal.php";?>
 
-		<script src="https://library/files/1/0908/7252/t/2/assets/cs.global.js?14058599523483859647" type="text/javascript"></script> 
+		<script src="http://fashiongold.com.mx/library/files/1/0908/7252/t/2/assets/cs.global.js" type="text/javascript"></script> 
 		<script type="text/javascript">
 			if (typeof Shopify.onCartShippingRatesUpdate === 'undefined') {
 				document.write("\u003cscript src=\"\/\/cdn.shopify.com\/s\/assets\/themes_support\/api.jquery-249bc01571641fb7bf9bf82378ba6333e9abdcc34aad49eb9e4edb01557b7dac.js\" type=\"text\/javascript\"\u003e\u003c\/script\u003e");
