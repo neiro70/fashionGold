@@ -92,31 +92,36 @@
 				<div class="home-slider-wrapper clearfix">
 					<div class="camera_wrap" id="home-slider">
 						
-						<div data-src="<?php echo $context ?>/site/img/collection/sanValentin.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">	
-									<p style="color: #010101;" class='chopsFont' > Bienvenido </p>
+							
+									<!-- p style="color: #010101;" class='chopsFont' > Bienvenido </p -->
 																	
 									<!--a href="http://www.espaciosalpro.com/">
 										<img src="<?php echo $context ?>/site/img/collection/expo3.jpg" style='margin-top:-2em'>
 									</a>
 									<div style="color: #FFF; margin-top:-3em;"><b>VISITANOS FASHION GOLD EN EL STAND #259</b></div-->
 
+									
+								    <img src="<?php echo $context ?>/site/img/collection/madre.jpg" style='margin-top:-3em'>
+									<div style="color: #000; margin-top:-2em;"><b>Encuentra en FashionGold el detalle perfecto para este 10 de mayo</b></div>
+
 							</div>
-							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
+							<!--div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
 								La joya ideal para ti
 							</div>
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/collections/general.php" class="btn">
 									Ver c&aacute;talogo
 								</a>
-							</div>
+							</div-->
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/sanValentin1.jpg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 
 									<p style="color: #010101;" class='chopsFont'>  
-										Encuentra en Fashion Gold el mejor regalo de San Valentín
+										Encuentra en FashionGold el mejor regalo para mamá
 									</p>
 
 							</div>
@@ -127,7 +132,7 @@
 							</div>
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/sanValentin3.jpg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								
 									<p class='chopsFont' style="color: #010101;">
