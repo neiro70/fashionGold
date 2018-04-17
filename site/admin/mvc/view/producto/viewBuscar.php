@@ -147,6 +147,7 @@
 									<option value="5">JUEGO</option>
 									<option value="6">ARETE</option>
                                     <option value="7">BRAZALETE</option>
+                                    <option value="8">CABALLERO</option>
 								</select>
                             </div>                          
                      </div>
