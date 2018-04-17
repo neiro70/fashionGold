@@ -117,7 +117,7 @@
 							</div>
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/madre.jpg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 
 									<p style="color: #010101;" class='chopsFont'>  
@@ -132,7 +132,7 @@
 							</div>
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/madre.jpg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								
 									<p class='chopsFont' style="color: #010101;">
