@@ -223,6 +223,7 @@
 									<option value="6" <?=$idTipo==6?"selected='selected'":''?>>ARETE</option>
 									<option value="7" <?=$idTipo==7?"selected='selected'":''?>>BRAZALETE</option>
 									<option value="8" <?=$idTipo==8?"selected='selected'":''?>>CABALLERO</option>
+									<option value="9" <?=$idTipo==8?"selected='selected'":''?>>DIJES</option>
 
                                 </select>
                             </div>

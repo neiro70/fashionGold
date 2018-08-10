@@ -148,6 +148,7 @@
 									<option value="6">ARETE</option>
                                     <option value="7">BRAZALETE</option>
                                     <option value="8">CABALLERO</option>
+                                    <option value="9">DIJES</option>
 								</select>
                             </div>                          
                      </div>
