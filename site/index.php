@@ -92,13 +92,13 @@
 				<div class="home-slider-wrapper clearfix">
 					<div class="camera_wrap" id="home-slider">
 						
-						<div data-src="<?php echo $context ?>/site/img/collection/expo2019.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">	
 							
 									<p style="color: #010101;" class='chopsFont' > Bienvenido </p>
-																	
+									  <img src="<?php echo $context ?>/site/img/collection/expo2019.jpeg" style='margin-top:-2em'>							
 									<!--a href="http://www.espaciosalpro.com/">
-										<img src="<?php echo $context ?>/site/img/collection/expo3.jpg" style='margin-top:-2em'>
+										<img src="<?php echo $context ?>/site/img/collection/expo2019.jpg" style='margin-top:-2em'>
 									</a>
 									<div style="color: #FFF; margin-top:-3em;"><b>VISITANOS FASHION GOLD EN EL STAND #259</b></div-->
 
