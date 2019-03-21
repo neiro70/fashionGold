@@ -92,7 +92,7 @@
 				<div class="home-slider-wrapper clearfix">
 					<div class="camera_wrap" id="home-slider">
 						
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad.jpg">
+						<div data-src="<?php echo $context ?>/site/img/collection/nnavidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">	
 							
 									<!-- p style="color: #010101;" class='chopsFont' > Bienvenido </p-->
@@ -121,7 +121,7 @@
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 
 									<p style="color: #010101;" class='chopsFont'>  
-										Encuentra en FashionGold el mejor regalo para esta navidad
+										Encuentra en FashionGold el mejor regalo 
 									</p>
 
 							</div>
@@ -132,7 +132,7 @@
 							</div>
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/madre.jpg">
+						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								
 									<p class='chopsFont' style="color: #010101;">
