@@ -96,12 +96,12 @@
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">	
 							
 									<!--p style="color: #010101;" class='chopsFont' > Bienvenido </p-->
-									  <img src="<?php echo $context ?>/site/img/collection/expo2019.jpeg" style='margin-top:-2em'>							
-									<a href="http://www.espaciosalpro.com/">
+									  <img src="<?php echo $context ?>/site/img/expo.jpeg" style='margin-top:-4em; width: 20%;'>							
+									<!-- a href="http://www.espaciosalpro.com/">
 										<img src="<?php echo $context ?>/site/img/collection/expo2019.jpg" style='margin-top:-2em'>
-									</a>
-									<div style="color: #000; margin-top:-11em;"><b>VISITANOS FASHION GOLD EN EL STAND #112</b>
-									</div>
+									</a -->
+									<!--div style="color: #000; margin-top:-11em;"><b>VISITANOS FASHION GOLD EN EL STAND #112</b>
+									</div-->
 
 									
 								    <!--img src="<?php echo $context ?>/site/img/collection/madre.jpg" style='margin-top:-3em'>
