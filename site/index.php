@@ -96,7 +96,7 @@
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">	
 							
 									<!--p style="color: #010101;" class='chopsFont' > Bienvenido </p-->
-									  <img src="<?php echo $context ?>/site/img/expo.jpeg" style='margin-top:-4em; width: 20%;'>							
+									  <img src="<?php echo $context ?>/site/img/expo.jpeg" style='margin-top:-4em; width: 256px;'>							
 									<!-- a href="http://www.espaciosalpro.com/">
 										<img src="<?php echo $context ?>/site/img/collection/expo2019.jpg" style='margin-top:-2em'>
 									</a -->
