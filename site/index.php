@@ -155,7 +155,7 @@
 				<div class="col-md-24 text-center">
 					<div class="home_collections">
 						<h6 class="general-title">Emprende tu negocio</h6>
-							<video width="500" height="240" controls>
+							<video width="320" height="240" controls>
 												<source src="videos/joyas.mp4" type="video/mp4">
 												<source src="videos/joyas.mp4" type="video/ogg">
 												Your browser does not support HTML video.
