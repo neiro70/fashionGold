@@ -109,8 +109,9 @@
 									<div style="color: #000; margin-top:-2em;"><b>Encuentra en FashionGold el detalle perfecto para este 10 de mayo</b></div-->
 
 							<!--/div-->
-							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
-								La joya ideal para ti
+							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;"> 
+								<p style="font-size:20px">La joya ideal para ti</p>
+		
 							</div>
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/collections/general.php" class="btn">
