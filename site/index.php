@@ -93,7 +93,8 @@
 					<div class="camera_wrap" id="home-slider">
 						
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
-							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">	
+
+							<!--div class="camera_caption camera_title_1 fadeIn moveFromLeft" -->	
 							
 									<!--p style="color: #010101;" class='chopsFont' > Bienvenido </p-->
 									  <img src="<?php echo $context ?>/site/img/fashion.jpeg" style='margin-top:-4em; width: 256px;'>							
@@ -107,15 +108,15 @@
 								    <!--img src="<?php echo $context ?>/site/img/collection/madre.jpg" style='margin-top:-3em'>
 									<div style="color: #000; margin-top:-2em;"><b>Encuentra en FashionGold el detalle perfecto para este 10 de mayo</b></div-->
 
-							</div>
-							<!--div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
+							<!--/div-->
+							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101;">
 								La joya ideal para ti
 							</div>
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/collections/general.php" class="btn">
 									Ver c&aacute;talogo
 								</a>
-							</div -->
+							</div>
 						</div>
 
 						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
@@ -150,6 +151,18 @@
 
 					</div>
 				</div>
+
+				<div class="col-md-24 text-center">
+					<div class="home_collections">
+						<h6 class="general-title">Emprende tu negocio</h6>
+							<video width="500" height="240" controls>
+												<source src="videos/joyas.mp4" type="video/mp4">
+												<source src="videos/joyas.mp4" type="video/ogg">
+												Your browser does not support HTML video.
+								</video>
+						</div>
+				</div>
+
 
 				<!-- Content -->
 				<div id="content" class="clearfix">
