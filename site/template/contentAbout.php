@@ -40,14 +40,20 @@
                                     <div class="col-md-6"><img src="../img/collection/local2.jpeg"/></div>
                                     <div class="col-md-6"><img src="../img/collection/local3.jpeg"/></div>
                                     <br/>
-                                    <p style="text-align: justify;"><strong>FASHION GOLD</strong> es una empresa dedicada a la importaci&oacute;n y venta de&nbsp; mayoreo de joyer&iacute;a de fantas&iacute;a, tal como&nbsp; oro laminado con ba&ntilde;o de 14k y 18k, rodio, acero inoxidable y cristal Swarovski.FASHION GOLD es una empresa dedicada a la importaci&oacute;n y venta de&nbsp; mayoreo de joyer&iacute;a de fantas&iacute;a, tal como&nbsp; oro laminado con ba&ntilde;o de 14k y 18k, rodio, acero inoxidable y cristal Swarovski.</p>
+                                    <p style="text-align: justify;"><strong>FASHION GOLD</strong> es una empresa dedicada a la importaci&oacute;n y venta de&nbsp; mayoreo de joyer&iacute;a de fantas&iacute;a, tal como&nbsp; oro laminado con ba&ntilde;o de 14k y 18k, rodio, acero inoxidable y cristal Swarovski.</p>
                                     <p style="text-align: justify;"><br />Tenemos experiencia de 10 a&ntilde;os en el giro joyero y conocemos las necesidades de la industria por lo que trabajamos dise&ntilde;os de moda para el gusto de todas las personas hasta de los m&aacute;s exigentes,&nbsp; cuidamos la calidad de nuestros productos porque nos gusta respetar y cuidar a nuestros clientes.</p>
                                     <p style="text-align: justify;">Somos importadores directos de f&aacute;brica y traemos nuestra joyer&iacute;a desde Indonesia, no tenemos intermediarios lo que nos permite ser competitivos con nuestros precios y la calidad de nuestros productos est&aacute;n por encima de muchos otros proveedores en el mercado.</p>
-                                    <p style="text-align: justify;"><strong>VALORES</strong>&nbsp;<br />Honestidad&nbsp;Pasi&oacute;n por nuestro trabajo&nbsp;Compromiso&nbsp;Respeto&nbsp;Calidad&nbsp;</p>
-                                    <p style="text-align: justify;">&nbsp;</p>
-                                    <p style="text-align: justify;">&nbsp;</p>
-                                    <p style="text-align: justify;">&nbsp;</p>
-                                    <p style="text-align: justify;">&nbsp;</p>
+                                    <p style="text-align: justify;"><strong>VALORES</strong>&nbsp;<br />
+                                    <ul> 
+                                        <li>* Honestidad</li> 
+                                        <li>* Pasión por nuestro trabajo</li> 
+                                        <li>* Compromiso</li> 
+                                        <li>* Respeto</li> 
+                                        <li>* Calidad</li> 
+                                    </ul>
+                                    
+                                    </p>
+
                                     <p style="text-align: justify;"><br /><strong>DONDE NOS ENCONTRAMOS</strong><br />Nuestra oficina de distribuci&oacute;n se ubica en palma 2 esquina con Tacuba Col Centro CP 06000 CDMX a dos cuadras del z&oacute;calo capitalino.<br />Al ser proveedores no tenemos venta al p&uacute;blico solo una oficina de distribuci&oacute;n y venta a nuestros clientes conocidos.&nbsp;</p>
                                     <iframe src="https://snazzymaps.com/embed/240993" width="100%" height="600px" style="border:none;"></iframe>
                                     <p style="text-align: justify;">&nbsp;</p>
