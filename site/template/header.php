@@ -38,11 +38,17 @@
 
                                     <div class="collapse navbar-collapse">
                                         <ul class="nav navbar-nav hoverMenuWrapper">
+                                     
                                             <li class="nav-item active">
                                                 <a href="'.$context.'">
                                                     <span>Inicio</span>
                                                 </a>
                                             </li>
+                                            <li class="nav-item">
+                                                <a href="'.$context.'/site/pages/about.php">
+                                                    <span>Quiénes somos</span>
+                                                </a>
+                                            </li>  
                                             <li class="dropdown mega-menu">
                                                 <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                                     <span>C&aacute;talogos</span>
