@@ -8,7 +8,7 @@
 
     echo'
         <!-- Header -->	
-        <header id="top" class="fadeInDown clearfix">
+        <header id="top" class="fadeInDown clearfix" style="background-color: black;">
                     
             <div class="line"></div>
                 

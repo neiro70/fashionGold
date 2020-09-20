@@ -349,6 +349,7 @@ header#top.affix #umbrella .cart-link:after {
 }
 #top nav.navbar .nav > li > a span {
   margin-right: 0.5em;
+  color:white;
 }
 .notouch .animated {
   opacity: 1;
@@ -400,7 +401,7 @@ header#top.affix #umbrella .cart-link:after {
   width: 100% !important;
 }
 #top nav.navbar .megamenu-label {
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-size: 9px;
   width: 29px;
@@ -545,6 +546,8 @@ header#top.affix #umbrella .cart-link:after {
 #top nav.navbar .nav > li > a:last-child,
 #top nav.navbar .nav > li > a span:last-child {
   padding-right: 0;
+  color:white;
+  
 }
 #top nav.navbar .dropdown-menu li.list-title {
   margin-top: 0;

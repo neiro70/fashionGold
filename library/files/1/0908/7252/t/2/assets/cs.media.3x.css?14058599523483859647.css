@@ -1299,7 +1299,7 @@
     zoom: 1 !important;
   }
   .navbar-toggle .icon-bar {
-    background: #202020;
+    background: white;
     width: 25px;
   }
   .navbar-toggle {
@@ -1363,6 +1363,7 @@
   }
   .nav-item .dropdown-menu > li {
     border-bottom: none;
+    color:black;
   }
   .navbar-collapse ul > li:last-child {
     border-bottom: none;
