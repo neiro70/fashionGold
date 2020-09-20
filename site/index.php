@@ -92,7 +92,7 @@
 				<div class="home-slider-wrapper clearfix">
 					<div class="camera_wrap" id="home-slider">
 						
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/fondo1.png">
 
 
 							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101; margin-top:-7em;"> 
@@ -107,7 +107,7 @@
 
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/fondo1.png">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 
 									<p style="color: #010101;" class='chopsFont'>  
@@ -122,7 +122,7 @@
 							</div>
 						</div>
 
-						<div data-src="<?php echo $context ?>/site/img/collection/navidad2.jpeg">
+						<div data-src="<?php echo $context ?>/site/img/collection/fondo1.png">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 								
 									<p class='chopsFont' style="color: #010101;">
