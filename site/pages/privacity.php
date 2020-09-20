@@ -62,8 +62,8 @@
                                 <div id="col-main" class="col-md-24 normal-page clearfix">
                                     <div class="page about-us   ">
 
-                                        <div class="col-md-24" >
-                                            <img src="../../library/files/1/0908/7252/t/2/assets/logo.png%3F14058599523483859647"  />
+                                        <div class="col-md-24 text-center" >
+                                            <img src="../img/collection/logo_negro.jpg"  />
                                         </div> 
                                         <br />
                                         <p><b>Fashion Gold</b>, con domicilio en la Ciudad de México, es el responsable del uso y protección de sus datos

@@ -28,19 +28,19 @@
 
             <div class='footer-content footer-content-bottom clearfix'>
                 <div class='container'>
-                    <div class='copyright col-md-8' >&copy; 2018 Fashion Gold.</div>
+                    <div class='copyright col-md-8' >&copy; 2020 Fashion Gold.</div>
                     <div class='copyright col-md-8' style='text-align:center'>
-                        <a style='color:blue;' href='"."$context/site/pages/privacity.php'>Aviso de Privacidad.
+                        <a style='color:yellow;' href='"."$context/site/pages/privacity.php'>Aviso de Privacidad.
                         </a>
                     </div>
                     <div id='widget-payment' class='col-md-8'>
-                        <ul id='payments' class='list-inline animated'>
+                        <!--ul id='payments' class='list-inline animated'>
                             <li class='btooltip tada' data-toggle='tooltip' data-placement='top' title='Visa'><a href='#' class='icons visa'></a></li>
                             <li class='btooltip tada' data-toggle='tooltip' data-placement='top' title='Mastercard'><a href='#' class='icons mastercard'></a></li>
                             <li class='btooltip tada' data-toggle='tooltip' data-placement='top' title='American Express'><a href='#' class='icons amex'></a></li>
                             <li class='btooltip tada' data-toggle='tooltip' data-placement='top' title='Paypal'><a href='#' class='icons paypal'></a></li>
                             <li class='btooltip tada' data-toggle='tooltip' data-placement='top' title='Moneybookers'><a href='#' class='icons moneybookers'></a></li>
-                        </ul>
+                        </ul-->
                     </div>
                 </div>
             </div>
