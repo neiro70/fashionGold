@@ -105,7 +105,7 @@
                                             </li>	
                                             <li class="nav-item">
                                             <a target="_blank"
-                                            href="https://www.instagram.com/fashiongold2018/"
+                                            href="https://www.instagram.com/onlineshopfg/"
                                             class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
                                             title="instagram"><i class="fa fa-instagram"></i></a>
                                             </li>

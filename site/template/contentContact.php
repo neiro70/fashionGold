@@ -82,7 +82,7 @@
                                                                 </a>
                                                             </li>
                                                             <li class="instagram">
-                                                                <a target="_blank" href="https://www.instagram.com/fashiongold2018/">
+                                                                <a target="_blank" href="https://www.instagram.com/onlineshopfg/">
                                                                     <span class="fa-stack fa-lg btooltip" title="Instagram"> 
                                                                         <i class="fa fa-circle fa-stack-2x"></i> 
                                                                         <i class="fa fa-instagram fa-inverse fa-stack-1x"></i> 

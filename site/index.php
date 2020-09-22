@@ -563,7 +563,7 @@
 					</li>
 					<li>
 						<a 	target="_blank" 
-							href="https://www.instagram.com/fashiongold2018/"
+							href="https://www.instagram.com/onlineshopfg/"
 							class="btooltip swing" 
 							data-toggle="tooltip" 
 							data-placement="bottom"
