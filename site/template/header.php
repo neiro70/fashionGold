@@ -130,14 +130,14 @@
 					if ($(window).innerWidth() >= 1024) {
 						if (scr > $("#top").innerHeight()) {
 							if (!$("#top").hasClass("affix")) {
-                                //$("#top").addClass("affix").addClass("animated");
-                                $("#top").addClass("animated");
+                                $("#top").addClass("affix").addClass("animated");
+                                //$("#top").addClass("animated");
 							}
 						} else {
 							if ($("#top").hasClass("affix")) {
 								$("#top").prev().remove();
-                                //$("#top").removeClass("affix").removeClass("animated");
-                                $("#top").removeClass("animated");
+                                $("#top").removeClass("affix").removeClass("animated");
+                                //$("#top").removeClass("animated");
 							}
 						}
 					} else $("#top").removeClass("affix");
