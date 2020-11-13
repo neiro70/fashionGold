@@ -169,7 +169,7 @@
                             </div>
                             <div class="form-group">
                                 <label>3) Descripción del Producto</label>
-                               <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"></textarea>
+                               <textarea class="form-control" rows="12" id="txtDescripcion" name="txtDescripcion"></textarea>
                                 <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavo y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
@@ -207,19 +207,29 @@
                             </div>
                             
                             <div class="form-group">
-                                <label>7) Precio Comercial</label>
+                                <label>7) Precio Menudeo</label>
                             </div>
 
 							<div class="form-group input-group">
                             	
                                 <span class="input-group-addon">$</span>
-                                <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" placeholder="Precio Comercial">
+                                <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" placeholder="Precio Menudeo">
+                             
+                            </div>
+							<div class="form-group">
+                                <label>8) Precio Mayoreo</label>
+                            </div>
+
+							<div class="form-group input-group">
+                            	
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" id="txtPrecioMayoreo" name="txtPrecioMayoreo" placeholder="Precio Mayoreo">
                              
                             </div>
                             
 
                              <div class="form-group">
-                                <label>8) Tiene Oferta</label>
+                                <label>9) Tiene Oferta</label>
                                 <select id="idOferta" name="idOferta">
                                 		<option value="0">NO</option>
                                 		<option value="1">SI</option>
@@ -227,7 +237,7 @@
                                 
                             </div>  
                             <div class="form-group">
-                                <label>9) Precio Oferta</label>
+                                <label>10) Precio Oferta</label>
                             </div>                        
 
                             <div class="form-group input-group">
@@ -237,7 +247,7 @@
                                 
                             </div>
                              <div class="form-group">
-                             <label>10) Subir imagen</label>
+                             <label>11) Subir imagen</label>
                              </div>
                               <div class="form-group">
                             	<span class="btn btn-default fileinput-button">

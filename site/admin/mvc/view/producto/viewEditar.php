@@ -29,7 +29,7 @@
 	
 	$db = new MySQL (); 
 	
-	$sql="SELECT t01.idProducto, t01.idLinea,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,t01.idTipo,t01.idStatus,t01.isOferta,t01.isDestacado,t01.isNuevo,t01.txtCodigo
+	$sql="SELECT t01.idProducto, t01.idLinea,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioMayoreo,t01.dPrecioOferta,t01.txtDescripcion,t01.idTipo,t01.idStatus,t01.isOferta,t01.isDestacado,t01.isNuevo,t01.txtCodigo
 		FROM t01producto t01 
 		WHERE t01.idProducto = {$idProducto} ";
 	
@@ -46,6 +46,7 @@
 			$idTipo=$row["idTipo"];
 			$isOferta=$row["isOferta"];
 			$dPrecioComercial=$row["dPrecioComercial"];
+			$dPrecioMayoreo=$row["dPrecioMayoreo"];
 			$dPrecioOferta=$row["dPrecioOferta"];
 			$isNuevo=$row["isNuevo"];
 			$isDestacado=$row["isDestacado"];
@@ -206,14 +207,14 @@
                             </div>
                             <div class="form-group">
                                 <label>3) Descripción del Producto</label>
-                               <textarea class="form-control" rows="3" id="txtDescripcion" name="txtDescripcion"><?=$txtDescripcion?></textarea>
+                               <textarea class="form-control" rows="12" id="txtDescripcion" name="txtDescripcion" ><?=$txtDescripcion?></textarea>
                                 <p class="help-block">Ejemplo 'Este anillo apilable de absoluta tendencia combina una superficie con baño de oro rosa, cristal pavo y una piedra rectangular para añadir un toque inmediato de glamour a cualquier look. Ideal para llevar a diario y fácil de combinar y mezclar con otras piezas de cualquier colección personal de accesorios, es perfecto como regalo'.</p>
                             </div>
 
                     </div>
                     <div class="col-lg-6">  
                             <div class="form-group">
-                                <label>4) Tipo de joya</label>
+                                <label>4) Tipo de joya</label> 
 						          <select id="idTipo" name="idTipo" data-placeholder="Selecciona..." class="chosen-select" tabindex="2">
 									<option value="1" <?=$idTipo==1?"selected='selected'":''?>>OTRO</option>
 									<option value="2" <?=$idTipo==2?"selected='selected'":''?>>GARGANTILLA</option>
@@ -223,7 +224,7 @@
 									<option value="6" <?=$idTipo==6?"selected='selected'":''?>>ARETE</option>
 									<option value="7" <?=$idTipo==7?"selected='selected'":''?>>BRAZALETE</option>
 									<option value="8" <?=$idTipo==8?"selected='selected'":''?>>CABALLERO</option>
-									<option value="9" <?=$idTipo==8?"selected='selected'":''?>>DIJES</option>
+									<option value="9" <?=$idTipo==9?"selected='selected'":''?>>DIJES</option>
 
                                 </select>
                             </div>
@@ -245,19 +246,29 @@
                             
                             
                             <div class="form-group">
-                                <label>7) Precio Comercial</label>
+                                <label>7) Precio Menudeo</label>
                             </div>
 
 							<div class="form-group input-group">
                             	
                                 <span class="input-group-addon">$</span>
-                                <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" placeholder="Precio Comercial" value="<?=$dPrecioComercial?>" >
+                                <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" placeholder="Precio Menudeo" value="<?=$dPrecioComercial?>" >
+                             
+                            </div>
+							<div class="form-group">
+                                <label>8) Precio Mayoreo</label>
+                            </div>
+
+							<div class="form-group input-group">
+                            	
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" id="txtPrecioMayoreo" name="txtPrecioMayoreo" placeholder="Precio Mayoreo" value="<?=$dPrecioMayoreo?>" >
                              
                             </div>
                             
 
                              <div class="form-group">
-                                <label>8) Tiene Oferta</label>
+                                <label>9) Tiene Oferta</label>
                                 <select id="idOferta" name="idOferta">
                                 		<option value="0"  <?=$isOferta==0?"selected='selected'":''?>>NO</option>
                                 		<option value="1"  <?=$isOferta==1?"selected='selected'":''?>>SI</option>
@@ -265,7 +276,7 @@
                                 
                             </div>  
                             <div class="form-group">
-                                <label>9) Precio Oferta</label>
+                                <label>10) Precio Oferta</label>
                             </div>                        
 
                             <div class="form-group input-group">
@@ -275,7 +286,7 @@
                                 
                             </div>
                              <div class="form-group">
-                             <label>10) Subir imagen</label>
+                             <label>11) Subir imagen</label>
                              </div>
                               <div class="form-group">
                             	<span class="btn btn-default fileinput-button">

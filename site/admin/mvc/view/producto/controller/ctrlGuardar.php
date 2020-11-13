@@ -12,9 +12,10 @@
 		 $contexto="http://" .$var[0];
 	 }
 
-		$txtTitulo=mb_convert_encoding($_POST["txtTitulo"],'ISO-8859-1','UTF-8');
-		$txtDescripcion=mb_convert_encoding($_POST["txtDescripcion"],'ISO-8859-1','UTF-8');
- 	$txtPrecio=$_POST["txtPrecio"]!=null ?$_POST["txtPrecio"]:0;
+	$txtTitulo=mb_convert_encoding($_POST["txtTitulo"],'ISO-8859-1','UTF-8');
+	$txtDescripcion=mb_convert_encoding($_POST["txtDescripcion"],'ISO-8859-1','UTF-8');
+	$txtPrecio=$_POST["txtPrecio"]!=null ?$_POST["txtPrecio"]:0;
+	$txtPrecioMayoreo=$_POST["txtPrecioMayoreo"]!=null ?$_POST["txtPrecioMayoreo"]:0;
  	$idOferta=trim($_POST['idOferta']);
  	$txtPrecioOld=trim($_POST['txtPrecioOld']);
  	$idTipo= trim($_POST['idTipo']);
@@ -29,10 +30,10 @@
 	
 	//idUsuario, idStatus, idImagen,dPrecioComercial,dPrecioOferta,isOferta,txtDescripcion,txtTitulo,
 	if($finalizar > 0){
-			$sql="UPDATE t01producto SET idStatus = $finalizar,idLinea='{$idLinea}',idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
+			$sql="UPDATE t01producto SET idStatus = $finalizar,idLinea='{$idLinea}',idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',dprecioMayoreo='{$txtPrecioMayoreo}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
 			txtDescripcion='{$txtDescripcion}',txtTitulo='{$txtTitulo}',isDestacado='{$isDestacado}',isNuevo='{$isNuevo}'	WHERE idProducto = {$idproducto}";
 	}else{
-			$sql="UPDATE t01producto SET idStatus = 2,idLinea='{$idLinea}',idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
+			$sql="UPDATE t01producto SET idStatus = 2,idLinea='{$idLinea}',idTipo={$idTipo},dPrecioComercial='{$txtPrecio}',dprecioMayoreo='{$txtPrecioMayoreo}',isOferta='{$idOferta}',dPrecioOferta={$txtPrecioOld},txtCodigo='{$idCodigo}',
 			txtDescripcion='{$txtDescripcion}',txtTitulo='{$txtTitulo}',isDestacado='{$isDestacado}',isNuevo='{$isNuevo}'	WHERE idProducto = {$idproducto}";
 	}
 

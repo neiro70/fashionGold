@@ -22,7 +22,7 @@
 	
 	$db = new MySQL (); 
 	
-	$sql="SELECT t01.idProducto,t01.idLinea, t01.txtCodigo,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,t02.txtdescripcion AS tipo,t01.idStatus,t01.isOferta
+	$sql="SELECT t01.idProducto,t01.idLinea, t01.txtCodigo,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioMayoreo,t01.dPrecioOferta,t01.txtDescripcion,t02.txtdescripcion AS tipo,t01.idStatus,t01.isOferta
 		FROM t01producto t01,c01tipo t02 
 		WHERE t02.idTipo=t01.idTipo AND t01.idProducto = {$idProducto} ";
 	
@@ -37,7 +37,8 @@
             $txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'UTF-8','ISO-8859-1');
 			$txtTipo=$row["tipo"];
 			$isOferta=$row["isOferta"];
-			$dPrecioComercial=$row["dPrecioComercial"];
+            $dPrecioComercial=$row["dPrecioComercial"];
+            $dPrecioMayoreo=$row["dPrecioMayoreo"];
 			$dPrecioOferta=$row["dPrecioOferta"];
 			$txtCodigo=$row["txtCodigo"];
 			$idLinea=$row["idLinea"];
@@ -117,8 +118,10 @@
                                 <?php echo $txtCodigo;?> </li>
                             <li><b>Descripci&oacute;n:</b>
                                 <?php echo $txtDescripcion;?> </li>
-                            <li><b>Precio:</b>
+                            <li><b>Precio Menudeo:</b>
                                 <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioComercial);?> MXN </li>
+                            <li><b>Precio Mayoreo:</b>
+                                <?php  setlocale(LC_MONETARY, 'es_MX');  echo money_format('%n',$dPrecioMayoreo);?> MXN </li>
                         </ul>
 
                     </div>

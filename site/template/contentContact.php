@@ -73,14 +73,14 @@
                                                                     </span>
                                                                 </a>
                                                             </li>
-                                                            <li class="twitter">
+                                                            <!-- li class="twitter">
                                                                 <a target="_blank" href="https://twitter.com/fashiongold2018/">
                                                                     <span class="fa-stack fa-lg btooltip" title="Twitter"> 
                                                                         <i class="fa fa-circle fa-stack-2x"></i> 
                                                                         <i class="fa fa-twitter fa-inverse fa-stack-1x"></i> 
                                                                     </span>
                                                                 </a>
-                                                            </li>
+                                                            </!-->
                                                             <li class="instagram">
                                                                 <a target="_blank" href="https://www.instagram.com/onlineshopfg/">
                                                                     <span class="fa-stack fa-lg btooltip" title="Instagram"> 

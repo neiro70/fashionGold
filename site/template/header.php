@@ -10,7 +10,7 @@
         <!-- Header -->	
         <header id="top" class="fadeInDown clearfix" style="background-color: black;">
                     
-            <div class="line"></div>
+           
                 
             <!-- Navigation -->
             <div class="container">
@@ -49,6 +49,11 @@
                                                     <span>Quiénes somos</span>
                                                 </a>
                                             </li>  
+                                            <li class="nav-item">
+                                            <a href="'.$context.'/site/pages/taxes.php">
+                                                <span>Descuentos</span>
+                                            </a>
+                                        </li>  
                                             <li class="dropdown mega-menu">
                                                 <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown">
                                                     <span>C&aacute;talogos</span>
@@ -97,12 +102,12 @@
                                             class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
                                             title="Facebook"><i class="fa fa-facebook"></i></a>
                                             </li>
-                                            <li class="nav-item">
+                                            <!--li class="nav-item">
                                             <a target="_blank"
                                             href="https://twitter.com/fashiongold2018"
                                             class="btooltip swing" data-toggle="tooltip" data-placement="bottom"
                                             title="Twitter"><i class="fa fa-twitter"></i></a>
-                                            </li>	
+                                            </li -->	
                                             <li class="nav-item">
                                             <a target="_blank"
                                             href="https://www.instagram.com/onlineshopfg/"
@@ -125,12 +130,14 @@
 					if ($(window).innerWidth() >= 1024) {
 						if (scr > $("#top").innerHeight()) {
 							if (!$("#top").hasClass("affix")) {
-								$("#top").addClass("affix").addClass("animated");
+                                //$("#top").addClass("affix").addClass("animated");
+                                $("#top").addClass("animated");
 							}
 						} else {
 							if ($("#top").hasClass("affix")) {
 								$("#top").prev().remove();
-								$("#top").removeClass("affix").removeClass("animated");
+                                //$("#top").removeClass("affix").removeClass("animated");
+                                $("#top").removeClass("animated");
 							}
 						}
 					} else $("#top").removeClass("affix");

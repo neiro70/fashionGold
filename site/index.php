@@ -17,7 +17,7 @@
 	$posNuevo=1;
 	$posDestacado=1;
 
-	$sql="SELECT m01.idImagen,t01.txtCodigo,t01.idProducto,t01.isOferta,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,
+	$sql="SELECT m01.idImagen,t01.txtCodigo,t01.idProducto,t01.isOferta,t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioMayoreo,t01.dPrecioOferta,
 			t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus,t01.isNuevo,t01.isDestacado
 			FROM t01producto t01 INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
 			LEFT JOIN t02imagen m01 ON m01.idProducto = t01.idProducto WHERE 1=1 OR isNuevo=1 OR isDestacado=1 ";
@@ -37,6 +37,7 @@
 			$idProducto=$row["idProducto"];
 			$txtTitulo=mb_convert_encoding($row["txtTitulo"],'ISO-8859-1','UTF-8');
 			$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
+			$dPrecioMayoreo=money_format('%n',$row["dPrecioMayoreo"])." MXN" ;
 			$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
 			$txtDescripcion=mb_convert_encoding($row["txtDescripcion"],'ISO-8859-1','UTF-8');
 			$estatus=$row["estatus"];
@@ -51,12 +52,12 @@
 				
 			if($isNuevo=="1"){
 				$nodeNuevo[$posNuevo++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",
-				'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+				'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto,'precioMayoreo'=>$dPrecioMayoreo);
 			}
 
 			if($isDestacado=="1"){
 				$nodeDestacado[$posDestacado++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$txtCodigo - $txtTitulo",
-				'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+				'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto,'precioMayoreo'=>$dPrecioMayoreo);
 			}
 		}
 	}
@@ -350,6 +351,9 @@
 																							<span class='price'> 
 																								<span class='money'>{$registro['precio']} </span>
 																							</span>
+																							<span class='price'> 
+																								<span class='money' style='color:#b18939'>{$registro['precioMayoreo']} </span>
+																							</span>
 																						</div>
 																					</div>
 																					<div class='list-mode-description'>{$registro['descripcion']}</div>
@@ -463,7 +467,9 @@
 																										href='#'>{$registro['titulo']}</a> <span
 																										class='shopify-product-reviews-badge' data-id='registro{$registro['titulo']}'></span></div>
 																									<div class='product-content-right'>
-																									<div class='product-price'><span class='price_sale'><span class='money'>{$registro['precioAnterior']}
+																									<div class='product-price'>
+																									<span class='price_sale'>
+																									<span class='money'>{$registro['precioAnterior']}
 																									</span></span> <del class='price_compare'> <span class='money'>{$registro['precio']}
 																									</span></del></div>				
 																									</div>
@@ -488,7 +494,10 @@
 																								href='#'>{$registro['titulo']}</a> <span
 																								class='shopify-product-reviews-badge' data-id='resgitro{$registro['titulo']}'></span></div>
 																							<div class='product-content-right'>
-																							<div class='product-price'><span class='price'> <span class='money'>{$registro['precio']}</span> </span></div>
+																							<div class='product-price'>
+																							<span class='price'> 
+																							<span class='money'>{$registro['precio']}</span> </span>
+																							</div>
 																							</div>
 																							<div class='list-mode-description'>{$registro['descripcion']}</div>
 																							</li>
@@ -550,7 +559,7 @@
 							Facebook
 						</a>
 					</li>
-					<li>
+					<!--li>
 						<a 	target="_blank" 
 							href="https://twitter.com/fashiongold2018/"
 							class="btooltip swing" 
@@ -560,7 +569,7 @@
 							<i class="fa fa-twitter"></i>
 							Twitter
 						</a>
-					</li>
+					</li -->
 					<li>
 						<a 	target="_blank" 
 							href="https://www.instagram.com/onlineshopfg/"

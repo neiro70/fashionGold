@@ -29,12 +29,15 @@
                                 }else{
                                     $div =$div." 			
                                         <span class='price'> 
-                                        <span class='money'>{$registro['precio']}</span></span>";
+                                        <span class='money'>{$registro['precio']}</span></span> 
+                                        <span class='price' style='color:#b18939'>
+                                        <span class='money'>{$registro['precioMayoreo']}</span></span>";
+                                        
                                 }
                                 $div = $div."
                             </div>
                         </div>
-                        <div class='list-mode-description'> {$registro['descripcion']}</div>
+                        <div class='list-mode-description'>  {$registro['descripcion']} </div>
                     </li>
                 </ul>
             </li>

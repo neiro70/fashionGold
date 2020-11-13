@@ -7,7 +7,8 @@
  	$idusuario=$_SESSION['idusuario'];
  	
  	$idStatus=1;
- 	$dPrecioComercial=0.0;
+	$dPrecioComercial=0.0;
+	$dprecioMayoreo=0.0;
  	$dPrecioOferta=0.0;
  	$isOferta=0;
 
@@ -16,8 +17,8 @@
 	
 	
 	
-	$sql="INSERT INTO t01producto (idUsuario, idStatus,idTipo,dPrecioComercial,dPrecioOferta,isOferta,txtDescripcion,txtTitulo,fhregistro,idLinea) 
-						   VALUES ($idusuario,$idStatus,1,$dPrecioComercial,$dPrecioOferta,$isOferta,NULL,NULL,CURRENT_TIMESTAMP,'')";
+	$sql="INSERT INTO t01producto (idUsuario, idStatus,idTipo,dPrecioComercial,dprecioMayoreo,dPrecioOferta,isOferta,txtDescripcion,txtTitulo,fhregistro,idLinea) 
+						   VALUES ($idusuario,$idStatus,1,$dPrecioComercial,$dprecioMayoreo,$dPrecioOferta,$isOferta,NULL,NULL,CURRENT_TIMESTAMP,'')";
 			
 	$conn=$db->getConexion();
 	 

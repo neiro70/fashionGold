@@ -21,7 +21,7 @@
 
 	if($idTipo > 0)	{
 
-		$sql="SELECT m01.idImagen,t01.idLinea,t01.txtCodigo,t01.idProducto,t01.isOferta, t01.txtTitulo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
+		$sql="SELECT m01.idImagen,t01.idLinea,t01.txtCodigo,t01.idProducto,t01.isOferta, t01.txtTitulo,t01.dPrecioMayoreo,t01.dPrecioComercial,t01.dPrecioOferta,t01.txtDescripcion,c02.txtDescripcion AS estatus,c01.txtdescripcion as tipo,t01.idStatus
 			FROM t01producto t01 
 			INNER JOIN c02estatus c02 ON c02.idEstatus=t01.idStatus 
 			INNER JOIN c01tipo c01 ON c01.idtipo = t01.idTipo 
@@ -47,6 +47,7 @@
 				$txtTitulo=mb_convert_encoding($row["txtTitulo"],'UTF-8','ISO-8859-1');
 				$dPrecioComercial= money_format('%n',$row["dPrecioComercial"])." MXN" ;
 				$dPrecioOferta= money_format('%n',$row["dPrecioOferta"])." MXN";
+				$dPrecioMayoreo= money_format('%n',$row["dPrecioMayoreo"])." MXN";
 				
 				
 				$estatus=$row["estatus"];
@@ -58,7 +59,7 @@
 				
 				$imagen="site/admin/mvc/view/producto/controller/ctrlGetFile.php?idimg={$idImagen}&r={$ran}";
 				
-				$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$idLinea-$txtCodigo-$txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto);
+				$node[$pos++]=array('descripcion'=>$txtDescripcion,'precio'=>$dPrecioComercial,'titulo'=>"$idLinea-$txtCodigo-$txtTitulo",'imagen'=>$imagen,'oferta'=> $isOferta,'precioAnterior'=>$dPrecioOferta,'idProducto'=>$idProducto,'precioMayoreo'=>$dPrecioMayoreo);
 				
 		
 

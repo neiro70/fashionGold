@@ -332,7 +332,7 @@ ul.list-inline {
 header#top.affix {
   z-index: 999;
   width: 100%;
-  background-color: #f7f7f7;
+  /*background-color: #f7f7f7;*/
 }
 header#top.affix .top-other,
 header#top.affix .top {
