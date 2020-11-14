@@ -28,9 +28,9 @@
                                     <br/>
                                     <ul>
                                         <li><i class="fa fa-check"></i>Si deseas emprender tu propio negocio somos la mejor opción pues manejamos diferentes rangos de descuento dependiendo tu monto de inversión, entendiendo que entre mas inviertas mayor será el descuento. </li>
-                                        <li><i class="fa fa-check"></i>Puedes invertir desde $1,200 y obtendrás un 20% de descuento y Puedes obtener hasta un 55% de descuento.</li>
-                                        <li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30% de tu próxima compra</li>
-                                        <li><i class="fa fa-check"></i>Contamos con más de 300 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
+                                        <li><i class="fa fa-check"></i>Consulta los descuentos para mayoristas en la sección de DESCUENTOS en el inicio de esta página</li>
+                                        <li><i class="fa fa-check"></i>Aceptamos devoluciones en un 30% de tu próxima compra, (TIENES UN MES) para hacer cambios o devoluciones  a partir de tu fecha de compra</li>
+                                        <li><i class="fa fa-check"></i>Contamos con más de 500 modelos diferentes entre aretes, arracadas, broqueles, gargantillas, pulseras, brazaletes, juego</li>
                                         <li><i class="fa fa-check"></i>Modelos nuevos e innovadores cada 20 días</li>
                                         <li><i class="fa fa-check"></i>Enviamos a toda la Republica</li>
                                     </ul>
