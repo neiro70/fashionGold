@@ -95,7 +95,7 @@
 						
 						<div data-src="<?php echo $context ?>/site/img/collection/fondo1.png">
 
-
+							<!--
 							<div class="camera_caption camera_caption_1 fadeIn" style="color: #010101; margin-top:-7em;"> 
 								<p style="font-size:20px">Emprende tu negocio</p>
 								<video width="320" height="240" controls>
@@ -105,6 +105,7 @@
 								</video>
 		
 							</div>
+							-->
 
 						</div>
 
