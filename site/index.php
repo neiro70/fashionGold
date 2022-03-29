@@ -110,6 +110,15 @@
 						</div>
 						-->
 
+						<div data-src="<?php echo $context ?>/site/img/queretaro.png">
+							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
+							</div>
+							<div class="camera_cta_1">
+								<a href="<?php echo $context ?>/site/pages/about.php" class="btn">
+									¡Visitanos!
+								</a>
+							</div>
+						</div>
 						<div data-src="<?php echo $context ?>/site/img/collection/fondo1.png">
 							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
 

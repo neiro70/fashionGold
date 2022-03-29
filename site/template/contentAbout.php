@@ -54,8 +54,17 @@
                                     
                                     </p>
 
-                                    <p style="text-align: justify;"><br /><strong>DONDE NOS ENCONTRAMOS</strong><br />Nuestra oficina de distribuci&oacute;n se ubica en palma 2 esquina con Tacuba Col Centro CP 06000 CDMX a dos cuadras del z&oacute;calo capitalino.<br />Al ser proveedores no tenemos venta al p&uacute;blico solo una oficina de distribuci&oacute;n y venta a nuestros clientes conocidos.&nbsp;</p>
+                                    <p style="text-align: justify;"><br />
+                                    <strong>DONDE NOS ENCONTRAMOS</strong>
+                                    
+                                    <h3>Ciudad de México</h3> 
+                                    <br />Nuestra oficina de distribuci&oacute;n se ubica en palma 2 esquina con Tacuba Col Centro CP 06000 CDMX a dos cuadras del z&oacute;calo capitalino.<br />Al ser proveedores no tenemos venta al p&uacute;blico solo una oficina de distribuci&oacute;n y venta a nuestros clientes conocidos.&nbsp;</p>
                                     <iframe src="https://snazzymaps.com/embed/240993" width="100%" height="600px" style="border:none;"></iframe>
+                                    
+                                    <h3>Querétaro</h3> 
+                                    <br />Tenemos Nueva sucursal en Queretaro encuéntranos en corregidora norte 57-B col centro a dos cuadras del jardín Zenea.</p>
+                                    <iframe src="https://snazzymaps.com/embed/382838" width="100%" height="600px" style="border:none;"></iframe>
+                                    
                                     <p style="text-align: justify;">&nbsp;</p>
                                     <p style="text-align: justify;"><strong>NUESTROS PRINCIPALES CLIENTES:</strong><br /> 1. Contamos con m&aacute;s de 100 personas independientes que se dedican a la venta de menudeo tanto de la CDMX como for&aacute;neos.</p>
                                     <p style="text-align: justify;">2. Surtimos a Joyer&iacute;as principalmente del centro de la CDMX pero tambi&eacute;n for&aacute;neas porque tenemos vendedores que salen fuera.</p>
