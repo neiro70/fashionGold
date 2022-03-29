@@ -62,7 +62,7 @@
                                     <iframe src="https://snazzymaps.com/embed/240993" width="100%" height="600px" style="border:none;"></iframe>
                                     
                                     <h3>Querétaro</h3> 
-                                    <br />Tenemos Nueva sucursal en Queretaro encuéntranos en corregidora norte 57-B col centro a dos cuadras del jardín Zenea.</p>
+                                    <br />Tenemos Nueva sucursal en Querétaro encuéntranos en corregidora norte 57-B col centro a dos cuadras del jardín Zenea.</p>
                                     <iframe src="https://snazzymaps.com/embed/382838" width="100%" height="600px" style="border:none;"></iframe>
                                     
                                     <p style="text-align: justify;">&nbsp;</p>

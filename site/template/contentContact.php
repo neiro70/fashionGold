@@ -58,7 +58,7 @@
                                                         <li class="title"><h6>Nos Ubicamos En</h6></li>
                                                         <li class="address">
                                                             <p><b>* Ciudad de México</b>  Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro</p>
-                                                            <p><b>* Querétaro </b>  Calle corregidora norte 57-B Col. Centro</p>
+                                                            <p><b>* Querétaro </b>  Calle Corregidora norte 57-B Col. Centro</p>
                                                         </li>
                                                         <ul>
                                                             <li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
