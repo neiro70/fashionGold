@@ -110,9 +110,8 @@
 						</div>
 						-->
 
-						<div data-src="<?php echo $context ?>/site/img/queretaro.png">
-							<div class="camera_caption camera_title_1 fadeIn moveFromLeft">
-							</div>
+						<div data-src="<?php echo $context ?>/site/img/queretaro4.jpeg">
+
 							<div class="camera_cta_1">
 								<a href="<?php echo $context ?>/site/pages/about.php" class="btn">
 									¡Visitanos!
