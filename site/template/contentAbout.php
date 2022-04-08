@@ -26,6 +26,11 @@
                                     <div class="col-md-24 ">
                                         <div class="home-slider-wrapper clearfix">
                                             <div class="camera_wrap" id="home-slider">
+                                                <div data-src="'.$context.'/site/img/collection/queretaro1.jpeg"></div>
+                                                <div data-src="'.$context.'/site/img/collection/queretaro2.jpeg"></div>
+                                                <div data-src="'.$context.'/site/img/collection/queretaro3.jpeg"></div>
+                                                <div data-src="'.$context.'/site/img/collection/queretaro4.jpeg"></div>
+                                                <div data-src="'.$context.'/site/img/collection/queretaro5.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/local4.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/local6.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/1-about.jpeg"></div>
@@ -62,7 +67,7 @@
                                     <iframe src="https://snazzymaps.com/embed/240993" width="100%" height="600px" style="border:none;"></iframe>
                                     
                                     <h3>Querétaro</h3> 
-                                    <br />Tenemos Nueva sucursal en Querétaro encuéntranos en corregidora norte 57-B col centro a dos cuadras del jardín Zenea.</p>
+                                    <br />Tenemos nueva sucursal encuéntranos en Corregidora norte 57-B col centro esquina con Morelos, Queretaro.</p>
                                     <iframe src="https://snazzymaps.com/embed/382838" width="100%" height="600px" style="border:none;"></iframe>
                                     
                                     <p style="text-align: justify;">&nbsp;</p>

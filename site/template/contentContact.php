@@ -57,11 +57,15 @@
                                                     <ul class="right-content">
                                                         <li class="title"><h6>Nos Ubicamos En</h6></li>
                                                         <li class="address">
-                                                            <p><b>* Ciudad de México</b>  Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro</p>
-                                                            <p><b>* Querétaro </b>  Calle Corregidora norte 57-B Col. Centro</p>
+                                                            <p><b>* Ciudad de México</b>  Calle Palma #2 Despacho 104 Edificio Burgos interior 4, Col. Centro
+                                                                <ul>
+                                                                    <li class="phone"><i class="fa fa-phone"></i> 55 55 12 32 97</li>
+                                                                </ul> 
+                                                            </p>
+                                                            <p><b>* Querétaro </b>  Calle Corregidora norte 57-B Col.Centro esquina con Morelos.</p>
                                                         </li>
                                                         <ul>
-                                                            <li class="phone"><i class="fa fa-phone"></i> 55 12 32 97</li>
+                                                            <li class="phone"><i class="fa fa-phone"></i> 442 224 8859</li> 
                                                             <li class="email"><i class="fa fa-envelope"></i>informesyventas@fashiongold.com.mx</li>
                                                         </ul>
                                                         <ul class="right-content">
