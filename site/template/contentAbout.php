@@ -31,6 +31,7 @@
                                                 <div data-src="'.$context.'/site/img/collection/queretaro3.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/queretaro4.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/queretaro5.jpeg"></div>
+                                                <div data-src="'.$context.'/site/img/collection/queretaro6.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/local4.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/local6.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/1-about.jpeg"></div>
