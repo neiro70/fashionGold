@@ -28,7 +28,6 @@
                                             <div class="camera_wrap" id="home-slider">
                                                 <div data-src="'.$context.'/site/img/collection/queretaro1.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/queretaro2.jpeg"></div>
-                                                <div data-src="'.$context.'/site/img/collection/queretaro3.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/queretaro4.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/queretaro5.jpeg"></div>
                                                 <div data-src="'.$context.'/site/img/collection/queretaro6.jpeg"></div>
